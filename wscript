@@ -139,3 +139,6 @@ def cpplint(ctx):
 
 def check_cmath(ctx):
   ctx.cmd_and_log('tools/codestyle/cmath_finder.sh')
+
+def docs(ctx):
+  ctx.exec_command('doxygen')

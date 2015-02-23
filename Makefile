@@ -14,3 +14,6 @@ check:
 
 install:
 	./waf install
+
+docs:
+	./waf docs
