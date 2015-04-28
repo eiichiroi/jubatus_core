@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -167,7 +167,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <a class="code" href="namespacejubatus_1_1core_1_1graph.html#afc1644e5eca38ecce322738a64a9a57f">jubatus::core::graph::edge_id_t</a> eid) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1driver_1_1graph.html#a880a0e575841880cb9d836c7ef72ceee">update_index</a>();</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1driver_1_1graph.html#a5cd9d8e1302bf9ae61f0401b939eac2b">clear</a>();</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1driver_1_1graph.html#a7c754851c7ccb7c75b1a16b55e9703ab">pack</a>(<a class="code" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">framework::packer</a>&amp; pk) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1driver_1_1graph.html#a7c754851c7ccb7c75b1a16b55e9703ab">pack</a>(<a class="code" href="classmsgpack_1_1packer.html">framework::packer</a>&amp; pk) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1driver_1_1graph.html#a57bf17581a39354040296b7c5aaf5d50">unpack</a>(msgpack::object o);</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="comment">// internal apis used between servers</span></div>
@@ -220,8 +220,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classjubatus_1_1core_1_1driver_1_1graph_html_aeb78128f2f6d3cb568c502a80d6b7781"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1graph.html#aeb78128f2f6d3cb568c502a80d6b7781">jubatus::core::driver::graph::create_edge_here</a></div><div class="ttdeci">void create_edge_here(jubatus::core::graph::edge_id_t eid, jubatus::core::graph::node_id_t src, jubatus::core::graph::node_id_t target, const jubatus::core::graph::property &amp;p)</div><div class="ttdef"><b>Definition:</b> <a href="graph_8cpp_source.html#l00155">graph.cpp:155</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1driver_1_1graph_html_a5cd9d8e1302bf9ae61f0401b939eac2b"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1graph.html#a5cd9d8e1302bf9ae61f0401b939eac2b">jubatus::core::driver::graph::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition:</b> <a href="graph_8cpp_source.html#l00130">graph.cpp:130</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1driver_1_1graph_html_a2769cd96f476cde30587d4a325e339e8"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1graph.html#a2769cd96f476cde30587d4a325e339e8">jubatus::core::driver::graph::add_centrality_query</a></div><div class="ttdeci">void add_centrality_query(const jubatus::core::graph::preset_query &amp;q)</div><div class="ttdef"><b>Definition:</b> <a href="graph_8cpp_source.html#l00098">graph.cpp:98</a></div></div>
+<div class="ttc" id="classmsgpack_1_1packer_html"><div class="ttname"><a href="classmsgpack_1_1packer.html">msgpack::packer</a></div><div class="ttdef"><b>Definition:</b> <a href="bandit__base_8hpp_source.html#l00026">bandit_base.hpp:26</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1driver_1_1graph_html_a72091c4f9272cbed0fdeaede20c79fe1"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1graph.html#a72091c4f9272cbed0fdeaede20c79fe1">jubatus::core::driver::graph::get_centrality</a></div><div class="ttdeci">double get_centrality(jubatus::core::graph::node_id_t nid, jubatus::core::graph::centrality_type ct, const jubatus::core::graph::preset_query &amp;q) const </div><div class="ttdef"><b>Definition:</b> <a href="graph_8cpp_source.html#l00081">graph.cpp:81</a></div></div>
-<div class="ttc" id="namespacejubatus_1_1core_1_1framework_html_a99dd974442916078e2a3458b1e85b254"><div class="ttname"><a href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">jubatus::core::framework::packer</a></div><div class="ttdeci">msgpack::packer&lt; jubatus_packer &gt; packer</div><div class="ttdef"><b>Definition:</b> <a href="packer_8hpp_source.html#l00043">packer.hpp:43</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1graph_1_1graph__wo__index_html"><div class="ttname"><a href="classjubatus_1_1core_1_1graph_1_1graph__wo__index.html">jubatus::core::graph::graph_wo_index</a></div><div class="ttdef"><b>Definition:</b> <a href="graph__wo__index_8hpp_source.html#l00038">graph_wo_index.hpp:38</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1driver_1_1graph_html_a731b50febcf39269a1fd2eb08af58b91"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1graph.html#a731b50febcf39269a1fd2eb08af58b91">jubatus::core::driver::graph::remove_centrality_query</a></div><div class="ttdeci">void remove_centrality_query(const jubatus::core::graph::preset_query &amp;q)</div><div class="ttdef"><b>Definition:</b> <a href="graph_8cpp_source.html#l00106">graph.cpp:106</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1driver_1_1graph_html_a880a0e575841880cb9d836c7ef72ceee"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1graph.html#a880a0e575841880cb9d836c7ef72ceee">jubatus::core::driver::graph::update_index</a></div><div class="ttdeci">void update_index()</div><div class="ttdef"><b>Definition:</b> <a href="graph_8cpp_source.html#l00126">graph.cpp:126</a></div></div>
@@ -232,7 +232,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:35 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:03 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

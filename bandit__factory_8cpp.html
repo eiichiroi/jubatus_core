@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -96,6 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="bandit__factory_8hpp_source.html">bandit_factory.hpp</a>&quot;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &quot;<a class="el" href="jsonconfig_8hpp_source.html">../common/jsonconfig.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="epsilon__greedy_8hpp_source.html">epsilon_greedy.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ucb1_8hpp_source.html">ucb1.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="softmax_8hpp_source.html">softmax.hpp</a>&quot;</code><br />
@@ -105,7 +106,7 @@ Include dependency graph for bandit_factory.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="bandit__factory_8cpp__incl.png" border="0" usemap="#jubatus_2core_2bandit_2bandit__factory_8cpp" alt=""/></div>
 <map name="jubatus_2core_2bandit_2bandit__factory_8cpp" id="jubatus_2core_2bandit_2bandit__factory_8cpp">
-<area shape="rect" id="node2" href="bandit__factory_8hpp.html" title="bandit_factory.hpp" alt="" coords="1288,92,1418,117"/><area shape="rect" id="node34" href="epsilon__greedy_8hpp.html" title="epsilon_greedy.hpp" alt="" coords="377,312,514,337"/><area shape="rect" id="node37" href="ucb1_8hpp.html" title="ucb1.hpp" alt="" coords="259,312,336,337"/><area shape="rect" id="node38" href="softmax_8hpp.html" title="softmax.hpp" alt="" coords="538,312,632,337"/><area shape="rect" id="node39" href="exp3_8hpp.html" title="exp3.hpp" alt="" coords="665,312,741,337"/><area shape="rect" id="node6" href="bandit__base_8hpp.html" title="bandit_base.hpp" alt="" coords="169,459,289,484"/><area shape="rect" id="node15" href="jsonconfig_8hpp.html" title="../common/jsonconfig.hpp" alt="" coords="1335,165,1508,191"/><area shape="rect" id="node7" href="arm__info_8hpp.html" title="arm_info.hpp" alt="" coords="267,532,366,557"/><area shape="rect" id="node11" href="packer_8hpp.html" title="../framework/packer.hpp" alt="" coords="149,612,313,637"/><area shape="rect" id="node12" href="version_8hpp.html" title="../common/version.hpp" alt="" coords="34,532,190,557"/><area shape="rect" id="node9" href="unordered__map_8hpp.html" title="../common/unordered\l_map.hpp" alt="" coords="387,605,535,644"/><area shape="rect" id="node16" href="config_8hpp.html" title="./jsonconfig/config.hpp" alt="" coords="1451,312,1605,337"/><area shape="rect" id="node20" href="common_2jsonconfig_2exception_8hpp.html" title="exception.hpp" alt="" coords="1731,385,1835,411"/><area shape="rect" id="node31" href="cast_8hpp.html" title="./jsonconfig/cast.hpp" alt="" coords="1289,239,1432,264"/><area shape="rect" id="node23" href="common_2exception_8hpp.html" title="../exception.hpp" alt="" coords="1916,459,2031,484"/><area shape="rect" id="node29" href="exception__info_8hpp.html" title="exception_info.hpp" alt="" coords="1781,532,1915,557"/><area shape="rect" id="node35" href="summation__storage_8hpp.html" title="summation_storage.hpp" alt="" coords="369,385,533,411"/></map>
+<area shape="rect" id="node2" href="bandit__factory_8hpp.html" title="bandit_factory.hpp" alt="" coords="785,459,915,484"/><area shape="rect" id="node5" href="jsonconfig_8hpp.html" title="../common/jsonconfig.hpp" alt="" coords="965,92,1138,117"/><area shape="rect" id="node27" href="epsilon__greedy_8hpp.html" title="epsilon_greedy.hpp" alt="" coords="1867,239,2004,264"/><area shape="rect" id="node34" href="ucb1_8hpp.html" title="ucb1.hpp" alt="" coords="2089,239,2165,264"/><area shape="rect" id="node35" href="softmax_8hpp.html" title="softmax.hpp" alt="" coords="1748,239,1842,264"/><area shape="rect" id="node36" href="exp3_8hpp.html" title="exp3.hpp" alt="" coords="1555,239,1631,264"/><area shape="rect" id="node6" href="config_8hpp.html" title="./jsonconfig/config.hpp" alt="" coords="861,239,1015,264"/><area shape="rect" id="node12" href="common_2jsonconfig_2exception_8hpp.html" title="exception.hpp" alt="" coords="749,312,853,337"/><area shape="rect" id="node23" href="cast_8hpp.html" title="./jsonconfig/cast.hpp" alt="" coords="1064,165,1207,191"/><area shape="rect" id="node15" href="common_2exception_8hpp.html" title="../exception.hpp" alt="" coords="502,385,617,411"/><area shape="rect" id="node21" href="exception__info_8hpp.html" title="exception_info.hpp" alt="" coords="322,459,455,484"/><area shape="rect" id="node28" href="bandit__base_8hpp.html" title="bandit_base.hpp" alt="" coords="1975,385,2095,411"/><area shape="rect" id="node32" href="summation__storage_8hpp.html" title="summation_storage.hpp" alt="" coords="1833,312,1998,337"/><area shape="rect" id="node29" href="arm__info_8hpp.html" title="arm_info.hpp" alt="" coords="2326,459,2425,484"/><area shape="rect" id="node31" href="unordered__map_8hpp.html" title="../common/unordered\l_map.hpp" alt="" coords="2189,532,2337,571"/></map>
 </div>
 </div>
 <p><a href="bandit__factory_8cpp_source.html">Go to the source code of this file.</a></p>
@@ -117,6 +118,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjubatus_1_1core_1_1bandit_1_1exp3__config.html">jubatus::core::bandit::exp3_config</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjubatus_1_1core_1_1bandit_1_1softmax__config.html">jubatus::core::bandit::softmax_config</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjubatus_1_1core_1_1bandit_1_1ucb1__config.html">jubatus::core::bandit::ucb1_config</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -131,7 +134,7 @@ Namespaces</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:35 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:04 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

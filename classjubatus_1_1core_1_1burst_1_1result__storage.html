@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -129,7 +129,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8e131a3ce3514a37d1ec05437d90c5f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4c410bec6bf0708fc368ad733c7cc40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classjubatus_1_1core_1_1burst_1_1result__storage.html#a8721c28cf76d21fd547ff4e6fd6764b4">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1burst_1_1result__storage.html#aa4c410bec6bf0708fc368ad733c7cc40">get_result_at</a> (double pos) const </td></tr>
 <tr class="separator:aa4c410bec6bf0708fc368ad733c7cc40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f6b36b5d41ee6a98884b3a08be4203a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1burst_1_1result__storage.html#a5f6b36b5d41ee6a98884b3a08be4203a">pack</a> (<a class="el" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">framework::packer</a> &amp;packer) const </td></tr>
+<tr class="memitem:a5f6b36b5d41ee6a98884b3a08be4203a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1burst_1_1result__storage.html#a5f6b36b5d41ee6a98884b3a08be4203a">pack</a> (<a class="el" href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">framework::packer</a> &amp;packer) const </td></tr>
 <tr class="separator:a5f6b36b5d41ee6a98884b3a08be4203a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0aafdb1451345c3d4000c87ffa62d7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1burst_1_1result__storage.html#af0aafdb1451345c3d4000c87ffa62d7f">put_diff</a> (const <a class="el" href="classjubatus_1_1core_1_1burst_1_1result__storage.html#a905ba6e11f063a8007f32375dff7d73c">diff_t</a> &amp;diff)</td></tr>
 <tr class="separator:af0aafdb1451345c3d4000c87ffa62d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -334,7 +334,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void jubatus::core::burst::result_storage::pack </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">framework::packer</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">framework::packer</a> &amp;&#160;</td>
           <td class="paramname"><em>packer</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -346,11 +346,11 @@ Here is the caller graph for this function:</div>
 <p>References <a class="el" href="assert_8hpp_source.html#l00055">JUBATUS_ASSERT</a>, and <a class="el" href="result__storage_8hpp_source.html#l00051">p_</a>.</p>
 <div class="fragment"><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                                                       {</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <a class="code" href="assert_8hpp.html#aa14b61d32cc83ffd94c0650047a86fe2">JUBATUS_ASSERT</a>(<a class="code" href="classjubatus_1_1core_1_1burst_1_1result__storage.html#aa3788a3d1447d864fa268405ea0941e0">p_</a>);</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <a class="code" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">packer</a>.pack(*<a class="code" href="classjubatus_1_1core_1_1burst_1_1result__storage.html#aa3788a3d1447d864fa268405ea0941e0">p_</a>);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <a class="code" href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">packer</a>.pack(*<a class="code" href="classjubatus_1_1core_1_1burst_1_1result__storage.html#aa3788a3d1447d864fa268405ea0941e0">p_</a>);</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;}</div>
 <div class="ttc" id="classjubatus_1_1core_1_1burst_1_1result__storage_html_aa3788a3d1447d864fa268405ea0941e0"><div class="ttname"><a href="classjubatus_1_1core_1_1burst_1_1result__storage.html#aa3788a3d1447d864fa268405ea0941e0">jubatus::core::burst::result_storage::p_</a></div><div class="ttdeci">jubatus::util::lang::scoped_ptr&lt; impl_ &gt; p_</div><div class="ttdef"><b>Definition:</b> <a href="result__storage_8hpp_source.html#l00051">result_storage.hpp:51</a></div></div>
 <div class="ttc" id="assert_8hpp_html_aa14b61d32cc83ffd94c0650047a86fe2"><div class="ttname"><a href="assert_8hpp.html#aa14b61d32cc83ffd94c0650047a86fe2">JUBATUS_ASSERT</a></div><div class="ttdeci">#define JUBATUS_ASSERT(expr)</div><div class="ttdef"><b>Definition:</b> <a href="assert_8hpp_source.html#l00055">assert.hpp:55</a></div></div>
-<div class="ttc" id="namespacejubatus_1_1core_1_1framework_html_a99dd974442916078e2a3458b1e85b254"><div class="ttname"><a href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">jubatus::core::framework::packer</a></div><div class="ttdeci">msgpack::packer&lt; jubatus_packer &gt; packer</div><div class="ttdef"><b>Definition:</b> <a href="packer_8hpp_source.html#l00043">packer.hpp:43</a></div></div>
+<div class="ttc" id="namespacejubatus_1_1core_1_1framework_html_a352834534d9a8d7a43dc7c73f0b65aa9"><div class="ttname"><a href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">jubatus::core::framework::packer</a></div><div class="ttdeci">msgpack::packer&lt; jubatus_packer &gt; packer</div><div class="ttdef"><b>Definition:</b> <a href="bandit__base_8hpp_source.html#l00031">bandit_base.hpp:31</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -475,7 +475,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:37 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:06 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

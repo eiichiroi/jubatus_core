@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -143,7 +143,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="structjubatus_1_1core_1_1burst_1_1keyword__with__params.html#a07c56d92fdb25828da44ee5f91e848c0">jubatus::core::burst::keyword_with_params</a>
 </li>
 <li>scan_clock()
-: <a class="el" href="classjubatus_1_1core_1_1table_1_1column__table.html#a03d557743a6960c0d23c7fb17aed7d51">jubatus::core::table::column_table</a>
+: <a class="el" href="classjubatus_1_1core_1_1storage_1_1column__table.html#a8327c1c4ce2420ba0c83b7275d364bbf">jubatus::core::storage::column_table</a>
 </li>
 <li>score
 : <a class="el" href="structjubatus_1_1core_1_1classifier_1_1classify__result__elem.html#a80c596c8f8c281841cf8ddc952df0c07">jubatus::core::classifier::classify_result_elem</a>
@@ -171,6 +171,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="structjubatus_1_1core_1_1bandit_1_1epsilon__greedy__config.html#a4f38d8b9367227395be3b2886b07f20d">jubatus::core::bandit::epsilon_greedy_config</a>
 , <a class="el" href="structjubatus_1_1core_1_1bandit_1_1exp3__config.html#a6f9ba3fe9bff4a79c3b940b585290af4">jubatus::core::bandit::exp3_config</a>
 , <a class="el" href="structjubatus_1_1core_1_1bandit_1_1softmax__config.html#a8ca929d6431c21e8dc3a6e396710d855">jubatus::core::bandit::softmax_config</a>
+, <a class="el" href="structjubatus_1_1core_1_1bandit_1_1ucb1__config.html#aa8e0571d2263a7d0f180c39a7673b73c">jubatus::core::bandit::ucb1_config</a>
 , <a class="el" href="structjubatus_1_1core_1_1burst_1_1burst__options.html#a2474247eb6ebd546498bbddfffb82426">jubatus::core::burst::burst_options</a>
 , <a class="el" href="structjubatus_1_1core_1_1classifier_1_1classifier__config.html#a89d36675db3e5955b169c931846a3baf">jubatus::core::classifier::classifier_config</a>
 , <a class="el" href="structjubatus_1_1core_1_1clustering_1_1clustering__config.html#a93d7238893b53550b67faee14dcdfbd7">jubatus::core::clustering::clustering_config</a>
@@ -205,18 +206,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#a5e7403bb5fd4403fc3109abc1f0fe2e2">jubatus::core::storage::local_storage_mixture</a>
 , <a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#a5d43c3a6f9de515c0130b38d68cd11e8">jubatus::core::storage::storage_base</a>
 </li>
+<li>set2_nolock()
+: <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage.html#ab586ee175d3645d03a1065ef1269e09a">jubatus::core::storage::local_storage</a>
+, <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#a9b51d5465347d0471d14025308176a01">jubatus::core::storage::local_storage_mixture</a>
+, <a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#a3e5ef738bd4affa17282483c0bcd0ad2">jubatus::core::storage::storage_base</a>
+</li>
 <li>set3()
 : <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage.html#a6dac473d824a6851c1a88df5c9a36b7e">jubatus::core::storage::local_storage</a>
 , <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#aee9806cc72917161a7e9f7485b5b91a1">jubatus::core::storage::local_storage_mixture</a>
 , <a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#a2ef1a78a61e5d9b779951a614051b384">jubatus::core::storage::storage_base</a>
+</li>
+<li>set3_nolock()
+: <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage.html#ab3a5f7bdbab0d7f4032735d6a96cd544">jubatus::core::storage::local_storage</a>
+, <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#ab08d64df5a1863c1140404f455ff6b0d">jubatus::core::storage::local_storage_mixture</a>
+, <a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#a982b544ffd3be65d76103822613b5a66">jubatus::core::storage::storage_base</a>
 </li>
 <li>set_average_and_clear_diff()
 : <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#a3a4f7c72f7847c4fcb20956091e73efe">jubatus::core::storage::local_storage_mixture</a>
 , <a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#af754027fc39448d68b902b92d03c17fe">jubatus::core::storage::storage_base</a>
 </li>
 <li>set_bit()
-: <a class="el" href="classjubatus_1_1core_1_1storage_1_1bit__vector.html#a56372262b1292c8c89385ec9ec430e66">jubatus::core::storage::bit_vector</a>
-, <a class="el" href="structjubatus_1_1core_1_1table_1_1bit__vector__base.html#abb47675dc2f49e56bcf7ce40afa8619d">jubatus::core::table::bit_vector_base&lt; bit_base &gt;</a>
+: <a class="el" href="classjubatus_1_1core_1_1storage_1_1bit__vector__base.html#a118875b59965b95d9629e5daf84eab52">jubatus::core::storage::bit_vector_base&lt; bit_base &gt;</a>
 </li>
 <li>set_callback()
 : <a class="el" href="classjubatus_1_1core_1_1unlearner_1_1unlearner__base.html#a1fca37ec59ae619c487a33ce21f4ae2c">jubatus::core::unlearner::unlearner_base</a>
@@ -271,6 +281,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>set_nn_engine()
 : <a class="el" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a8a97b00c84bb1e6b37759a8d38bd6618">jubatus::core::anomaly::lof_storage</a>
 </li>
+<li>set_nolock()
+: <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage.html#a7c733da621efa1d6a3191ff1ace4ac33">jubatus::core::storage::local_storage</a>
+, <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#a952e6a349fea076ef8054c5bea347716">jubatus::core::storage::local_storage_mixture</a>
+, <a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#a274938a55bbaefbec59e937bfa1e5d45">jubatus::core::storage::storage_base</a>
+</li>
 <li>set_number_unsafe()
 : <a class="el" href="classjubatus_1_1core_1_1storage_1_1version.html#a142dcb8ce8f8e18d0f244154bfdb5b51">jubatus::core::storage::version</a>
 </li>
@@ -291,9 +306,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh.html#a0fe67925b0c2205f08948d2d94dd3fd0">jubatus::core::nearest_neighbor::euclid_lsh</a>
 , <a class="el" href="classjubatus_1_1core_1_1nearest__neighbor_1_1nearest__neighbor__base.html#ae01b86b7bec9b64a40790a7ccf3a8a52">jubatus::core::nearest_neighbor::nearest_neighbor_base</a>
 , <a class="el" href="classjubatus_1_1core_1_1storage_1_1bit__index__storage.html#a75d6dc0eb9d96bfdbb7478981b322738">jubatus::core::storage::bit_index_storage</a>
+, <a class="el" href="classjubatus_1_1core_1_1storage_1_1column__table.html#aebc98d5aac124e3930763ac32b7d098a">jubatus::core::storage::column_table</a>
 , <a class="el" href="classjubatus_1_1core_1_1storage_1_1lsh__index__storage.html#acb1068cb0043d253af4825efbd5018f0">jubatus::core::storage::lsh_index_storage</a>
 , <a class="el" href="classjubatus_1_1core_1_1storage_1_1sparse__matrix__storage.html#aaec338078a7b87427bd8a7441346e0b0">jubatus::core::storage::sparse_matrix_storage</a>
-, <a class="el" href="classjubatus_1_1core_1_1table_1_1column__table.html#a21a789c1581b21f9a3d2489ee58bdf8e">jubatus::core::table::column_table</a>
 </li>
 <li>set_similar_items()
 : <a class="el" href="classjubatus_1_1core_1_1recommender_1_1recommender__mock__storage.html#af21648ff87965d056ee5b82a541c93a0">jubatus::core::recommender::recommender_mock_storage</a>
@@ -340,10 +355,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classjubatus_1_1core_1_1recommender_1_1lsh.html#a4e8ba1aa9afa65218fd84afa8740ec6a">jubatus::core::recommender::lsh</a>
 , <a class="el" href="classjubatus_1_1core_1_1recommender_1_1minhash.html#add9320be2b69cd17a72007f780ab3b8c">jubatus::core::recommender::minhash</a>
 , <a class="el" href="classjubatus_1_1core_1_1recommender_1_1nearest__neighbor__recommender.html#a19c4cba8bb159ff3828a8d8549158d08">jubatus::core::recommender::nearest_neighbor_recommender</a>
-, <a class="el" href="classjubatus_1_1core_1_1recommender_1_1recommender__base.html#a0b29000674c0428170979de3dc3e7dc9">jubatus::core::recommender::recommender_base</a>
+, <a class="el" href="classjubatus_1_1core_1_1recommender_1_1recommender__base.html#a3e5e28fb6211f3e6e7a02914c1ad4e33">jubatus::core::recommender::recommender_base</a>
 , <a class="el" href="classjubatus_1_1core_1_1recommender_1_1recommender__mock.html#adf888df0f45026db99374957bcb028f8">jubatus::core::recommender::recommender_mock</a>
 , <a class="el" href="classjubatus_1_1core_1_1storage_1_1bit__index__storage.html#a8f33f0cab3694833414d3cbb66b9fe05">jubatus::core::storage::bit_index_storage</a>
-, <a class="el" href="classjubatus_1_1core_1_1storage_1_1lsh__index__storage.html#a545f5a6d20f41136f3d51897781fd981">jubatus::core::storage::lsh_index_storage</a>
+, <a class="el" href="classjubatus_1_1core_1_1storage_1_1lsh__index__storage.html#a9aa30bd172e006bc22405ff19a703647">jubatus::core::storage::lsh_index_storage</a>
 </li>
 <li>similar_row_from_datum()
 : <a class="el" href="classjubatus_1_1core_1_1driver_1_1recommender.html#a96ee229c3c61beab879e392ece289dbd">jubatus::core::driver::recommender</a>
@@ -361,12 +376,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classjubatus_1_1core_1_1common_1_1jsonconfig_1_1config.html#ad88a6cda38a41bdbb4adb30a326886f4">jubatus::core::common::jsonconfig::config</a>
 , <a class="el" href="classjubatus_1_1core_1_1common_1_1jsonconfig_1_1out__of__range.html#a54c02493fdd06e4eef9ae2e9f251f9be">jubatus::core::common::jsonconfig::out_of_range</a>
 , <a class="el" href="classjubatus_1_1core_1_1common_1_1key__manager.html#ac7d6c880e8be0fffbfcf08a22539992b">jubatus::core::common::key_manager</a>
+, <a class="el" href="classjubatus_1_1core_1_1storage_1_1column__table.html#aafcacbd8c7c131a0871dc50108256f10">jubatus::core::storage::column_table</a>
+, <a class="el" href="classjubatus_1_1core_1_1storage_1_1column__type.html#aee17c2ec2ae252b0a279adb864ee346e">jubatus::core::storage::column_type</a>
 , <a class="el" href="classjubatus_1_1core_1_1storage_1_1fixed__size__heap.html#a8dabd2f15819da17b6300edca163b7eb">jubatus::core::storage::fixed_size_heap&lt; T, Comp &gt;</a>
 , <a class="el" href="classjubatus_1_1core_1_1storage_1_1lsh__vector.html#a7e169a67a2ed424b060252eb9524c31b">jubatus::core::storage::lsh_vector</a>
-, <a class="el" href="classjubatus_1_1core_1_1table_1_1column__table.html#a5ce93eb36867e34d39292f29a19e7cb4">jubatus::core::table::column_table</a>
-, <a class="el" href="classjubatus_1_1core_1_1table_1_1column__type.html#ab54bc173412bfda1b77e1282b4b43e81">jubatus::core::table::column_type</a>
-, <a class="el" href="classjubatus_1_1core_1_1table_1_1typed__column.html#a16b9b3cdb64195820a02912227298964">jubatus::core::table::typed_column&lt; T &gt;</a>
-, <a class="el" href="classjubatus_1_1core_1_1table_1_1typed__column_3_01bit__vector_01_4.html#ad3a436959f4f1813856e0d51d423f0fa">jubatus::core::table::typed_column&lt; bit_vector &gt;</a>
+, <a class="el" href="classjubatus_1_1core_1_1storage_1_1typed__column.html#ae148d5c7eb91b21a3d215f1dc82fd59e">jubatus::core::storage::typed_column&lt; T &gt;</a>
+, <a class="el" href="classjubatus_1_1core_1_1storage_1_1typed__column_3_01bit__vector_01_4.html#a475b8cd48f32412c1056eebf645160c3">jubatus::core::storage::typed_column&lt; bit_vector &gt;</a>
 </li>
 <li>size_
 : <a class="el" href="classjubatus_1_1core_1_1common_1_1jsonconfig_1_1out__of__range.html#a20d71d23fdf0064b50740dfc32e530e8">jubatus::core::common::jsonconfig::out_of_range</a>
@@ -375,7 +390,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classjubatus_1_1core_1_1storage_1_1lsh__vector.html#a0d8ff187c306b47e4e8d44e408b3d7b8">jubatus::core::storage::lsh_vector</a>
 </li>
 <li>softmax()
-: <a class="el" href="classjubatus_1_1core_1_1bandit_1_1softmax.html#a1174dea1ded735bbc9b478d92bdc9b93">jubatus::core::bandit::softmax</a>
+: <a class="el" href="classjubatus_1_1core_1_1bandit_1_1softmax.html#a462a607c65dfb6d7e98914ea48236f34">jubatus::core::bandit::softmax</a>
 </li>
 <li>sparse_matrix_storage()
 : <a class="el" href="classjubatus_1_1core_1_1storage_1_1sparse__matrix__storage.html#ae411501b7ff5ff6ab9bf9ca3efea1552">jubatus::core::storage::sparse_matrix_storage</a>
@@ -436,7 +451,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classjubatus_1_1core_1_1stat_1_1stat.html#a9d4b2eaebe2a8520a34b0e0a23890662">jubatus::core::stat::stat</a>
 </li>
 <li>status()
-: <a class="el" href="structjubatus_1_1core_1_1table_1_1bit__vector__base.html#a447d9e3fa97755ce784208ea257690c0">jubatus::core::table::bit_vector_base&lt; bit_base &gt;</a>
+: <a class="el" href="classjubatus_1_1core_1_1storage_1_1bit__vector__base.html#a5d1ca012cd9c6c63ea8bda239b0c4189">jubatus::core::storage::bit_vector_base&lt; bit_base &gt;</a>
 </li>
 <li>status_
 : <a class="el" href="classjubatus_1_1core_1_1clustering_1_1compressive__storage.html#a454a0f2d3e384e4b499e07b02ebf4405">jubatus::core::clustering::compressive_storage</a>
@@ -446,10 +461,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classjubatus_1_1core_1_1stat_1_1stat.html#a10bccf964f09530fc407ce527890db44">jubatus::core::stat::stat</a>
 </li>
 <li>sticky_ids_
-: <a class="el" href="classjubatus_1_1core_1_1unlearner_1_1lru__unlearner.html#a2e01becd21b839ad9d49044db549c517">jubatus::core::unlearner::lru_unlearner</a>
+: <a class="el" href="classjubatus_1_1core_1_1unlearner_1_1lru__unlearner.html#ace2a5455fd9109439d4c5cd2abdcf162">jubatus::core::unlearner::lru_unlearner</a>
 </li>
 <li>sticky_matcher_
-: <a class="el" href="classjubatus_1_1core_1_1unlearner_1_1lru__unlearner.html#ae4321bb0a1f11c9eb4732cc33d8fb8d7">jubatus::core::unlearner::lru_unlearner</a>
+: <a class="el" href="classjubatus_1_1core_1_1unlearner_1_1lru__unlearner.html#a7db4f3636f26db9ae186e8b565febf75">jubatus::core::unlearner::lru_unlearner</a>
 </li>
 <li>sticky_pattern
 : <a class="el" href="structjubatus_1_1core_1_1unlearner_1_1lru__unlearner_1_1config.html#a10d55d4e250e6784e90401a541cd2a3d">jubatus::core::unlearner::lru_unlearner::config</a>
@@ -465,7 +480,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>storage_exception()
 : <a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__exception.html#a1335268f8107e3acc6f6487d81ef75b6">jubatus::core::storage::storage_exception</a>
-, <a class="el" href="classjubatus_1_1core_1_1table_1_1storage__exception.html#ac4ce8caa18db36f4d7727db6a732dd70">jubatus::core::table::storage_exception</a>
 </li>
 <li>storages_
 : <a class="el" href="classjubatus_1_1core_1_1burst_1_1burst_1_1impl__.html#a475775d16a8c16254cdb1eb79d5aa8f9">jubatus::core::burst::burst::impl_</a>
@@ -515,7 +529,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classjubatus_1_1core_1_1fv__converter_1_1datum__to__fv__converter__impl.html#a7ad8dade51b1ca4dee8bdebe4f797ee5">jubatus::core::fv_converter::datum_to_fv_converter_impl</a>
 </li>
 <li>string_type
-: <a class="el" href="classjubatus_1_1core_1_1table_1_1column__type.html#a4e99359af30a43eb88bf1b352974198ead01ceb2fdc1b0409c78b9ab2e18db216">jubatus::core::table::column_type</a>
+: <a class="el" href="classjubatus_1_1core_1_1storage_1_1column__type.html#ab386b62bbcbf1e5df3e78ca945674566a7e454be844d4d3e5791b95cdf4ecbd8c">jubatus::core::storage::column_type</a>
 </li>
 <li>string_types
 : <a class="el" href="structjubatus_1_1core_1_1fv__converter_1_1converter__config.html#a0e60f68a82ed95c1186ae2fcbd109137">jubatus::core::fv_converter::converter_config</a>
@@ -547,28 +561,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="structjubatus_1_1core_1_1stat_1_1stat_1_1stat__val.html#aa941707b55da6712e516ff3a2990be55">jubatus::core::stat::stat::stat_val</a>
 </li>
 <li>summation_storage()
-: <a class="el" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a4d29c0388c3ad34bf1abe3b8f9441f0d">jubatus::core::bandit::summation_storage</a>
+: <a class="el" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a2ef41ae3b1abc0d50a3549bb2cd55e5b">jubatus::core::bandit::summation_storage</a>
 </li>
 <li>sv_t
 : <a class="el" href="structjubatus_1_1core_1_1fv__converter_1_1datum.html#ad9037ee71b86e675ea0a501182ac5f2e">jubatus::core::fv_converter::datum</a>
 </li>
 <li>swap
 : <a class="el" href="classjubatus_1_1core_1_1burst_1_1basic__window.html#aaaad0bff8ed03bcd11d429331f1ca229">jubatus::core::burst::basic_window&lt; Batch &gt;</a>
-, <a class="el" href="classjubatus_1_1core_1_1burst_1_1burst__result.html#aa160e072abc5a9b9376fe09fc64f3934">jubatus::core::burst::burst_result</a>
+, <a class="el" href="classjubatus_1_1core_1_1burst_1_1burst__result.html#a3318ae5b8b22d3fd04be1f123ee73b5a">jubatus::core::burst::burst_result</a>
 , <a class="el" href="classjubatus_1_1core_1_1burst_1_1input__window.html#a9b9ce34d88852ecdc71fee070e2636ef">jubatus::core::burst::input_window</a>
 , <a class="el" href="classjubatus_1_1core_1_1common_1_1byte__buffer.html#af12491b21dfe79a1a15b0d490c870512">jubatus::core::common::byte_buffer</a>
 , <a class="el" href="classjubatus_1_1core_1_1common_1_1key__manager.html#a3b9c45e7754490eda2007ebd3ccb1f9d">jubatus::core::common::key_manager</a>
-, <a class="el" href="classjubatus_1_1core_1_1storage_1_1bit__vector.html#aef8fc784d89ed7ba5444ea95dc04a696">jubatus::core::storage::bit_vector</a>
+, <a class="el" href="classjubatus_1_1core_1_1storage_1_1bit__vector__base.html#a827b253008fcd57fb3079a21c323ca3c">jubatus::core::storage::bit_vector_base&lt; bit_base &gt;</a>
+, <a class="el" href="classjubatus_1_1core_1_1storage_1_1column__type.html#a682b87e46c0d092813853f101f5f6079">jubatus::core::storage::column_type</a>
+, <a class="el" href="classjubatus_1_1core_1_1storage_1_1detail_1_1abstract__column.html#a880df3f8fbb88a686ed3eedd750403a9">jubatus::core::storage::detail::abstract_column</a>
 , <a class="el" href="classjubatus_1_1core_1_1storage_1_1lsh__vector.html#aaaea37853beadba3adfd5501a2bccf63">jubatus::core::storage::lsh_vector</a>
-, <a class="el" href="structjubatus_1_1core_1_1table_1_1bit__vector__base.html#a5a6fb8411234279ca170df1381428b99">jubatus::core::table::bit_vector_base&lt; bit_base &gt;</a>
-, <a class="el" href="classjubatus_1_1core_1_1table_1_1column__type.html#a1804529036d5d7cd7d75a70a1402c4a3">jubatus::core::table::column_type</a>
-, <a class="el" href="classjubatus_1_1core_1_1table_1_1detail_1_1abstract__column.html#a880df3f8fbb88a686ed3eedd750403a9">jubatus::core::table::detail::abstract_column</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:41 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:12 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

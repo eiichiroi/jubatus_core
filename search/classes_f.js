@@ -1,8 +1,9 @@
 var searchData=
 [
+  ['packer',['packer',['../classmsgpack_1_1packer.html',1,'msgpack']]],
   ['parameter',['parameter',['../structjubatus_1_1core_1_1anomaly_1_1light__lof_1_1parameter.html',1,'jubatus::core::anomaly::light_lof']]],
-  ['passive_5faggressive',['passive_aggressive',['../classjubatus_1_1core_1_1classifier_1_1passive__aggressive.html',1,'jubatus::core::classifier']]],
   ['passive_5faggressive',['passive_aggressive',['../classjubatus_1_1core_1_1regression_1_1passive__aggressive.html',1,'jubatus::core::regression']]],
+  ['passive_5faggressive',['passive_aggressive',['../classjubatus_1_1core_1_1classifier_1_1passive__aggressive.html',1,'jubatus::core::classifier']]],
   ['passive_5faggressive_5f1',['passive_aggressive_1',['../classjubatus_1_1core_1_1classifier_1_1passive__aggressive__1.html',1,'jubatus::core::classifier']]],
   ['passive_5faggressive_5f2',['passive_aggressive_2',['../classjubatus_1_1core_1_1classifier_1_1passive__aggressive__2.html',1,'jubatus::core::classifier']]],
   ['perceptron',['perceptron',['../classjubatus_1_1core_1_1classifier_1_1perceptron.html',1,'jubatus::core::classifier']]],

@@ -16,6 +16,6 @@ var searchData=
   ['regression_5ffactory',['regression_factory',['../classjubatus_1_1core_1_1regression_1_1regression__factory.html',1,'jubatus::core::regression']]],
   ['result_5fstorage',['result_storage',['../classjubatus_1_1core_1_1burst_1_1result__storage.html',1,'jubatus::core::burst']]],
   ['result_5fwindow',['result_window',['../classjubatus_1_1core_1_1burst_1_1result__window.html',1,'jubatus::core::burst']]],
-  ['row_5fdeleter',['row_deleter',['../classjubatus_1_1core_1_1table_1_1row__deleter.html',1,'jubatus::core::table']]],
+  ['row_5fdeleter',['row_deleter',['../classjubatus_1_1core_1_1storage_1_1row__deleter.html',1,'jubatus::core::storage']]],
   ['runtime_5ferror',['runtime_error',['../classjubatus_1_1core_1_1common_1_1exception_1_1runtime__error.html',1,'jubatus::core::common::exception']]]
 ];

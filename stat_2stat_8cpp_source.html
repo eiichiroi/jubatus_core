@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -276,7 +276,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1stat_1_1stat.html#a9d4b2eaebe2a8520a34b0e0a23890662">stats_</a>.clear();</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;}</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
-<div class="line"><a name="l00186"></a><span class="lineno"><a class="line" href="classjubatus_1_1core_1_1stat_1_1stat.html#a8f972bc1dfa556e011c26c0271fcd9a5">  186</a></span>&#160;<span class="keywordtype">void</span> stat::pack(<a class="code" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">framework::packer</a>&amp; <a class="code" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">packer</a>)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00186"></a><span class="lineno"><a class="line" href="classjubatus_1_1core_1_1stat_1_1stat.html#a8f972bc1dfa556e011c26c0271fcd9a5">  186</a></span>&#160;<span class="keywordtype">void</span> stat::pack(<a class="code" href="classmsgpack_1_1packer.html">framework::packer</a>&amp; <a class="code" href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">packer</a>)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  packer.pack(*<span class="keyword">this</span>);</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;}</div>
 <div class="line"><a name="l00189"></a><span class="lineno"><a class="line" href="classjubatus_1_1core_1_1stat_1_1stat.html#a81a9f1130dab15ae82ce2a2a3bb710ca">  189</a></span>&#160;<span class="keywordtype">void</span> stat::unpack(msgpack::object o) {</div>
@@ -303,17 +303,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classjubatus_1_1core_1_1stat_1_1stat_html_ac97190247626ccccaf5c4da956142305"><div class="ttname"><a href="classjubatus_1_1core_1_1stat_1_1stat.html#ac97190247626ccccaf5c4da956142305">jubatus::core::stat::stat::window_size_</a></div><div class="ttdeci">size_t window_size_</div><div class="ttdef"><b>Definition:</b> <a href="stat_2stat_8hpp_source.html#l00170">stat.hpp:170</a></div></div>
 <div class="ttc" id="stat_2stat_8hpp_html"><div class="ttname"><a href="stat_2stat_8hpp.html">stat.hpp</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1stat_1_1stat_html_a106a5d988067c45168faf78cbdec2771"><div class="ttname"><a href="classjubatus_1_1core_1_1stat_1_1stat.html#a106a5d988067c45168faf78cbdec2771">jubatus::core::stat::stat::moment</a></div><div class="ttdeci">double moment(const std::string &amp;key, int n, double c) const </div><div class="ttdef"><b>Definition:</b> <a href="stat_2stat_8cpp_source.html#l00147">stat.cpp:147</a></div></div>
+<div class="ttc" id="namespacejubatus_1_1core_1_1framework_html_a352834534d9a8d7a43dc7c73f0b65aa9"><div class="ttname"><a href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">jubatus::core::framework::packer</a></div><div class="ttdeci">msgpack::packer&lt; jubatus_packer &gt; packer</div><div class="ttdef"><b>Definition:</b> <a href="bandit__base_8hpp_source.html#l00031">bandit_base.hpp:31</a></div></div>
 <div class="ttc" id="structjubatus_1_1core_1_1stat_1_1stat_1_1stat__val_html_a331a6282ebe3fbc6acfdfc07a6959b22"><div class="ttname"><a href="structjubatus_1_1core_1_1stat_1_1stat_1_1stat__val.html#a331a6282ebe3fbc6acfdfc07a6959b22">jubatus::core::stat::stat::stat_val::n_</a></div><div class="ttdeci">size_t n_</div><div class="ttdef"><b>Definition:</b> <a href="stat_2stat_8hpp_source.html#l00157">stat.hpp:157</a></div></div>
 <div class="ttc" id="structjubatus_1_1core_1_1stat_1_1stat_1_1stat__val_html_a4645e516f296e9be78f9234611a1c25c"><div class="ttname"><a href="structjubatus_1_1core_1_1stat_1_1stat_1_1stat__val.html#a4645e516f296e9be78f9234611a1c25c">jubatus::core::stat::stat::stat_val::sum2_</a></div><div class="ttdeci">double sum2_</div><div class="ttdef"><b>Definition:</b> <a href="stat_2stat_8hpp_source.html#l00159">stat.hpp:159</a></div></div>
 <div class="ttc" id="structjubatus_1_1core_1_1stat_1_1stat_1_1stat__val_html"><div class="ttname"><a href="structjubatus_1_1core_1_1stat_1_1stat_1_1stat__val.html">jubatus::core::stat::stat::stat_val</a></div><div class="ttdef"><b>Definition:</b> <a href="stat_2stat_8hpp_source.html#l00086">stat.hpp:86</a></div></div>
 <div class="ttc" id="namespacejubatus_1_1core_1_1clustering_html_a483dc3d8f221bc7cb2a7d3bae2308c58"><div class="ttname"><a href="namespacejubatus_1_1core_1_1clustering.html#a483dc3d8f221bc7cb2a7d3bae2308c58">jubatus::core::clustering::sum</a></div><div class="ttdeci">double sum(const common::sfv_t &amp;p)</div><div class="ttdef"><b>Definition:</b> <a href="clustering_2util_8cpp_source.html#l00047">util.cpp:47</a></div></div>
+<div class="ttc" id="classmsgpack_1_1packer_html"><div class="ttname"><a href="classmsgpack_1_1packer.html">msgpack::packer</a></div><div class="ttdef"><b>Definition:</b> <a href="bandit__base_8hpp_source.html#l00026">bandit_base.hpp:26</a></div></div>
 <div class="ttc" id="structjubatus_1_1core_1_1stat_1_1stat_1_1stat__val_html_a6d608cbaca220f5bf478d0a7218064b1"><div class="ttname"><a href="structjubatus_1_1core_1_1stat_1_1stat_1_1stat__val.html#a6d608cbaca220f5bf478d0a7218064b1">jubatus::core::stat::stat::stat_val::max_</a></div><div class="ttdeci">double max_</div><div class="ttdef"><b>Definition:</b> <a href="stat_2stat_8hpp_source.html#l00160">stat.hpp:160</a></div></div>
-<div class="ttc" id="namespacejubatus_1_1core_1_1framework_html_a99dd974442916078e2a3458b1e85b254"><div class="ttname"><a href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">jubatus::core::framework::packer</a></div><div class="ttdeci">msgpack::packer&lt; jubatus_packer &gt; packer</div><div class="ttdef"><b>Definition:</b> <a href="packer_8hpp_source.html#l00043">packer.hpp:43</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1stat_1_1stat_html_a9d4b2eaebe2a8520a34b0e0a23890662"><div class="ttname"><a href="classjubatus_1_1core_1_1stat_1_1stat.html#a9d4b2eaebe2a8520a34b0e0a23890662">jubatus::core::stat::stat::stats_</a></div><div class="ttdeci">jubatus::util::data::unordered_map&lt; std::string, stat_val &gt; stats_</div><div class="ttdef"><b>Definition:</b> <a href="stat_2stat_8hpp_source.html#l00167">stat.hpp:167</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:35 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:03 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

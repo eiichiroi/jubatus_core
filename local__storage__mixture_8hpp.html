@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -98,6 +98,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;map&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;jubatus/util/concurrent/mutex.h&quot;</code><br />
 <code>#include &quot;jubatus/util/data/intern.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="local__storage_8hpp_source.html">local_storage.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="version_8hpp_source.html">../common/version.hpp</a>&quot;</code><br />
@@ -106,7 +107,7 @@ Include dependency graph for local_storage_mixture.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="local__storage__mixture_8hpp__incl.png" border="0" usemap="#jubatus_2core_2storage_2local__storage__mixture_8hpp" alt=""/></div>
 <map name="jubatus_2core_2storage_2local__storage__mixture_8hpp" id="jubatus_2core_2storage_2local__storage__mixture_8hpp">
-<area shape="rect" id="node7" href="local__storage_8hpp.html" title="local_storage.hpp" alt="" coords="885,92,1012,117"/><area shape="rect" id="node19" href="version_8hpp.html" title="../common/version.hpp" alt="" coords="602,312,758,337"/><area shape="rect" id="node9" href="storage__base_8hpp.html" title="storage_base.hpp" alt="" coords="1655,165,1783,191"/><area shape="rect" id="node35" href="key__manager_8hpp.html" title="../common/key_manager.hpp" alt="" coords="232,239,425,264"/><area shape="rect" id="node14" href="storage__type_8hpp.html" title="storage_type.hpp" alt="" coords="1153,239,1277,264"/><area shape="rect" id="node22" href="common_2exception_8hpp.html" title="../common/exception.hpp" alt="" coords="2415,239,2585,264"/><area shape="rect" id="node32" href="common_2type_8hpp.html" title="../common/type.hpp" alt="" coords="1756,312,1895,337"/><area shape="rect" id="node33" href="model_8hpp.html" title="../framework/model.hpp" alt="" coords="499,239,659,264"/><area shape="rect" id="node18" href="assoc__vector_8hpp.html" title="../common/assoc_vector.hpp" alt="" coords="1186,312,1377,337"/><area shape="rect" id="node21" href="storage_2bit__vector_8hpp.html" title="bit_vector.hpp" alt="" coords="1007,312,1111,337"/><area shape="rect" id="node28" href="exception__info_8hpp.html" title="exception_info.hpp" alt="" coords="2875,312,3008,337"/><area shape="rect" id="node34" href="packer_8hpp.html" title="packer.hpp" alt="" coords="390,312,477,337"/><area shape="rect" id="node36" href="unordered__map_8hpp.html" title="unordered_map.hpp" alt="" coords="124,312,266,337"/></map>
+<area shape="rect" id="node8" href="local__storage_8hpp.html" title="local_storage.hpp" alt="" coords="1160,92,1286,117"/><area shape="rect" id="node20" href="version_8hpp.html" title="../common/version.hpp" alt="" coords="1666,339,1822,364"/><area shape="rect" id="node11" href="storage__base_8hpp.html" title="storage_base.hpp" alt="" coords="1622,172,1750,197"/><area shape="rect" id="node43" href="key__manager_8hpp.html" title="../common/key_manager.hpp" alt="" coords="721,259,914,284"/><area shape="rect" id="node15" href="storage__type_8hpp.html" title="storage_type.hpp" alt="" coords="1342,259,1466,284"/><area shape="rect" id="node28" href="common_2exception_8hpp.html" title="../common/exception.hpp" alt="" coords="2404,499,2575,524"/><area shape="rect" id="node39" href="storage__exception_8hpp.html" title="storage_exception.hpp" alt="" coords="2245,419,2401,444"/><area shape="rect" id="node40" href="common_2type_8hpp.html" title="../common/type.hpp" alt="" coords="1846,339,1984,364"/><area shape="rect" id="node41" href="model_8hpp.html" title="../framework/model.hpp" alt="" coords="1547,259,1707,284"/><area shape="rect" id="node19" href="assoc__vector_8hpp.html" title="../common/assoc_vector.hpp" alt="" coords="1087,339,1278,364"/><area shape="rect" id="node22" href="bit__vector_8hpp.html" title="bit_vector.hpp" alt="" coords="2008,339,2112,364"/><area shape="rect" id="node24" href="assert_8hpp.html" title="../common/assert.hpp" alt="" coords="59,572,208,597"/><area shape="rect" id="node37" href="big__endian_8hpp.html" title="../common/big_endian.hpp" alt="" coords="1624,419,1803,444"/><area shape="rect" id="node34" href="exception__info_8hpp.html" title="exception_info.hpp" alt="" coords="2792,572,2926,597"/><area shape="rect" id="node42" href="packer_8hpp.html" title="packer.hpp" alt="" coords="1556,339,1642,364"/><area shape="rect" id="node44" href="unordered__map_8hpp.html" title="unordered_map.hpp" alt="" coords="668,339,810,364"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
@@ -135,7 +136,7 @@ Namespaces</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:36 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:05 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

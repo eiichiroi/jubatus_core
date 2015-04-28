@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -124,8 +124,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1framework_1_1push__mixable.html#a5e9864710bf336f980ca1e45443e5197">push_mixable</a>();</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classjubatus_1_1core_1_1framework_1_1push__mixable.html#a198028a86c7381ee3f069c1ce623d320">~push_mixable</a>();</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1framework_1_1push__mixable.html#a1442216debb67750e3093ae8d729cfb6">get_argument</a>(<a class="code" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">packer</a>&amp;) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1framework_1_1push__mixable.html#a24dcbd014dd93b6ff8bf4b76faf0224e">pull</a>(<span class="keyword">const</span> msgpack::object&amp; arg, <a class="code" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">packer</a>&amp;) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1framework_1_1push__mixable.html#a1442216debb67750e3093ae8d729cfb6">get_argument</a>(<a class="code" href="classmsgpack_1_1packer.html">packer</a>&amp;) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1framework_1_1push__mixable.html#a24dcbd014dd93b6ff8bf4b76faf0224e">pull</a>(<span class="keyword">const</span> msgpack::object&amp; arg, <a class="code" href="classmsgpack_1_1packer.html">packer</a>&amp;) <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1framework_1_1push__mixable.html#a771266cc470620b2b95090d45748eeb7">push</a>(<span class="keyword">const</span> msgpack::object&amp;) = 0;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
@@ -141,14 +141,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="mixable_8hpp_html"><div class="ttname"><a href="mixable_8hpp.html">mixable.hpp</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1framework_1_1push__mixable_html_a5e9864710bf336f980ca1e45443e5197"><div class="ttname"><a href="classjubatus_1_1core_1_1framework_1_1push__mixable.html#a5e9864710bf336f980ca1e45443e5197">jubatus::core::framework::push_mixable::push_mixable</a></div><div class="ttdeci">push_mixable()</div><div class="ttdef"><b>Definition:</b> <a href="push__mixable_8cpp_source.html#l00023">push_mixable.cpp:23</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1framework_1_1push__mixable_html_a198028a86c7381ee3f069c1ce623d320"><div class="ttname"><a href="classjubatus_1_1core_1_1framework_1_1push__mixable.html#a198028a86c7381ee3f069c1ce623d320">jubatus::core::framework::push_mixable::~push_mixable</a></div><div class="ttdeci">virtual ~push_mixable()</div><div class="ttdef"><b>Definition:</b> <a href="push__mixable_8cpp_source.html#l00026">push_mixable.cpp:26</a></div></div>
-<div class="ttc" id="namespacejubatus_1_1core_1_1framework_html_a99dd974442916078e2a3458b1e85b254"><div class="ttname"><a href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">jubatus::core::framework::packer</a></div><div class="ttdeci">msgpack::packer&lt; jubatus_packer &gt; packer</div><div class="ttdef"><b>Definition:</b> <a href="packer_8hpp_source.html#l00043">packer.hpp:43</a></div></div>
+<div class="ttc" id="classmsgpack_1_1packer_html"><div class="ttname"><a href="classmsgpack_1_1packer.html">msgpack::packer</a></div><div class="ttdef"><b>Definition:</b> <a href="bandit__base_8hpp_source.html#l00026">bandit_base.hpp:26</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1framework_1_1push__mixable_html_a771266cc470620b2b95090d45748eeb7"><div class="ttname"><a href="classjubatus_1_1core_1_1framework_1_1push__mixable.html#a771266cc470620b2b95090d45748eeb7">jubatus::core::framework::push_mixable::push</a></div><div class="ttdeci">virtual void push(const msgpack::object &amp;)=0</div></div>
 <div class="ttc" id="packer_8hpp_html"><div class="ttname"><a href="packer_8hpp.html">packer.hpp</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1framework_1_1push__mixable_html_a24dcbd014dd93b6ff8bf4b76faf0224e"><div class="ttname"><a href="classjubatus_1_1core_1_1framework_1_1push__mixable.html#a24dcbd014dd93b6ff8bf4b76faf0224e">jubatus::core::framework::push_mixable::pull</a></div><div class="ttdeci">virtual void pull(const msgpack::object &amp;arg, packer &amp;) const =0</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:35 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:03 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

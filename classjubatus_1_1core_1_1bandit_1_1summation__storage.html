@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -132,6 +132,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae9008375b93c16384e36e3750c850b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a057cac1777b52605963b9e6f89a193"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a9a057cac1777b52605963b9e6f89a193">MSGPACK_DEFINE</a> (<a class="el" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">arm_ids_</a>, <a class="el" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a764a5b531d6df04966a1cd3fddd1aafb">mixed_</a>, <a class="el" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">unmixed_</a>)</td></tr>
 <tr class="separator:a9a057cac1777b52605963b9e6f89a193"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71fd0d39d57713fc9642634f87aa2a88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a71fd0d39d57713fc9642634f87aa2a88">notify_selected</a> (const std::string &amp;player_id, const std::string &amp;arm_id)</td></tr>
+<tr class="separator:a71fd0d39d57713fc9642634f87aa2a88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe15668f203a9ad079e09c36700f17e9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#abe15668f203a9ad079e09c36700f17e9">put_diff</a> (const <a class="el" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#ab4ff420569a5dff993f01e9a059a0c42">table_t</a> &amp;diff)</td></tr>
 <tr class="separator:abe15668f203a9ad079e09c36700f17e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9892f5596b27079ecd32d4902ac77d35"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a9892f5596b27079ecd32d4902ac77d35">register_arm</a> (const std::string &amp;arm_id)</td></tr>
@@ -140,8 +142,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aad3218657e77a9569e459e1ffec40617"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10da8b7e4889779b4cbcad7a4eeef2b6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a10da8b7e4889779b4cbcad7a4eeef2b6">reset</a> (const std::string &amp;player_id)</td></tr>
 <tr class="separator:a10da8b7e4889779b4cbcad7a4eeef2b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d29c0388c3ad34bf1abe3b8f9441f0d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a4d29c0388c3ad34bf1abe3b8f9441f0d">summation_storage</a> ()</td></tr>
-<tr class="separator:a4d29c0388c3ad34bf1abe3b8f9441f0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ef41ae3b1abc0d50a3549bb2cd55e5b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a2ef41ae3b1abc0d50a3549bb2cd55e5b">summation_storage</a> (bool assume_unrewarded)</td></tr>
+<tr class="separator:a2ef41ae3b1abc0d50a3549bb2cd55e5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -152,6 +154,8 @@ Static Public Member Functions</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a73d5b2a08f8a475dbca937f006e463fe"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">arm_ids_</a></td></tr>
 <tr class="separator:a73d5b2a08f8a475dbca937f006e463fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b0ccc3cbc5a56b5efb9ad56af6a4108"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a9b0ccc3cbc5a56b5efb9ad56af6a4108">assume_unrewarded_</a></td></tr>
+<tr class="separator:a9b0ccc3cbc5a56b5efb9ad56af6a4108"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a764a5b531d6df04966a1cd3fddd1aafb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#ab4ff420569a5dff993f01e9a059a0c42">table_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a764a5b531d6df04966a1cd3fddd1aafb">mixed_</a></td></tr>
 <tr class="separator:a764a5b531d6df04966a1cd3fddd1aafb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcfac98467edc16cec7851d98f89ee33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#ab4ff420569a5dff993f01e9a059a0c42">table_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">unmixed_</a></td></tr>
@@ -176,22 +180,32 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a4d29c0388c3ad34bf1abe3b8f9441f0d"></a>
+<a class="anchor" id="a2ef41ae3b1abc0d50a3549bb2cd55e5b"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">jubatus::core::bandit::summation_storage::summation_storage </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>assume_unrewarded</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="summation__storage_8cpp_source.html#l00026">26</a> of file <a class="el" href="summation__storage_8cpp_source.html">summation_storage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                                     {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<p>Definition at line <a class="el" href="summation__storage_8cpp_source.html#l00027">27</a> of file <a class="el" href="summation__storage_8cpp_source.html">summation_storage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    : <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a9b0ccc3cbc5a56b5efb9ad56af6a4108">assume_unrewarded_</a>(assume_unrewarded) {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_a9b0ccc3cbc5a56b5efb9ad56af6a4108"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a9b0ccc3cbc5a56b5efb9ad56af6a4108">jubatus::core::bandit::summation_storage::assume_unrewarded_</a></div><div class="ttdeci">const bool assume_unrewarded_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00064">summation_storage.hpp:64</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -209,17 +223,19 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="summation__storage_8cpp_source.html#l00157">157</a> of file <a class="el" href="summation__storage_8cpp_source.html">summation_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="summation__storage_8cpp_source.html#l00202">202</a> of file <a class="el" href="summation__storage_8cpp_source.html">summation_storage.cpp</a>.</p>
 
-<p>References <a class="el" href="summation__storage_8hpp_source.html#l00063">mixed_</a>, and <a class="el" href="summation__storage_8hpp_source.html#l00063">unmixed_</a>.</p>
+<p>References <a class="el" href="summation__storage_8hpp_source.html#l00065">arm_ids_</a>, <a class="el" href="summation__storage_8hpp_source.html#l00066">mixed_</a>, and <a class="el" href="summation__storage_8hpp_source.html#l00066">unmixed_</a>.</p>
 
-<p>Referenced by <a class="el" href="ucb1_8cpp_source.html#l00082">jubatus::core::bandit::ucb1::clear()</a>, <a class="el" href="epsilon__greedy_8cpp_source.html#l00080">jubatus::core::bandit::epsilon_greedy::clear()</a>, <a class="el" href="softmax_8cpp_source.html#l00075">jubatus::core::bandit::softmax::clear()</a>, and <a class="el" href="exp3_8cpp_source.html#l00098">jubatus::core::bandit::exp3::clear()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                              {</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a764a5b531d6df04966a1cd3fddd1aafb">mixed_</a>.clear();</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">unmixed_</a>.clear();</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_adcfac98467edc16cec7851d98f89ee33"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">jubatus::core::bandit::summation_storage::unmixed_</a></div><div class="ttdeci">table_t unmixed_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00063">summation_storage.hpp:63</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_a764a5b531d6df04966a1cd3fddd1aafb"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a764a5b531d6df04966a1cd3fddd1aafb">jubatus::core::bandit::summation_storage::mixed_</a></div><div class="ttdeci">table_t mixed_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00063">summation_storage.hpp:63</a></div></div>
+<p>Referenced by <a class="el" href="ucb1_8cpp_source.html#l00086">jubatus::core::bandit::ucb1::clear()</a>, <a class="el" href="epsilon__greedy_8cpp_source.html#l00084">jubatus::core::bandit::epsilon_greedy::clear()</a>, <a class="el" href="softmax_8cpp_source.html#l00079">jubatus::core::bandit::softmax::clear()</a>, and <a class="el" href="exp3_8cpp_source.html#l00102">jubatus::core::bandit::exp3::clear()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                              {</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">arm_ids_</a>.clear();</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a764a5b531d6df04966a1cd3fddd1aafb">mixed_</a>.clear();</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">unmixed_</a>.clear();</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_adcfac98467edc16cec7851d98f89ee33"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">jubatus::core::bandit::summation_storage::unmixed_</a></div><div class="ttdeci">table_t unmixed_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00066">summation_storage.hpp:66</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_a73d5b2a08f8a475dbca937f006e463fe"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">jubatus::core::bandit::summation_storage::arm_ids_</a></div><div class="ttdeci">std::vector&lt; std::string &gt; arm_ids_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00065">summation_storage.hpp:65</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_a764a5b531d6df04966a1cd3fddd1aafb"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a764a5b531d6df04966a1cd3fddd1aafb">jubatus::core::bandit::summation_storage::mixed_</a></div><div class="ttdeci">table_t mixed_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00066">summation_storage.hpp:66</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -246,26 +262,26 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="summation__storage_8cpp_source.html#l00048">48</a> of file <a class="el" href="summation__storage_8cpp_source.html">summation_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="summation__storage_8cpp_source.html#l00082">82</a> of file <a class="el" href="summation__storage_8cpp_source.html">summation_storage.cpp</a>.</p>
 
-<p>References <a class="el" href="summation__storage_8hpp_source.html#l00062">arm_ids_</a>, <a class="el" href="summation__storage_8hpp_source.html#l00063">mixed_</a>, and <a class="el" href="summation__storage_8hpp_source.html#l00063">unmixed_</a>.</p>
+<p>References <a class="el" href="summation__storage_8hpp_source.html#l00065">arm_ids_</a>, <a class="el" href="summation__storage_8hpp_source.html#l00066">mixed_</a>, and <a class="el" href="summation__storage_8hpp_source.html#l00066">unmixed_</a>.</p>
 
-<p>Referenced by <a class="el" href="ucb1_8cpp_source.html#l00065">jubatus::core::bandit::ucb1::delete_arm()</a>, <a class="el" href="epsilon__greedy_8cpp_source.html#l00063">jubatus::core::bandit::epsilon_greedy::delete_arm()</a>, <a class="el" href="softmax_8cpp_source.html#l00058">jubatus::core::bandit::softmax::delete_arm()</a>, and <a class="el" href="exp3_8cpp_source.html#l00073">jubatus::core::bandit::exp3::delete_arm()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                                                          {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  delete_arm_(<a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a764a5b531d6df04966a1cd3fddd1aafb">mixed_</a>, arm_id);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  delete_arm_(<a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">unmixed_</a>, arm_id);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  std::vector&lt;std::string&gt;::iterator iter =</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      std::remove(<a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">arm_ids_</a>.begin(), <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">arm_ids_</a>.end(), arm_id);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordflow">if</span> (iter == <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">arm_ids_</a>.end()) {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">arm_ids_</a>.erase(iter, <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">arm_ids_</a>.end());</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_adcfac98467edc16cec7851d98f89ee33"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">jubatus::core::bandit::summation_storage::unmixed_</a></div><div class="ttdeci">table_t unmixed_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00063">summation_storage.hpp:63</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_a73d5b2a08f8a475dbca937f006e463fe"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">jubatus::core::bandit::summation_storage::arm_ids_</a></div><div class="ttdeci">std::vector&lt; std::string &gt; arm_ids_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00062">summation_storage.hpp:62</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_a764a5b531d6df04966a1cd3fddd1aafb"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a764a5b531d6df04966a1cd3fddd1aafb">jubatus::core::bandit::summation_storage::mixed_</a></div><div class="ttdeci">table_t mixed_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00063">summation_storage.hpp:63</a></div></div>
+<p>Referenced by <a class="el" href="ucb1_8cpp_source.html#l00069">jubatus::core::bandit::ucb1::delete_arm()</a>, <a class="el" href="epsilon__greedy_8cpp_source.html#l00067">jubatus::core::bandit::epsilon_greedy::delete_arm()</a>, <a class="el" href="softmax_8cpp_source.html#l00062">jubatus::core::bandit::softmax::delete_arm()</a>, and <a class="el" href="exp3_8cpp_source.html#l00077">jubatus::core::bandit::exp3::delete_arm()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                                                          {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  delete_arm_(<a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a764a5b531d6df04966a1cd3fddd1aafb">mixed_</a>, arm_id);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  delete_arm_(<a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">unmixed_</a>, arm_id);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  std::vector&lt;std::string&gt;::iterator iter =</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      std::remove(<a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">arm_ids_</a>.begin(), <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">arm_ids_</a>.end(), arm_id);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordflow">if</span> (iter == <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">arm_ids_</a>.end()) {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">arm_ids_</a>.erase(iter, <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">arm_ids_</a>.end());</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_adcfac98467edc16cec7851d98f89ee33"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">jubatus::core::bandit::summation_storage::unmixed_</a></div><div class="ttdeci">table_t unmixed_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00066">summation_storage.hpp:66</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_a73d5b2a08f8a475dbca937f006e463fe"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">jubatus::core::bandit::summation_storage::arm_ids_</a></div><div class="ttdeci">std::vector&lt; std::string &gt; arm_ids_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00065">summation_storage.hpp:65</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_a764a5b531d6df04966a1cd3fddd1aafb"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a764a5b531d6df04966a1cd3fddd1aafb">jubatus::core::bandit::summation_storage::mixed_</a></div><div class="ttdeci">table_t mixed_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00066">summation_storage.hpp:66</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -299,15 +315,15 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="summation__storage_8hpp_source.html#l00047">47</a> of file <a class="el" href="summation__storage_8hpp_source.html">summation_storage.hpp</a>.</p>
+<p>Definition at line <a class="el" href="summation__storage_8hpp_source.html#l00049">49</a> of file <a class="el" href="summation__storage_8hpp_source.html">summation_storage.hpp</a>.</p>
 
-<p>References <a class="el" href="summation__storage_8hpp_source.html#l00062">arm_ids_</a>.</p>
+<p>References <a class="el" href="summation__storage_8hpp_source.html#l00065">arm_ids_</a>.</p>
 
-<p>Referenced by <a class="el" href="exp3_8cpp_source.html#l00036">jubatus::core::bandit::exp3::calc_weights_()</a>, <a class="el" href="exp3_8cpp_source.html#l00077">jubatus::core::bandit::exp3::register_reward()</a>, <a class="el" href="ucb1_8cpp_source.html#l00031">jubatus::core::bandit::ucb1::select_arm()</a>, <a class="el" href="epsilon__greedy_8cpp_source.html#l00035">jubatus::core::bandit::epsilon_greedy::select_arm()</a>, <a class="el" href="softmax_8cpp_source.html#l00038">jubatus::core::bandit::softmax::select_arm()</a>, and <a class="el" href="exp3_8cpp_source.html#l00058">jubatus::core::bandit::exp3::select_arm()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                                  {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">arm_ids_</a>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  }</div>
-<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_a73d5b2a08f8a475dbca937f006e463fe"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">jubatus::core::bandit::summation_storage::arm_ids_</a></div><div class="ttdeci">std::vector&lt; std::string &gt; arm_ids_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00062">summation_storage.hpp:62</a></div></div>
+<p>Referenced by <a class="el" href="exp3_8cpp_source.html#l00038">jubatus::core::bandit::exp3::calc_weights_()</a>, <a class="el" href="exp3_8cpp_source.html#l00081">jubatus::core::bandit::exp3::register_reward()</a>, <a class="el" href="ucb1_8cpp_source.html#l00034">jubatus::core::bandit::ucb1::select_arm()</a>, <a class="el" href="epsilon__greedy_8cpp_source.html#l00037">jubatus::core::bandit::epsilon_greedy::select_arm()</a>, <a class="el" href="softmax_8cpp_source.html#l00040">jubatus::core::bandit::softmax::select_arm()</a>, and <a class="el" href="exp3_8cpp_source.html#l00060">jubatus::core::bandit::exp3::select_arm()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                                                  {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">arm_ids_</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  }</div>
+<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_a73d5b2a08f8a475dbca937f006e463fe"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">jubatus::core::bandit::summation_storage::arm_ids_</a></div><div class="ttdeci">std::vector&lt; std::string &gt; arm_ids_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00065">summation_storage.hpp:65</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -344,22 +360,22 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="summation__storage_8cpp_source.html#l00092">92</a> of file <a class="el" href="summation__storage_8cpp_source.html">summation_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="summation__storage_8cpp_source.html#l00137">137</a> of file <a class="el" href="summation__storage_8cpp_source.html">summation_storage.cpp</a>.</p>
 
-<p>References <a class="el" href="summation__storage_8hpp_source.html#l00063">mixed_</a>, <a class="el" href="arm__info_8hpp_source.html#l00030">jubatus::core::bandit::arm_info::trial_count</a>, <a class="el" href="summation__storage_8hpp_source.html#l00063">unmixed_</a>, and <a class="el" href="arm__info_8hpp_source.html#l00031">jubatus::core::bandit::arm_info::weight</a>.</p>
+<p>References <a class="el" href="summation__storage_8hpp_source.html#l00066">mixed_</a>, <a class="el" href="arm__info_8hpp_source.html#l00030">jubatus::core::bandit::arm_info::trial_count</a>, <a class="el" href="summation__storage_8hpp_source.html#l00066">unmixed_</a>, and <a class="el" href="arm__info_8hpp_source.html#l00031">jubatus::core::bandit::arm_info::weight</a>.</p>
 
-<p>Referenced by <a class="el" href="exp3_8cpp_source.html#l00036">jubatus::core::bandit::exp3::calc_weights_()</a>, <a class="el" href="summation__storage_8cpp_source.html#l00114">get_arm_info_map()</a>, <a class="el" href="summation__storage_8cpp_source.html#l00104">get_expectation()</a>, and <a class="el" href="ucb1_8cpp_source.html#l00031">jubatus::core::bandit::ucb1::select_arm()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                                   {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keyword">const</span> arm_info a1 = get_arm_info_(<a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a764a5b531d6df04966a1cd3fddd1aafb">mixed_</a>, player_id, arm_id);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keyword">const</span> arm_info a2 = get_arm_info_(<a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">unmixed_</a>, player_id, arm_id);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  arm_info result;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  result.trial_count = a1.trial_count + a2.trial_count;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  result.weight = a1.weight + a2.weight;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_adcfac98467edc16cec7851d98f89ee33"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">jubatus::core::bandit::summation_storage::unmixed_</a></div><div class="ttdeci">table_t unmixed_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00063">summation_storage.hpp:63</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_a764a5b531d6df04966a1cd3fddd1aafb"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a764a5b531d6df04966a1cd3fddd1aafb">jubatus::core::bandit::summation_storage::mixed_</a></div><div class="ttdeci">table_t mixed_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00063">summation_storage.hpp:63</a></div></div>
+<p>Referenced by <a class="el" href="exp3_8cpp_source.html#l00038">jubatus::core::bandit::exp3::calc_weights_()</a>, <a class="el" href="summation__storage_8cpp_source.html#l00159">get_arm_info_map()</a>, <a class="el" href="summation__storage_8cpp_source.html#l00149">get_expectation()</a>, and <a class="el" href="ucb1_8cpp_source.html#l00034">jubatus::core::bandit::ucb1::select_arm()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                                   {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  <span class="keyword">const</span> arm_info a1 = get_arm_info_(<a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a764a5b531d6df04966a1cd3fddd1aafb">mixed_</a>, player_id, arm_id);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <span class="keyword">const</span> arm_info a2 = get_arm_info_(<a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">unmixed_</a>, player_id, arm_id);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  arm_info result;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  result.trial_count = a1.trial_count + a2.trial_count;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  result.weight = a1.weight + a2.weight;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_adcfac98467edc16cec7851d98f89ee33"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">jubatus::core::bandit::summation_storage::unmixed_</a></div><div class="ttdeci">table_t unmixed_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00066">summation_storage.hpp:66</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_a764a5b531d6df04966a1cd3fddd1aafb"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a764a5b531d6df04966a1cd3fddd1aafb">jubatus::core::bandit::summation_storage::mixed_</a></div><div class="ttdeci">table_t mixed_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00066">summation_storage.hpp:66</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -386,24 +402,24 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="summation__storage_8cpp_source.html#l00114">114</a> of file <a class="el" href="summation__storage_8cpp_source.html">summation_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="summation__storage_8cpp_source.html#l00159">159</a> of file <a class="el" href="summation__storage_8cpp_source.html">summation_storage.cpp</a>.</p>
 
-<p>References <a class="el" href="summation__storage_8hpp_source.html#l00062">arm_ids_</a>, and <a class="el" href="summation__storage_8cpp_source.html#l00092">get_arm_info()</a>.</p>
+<p>References <a class="el" href="summation__storage_8hpp_source.html#l00065">arm_ids_</a>, and <a class="el" href="summation__storage_8cpp_source.html#l00137">get_arm_info()</a>.</p>
 
-<p>Referenced by <a class="el" href="ucb1_8cpp_source.html#l00075">jubatus::core::bandit::ucb1::get_arm_info()</a>, <a class="el" href="epsilon__greedy_8cpp_source.html#l00073">jubatus::core::bandit::epsilon_greedy::get_arm_info()</a>, <a class="el" href="softmax_8cpp_source.html#l00068">jubatus::core::bandit::softmax::get_arm_info()</a>, and <a class="el" href="exp3_8cpp_source.html#l00091">jubatus::core::bandit::exp3::get_arm_info()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                                      {</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <a class="code" href="namespacejubatus_1_1core_1_1bandit.html#af291a92ff240efd58c0ad570c6d07384">arm_info_map</a> result;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordflow">for</span> (std::vector&lt;std::string&gt;::const_iterator iter = <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">arm_ids_</a>.begin();</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;       iter != <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">arm_ids_</a>.end(); ++iter) {</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    result.insert(std::make_pair(*iter, <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a922e07964d50c89756e0f2b7b8e994bc">get_arm_info</a>(player_id, *iter)));</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  }</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_a73d5b2a08f8a475dbca937f006e463fe"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">jubatus::core::bandit::summation_storage::arm_ids_</a></div><div class="ttdeci">std::vector&lt; std::string &gt; arm_ids_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00062">summation_storage.hpp:62</a></div></div>
+<p>Referenced by <a class="el" href="ucb1_8cpp_source.html#l00079">jubatus::core::bandit::ucb1::get_arm_info()</a>, <a class="el" href="epsilon__greedy_8cpp_source.html#l00077">jubatus::core::bandit::epsilon_greedy::get_arm_info()</a>, <a class="el" href="softmax_8cpp_source.html#l00072">jubatus::core::bandit::softmax::get_arm_info()</a>, and <a class="el" href="exp3_8cpp_source.html#l00095">jubatus::core::bandit::exp3::get_arm_info()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                                      {</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <a class="code" href="namespacejubatus_1_1core_1_1bandit.html#af291a92ff240efd58c0ad570c6d07384">arm_info_map</a> result;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="keywordflow">for</span> (std::vector&lt;std::string&gt;::const_iterator iter = <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">arm_ids_</a>.begin();</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;       iter != <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">arm_ids_</a>.end(); ++iter) {</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    result.insert(std::make_pair(*iter, <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a922e07964d50c89756e0f2b7b8e994bc">get_arm_info</a>(player_id, *iter)));</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_a73d5b2a08f8a475dbca937f006e463fe"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">jubatus::core::bandit::summation_storage::arm_ids_</a></div><div class="ttdeci">std::vector&lt; std::string &gt; arm_ids_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00065">summation_storage.hpp:65</a></div></div>
 <div class="ttc" id="namespacejubatus_1_1core_1_1bandit_html_af291a92ff240efd58c0ad570c6d07384"><div class="ttname"><a href="namespacejubatus_1_1core_1_1bandit.html#af291a92ff240efd58c0ad570c6d07384">jubatus::core::bandit::arm_info_map</a></div><div class="ttdeci">jubatus::util::data::unordered_map&lt; std::string, arm_info &gt; arm_info_map</div><div class="ttdef"><b>Definition:</b> <a href="arm__info_8hpp_source.html#l00036">arm_info.hpp:36</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_a922e07964d50c89756e0f2b7b8e994bc"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a922e07964d50c89756e0f2b7b8e994bc">jubatus::core::bandit::summation_storage::get_arm_info</a></div><div class="ttdeci">arm_info get_arm_info(const std::string &amp;player_id, const std::string &amp;arm_id) const </div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8cpp_source.html#l00092">summation_storage.cpp:92</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_a922e07964d50c89756e0f2b7b8e994bc"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a922e07964d50c89756e0f2b7b8e994bc">jubatus::core::bandit::summation_storage::get_arm_info</a></div><div class="ttdeci">arm_info get_arm_info(const std::string &amp;player_id, const std::string &amp;arm_id) const </div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8cpp_source.html#l00137">summation_storage.cpp:137</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -439,15 +455,15 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="summation__storage_8cpp_source.html#l00126">126</a> of file <a class="el" href="summation__storage_8cpp_source.html">summation_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="summation__storage_8cpp_source.html#l00171">171</a> of file <a class="el" href="summation__storage_8cpp_source.html">summation_storage.cpp</a>.</p>
 
-<p>References <a class="el" href="summation__storage_8hpp_source.html#l00063">unmixed_</a>.</p>
+<p>References <a class="el" href="summation__storage_8hpp_source.html#l00066">unmixed_</a>.</p>
 
-<p>Referenced by <a class="el" href="ucb1_8cpp_source.html#l00093">jubatus::core::bandit::ucb1::get_diff()</a>, <a class="el" href="epsilon__greedy_8cpp_source.html#l00091">jubatus::core::bandit::epsilon_greedy::get_diff()</a>, <a class="el" href="softmax_8cpp_source.html#l00086">jubatus::core::bandit::softmax::get_diff()</a>, and <a class="el" href="exp3_8cpp_source.html#l00109">jubatus::core::bandit::exp3::get_diff()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                                                    {</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  diff = <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">unmixed_</a>;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_adcfac98467edc16cec7851d98f89ee33"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">jubatus::core::bandit::summation_storage::unmixed_</a></div><div class="ttdeci">table_t unmixed_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00063">summation_storage.hpp:63</a></div></div>
+<p>Referenced by <a class="el" href="ucb1_8cpp_source.html#l00097">jubatus::core::bandit::ucb1::get_diff()</a>, <a class="el" href="epsilon__greedy_8cpp_source.html#l00095">jubatus::core::bandit::epsilon_greedy::get_diff()</a>, <a class="el" href="softmax_8cpp_source.html#l00090">jubatus::core::bandit::softmax::get_diff()</a>, and <a class="el" href="exp3_8cpp_source.html#l00113">jubatus::core::bandit::exp3::get_diff()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                                                    {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  diff = <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">unmixed_</a>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_adcfac98467edc16cec7851d98f89ee33"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">jubatus::core::bandit::summation_storage::unmixed_</a></div><div class="ttdeci">table_t unmixed_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00066">summation_storage.hpp:66</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -484,19 +500,19 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="summation__storage_8cpp_source.html#l00104">104</a> of file <a class="el" href="summation__storage_8cpp_source.html">summation_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="summation__storage_8cpp_source.html#l00149">149</a> of file <a class="el" href="summation__storage_8cpp_source.html">summation_storage.cpp</a>.</p>
 
-<p>References <a class="el" href="summation__storage_8cpp_source.html#l00092">get_arm_info()</a>, <a class="el" href="arm__info_8hpp_source.html#l00030">jubatus::core::bandit::arm_info::trial_count</a>, and <a class="el" href="arm__info_8hpp_source.html#l00031">jubatus::core::bandit::arm_info::weight</a>.</p>
+<p>References <a class="el" href="summation__storage_8cpp_source.html#l00137">get_arm_info()</a>, <a class="el" href="arm__info_8hpp_source.html#l00030">jubatus::core::bandit::arm_info::trial_count</a>, and <a class="el" href="arm__info_8hpp_source.html#l00031">jubatus::core::bandit::arm_info::weight</a>.</p>
 
-<p>Referenced by <a class="el" href="epsilon__greedy_8cpp_source.html#l00035">jubatus::core::bandit::epsilon_greedy::select_arm()</a>, and <a class="el" href="softmax_8cpp_source.html#l00038">jubatus::core::bandit::softmax::select_arm()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                                   {</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keyword">const</span> arm_info a = <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a922e07964d50c89756e0f2b7b8e994bc">get_arm_info</a>(player_id, arm_id);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keywordflow">if</span> (a.trial_count == 0) {</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  }</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keywordflow">return</span> a.weight / a.trial_count;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_a922e07964d50c89756e0f2b7b8e994bc"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a922e07964d50c89756e0f2b7b8e994bc">jubatus::core::bandit::summation_storage::get_arm_info</a></div><div class="ttdeci">arm_info get_arm_info(const std::string &amp;player_id, const std::string &amp;arm_id) const </div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8cpp_source.html#l00092">summation_storage.cpp:92</a></div></div>
+<p>Referenced by <a class="el" href="epsilon__greedy_8cpp_source.html#l00037">jubatus::core::bandit::epsilon_greedy::select_arm()</a>, and <a class="el" href="softmax_8cpp_source.html#l00040">jubatus::core::bandit::softmax::select_arm()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                                   {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  <span class="keyword">const</span> arm_info a = <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a922e07964d50c89756e0f2b7b8e994bc">get_arm_info</a>(player_id, arm_id);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="keywordflow">if</span> (a.trial_count == 0) {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keywordflow">return</span> a.weight / a.trial_count;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_a922e07964d50c89756e0f2b7b8e994bc"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a922e07964d50c89756e0f2b7b8e994bc">jubatus::core::bandit::summation_storage::get_arm_info</a></div><div class="ttdeci">arm_info get_arm_info(const std::string &amp;player_id, const std::string &amp;arm_id) const </div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8cpp_source.html#l00137">summation_storage.cpp:137</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -550,25 +566,25 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="summation__storage_8cpp_source.html#l00136">136</a> of file <a class="el" href="summation__storage_8cpp_source.html">summation_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="summation__storage_8cpp_source.html#l00181">181</a> of file <a class="el" href="summation__storage_8cpp_source.html">summation_storage.cpp</a>.</p>
 
 <p>References <a class="el" href="arm__info_8hpp_source.html#l00030">jubatus::core::bandit::arm_info::trial_count</a>, and <a class="el" href="arm__info_8hpp_source.html#l00031">jubatus::core::bandit::arm_info::weight</a>.</p>
 
-<p>Referenced by <a class="el" href="ucb1_8cpp_source.html#l00099">jubatus::core::bandit::ucb1::mix()</a>, <a class="el" href="epsilon__greedy_8cpp_source.html#l00097">jubatus::core::bandit::epsilon_greedy::mix()</a>, <a class="el" href="softmax_8cpp_source.html#l00092">jubatus::core::bandit::softmax::mix()</a>, <a class="el" href="exp3_8cpp_source.html#l00115">jubatus::core::bandit::exp3::mix()</a>, and <a class="el" href="summation__storage_8cpp_source.html#l00130">put_diff()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                                                            {</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <span class="keywordflow">for</span> (table_t::const_iterator iter = lhs.begin();</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;       iter != lhs.end(); ++iter) {</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1bandit.html#af291a92ff240efd58c0ad570c6d07384">arm_info_map</a>&amp; as0 = rhs[iter-&gt;first];</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacejubatus_1_1core_1_1bandit.html#af291a92ff240efd58c0ad570c6d07384">arm_info_map</a>&amp; as1 = iter-&gt;second;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordflow">for</span> (arm_info_map::const_iterator jter = as1.begin();</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;         jter != as1.end(); ++jter) {</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;      arm_info&amp; a0 = as0[jter-&gt;first];</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;      <span class="keyword">const</span> arm_info&amp; a1 = jter-&gt;second;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;      a0.trial_count += a1.trial_count;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;      a0.weight += a1.weight;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    }</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  }</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;}</div>
+<p>Referenced by <a class="el" href="ucb1_8cpp_source.html#l00103">jubatus::core::bandit::ucb1::mix()</a>, <a class="el" href="epsilon__greedy_8cpp_source.html#l00101">jubatus::core::bandit::epsilon_greedy::mix()</a>, <a class="el" href="softmax_8cpp_source.html#l00096">jubatus::core::bandit::softmax::mix()</a>, <a class="el" href="exp3_8cpp_source.html#l00119">jubatus::core::bandit::exp3::mix()</a>, and <a class="el" href="summation__storage_8cpp_source.html#l00175">put_diff()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                                                            {</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="keywordflow">for</span> (table_t::const_iterator iter = lhs.begin();</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;       iter != lhs.end(); ++iter) {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1bandit.html#af291a92ff240efd58c0ad570c6d07384">arm_info_map</a>&amp; as0 = rhs[iter-&gt;first];</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacejubatus_1_1core_1_1bandit.html#af291a92ff240efd58c0ad570c6d07384">arm_info_map</a>&amp; as1 = iter-&gt;second;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordflow">for</span> (arm_info_map::const_iterator jter = as1.begin();</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;         jter != as1.end(); ++jter) {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;      arm_info&amp; a0 = as0[jter-&gt;first];</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;      <span class="keyword">const</span> arm_info&amp; a1 = jter-&gt;second;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;      a0.trial_count += a1.trial_count;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;      a0.weight += a1.weight;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;}</div>
 <div class="ttc" id="namespacejubatus_1_1core_1_1bandit_html_af291a92ff240efd58c0ad570c6d07384"><div class="ttname"><a href="namespacejubatus_1_1core_1_1bandit.html#af291a92ff240efd58c0ad570c6d07384">jubatus::core::bandit::arm_info_map</a></div><div class="ttdeci">jubatus::util::data::unordered_map&lt; std::string, arm_info &gt; arm_info_map</div><div class="ttdef"><b>Definition:</b> <a href="arm__info_8hpp_source.html#l00036">arm_info.hpp:36</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
@@ -614,6 +630,57 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="a71fd0d39d57713fc9642634f87aa2a88"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void jubatus::core::bandit::summation_storage::notify_selected </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>player_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>arm_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="summation__storage_8cpp_source.html#l00095">95</a> of file <a class="el" href="summation__storage_8cpp_source.html">summation_storage.cpp</a>.</p>
+
+<p>References <a class="el" href="summation__storage_8hpp_source.html#l00065">arm_ids_</a>, <a class="el" href="summation__storage_8hpp_source.html#l00064">assume_unrewarded_</a>, <a class="el" href="arm__info_8hpp_source.html#l00030">jubatus::core::bandit::arm_info::trial_count</a>, and <a class="el" href="summation__storage_8hpp_source.html#l00066">unmixed_</a>.</p>
+
+<p>Referenced by <a class="el" href="ucb1_8cpp_source.html#l00034">jubatus::core::bandit::ucb1::select_arm()</a>, <a class="el" href="epsilon__greedy_8cpp_source.html#l00037">jubatus::core::bandit::epsilon_greedy::select_arm()</a>, <a class="el" href="softmax_8cpp_source.html#l00040">jubatus::core::bandit::softmax::select_arm()</a>, and <a class="el" href="exp3_8cpp_source.html#l00060">jubatus::core::bandit::exp3::select_arm()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                             {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a9b0ccc3cbc5a56b5efb9ad56af6a4108">assume_unrewarded_</a>) {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  arm_info&amp; a = get_arm_info_(<a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">unmixed_</a>, <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">arm_ids_</a>, player_id, arm_id);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  a.trial_count += 1;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_adcfac98467edc16cec7851d98f89ee33"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">jubatus::core::bandit::summation_storage::unmixed_</a></div><div class="ttdeci">table_t unmixed_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00066">summation_storage.hpp:66</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_a73d5b2a08f8a475dbca937f006e463fe"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">jubatus::core::bandit::summation_storage::arm_ids_</a></div><div class="ttdeci">std::vector&lt; std::string &gt; arm_ids_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00065">summation_storage.hpp:65</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_a9b0ccc3cbc5a56b5efb9ad56af6a4108"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a9b0ccc3cbc5a56b5efb9ad56af6a4108">jubatus::core::bandit::summation_storage::assume_unrewarded_</a></div><div class="ttdeci">const bool assume_unrewarded_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00064">summation_storage.hpp:64</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classjubatus_1_1core_1_1bandit_1_1summation__storage_a71fd0d39d57713fc9642634f87aa2a88_icgraph.png" border="0" usemap="#classjubatus_1_1core_1_1bandit_1_1summation__storage_a71fd0d39d57713fc9642634f87aa2a88_icgraph" alt=""/></div>
+<map name="classjubatus_1_1core_1_1bandit_1_1summation__storage_a71fd0d39d57713fc9642634f87aa2a88_icgraph" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_a71fd0d39d57713fc9642634f87aa2a88_icgraph">
+<area shape="rect" id="node2" href="classjubatus_1_1core_1_1bandit_1_1ucb1.html#a21e20c323726121b10fc367d20f6444d" title="jubatus::core::bandit\l::ucb1::select_arm" alt="" coords="232,5,373,44"/><area shape="rect" id="node3" href="classjubatus_1_1core_1_1bandit_1_1epsilon__greedy.html#af2675a65a648567ff5f4b4e84e209b0d" title="jubatus::core::bandit\l::epsilon_greedy::select_arm" alt="" coords="207,68,398,107"/><area shape="rect" id="node4" href="classjubatus_1_1core_1_1bandit_1_1softmax.html#a89e31d1d230ba5b71a1f4ea9f6248598" title="jubatus::core::bandit\l::softmax::select_arm" alt="" coords="228,131,376,169"/><area shape="rect" id="node5" href="classjubatus_1_1core_1_1bandit_1_1exp3.html#a60ca2395a8c2ad8d7de2c1750fbc6364" title="jubatus::core::bandit\l::exp3::select_arm" alt="" coords="232,193,373,232"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="abe15668f203a9ad079e09c36700f17e9"></a>
 <div class="memitem">
 <div class="memproto">
@@ -628,19 +695,19 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="summation__storage_8cpp_source.html#l00130">130</a> of file <a class="el" href="summation__storage_8cpp_source.html">summation_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="summation__storage_8cpp_source.html#l00175">175</a> of file <a class="el" href="summation__storage_8cpp_source.html">summation_storage.cpp</a>.</p>
 
-<p>References <a class="el" href="summation__storage_8cpp_source.html#l00136">mix()</a>, <a class="el" href="summation__storage_8hpp_source.html#l00063">mixed_</a>, and <a class="el" href="summation__storage_8hpp_source.html#l00063">unmixed_</a>.</p>
+<p>References <a class="el" href="summation__storage_8cpp_source.html#l00181">mix()</a>, <a class="el" href="summation__storage_8hpp_source.html#l00066">mixed_</a>, and <a class="el" href="summation__storage_8hpp_source.html#l00066">unmixed_</a>.</p>
 
-<p>Referenced by <a class="el" href="ucb1_8cpp_source.html#l00096">jubatus::core::bandit::ucb1::put_diff()</a>, <a class="el" href="epsilon__greedy_8cpp_source.html#l00094">jubatus::core::bandit::epsilon_greedy::put_diff()</a>, <a class="el" href="softmax_8cpp_source.html#l00089">jubatus::core::bandit::softmax::put_diff()</a>, and <a class="el" href="exp3_8cpp_source.html#l00112">jubatus::core::bandit::exp3::put_diff()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                                                    {</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a9bc682c06670f0d4578e1a4549bf1b61">mix</a>(diff, <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a764a5b531d6df04966a1cd3fddd1aafb">mixed_</a>);</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">unmixed_</a>.clear();</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_adcfac98467edc16cec7851d98f89ee33"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">jubatus::core::bandit::summation_storage::unmixed_</a></div><div class="ttdeci">table_t unmixed_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00063">summation_storage.hpp:63</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_a764a5b531d6df04966a1cd3fddd1aafb"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a764a5b531d6df04966a1cd3fddd1aafb">jubatus::core::bandit::summation_storage::mixed_</a></div><div class="ttdeci">table_t mixed_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00063">summation_storage.hpp:63</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_a9bc682c06670f0d4578e1a4549bf1b61"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a9bc682c06670f0d4578e1a4549bf1b61">jubatus::core::bandit::summation_storage::mix</a></div><div class="ttdeci">static void mix(const table_t &amp;lhs, table_t &amp;rhs)</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8cpp_source.html#l00136">summation_storage.cpp:136</a></div></div>
+<p>Referenced by <a class="el" href="ucb1_8cpp_source.html#l00100">jubatus::core::bandit::ucb1::put_diff()</a>, <a class="el" href="epsilon__greedy_8cpp_source.html#l00098">jubatus::core::bandit::epsilon_greedy::put_diff()</a>, <a class="el" href="softmax_8cpp_source.html#l00093">jubatus::core::bandit::softmax::put_diff()</a>, and <a class="el" href="exp3_8cpp_source.html#l00116">jubatus::core::bandit::exp3::put_diff()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                                                    {</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a9bc682c06670f0d4578e1a4549bf1b61">mix</a>(diff, <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a764a5b531d6df04966a1cd3fddd1aafb">mixed_</a>);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">unmixed_</a>.clear();</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_adcfac98467edc16cec7851d98f89ee33"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">jubatus::core::bandit::summation_storage::unmixed_</a></div><div class="ttdeci">table_t unmixed_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00066">summation_storage.hpp:66</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_a764a5b531d6df04966a1cd3fddd1aafb"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a764a5b531d6df04966a1cd3fddd1aafb">jubatus::core::bandit::summation_storage::mixed_</a></div><div class="ttdeci">table_t mixed_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00066">summation_storage.hpp:66</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_a9bc682c06670f0d4578e1a4549bf1b61"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a9bc682c06670f0d4578e1a4549bf1b61">jubatus::core::bandit::summation_storage::mix</a></div><div class="ttdeci">static void mix(const table_t &amp;lhs, table_t &amp;rhs)</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8cpp_source.html#l00181">summation_storage.cpp:181</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -676,20 +743,28 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="summation__storage_8cpp_source.html#l00029">29</a> of file <a class="el" href="summation__storage_8cpp_source.html">summation_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="summation__storage_8cpp_source.html#l00031">31</a> of file <a class="el" href="summation__storage_8cpp_source.html">summation_storage.cpp</a>.</p>
 
-<p>References <a class="el" href="summation__storage_8hpp_source.html#l00062">arm_ids_</a>.</p>
+<p>References <a class="el" href="summation__storage_8hpp_source.html#l00065">arm_ids_</a>, and <a class="el" href="summation__storage_8hpp_source.html#l00066">unmixed_</a>.</p>
 
-<p>Referenced by <a class="el" href="ucb1_8cpp_source.html#l00062">jubatus::core::bandit::ucb1::register_arm()</a>, <a class="el" href="epsilon__greedy_8cpp_source.html#l00060">jubatus::core::bandit::epsilon_greedy::register_arm()</a>, <a class="el" href="softmax_8cpp_source.html#l00055">jubatus::core::bandit::softmax::register_arm()</a>, and <a class="el" href="exp3_8cpp_source.html#l00070">jubatus::core::bandit::exp3::register_arm()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                                                            {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordflow">if</span> (std::find(<a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">arm_ids_</a>.begin(), <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">arm_ids_</a>.end(), arm_id) != <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">arm_ids_</a>.end()) {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">// arm_id is already in arms_</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">arm_ids_</a>.push_back(arm_id);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_a73d5b2a08f8a475dbca937f006e463fe"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">jubatus::core::bandit::summation_storage::arm_ids_</a></div><div class="ttdeci">std::vector&lt; std::string &gt; arm_ids_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00062">summation_storage.hpp:62</a></div></div>
+<p>Referenced by <a class="el" href="ucb1_8cpp_source.html#l00066">jubatus::core::bandit::ucb1::register_arm()</a>, <a class="el" href="epsilon__greedy_8cpp_source.html#l00064">jubatus::core::bandit::epsilon_greedy::register_arm()</a>, <a class="el" href="softmax_8cpp_source.html#l00059">jubatus::core::bandit::softmax::register_arm()</a>, and <a class="el" href="exp3_8cpp_source.html#l00074">jubatus::core::bandit::exp3::register_arm()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                                            {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordflow">if</span> (std::find(<a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">arm_ids_</a>.begin(), <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">arm_ids_</a>.end(), arm_id) != <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">arm_ids_</a>.end()) {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">// arm_id is already in arms_</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">arm_ids_</a>.push_back(arm_id);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">const</span> arm_info a0 = {0, 0.0};</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordflow">for</span> (table_t::iterator iter = <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">unmixed_</a>.begin();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      iter != <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">unmixed_</a>.end(); ++iter) {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1bandit.html#af291a92ff240efd58c0ad570c6d07384">arm_info_map</a>&amp; as = iter-&gt;second;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    as.insert(std::make_pair(arm_id, a0));</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_adcfac98467edc16cec7851d98f89ee33"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">jubatus::core::bandit::summation_storage::unmixed_</a></div><div class="ttdeci">table_t unmixed_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00066">summation_storage.hpp:66</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_a73d5b2a08f8a475dbca937f006e463fe"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">jubatus::core::bandit::summation_storage::arm_ids_</a></div><div class="ttdeci">std::vector&lt; std::string &gt; arm_ids_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00065">summation_storage.hpp:65</a></div></div>
+<div class="ttc" id="namespacejubatus_1_1core_1_1bandit_html_af291a92ff240efd58c0ad570c6d07384"><div class="ttname"><a href="namespacejubatus_1_1core_1_1bandit.html#af291a92ff240efd58c0ad570c6d07384">jubatus::core::bandit::arm_info_map</a></div><div class="ttdeci">jubatus::util::data::unordered_map&lt; std::string, arm_info &gt; arm_info_map</div><div class="ttdef"><b>Definition:</b> <a href="arm__info_8hpp_source.html#l00036">arm_info.hpp:36</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -732,20 +807,22 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="summation__storage_8cpp_source.html#l00061">61</a> of file <a class="el" href="summation__storage_8cpp_source.html">summation_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="summation__storage_8cpp_source.html#l00105">105</a> of file <a class="el" href="summation__storage_8cpp_source.html">summation_storage.cpp</a>.</p>
 
-<p>References <a class="el" href="arm__info_8hpp_source.html#l00030">jubatus::core::bandit::arm_info::trial_count</a>, <a class="el" href="summation__storage_8hpp_source.html#l00063">unmixed_</a>, and <a class="el" href="arm__info_8hpp_source.html#l00031">jubatus::core::bandit::arm_info::weight</a>.</p>
+<p>References <a class="el" href="summation__storage_8hpp_source.html#l00065">arm_ids_</a>, <a class="el" href="summation__storage_8hpp_source.html#l00064">assume_unrewarded_</a>, <a class="el" href="arm__info_8hpp_source.html#l00030">jubatus::core::bandit::arm_info::trial_count</a>, <a class="el" href="summation__storage_8hpp_source.html#l00066">unmixed_</a>, and <a class="el" href="arm__info_8hpp_source.html#l00031">jubatus::core::bandit::arm_info::weight</a>.</p>
 
-<p>Referenced by <a class="el" href="ucb1_8cpp_source.html#l00069">jubatus::core::bandit::ucb1::register_reward()</a>, <a class="el" href="epsilon__greedy_8cpp_source.html#l00067">jubatus::core::bandit::epsilon_greedy::register_reward()</a>, <a class="el" href="softmax_8cpp_source.html#l00062">jubatus::core::bandit::softmax::register_reward()</a>, and <a class="el" href="exp3_8cpp_source.html#l00077">jubatus::core::bandit::exp3::register_reward()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                   {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <a class="code" href="namespacejubatus_1_1core_1_1bandit.html#af291a92ff240efd58c0ad570c6d07384">arm_info_map</a>&amp; as = <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">unmixed_</a>[player_id];</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  arm_info&amp; a = as[arm_id];</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  a.trial_count += 1;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  a.weight += reward;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_adcfac98467edc16cec7851d98f89ee33"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">jubatus::core::bandit::summation_storage::unmixed_</a></div><div class="ttdeci">table_t unmixed_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00063">summation_storage.hpp:63</a></div></div>
-<div class="ttc" id="namespacejubatus_1_1core_1_1bandit_html_af291a92ff240efd58c0ad570c6d07384"><div class="ttname"><a href="namespacejubatus_1_1core_1_1bandit.html#af291a92ff240efd58c0ad570c6d07384">jubatus::core::bandit::arm_info_map</a></div><div class="ttdeci">jubatus::util::data::unordered_map&lt; std::string, arm_info &gt; arm_info_map</div><div class="ttdef"><b>Definition:</b> <a href="arm__info_8hpp_source.html#l00036">arm_info.hpp:36</a></div></div>
+<p>Referenced by <a class="el" href="ucb1_8cpp_source.html#l00073">jubatus::core::bandit::ucb1::register_reward()</a>, <a class="el" href="epsilon__greedy_8cpp_source.html#l00071">jubatus::core::bandit::epsilon_greedy::register_reward()</a>, <a class="el" href="softmax_8cpp_source.html#l00066">jubatus::core::bandit::softmax::register_reward()</a>, and <a class="el" href="exp3_8cpp_source.html#l00081">jubatus::core::bandit::exp3::register_reward()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                   {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  arm_info&amp; a = get_arm_info_(<a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">unmixed_</a>, <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">arm_ids_</a>, player_id, arm_id);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a9b0ccc3cbc5a56b5efb9ad56af6a4108">assume_unrewarded_</a>) {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    a.trial_count += 1;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  a.weight += reward;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_adcfac98467edc16cec7851d98f89ee33"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">jubatus::core::bandit::summation_storage::unmixed_</a></div><div class="ttdeci">table_t unmixed_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00066">summation_storage.hpp:66</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_a73d5b2a08f8a475dbca937f006e463fe"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a73d5b2a08f8a475dbca937f006e463fe">jubatus::core::bandit::summation_storage::arm_ids_</a></div><div class="ttdeci">std::vector&lt; std::string &gt; arm_ids_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00065">summation_storage.hpp:65</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_a9b0ccc3cbc5a56b5efb9ad56af6a4108"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a9b0ccc3cbc5a56b5efb9ad56af6a4108">jubatus::core::bandit::summation_storage::assume_unrewarded_</a></div><div class="ttdeci">const bool assume_unrewarded_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00064">summation_storage.hpp:64</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -772,18 +849,18 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="summation__storage_8cpp_source.html#l00151">151</a> of file <a class="el" href="summation__storage_8cpp_source.html">summation_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="summation__storage_8cpp_source.html#l00196">196</a> of file <a class="el" href="summation__storage_8cpp_source.html">summation_storage.cpp</a>.</p>
 
-<p>References <a class="el" href="summation__storage_8hpp_source.html#l00063">mixed_</a>, and <a class="el" href="summation__storage_8hpp_source.html#l00063">unmixed_</a>.</p>
+<p>References <a class="el" href="summation__storage_8hpp_source.html#l00066">mixed_</a>, and <a class="el" href="summation__storage_8hpp_source.html#l00066">unmixed_</a>.</p>
 
-<p>Referenced by <a class="el" href="ucb1_8cpp_source.html#l00079">jubatus::core::bandit::ucb1::reset()</a>, <a class="el" href="epsilon__greedy_8cpp_source.html#l00077">jubatus::core::bandit::epsilon_greedy::reset()</a>, <a class="el" href="softmax_8cpp_source.html#l00072">jubatus::core::bandit::softmax::reset()</a>, and <a class="el" href="exp3_8cpp_source.html#l00095">jubatus::core::bandit::exp3::reset()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                                                        {</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  <span class="keywordtype">bool</span> result1 = <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a764a5b531d6df04966a1cd3fddd1aafb">mixed_</a>.erase(player_id) &gt; 0;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="keywordtype">bool</span> result2 = <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">unmixed_</a>.erase(player_id) &gt; 0;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keywordflow">return</span> result1 || result2;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_adcfac98467edc16cec7851d98f89ee33"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">jubatus::core::bandit::summation_storage::unmixed_</a></div><div class="ttdeci">table_t unmixed_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00063">summation_storage.hpp:63</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_a764a5b531d6df04966a1cd3fddd1aafb"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a764a5b531d6df04966a1cd3fddd1aafb">jubatus::core::bandit::summation_storage::mixed_</a></div><div class="ttdeci">table_t mixed_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00063">summation_storage.hpp:63</a></div></div>
+<p>Referenced by <a class="el" href="ucb1_8cpp_source.html#l00083">jubatus::core::bandit::ucb1::reset()</a>, <a class="el" href="epsilon__greedy_8cpp_source.html#l00081">jubatus::core::bandit::epsilon_greedy::reset()</a>, <a class="el" href="softmax_8cpp_source.html#l00076">jubatus::core::bandit::softmax::reset()</a>, and <a class="el" href="exp3_8cpp_source.html#l00099">jubatus::core::bandit::exp3::reset()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                                                        {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  <span class="keywordtype">bool</span> result1 = <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a764a5b531d6df04966a1cd3fddd1aafb">mixed_</a>.erase(player_id) &gt; 0;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  <span class="keywordtype">bool</span> result2 = <a class="code" href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">unmixed_</a>.erase(player_id) &gt; 0;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  <span class="keywordflow">return</span> result1 || result2;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_adcfac98467edc16cec7851d98f89ee33"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#adcfac98467edc16cec7851d98f89ee33">jubatus::core::bandit::summation_storage::unmixed_</a></div><div class="ttdeci">table_t unmixed_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00066">summation_storage.hpp:66</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1bandit_1_1summation__storage_html_a764a5b531d6df04966a1cd3fddd1aafb"><div class="ttname"><a href="classjubatus_1_1core_1_1bandit_1_1summation__storage.html#a764a5b531d6df04966a1cd3fddd1aafb">jubatus::core::bandit::summation_storage::mixed_</a></div><div class="ttdeci">table_t mixed_</div><div class="ttdef"><b>Definition:</b> <a href="summation__storage_8hpp_source.html#l00066">summation_storage.hpp:66</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -815,9 +892,33 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="summation__storage_8hpp_source.html#l00062">62</a> of file <a class="el" href="summation__storage_8hpp_source.html">summation_storage.hpp</a>.</p>
+<p>Definition at line <a class="el" href="summation__storage_8hpp_source.html#l00065">65</a> of file <a class="el" href="summation__storage_8hpp_source.html">summation_storage.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="summation__storage_8cpp_source.html#l00048">delete_arm()</a>, <a class="el" href="summation__storage_8hpp_source.html#l00047">get_arm_ids()</a>, <a class="el" href="summation__storage_8cpp_source.html#l00114">get_arm_info_map()</a>, and <a class="el" href="summation__storage_8cpp_source.html#l00029">register_arm()</a>.</p>
+<p>Referenced by <a class="el" href="summation__storage_8cpp_source.html#l00202">clear()</a>, <a class="el" href="summation__storage_8cpp_source.html#l00082">delete_arm()</a>, <a class="el" href="summation__storage_8hpp_source.html#l00049">get_arm_ids()</a>, <a class="el" href="summation__storage_8cpp_source.html#l00159">get_arm_info_map()</a>, <a class="el" href="summation__storage_8cpp_source.html#l00095">notify_selected()</a>, <a class="el" href="summation__storage_8cpp_source.html#l00031">register_arm()</a>, and <a class="el" href="summation__storage_8cpp_source.html#l00105">register_reward()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9b0ccc3cbc5a56b5efb9ad56af6a4108"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool jubatus::core::bandit::summation_storage::assume_unrewarded_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="summation__storage_8hpp_source.html#l00064">64</a> of file <a class="el" href="summation__storage_8hpp_source.html">summation_storage.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="summation__storage_8cpp_source.html#l00095">notify_selected()</a>, and <a class="el" href="summation__storage_8cpp_source.html#l00105">register_reward()</a>.</p>
 
 </div>
 </div>
@@ -839,9 +940,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="summation__storage_8hpp_source.html#l00063">63</a> of file <a class="el" href="summation__storage_8hpp_source.html">summation_storage.hpp</a>.</p>
+<p>Definition at line <a class="el" href="summation__storage_8hpp_source.html#l00066">66</a> of file <a class="el" href="summation__storage_8hpp_source.html">summation_storage.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="summation__storage_8cpp_source.html#l00157">clear()</a>, <a class="el" href="summation__storage_8cpp_source.html#l00048">delete_arm()</a>, <a class="el" href="summation__storage_8cpp_source.html#l00092">get_arm_info()</a>, <a class="el" href="summation__storage_8cpp_source.html#l00130">put_diff()</a>, and <a class="el" href="summation__storage_8cpp_source.html#l00151">reset()</a>.</p>
+<p>Referenced by <a class="el" href="summation__storage_8cpp_source.html#l00202">clear()</a>, <a class="el" href="summation__storage_8cpp_source.html#l00082">delete_arm()</a>, <a class="el" href="summation__storage_8cpp_source.html#l00137">get_arm_info()</a>, <a class="el" href="summation__storage_8cpp_source.html#l00175">put_diff()</a>, and <a class="el" href="summation__storage_8cpp_source.html#l00196">reset()</a>.</p>
 
 </div>
 </div>
@@ -863,9 +964,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="summation__storage_8hpp_source.html#l00063">63</a> of file <a class="el" href="summation__storage_8hpp_source.html">summation_storage.hpp</a>.</p>
+<p>Definition at line <a class="el" href="summation__storage_8hpp_source.html#l00066">66</a> of file <a class="el" href="summation__storage_8hpp_source.html">summation_storage.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="summation__storage_8cpp_source.html#l00157">clear()</a>, <a class="el" href="summation__storage_8cpp_source.html#l00048">delete_arm()</a>, <a class="el" href="summation__storage_8cpp_source.html#l00092">get_arm_info()</a>, <a class="el" href="summation__storage_8cpp_source.html#l00126">get_diff()</a>, <a class="el" href="summation__storage_8cpp_source.html#l00130">put_diff()</a>, <a class="el" href="summation__storage_8cpp_source.html#l00061">register_reward()</a>, and <a class="el" href="summation__storage_8cpp_source.html#l00151">reset()</a>.</p>
+<p>Referenced by <a class="el" href="summation__storage_8cpp_source.html#l00202">clear()</a>, <a class="el" href="summation__storage_8cpp_source.html#l00082">delete_arm()</a>, <a class="el" href="summation__storage_8cpp_source.html#l00137">get_arm_info()</a>, <a class="el" href="summation__storage_8cpp_source.html#l00171">get_diff()</a>, <a class="el" href="summation__storage_8cpp_source.html#l00095">notify_selected()</a>, <a class="el" href="summation__storage_8cpp_source.html#l00175">put_diff()</a>, <a class="el" href="summation__storage_8cpp_source.html#l00031">register_arm()</a>, <a class="el" href="summation__storage_8cpp_source.html#l00105">register_reward()</a>, and <a class="el" href="summation__storage_8cpp_source.html#l00196">reset()</a>.</p>
 
 </div>
 </div>
@@ -876,7 +977,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:37 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:05 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

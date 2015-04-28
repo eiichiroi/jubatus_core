@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -120,7 +120,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classjubatus_1_1core_1_1framework_1_1model.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="classjubatus_1_1core_1_1framework_1_1model.html">model</a> {</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classjubatus_1_1core_1_1framework_1_1model.html#ac60106de5c13905cfcc53d6590ba141e">~model</a>();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1framework_1_1model.html#a9fdb1638abb6a9106798104fd6262e77">pack</a>(<a class="code" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">framework::packer</a>&amp; <a class="code" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">packer</a>) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1framework_1_1model.html#a9fdb1638abb6a9106798104fd6262e77">pack</a>(<a class="code" href="classmsgpack_1_1packer.html">framework::packer</a>&amp; <a class="code" href="classmsgpack_1_1packer.html">packer</a>) <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1framework_1_1model.html#af0e8eafe8e66072d8d23e9f48850a0e2">unpack</a>(msgpack::object o) = 0;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1framework_1_1model.html#a171565e665abe39dfa4bf6ef1f225096">clear</a>();</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
@@ -134,14 +134,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="namespacejubatus_html"><div class="ttname"><a href="namespacejubatus.html">jubatus</a></div><div class="ttdef"><b>Definition:</b> <a href="anomaly__base_8cpp_source.html#l00029">anomaly_base.cpp:29</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1framework_1_1model_html_a171565e665abe39dfa4bf6ef1f225096"><div class="ttname"><a href="classjubatus_1_1core_1_1framework_1_1model.html#a171565e665abe39dfa4bf6ef1f225096">jubatus::core::framework::model::clear</a></div><div class="ttdeci">virtual void clear()</div><div class="ttdef"><b>Definition:</b> <a href="model_8cpp_source.html#l00026">model.cpp:26</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1framework_1_1model_html_a9fdb1638abb6a9106798104fd6262e77"><div class="ttname"><a href="classjubatus_1_1core_1_1framework_1_1model.html#a9fdb1638abb6a9106798104fd6262e77">jubatus::core::framework::model::pack</a></div><div class="ttdeci">virtual void pack(framework::packer &amp;packer) const =0</div></div>
-<div class="ttc" id="namespacejubatus_1_1core_1_1framework_html_a99dd974442916078e2a3458b1e85b254"><div class="ttname"><a href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">jubatus::core::framework::packer</a></div><div class="ttdeci">msgpack::packer&lt; jubatus_packer &gt; packer</div><div class="ttdef"><b>Definition:</b> <a href="packer_8hpp_source.html#l00043">packer.hpp:43</a></div></div>
+<div class="ttc" id="classmsgpack_1_1packer_html"><div class="ttname"><a href="classmsgpack_1_1packer.html">msgpack::packer</a></div><div class="ttdef"><b>Definition:</b> <a href="bandit__base_8hpp_source.html#l00026">bandit_base.hpp:26</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1framework_1_1model_html"><div class="ttname"><a href="classjubatus_1_1core_1_1framework_1_1model.html">jubatus::core::framework::model</a></div><div class="ttdef"><b>Definition:</b> <a href="model_8hpp_source.html#l00027">model.hpp:27</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1framework_1_1model_html_af0e8eafe8e66072d8d23e9f48850a0e2"><div class="ttname"><a href="classjubatus_1_1core_1_1framework_1_1model.html#af0e8eafe8e66072d8d23e9f48850a0e2">jubatus::core::framework::model::unpack</a></div><div class="ttdeci">virtual void unpack(msgpack::object o)=0</div></div>
 <div class="ttc" id="packer_8hpp_html"><div class="ttname"><a href="packer_8hpp.html">packer.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:35 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:03 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

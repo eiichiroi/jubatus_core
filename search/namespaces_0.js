@@ -11,7 +11,6 @@ var searchData=
   ['data',['data',['../namespacejubatus_1_1util_1_1data.html',1,'jubatus::util']]],
   ['detail',['detail',['../namespacejubatus_1_1core_1_1common_1_1exception_1_1detail.html',1,'jubatus::core::common::exception']]],
   ['detail',['detail',['../namespacejubatus_1_1core_1_1storage_1_1detail.html',1,'jubatus::core::storage']]],
-  ['detail',['detail',['../namespacejubatus_1_1core_1_1table_1_1detail.html',1,'jubatus::core::table']]],
   ['detail',['detail',['../namespacejubatus_1_1core_1_1common_1_1jsonconfig_1_1detail.html',1,'jubatus::core::common::jsonconfig']]],
   ['driver',['driver',['../namespacejubatus_1_1core_1_1driver.html',1,'jubatus::core']]],
   ['exception',['exception',['../namespacejubatus_1_1core_1_1common_1_1exception.html',1,'jubatus::core::common']]],
@@ -26,7 +25,6 @@ var searchData=
   ['regression',['regression',['../namespacejubatus_1_1core_1_1regression.html',1,'jubatus::core']]],
   ['stat',['stat',['../namespacejubatus_1_1core_1_1stat.html',1,'jubatus::core']]],
   ['storage',['storage',['../namespacejubatus_1_1core_1_1storage.html',1,'jubatus::core']]],
-  ['table',['table',['../namespacejubatus_1_1core_1_1table.html',1,'jubatus::core']]],
   ['text',['text',['../namespacejubatus_1_1util_1_1text.html',1,'jubatus::util']]],
   ['unlearner',['unlearner',['../namespacejubatus_1_1core_1_1unlearner.html',1,'jubatus::core']]],
   ['util',['util',['../namespacejubatus_1_1util.html',1,'jubatus']]]

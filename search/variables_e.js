@@ -7,5 +7,5 @@ var searchData=
   ['original',['original',['../structjubatus_1_1core_1_1clustering_1_1weighted__point.html#a29129ffbf5c3066034bdbc19a435eca9',1,'jubatus::core::clustering::weighted_point']]],
   ['out_5fdegree_5fnum',['out_degree_num',['../structjubatus_1_1core_1_1graph_1_1eigen__vector__info.html#a33f223126131acbd93ea2da6cdd0efa5',1,'jubatus::core::graph::eigen_vector_info']]],
   ['out_5fedges',['out_edges',['../structjubatus_1_1core_1_1graph_1_1node__info.html#a0ba176a5454e2bbe688f2a88afd245d1',1,'jubatus::core::graph::node_info']]],
-  ['own_5f',['own_',['../structjubatus_1_1core_1_1table_1_1bit__vector__base.html#a441dff58d40218db432aec30528e25c3',1,'jubatus::core::table::bit_vector_base']]]
+  ['own_5f',['own_',['../classjubatus_1_1core_1_1storage_1_1bit__vector__base.html#a792dd2db87b4496ad82b0d2a40e1eeb1',1,'jubatus::core::storage::bit_vector_base']]]
 ];

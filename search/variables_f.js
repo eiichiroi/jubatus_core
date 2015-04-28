@@ -11,6 +11,6 @@ var searchData=
   ['pimpl_5f',['pimpl_',['../classjubatus_1_1core_1_1fv__converter_1_1datum__to__fv__converter.html#a01742bcf7cc3e9388d5b3c4edf8dd894',1,'jubatus::core::fv_converter::datum_to_fv_converter']]],
   ['prefix_5f',['prefix_',['../classjubatus_1_1core_1_1fv__converter_1_1prefix__match.html#af49c54f886cd846c3f52716fa9f3693c',1,'jubatus::core::fv_converter::prefix_match']]],
   ['probe_5fnum',['probe_num',['../structjubatus_1_1core_1_1recommender_1_1euclid__lsh_1_1config.html#a492a0eac7d027ddebf1d658854317da8',1,'jubatus::core::recommender::euclid_lsh::config']]],
-  ['projection_5f',['projection_',['../classjubatus_1_1core_1_1recommender_1_1euclid__lsh.html#a4cec0c925b9981184558480c5c816630',1,'jubatus::core::recommender::euclid_lsh']]],
+  ['projection_5fcache_5f',['projection_cache_',['../classjubatus_1_1core_1_1recommender_1_1euclid__lsh.html#afc067c4d16a58250ef5a85134705ede1',1,'jubatus::core::recommender::euclid_lsh']]],
   ['property',['property',['../structjubatus_1_1core_1_1graph_1_1node__info.html#aaa6bae1d8dcb9b9716cb7ee0571d36c7',1,'jubatus::core::graph::node_info']]]
 ];

@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -137,7 +137,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  diff_t <a class="code" href="classjubatus_1_1core_1_1burst_1_1result__storage.html#afe1a440ca15693e36c20b1f27ffde45a">get_diff</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1burst_1_1result__storage.html#af0aafdb1451345c3d4000c87ffa62d7f">put_diff</a>(<span class="keyword">const</span> diff_t&amp; diff);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1burst_1_1result__storage.html#a5f6b36b5d41ee6a98884b3a08be4203a">pack</a>(<a class="code" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">framework::packer</a>&amp; <a class="code" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">packer</a>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1burst_1_1result__storage.html#a5f6b36b5d41ee6a98884b3a08be4203a">pack</a>(<a class="code" href="classmsgpack_1_1packer.html">framework::packer</a>&amp; <a class="code" href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">packer</a>) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1burst_1_1result__storage.html#a60d1220f2b57d1b1f60f8ee3a7ce2a3e">unpack</a>(msgpack::object o);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; <span class="keyword">private</span>:</div>
@@ -163,15 +163,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classjubatus_1_1core_1_1burst_1_1result__storage_html_a55a114e08b9622d0f54fec94e5e282c3"><div class="ttname"><a href="classjubatus_1_1core_1_1burst_1_1result__storage.html#a55a114e08b9622d0f54fec94e5e282c3">jubatus::core::burst::result_storage::store</a></div><div class="ttdeci">void store(const result_t &amp;result)</div><div class="ttdef"><b>Definition:</b> <a href="result__storage_8cpp_source.html#l00129">result_storage.cpp:129</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1burst_1_1result__storage_html_a4309ae8a75d28a12af77508fd3541d56"><div class="ttname"><a href="classjubatus_1_1core_1_1burst_1_1result__storage.html#a4309ae8a75d28a12af77508fd3541d56">jubatus::core::burst::result_storage::result_storage</a></div><div class="ttdeci">result_storage(int stored_results_max)</div><div class="ttdef"><b>Definition:</b> <a href="result__storage_8cpp_source.html#l00122">result_storage.cpp:122</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1burst_1_1result__storage_html_a8721c28cf76d21fd547ff4e6fd6764b4"><div class="ttname"><a href="classjubatus_1_1core_1_1burst_1_1result__storage.html#a8721c28cf76d21fd547ff4e6fd6764b4">jubatus::core::burst::result_storage::result_t</a></div><div class="ttdeci">burst_result result_t</div><div class="ttdef"><b>Definition:</b> <a href="result__storage_8hpp_source.html#l00033">result_storage.hpp:33</a></div></div>
+<div class="ttc" id="namespacejubatus_1_1core_1_1framework_html_a352834534d9a8d7a43dc7c73f0b65aa9"><div class="ttname"><a href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">jubatus::core::framework::packer</a></div><div class="ttdeci">msgpack::packer&lt; jubatus_packer &gt; packer</div><div class="ttdef"><b>Definition:</b> <a href="bandit__base_8hpp_source.html#l00031">bandit_base.hpp:31</a></div></div>
+<div class="ttc" id="classmsgpack_1_1packer_html"><div class="ttname"><a href="classmsgpack_1_1packer.html">msgpack::packer</a></div><div class="ttdef"><b>Definition:</b> <a href="bandit__base_8hpp_source.html#l00026">bandit_base.hpp:26</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1burst_1_1result__storage_html"><div class="ttname"><a href="classjubatus_1_1core_1_1burst_1_1result__storage.html">jubatus::core::burst::result_storage</a></div><div class="ttdef"><b>Definition:</b> <a href="result__storage_8hpp_source.html#l00031">result_storage.hpp:31</a></div></div>
-<div class="ttc" id="namespacejubatus_1_1core_1_1framework_html_a99dd974442916078e2a3458b1e85b254"><div class="ttname"><a href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">jubatus::core::framework::packer</a></div><div class="ttdeci">msgpack::packer&lt; jubatus_packer &gt; packer</div><div class="ttdef"><b>Definition:</b> <a href="packer_8hpp_source.html#l00043">packer.hpp:43</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1burst_1_1result__storage_html_a0abbc622865ec881ebe6bd0decec10ba"><div class="ttname"><a href="classjubatus_1_1core_1_1burst_1_1result__storage.html#a0abbc622865ec881ebe6bd0decec10ba">jubatus::core::burst::result_storage::~result_storage</a></div><div class="ttdeci">~result_storage()</div><div class="ttdef"><b>Definition:</b> <a href="result__storage_8cpp_source.html#l00126">result_storage.cpp:126</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1burst_1_1burst__result_html"><div class="ttname"><a href="classjubatus_1_1core_1_1burst_1_1burst__result.html">jubatus::core::burst::burst_result</a></div><div class="ttdef"><b>Definition:</b> <a href="burst__result_8hpp_source.html#l00033">burst_result.hpp:33</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1burst_1_1result__storage_html_a5f6b36b5d41ee6a98884b3a08be4203a"><div class="ttname"><a href="classjubatus_1_1core_1_1burst_1_1result__storage.html#a5f6b36b5d41ee6a98884b3a08be4203a">jubatus::core::burst::result_storage::pack</a></div><div class="ttdeci">void pack(framework::packer &amp;packer) const </div><div class="ttdef"><b>Definition:</b> <a href="result__storage_8cpp_source.html#l00154">result_storage.cpp:154</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:34 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:02 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

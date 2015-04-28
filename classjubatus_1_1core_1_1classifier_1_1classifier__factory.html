@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -232,9 +232,9 @@ Static Public Member Functions</h2></td></tr>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    nearest_neighbor_classifier_config conf</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        = config_cast_check&lt;nearest_neighbor_classifier_config&gt;(param);</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    unlearner = <a class="code" href="namespacejubatus_1_1core_1_1unlearner.html#a51ac7cbb824dfd5e7cc8af8c948352ba">create_unlearner</a>(conf);</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    shared_ptr&lt;table::column_table&gt; table(<span class="keyword">new</span> table::column_table);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    shared_ptr&lt;storage::column_table&gt; table(<span class="keyword">new</span> storage::column_table);</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    shared_ptr&lt;nearest_neighbor::nearest_neighbor_base&gt;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        nearest_neighbor_engine(<a class="code" href="namespacejubatus_1_1core_1_1nearest__neighbor.html#ab7a245f0b10c66a32167bf8b455fdfc3">nearest_neighbor::create_nearest_neighbor</a>(</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        nearest_neighbor_engine(<a class="code" href="namespacejubatus_1_1core_1_1nearest__neighbor.html#a4ba5447bb69d85a61d44f486bb75491f">nearest_neighbor::create_nearest_neighbor</a>(</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            conf.method, conf.parameter, table, <span class="stringliteral">&quot;&quot;</span>));</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    res.reset(</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keyword">new</span> nearest_neighbor_classifier(nearest_neighbor_engine,</div>
@@ -253,15 +253,15 @@ Static Public Member Functions</h2></td></tr>
 <div class="ttc" id="namespacejubatus_1_1core_1_1unlearner_html_a51ac7cbb824dfd5e7cc8af8c948352ba"><div class="ttname"><a href="namespacejubatus_1_1core_1_1unlearner.html#a51ac7cbb824dfd5e7cc8af8c948352ba">jubatus::core::unlearner::create_unlearner</a></div><div class="ttdeci">shared_ptr&lt; unlearner_base &gt; create_unlearner(const std::string &amp;name, const common::jsonconfig::config &amp;config)</div><div class="ttdef"><b>Definition:</b> <a href="unlearner__factory_8cpp_source.html#l00031">unlearner_factory.cpp:31</a></div></div>
 <div class="ttc" id="classifier__factory_8cpp_html_ac8d02ed1646fb01dcc27cdf22df8be87"><div class="ttname"><a href="classifier__factory_8cpp.html#ac8d02ed1646fb01dcc27cdf22df8be87">unlearner</a></div><div class="ttdeci">jubatus::util::data::optional&lt; std::string &gt; unlearner</div><div class="ttdef"><b>Definition:</b> <a href="classifier__factory_8cpp_source.html#l00038">classifier_factory.cpp:38</a></div></div>
 <div class="ttc" id="common_2exception_8hpp_html_aff10b0eb90b477115ab3955c3995d327"><div class="ttname"><a href="common_2exception_8hpp.html#aff10b0eb90b477115ab3955c3995d327">JUBATUS_EXCEPTION</a></div><div class="ttdeci">#define JUBATUS_EXCEPTION(e)</div><div class="ttdef"><b>Definition:</b> <a href="common_2exception_8hpp_source.html#l00079">exception.hpp:79</a></div></div>
-<div class="ttc" id="namespacejubatus_1_1core_1_1nearest__neighbor_html_ab7a245f0b10c66a32167bf8b455fdfc3"><div class="ttname"><a href="namespacejubatus_1_1core_1_1nearest__neighbor.html#ab7a245f0b10c66a32167bf8b455fdfc3">jubatus::core::nearest_neighbor::create_nearest_neighbor</a></div><div class="ttdeci">shared_ptr&lt; nearest_neighbor_base &gt; create_nearest_neighbor(const std::string &amp;name, const common::jsonconfig::config &amp;config, shared_ptr&lt; table::column_table &gt; table, const std::string &amp;id)</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__factory_8cpp_source.html#l00032">nearest_neighbor_factory.cpp:32</a></div></div>
 <div class="ttc" id="namespacejubatus_1_1core_1_1common_1_1exception_html_ae636bb5b7830b44a92d86c4aa445548e"><div class="ttname"><a href="namespacejubatus_1_1core_1_1common_1_1exception.html#ae636bb5b7830b44a92d86c4aa445548e">jubatus::core::common::exception::error_message</a></div><div class="ttdeci">error_info&lt; struct error_message_, std::string &gt; error_message</div><div class="ttdef"><b>Definition:</b> <a href="common_2exception_8hpp_source.html#l00059">exception.hpp:59</a></div></div>
+<div class="ttc" id="namespacejubatus_1_1core_1_1nearest__neighbor_html_a4ba5447bb69d85a61d44f486bb75491f"><div class="ttname"><a href="namespacejubatus_1_1core_1_1nearest__neighbor.html#a4ba5447bb69d85a61d44f486bb75491f">jubatus::core::nearest_neighbor::create_nearest_neighbor</a></div><div class="ttdeci">shared_ptr&lt; nearest_neighbor_base &gt; create_nearest_neighbor(const std::string &amp;name, const common::jsonconfig::config &amp;config, shared_ptr&lt; storage::column_table &gt; table, const std::string &amp;id)</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__factory_8cpp_source.html#l00032">nearest_neighbor_factory.cpp:32</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classjubatus_1_1core_1_1classifier_1_1classifier__factory_a61271a4cd3d7df68ef7c5329d958c076_cgraph.png" border="0" usemap="#classjubatus_1_1core_1_1classifier_1_1classifier__factory_a61271a4cd3d7df68ef7c5329d958c076_cgraph" alt=""/></div>
 <map name="classjubatus_1_1core_1_1classifier_1_1classifier__factory_a61271a4cd3d7df68ef7c5329d958c076_cgraph" id="classjubatus_1_1core_1_1classifier_1_1classifier__factory_a61271a4cd3d7df68ef7c5329d958c076_cgraph">
-<area shape="rect" id="node2" href="namespacejubatus_1_1core_1_1nearest__neighbor.html#ab7a245f0b10c66a32167bf8b455fdfc3" title="jubatus::core::nearest\l_neighbor::create_nearest\l_neighbor" alt="" coords="226,5,403,57"/><area shape="rect" id="node6" href="namespacejubatus_1_1core_1_1unlearner.html#a51ac7cbb824dfd5e7cc8af8c948352ba" title="jubatus::core::unlearner\l::create_unlearner" alt="" coords="234,81,395,120"/><area shape="rect" id="node7" href="classjubatus_1_1core_1_1common_1_1jsonconfig_1_1config.html#ada031b9c4694c95e200037b12deb3af7" title="jubatus::core::common\l::jsonconfig::config::type" alt="" coords="232,144,397,183"/><area shape="rect" id="node3" href="namespacejubatus_1_1core_1_1common_1_1jsonconfig.html#ade63ff3a224df5b6f8bf2558560330ac" title="jubatus::core::common\l::jsonconfig::config\l_cast_check" alt="" coords="451,40,607,92"/><area shape="rect" id="node4" href="namespacejubatus_1_1core_1_1common_1_1jsonconfig.html#aa8d0d613d9a4865546413ef364897444" title="jubatus::core::common\l::jsonconfig::serialize" alt="" coords="655,47,811,85"/><area shape="rect" id="node5" href="classjubatus_1_1core_1_1common_1_1jsonconfig_1_1member__collector.html#a485b26c2c74a3ed6493e04b254f79c02" title="jubatus::core::common\l::jsonconfig::member\l_collector::append" alt="" coords="859,40,1015,92"/></map>
+<area shape="rect" id="node2" href="namespacejubatus_1_1core_1_1nearest__neighbor.html#a4ba5447bb69d85a61d44f486bb75491f" title="jubatus::core::nearest\l_neighbor::create_nearest\l_neighbor" alt="" coords="226,5,403,57"/><area shape="rect" id="node6" href="namespacejubatus_1_1core_1_1unlearner.html#a51ac7cbb824dfd5e7cc8af8c948352ba" title="jubatus::core::unlearner\l::create_unlearner" alt="" coords="234,81,395,120"/><area shape="rect" id="node7" href="classjubatus_1_1core_1_1common_1_1jsonconfig_1_1config.html#ada031b9c4694c95e200037b12deb3af7" title="jubatus::core::common\l::jsonconfig::config::type" alt="" coords="232,144,397,183"/><area shape="rect" id="node3" href="namespacejubatus_1_1core_1_1common_1_1jsonconfig.html#ade63ff3a224df5b6f8bf2558560330ac" title="jubatus::core::common\l::jsonconfig::config\l_cast_check" alt="" coords="451,40,607,92"/><area shape="rect" id="node4" href="namespacejubatus_1_1core_1_1common_1_1jsonconfig.html#aa8d0d613d9a4865546413ef364897444" title="jubatus::core::common\l::jsonconfig::serialize" alt="" coords="655,47,811,85"/><area shape="rect" id="node5" href="classjubatus_1_1core_1_1common_1_1jsonconfig_1_1member__collector.html#a485b26c2c74a3ed6493e04b254f79c02" title="jubatus::core::common\l::jsonconfig::member\l_collector::append" alt="" coords="859,40,1015,92"/></map>
 </div>
 </p>
 
@@ -274,7 +274,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:37 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:06 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

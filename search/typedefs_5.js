@@ -6,5 +6,5 @@ var searchData=
   ['features1_5ft',['features1_t',['../namespacejubatus_1_1core_1_1storage.html#a28aa094b85460cfa282e82622c9096a1',1,'jubatus::core::storage']]],
   ['features2_5ft',['features2_t',['../namespacejubatus_1_1core_1_1storage.html#af095ad06ce596e53e708690df90833e3',1,'jubatus::core::storage']]],
   ['features3_5ft',['features3_t',['../namespacejubatus_1_1core_1_1storage.html#a4e75bb85019daa80b04b756b00f631a4',1,'jubatus::core::storage']]],
-  ['float_5fcolumn',['float_column',['../namespacejubatus_1_1core_1_1table.html#a75f5f408cff052b0b0c595069edbbebb',1,'jubatus::core::table']]]
+  ['float_5fcolumn',['float_column',['../namespacejubatus_1_1core_1_1storage.html#a03758bf4ae60babdd49e029cb1564e03',1,'jubatus::core::storage']]]
 ];

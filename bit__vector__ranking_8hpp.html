@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -88,22 +88,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">bit_vector_ranking.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;utility&gt;</code><br />
+<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
-<code>#include &quot;<a class="el" href="table_2column_2bit__vector_8hpp_source.html">../table/column/bit_vector.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="abstract__column_8hpp_source.html">../table/column/abstract_column.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for bit_vector_ranking.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="bit__vector__ranking_8hpp__incl.png" border="0" usemap="#jubatus_2core_2nearest__neighbor_2bit__vector__ranking_8hpp" alt=""/></div>
 <map name="jubatus_2core_2nearest__neighbor_2bit__vector__ranking_8hpp" id="jubatus_2core_2nearest__neighbor_2bit__vector__ranking_8hpp">
-<area shape="rect" id="node4" href="table_2column_2bit__vector_8hpp.html" title="../table/column/bit\l_vector.hpp" alt="" coords="700,265,826,304"/><area shape="rect" id="node28" href="abstract__column_8hpp.html" title="../table/column/abstract\l_column.hpp" alt="" coords="886,105,1045,144"/><area shape="rect" id="node11" href="assert_8hpp.html" title="../../common/assert.hpp" alt="" coords="1144,352,1305,377"/><area shape="rect" id="node14" href="common_2exception_8hpp.html" title="../../common/exception.hpp" alt="" coords="771,425,953,451"/><area shape="rect" id="node25" href="big__endian_8hpp.html" title="../../common/big_endian.hpp" alt="" coords="486,352,675,377"/><area shape="rect" id="node27" href="storage__exception_8hpp.html" title="../storage_exception.hpp" alt="" coords="902,352,1070,377"/><area shape="rect" id="node22" href="exception__info_8hpp.html" title="exception_info.hpp" alt="" coords="467,499,600,524"/><area shape="rect" id="node32" href="packer_8hpp.html" title="../../framework/packer.hpp" alt="" coords="1252,272,1427,297"/><area shape="rect" id="node33" href="column__type_8hpp.html" title="column_type.hpp" alt="" coords="702,192,825,217"/></map>
+</map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
@@ -115,6 +116,13 @@ This graph shows which files directly or indirectly include this file:</div>
 </div>
 <p><a href="bit__vector__ranking_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1storage_1_1bit__vector__base.html">jubatus::core::storage::bit_vector_base&lt; bit_base &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1storage_1_1typed__column.html">jubatus::core::storage::typed_column&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacejubatus"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus.html">jubatus</a></td></tr>
@@ -123,16 +131,27 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacejubatus_1_1core_1_1nearest__neighbor"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1nearest__neighbor.html">jubatus::core::nearest_neighbor</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacejubatus_1_1core_1_1storage"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1storage.html">jubatus::core::storage</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a3cf0187e222972df167b5f987cbc3b4e"><td class="memItemLeft" align="right" valign="top">typedef bit_vector_base&lt; uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1storage.html#a3cf0187e222972df167b5f987cbc3b4e">jubatus::core::storage::bit_vector</a></td></tr>
+<tr class="separator:a3cf0187e222972df167b5f987cbc3b4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac68495e0ae772ff1c0d73eef252f2891"><td class="memItemLeft" align="right" valign="top">typedef typed_column&lt; bit_vector &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1storage.html#ac68495e0ae772ff1c0d73eef252f2891">jubatus::core::storage::bit_vector_column</a></td></tr>
+<tr class="separator:ac68495e0ae772ff1c0d73eef252f2891"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63667ab3881bcaac68e5c148d4bc05ff"><td class="memItemLeft" align="right" valign="top">typedef const bit_vector_column&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1storage.html#a63667ab3881bcaac68e5c148d4bc05ff">jubatus::core::storage::const_bit_vector_column</a></td></tr>
+<tr class="separator:a63667ab3881bcaac68e5c148d4bc05ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa0a25057fa53c3e6acb2ef47a4b87e7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1nearest__neighbor.html#aa0a25057fa53c3e6acb2ef47a4b87e7f">jubatus::core::nearest_neighbor::ranking_hamming_bit_vectors</a> (const table::bit_vector &amp;query, const table::const_bit_vector_column &amp;bvs, std::vector&lt; std::pair&lt; uint64_t, float &gt; &gt; &amp;ret, uint64_t ret_num)</td></tr>
-<tr class="separator:aa0a25057fa53c3e6acb2ef47a4b87e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dc5546b8837a6cc2d0ef5d82ecaba05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1nearest__neighbor.html#a9dc5546b8837a6cc2d0ef5d82ecaba05">jubatus::core::nearest_neighbor::ranking_hamming_bit_vectors</a> (const storage::bit_vector &amp;query, const storage::const_bit_vector_column &amp;bvs, std::vector&lt; std::pair&lt; uint64_t, float &gt; &gt; &amp;ret, uint64_t ret_num)</td></tr>
+<tr class="separator:a9dc5546b8837a6cc2d0ef5d82ecaba05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:36 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:05 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

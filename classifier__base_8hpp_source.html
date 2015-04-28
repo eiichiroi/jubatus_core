@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -150,7 +150,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1classifier_1_1classifier__base.html#aaacee7efd739fc794f53604a0c659faa">get_status</a>(std::map&lt;std::string, std::string&gt;&amp; status) <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1classifier_1_1classifier__base.html#aa618bb50fb4781cc594c9ff69f0370d5">pack</a>(<a class="code" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">framework::packer</a>&amp; pk) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1classifier_1_1classifier__base.html#aa618bb50fb4781cc594c9ff69f0370d5">pack</a>(<a class="code" href="classmsgpack_1_1packer.html">framework::packer</a>&amp; pk) <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1classifier_1_1classifier__base.html#ad91493145146fb564d7aeaf0d474fe96">unpack</a>(msgpack::object o) = 0;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1classifier_1_1classifier__base.html#acc2ddf51bda8ebde4233dd2794dbaa3a">clear</a>() = 0;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
@@ -181,12 +181,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1classifier__base_html_a4fcb91fd9f3250325732295ab9643f81"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1classifier__base.html#a4fcb91fd9f3250325732295ab9643f81">jubatus::core::classifier::classifier_base::name</a></div><div class="ttdeci">virtual std::string name() const =0</div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1classifier__base_html_aa618bb50fb4781cc594c9ff69f0370d5"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1classifier__base.html#aa618bb50fb4781cc594c9ff69f0370d5">jubatus::core::classifier::classifier_base::pack</a></div><div class="ttdeci">virtual void pack(framework::packer &amp;pk) const =0</div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1classifier__base_html_acc2ddf51bda8ebde4233dd2794dbaa3a"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1classifier__base.html#acc2ddf51bda8ebde4233dd2794dbaa3a">jubatus::core::classifier::classifier_base::clear</a></div><div class="ttdeci">virtual void clear()=0</div></div>
-<div class="ttc" id="namespacejubatus_1_1core_1_1framework_html_a99dd974442916078e2a3458b1e85b254"><div class="ttname"><a href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">jubatus::core::framework::packer</a></div><div class="ttdeci">msgpack::packer&lt; jubatus_packer &gt; packer</div><div class="ttdef"><b>Definition:</b> <a href="packer_8hpp_source.html#l00043">packer.hpp:43</a></div></div>
+<div class="ttc" id="classmsgpack_1_1packer_html"><div class="ttname"><a href="classmsgpack_1_1packer.html">msgpack::packer</a></div><div class="ttdef"><b>Definition:</b> <a href="bandit__base_8hpp_source.html#l00026">bandit_base.hpp:26</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1classifier__base_html_aaacee7efd739fc794f53604a0c659faa"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1classifier__base.html#aaacee7efd739fc794f53604a0c659faa">jubatus::core::classifier::classifier_base::get_status</a></div><div class="ttdeci">virtual void get_status(std::map&lt; std::string, std::string &gt; &amp;status) const =0</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:34 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:02 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

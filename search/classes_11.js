@@ -16,7 +16,6 @@ var searchData=
   ['storage_5f',['storage_',['../classjubatus_1_1core_1_1burst_1_1burst_1_1impl___1_1storage__.html',1,'jubatus::core::burst::burst::impl_']]],
   ['storage_5fbase',['storage_base',['../classjubatus_1_1core_1_1storage_1_1storage__base.html',1,'jubatus::core::storage']]],
   ['storage_5fexception',['storage_exception',['../classjubatus_1_1core_1_1storage_1_1storage__exception.html',1,'jubatus::core::storage']]],
-  ['storage_5fexception',['storage_exception',['../classjubatus_1_1core_1_1table_1_1storage__exception.html',1,'jubatus::core::table']]],
   ['storage_5ffactory',['storage_factory',['../classjubatus_1_1core_1_1clustering_1_1storage__factory.html',1,'jubatus::core::clustering']]],
   ['storage_5ffactory',['storage_factory',['../classjubatus_1_1core_1_1storage_1_1storage__factory.html',1,'jubatus::core::storage']]],
   ['storage_5fnot_5fset',['storage_not_set',['../classjubatus_1_1core_1_1common_1_1storage__not__set.html',1,'jubatus::core::common']]],

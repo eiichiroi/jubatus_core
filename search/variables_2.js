@@ -1,9 +1,10 @@
 var searchData=
 [
+  ['cache_5flock_5f',['cache_lock_',['../classjubatus_1_1core_1_1recommender_1_1euclid__lsh.html#ac0fae5a0f3837a23637aba063626ce08',1,'jubatus::core::recommender::euclid_lsh']]],
   ['callback_5f',['callback_',['../classjubatus_1_1core_1_1unlearner_1_1unlearner__base.html#a855cbe2cf75d7e01357c5c379e3753b4',1,'jubatus::core::unlearner::unlearner_base']]],
   ['class2id_5f',['class2id_',['../classjubatus_1_1core_1_1storage_1_1local__storage.html#a9c22233eff0a4215fd8a5f5633e25c3c',1,'jubatus::core::storage::local_storage::class2id_()'],['../classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#a31bc37187550dddfa0b50b9254d52bed',1,'jubatus::core::storage::local_storage_mixture::class2id_()']]],
   ['classifier_5f',['classifier_',['../classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_1_1unlearning__callback.html#a923493c1c7eff49f16fcb5e2da628f27',1,'jubatus::core::classifier::nearest_neighbor_classifier::unlearning_callback::classifier_()'],['../classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec',1,'jubatus::core::driver::classifier::classifier_()']]],
-  ['clock_5f',['clock_',['../classjubatus_1_1core_1_1table_1_1column__table.html#ad1343e0218c8aa27e06c5ef950bbae7f',1,'jubatus::core::table::column_table']]],
+  ['clock_5f',['clock_',['../classjubatus_1_1core_1_1storage_1_1column__table.html#a5037399b82a6d29e58d126aed069a6c5',1,'jubatus::core::storage::column_table']]],
   ['clustering_5f',['clustering_',['../classjubatus_1_1core_1_1driver_1_1clustering.html#ac0b737f02250927f83ba27571eb28d9f',1,'jubatus::core::driver::clustering']]],
   ['clustering_5fmethod_5f',['clustering_method_',['../classjubatus_1_1core_1_1clustering_1_1clustering.html#a99f0a7bcaec9b7f39fc0b858902cec39',1,'jubatus::core::clustering::clustering']]],
   ['column2baseval_5f',['column2baseval_',['../classjubatus_1_1core_1_1recommender_1_1lsh.html#afe1ece5f7ef4f8937891d5bd81ad0461',1,'jubatus::core::recommender::lsh']]],
@@ -11,7 +12,7 @@ var searchData=
   ['column2norm',['column2norm',['../structjubatus_1_1core_1_1storage_1_1inverted__index__storage_1_1diff__type.html#a97185d26fb66a7a3434fc058167d93e8',1,'jubatus::core::storage::inverted_index_storage::diff_type']]],
   ['column2norm_5f',['column2norm_',['../classjubatus_1_1core_1_1storage_1_1inverted__index__storage.html#afc7e19c22cf0e78f3c0fc7fc36a46af8',1,'jubatus::core::storage::inverted_index_storage']]],
   ['column2norm_5fdiff_5f',['column2norm_diff_',['../classjubatus_1_1core_1_1storage_1_1inverted__index__storage.html#a7b227c5e17280623012ae394c7b8a975',1,'jubatus::core::storage::inverted_index_storage']]],
-  ['columns_5f',['columns_',['../classjubatus_1_1core_1_1table_1_1column__table.html#a88a725ae9635bcfe72468e9321863db3',1,'jubatus::core::table::column_table']]],
+  ['columns_5f',['columns_',['../classjubatus_1_1core_1_1storage_1_1column__table.html#a0e5c2f1214f71601e47a7c4fc9d9cd72',1,'jubatus::core::storage::column_table']]],
   ['combination_5frules',['combination_rules',['../structjubatus_1_1core_1_1fv__converter_1_1converter__config.html#a1c922be8d6704a9a7bbd4a23ffc7c465',1,'jubatus::core::fv_converter::converter_config']]],
   ['combination_5frules_5f',['combination_rules_',['../classjubatus_1_1core_1_1fv__converter_1_1datum__to__fv__converter__impl.html#a060edc8ee0859ba55bd169b813cee650',1,'jubatus::core::fv_converter::datum_to_fv_converter_impl']]],
   ['combination_5ftypes',['combination_types',['../structjubatus_1_1core_1_1fv__converter_1_1converter__config.html#abbe513a98ce2b9f915f34bf5f599475c',1,'jubatus::core::fv_converter::converter_config']]],

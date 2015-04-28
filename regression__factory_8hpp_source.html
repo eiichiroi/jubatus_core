@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -111,52 +111,51 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#define JUBATUS_CORE_REGRESSION_REGRESSION_FACTORY_HPP_</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;jubatus/util/text/json.h&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;jubatus/util/lang/shared_ptr.h&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacejubatus.html">jubatus</a> {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>core {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>storage {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">class </span>storage_base;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}  <span class="comment">// namespace storage</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">namespace </span>common {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">namespace </span>jsonconfig {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">class </span>config;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}  <span class="comment">// namespace jsonconfig</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}  <span class="comment">// namespace common</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">namespace </span>regression {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">class </span>regression_base;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classjubatus_1_1core_1_1regression_1_1regression__factory.html">   45</a></span>&#160;<span class="keyword">class </span><a class="code" href="classjubatus_1_1core_1_1regression_1_1regression__factory.html">regression_factory</a> {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keyword">static</span> jubatus::util::lang::shared_ptr&lt;regression_base&gt; <a class="code" href="classjubatus_1_1core_1_1regression_1_1regression__factory.html#a42b6191588215e34c8eedf3d3c7bdd86">create_regression</a>(</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      <span class="keyword">const</span> std::string&amp; name,</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <span class="keyword">const</span> <a class="code" href="classjubatus_1_1core_1_1common_1_1jsonconfig_1_1config.html">common::jsonconfig::config</a>&amp; param,</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      jubatus::util::lang::shared_ptr&lt;storage::storage_base&gt; storage);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}  <span class="comment">// namespace regression</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}  <span class="comment">// namespace core</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}  <span class="comment">// namespace jubatus</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif  // JUBATUS_CORE_REGRESSION_REGRESSION_FACTORY_HPP_</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;jubatus/util/lang/shared_ptr.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacejubatus.html">jubatus</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span>core {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>storage {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">class </span>storage_base;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}  <span class="comment">// namespace storage</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">namespace </span>common {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">namespace </span>jsonconfig {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">class </span>config;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}  <span class="comment">// namespace jsonconfig</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}  <span class="comment">// namespace common</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">namespace </span>regression {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">class </span>regression_base;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classjubatus_1_1core_1_1regression_1_1regression__factory.html">   44</a></span>&#160;<span class="keyword">class </span><a class="code" href="classjubatus_1_1core_1_1regression_1_1regression__factory.html">regression_factory</a> {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keyword">static</span> jubatus::util::lang::shared_ptr&lt;regression_base&gt; <a class="code" href="classjubatus_1_1core_1_1regression_1_1regression__factory.html#a42b6191588215e34c8eedf3d3c7bdd86">create_regression</a>(</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <span class="keyword">const</span> std::string&amp; name,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      <span class="keyword">const</span> <a class="code" href="classjubatus_1_1core_1_1common_1_1jsonconfig_1_1config.html">common::jsonconfig::config</a>&amp; param,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      jubatus::util::lang::shared_ptr&lt;storage::storage_base&gt; storage);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}  <span class="comment">// namespace regression</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}  <span class="comment">// namespace core</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}  <span class="comment">// namespace jubatus</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif  // JUBATUS_CORE_REGRESSION_REGRESSION_FACTORY_HPP_</span></div>
 <div class="ttc" id="namespacejubatus_html"><div class="ttname"><a href="namespacejubatus.html">jubatus</a></div><div class="ttdef"><b>Definition:</b> <a href="anomaly__base_8cpp_source.html#l00029">anomaly_base.cpp:29</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1regression_1_1regression__factory_html"><div class="ttname"><a href="classjubatus_1_1core_1_1regression_1_1regression__factory.html">jubatus::core::regression::regression_factory</a></div><div class="ttdef"><b>Definition:</b> <a href="regression__factory_8hpp_source.html#l00045">regression_factory.hpp:45</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1regression_1_1regression__factory_html"><div class="ttname"><a href="classjubatus_1_1core_1_1regression_1_1regression__factory.html">jubatus::core::regression::regression_factory</a></div><div class="ttdef"><b>Definition:</b> <a href="regression__factory_8hpp_source.html#l00044">regression_factory.hpp:44</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1regression_1_1regression__factory_html_a42b6191588215e34c8eedf3d3c7bdd86"><div class="ttname"><a href="classjubatus_1_1core_1_1regression_1_1regression__factory.html#a42b6191588215e34c8eedf3d3c7bdd86">jubatus::core::regression::regression_factory::create_regression</a></div><div class="ttdeci">static jubatus::util::lang::shared_ptr&lt; regression_base &gt; create_regression(const std::string &amp;name, const common::jsonconfig::config &amp;param, jubatus::util::lang::shared_ptr&lt; storage::storage_base &gt; storage)</div><div class="ttdef"><b>Definition:</b> <a href="regression__factory_8cpp_source.html#l00033">regression_factory.cpp:33</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1common_1_1jsonconfig_1_1config_html"><div class="ttname"><a href="classjubatus_1_1core_1_1common_1_1jsonconfig_1_1config.html">jubatus::core::common::jsonconfig::config</a></div><div class="ttdef"><b>Definition:</b> <a href="config_8hpp_source.html#l00040">config.hpp:40</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:35 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:03 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

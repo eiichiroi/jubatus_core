@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -103,7 +103,7 @@ Inheritance diagram for jubatus::core::storage::storage_base:</div>
 <div class="dyncontent">
 <div class="center"><img src="classjubatus_1_1core_1_1storage_1_1storage__base__inherit__graph.png" border="0" usemap="#jubatus_1_1core_1_1storage_1_1storage__base_inherit__map" alt="Inheritance graph"/></div>
 <map name="jubatus_1_1core_1_1storage_1_1storage__base_inherit__map" id="jubatus_1_1core_1_1storage_1_1storage__base_inherit__map">
-<area shape="rect" id="node3" href="classjubatus_1_1core_1_1storage_1_1local__storage.html" title="{jubatus::core::storage\l::local_storage\n|&#45; class2id_\l&#45; tbl_\l|+ bulk_update()\l+ clear()\l+ delete_label()\l+ get()\l+ get2()\l+ get3()\l+ get_labels()\l+ get_status()\l+ get_version()\l+ inp()\land 12 more...\l}" alt="" coords="5,468,155,701"/><area shape="rect" id="node4" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html" title="{jubatus::core::storage\l::local_storage_mixture\n|&#45; class2id_\l&#45; model_version_\l&#45; tbl_\l&#45; tbl_diff_\l|+ bulk_update()\l+ clear()\l+ delete_label()\l+ get()\l+ get2()\l+ get3()\l+ get_diff()\l+ get_labels()\l+ get_status()\l+ get_version()\land 14 more...\l&#45; get_internal()\l}" alt="" coords="179,448,338,721"/><area shape="rect" id="node2" href="classjubatus_1_1core_1_1framework_1_1model.html" title="{jubatus::core::framework\l::model\n||+ clear()\l+ pack()\l+ unpack()\l+ ~model()\l}" alt="" coords="86,5,253,132"/></map>
+<area shape="rect" id="node3" href="classjubatus_1_1core_1_1storage_1_1local__storage.html" title="{jubatus::core::storage\l::local_storage\n|&#45; class2id_\l&#45; mutex_\l&#45; tbl_\l|+ bulk_update()\l+ clear()\l+ delete_label()\l+ delete_label_nolock()\l+ get()\l+ get2()\l+ get2_nolock()\l+ get3()\l+ get3_nolock()\l+ get_labels()\land 20 more...\l}" alt="" coords="5,468,165,715"/><area shape="rect" id="node4" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html" title="{jubatus::core::storage\l::local_storage_mixture\n|&#45; class2id_\l&#45; model_version_\l&#45; mutex_\l&#45; tbl_\l&#45; tbl_diff_\l|+ bulk_update()\l+ clear()\l+ delete_label()\l+ delete_label_nolock()\l+ get()\l+ get2()\l+ get2_nolock()\l+ get3()\l+ get3_nolock()\l+ get_diff()\land 22 more...\l&#45; get_internal()\l}" alt="" coords="189,448,349,735"/><area shape="rect" id="node2" href="classjubatus_1_1core_1_1framework_1_1model.html" title="{jubatus::core::framework\l::model\n||+ clear()\l+ pack()\l+ unpack()\l+ ~model()\l}" alt="" coords="93,5,261,132"/></map>
 </div>
 <div class="dynheader">
 Collaboration diagram for jubatus::core::storage::storage_base:</div>
@@ -121,23 +121,33 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abe6f721ddefe7a66cbb12d7363f92fc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33061b32008232de3e55c5d39c0f7961"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#a33061b32008232de3e55c5d39c0f7961">delete_label</a> (const std::string &amp;label)=0</td></tr>
 <tr class="separator:a33061b32008232de3e55c5d39c0f7961"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55de6396de2b2f7e7163e368d348e972"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#a55de6396de2b2f7e7163e368d348e972">delete_label_nolock</a> (const std::string &amp;label)=0</td></tr>
+<tr class="separator:a55de6396de2b2f7e7163e368d348e972"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5aa93021b5db1a0d4b648bf0aba30fbc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#a5aa93021b5db1a0d4b648bf0aba30fbc">get</a> (const std::string &amp;feature, <a class="el" href="namespacejubatus_1_1core_1_1storage.html#a14d8bb06dbf23032c67e143fade9ba50">feature_val1_t</a> &amp;ret) const =0</td></tr>
 <tr class="separator:a5aa93021b5db1a0d4b648bf0aba30fbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cef2b2437038f32bc87a9bc5e50fe54"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#a7cef2b2437038f32bc87a9bc5e50fe54">get2</a> (const std::string &amp;feature, <a class="el" href="namespacejubatus_1_1core_1_1storage.html#ac1903c3c7299b32c19e3de42701e22dd">feature_val2_t</a> &amp;ret) const =0</td></tr>
 <tr class="separator:a7cef2b2437038f32bc87a9bc5e50fe54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab00b7d359356139ec1701faedfe3c192"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#ab00b7d359356139ec1701faedfe3c192">get2_nolock</a> (const std::string &amp;feature, <a class="el" href="namespacejubatus_1_1core_1_1storage.html#ac1903c3c7299b32c19e3de42701e22dd">feature_val2_t</a> &amp;ret) const =0</td></tr>
+<tr class="separator:ab00b7d359356139ec1701faedfe3c192"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3e50b8b4cb6426168c176a101a18f2d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#ab3e50b8b4cb6426168c176a101a18f2d">get3</a> (const std::string &amp;feature, <a class="el" href="namespacejubatus_1_1core_1_1storage.html#a267a5aa6255d61e2d5c8e0e03995dcb9">feature_val3_t</a> &amp;ret) const =0</td></tr>
 <tr class="separator:ab3e50b8b4cb6426168c176a101a18f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb920349fd789af2ca923e6b34a80ea2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#acb920349fd789af2ca923e6b34a80ea2">get3_nolock</a> (const std::string &amp;feature, <a class="el" href="namespacejubatus_1_1core_1_1storage.html#a267a5aa6255d61e2d5c8e0e03995dcb9">feature_val3_t</a> &amp;ret) const =0</td></tr>
+<tr class="separator:acb920349fd789af2ca923e6b34a80ea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29876017d493fa6d4fa4e7e623ed9205"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#a29876017d493fa6d4fa4e7e623ed9205">get_diff</a> (<a class="el" href="structjubatus_1_1core_1_1storage_1_1diff__t.html">diff_t</a> &amp;) const </td></tr>
 <tr class="separator:a29876017d493fa6d4fa4e7e623ed9205"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00c65eb5db92b729f848d2db385942fe"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#a00c65eb5db92b729f848d2db385942fe">get_labels</a> () const =0</td></tr>
 <tr class="separator:a00c65eb5db92b729f848d2db385942fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac62beded9b41ce55949b1bbf7ffed5e3"><td class="memItemLeft" align="right" valign="top">virtual util::concurrent::mutex &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#ac62beded9b41ce55949b1bbf7ffed5e3">get_lock</a> () const =0</td></tr>
+<tr class="separator:ac62beded9b41ce55949b1bbf7ffed5e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdd3d2a708b302c5a1596dd0161fcf13"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#acdd3d2a708b302c5a1596dd0161fcf13">get_nolock</a> (const std::string &amp;feature, <a class="el" href="namespacejubatus_1_1core_1_1storage.html#a14d8bb06dbf23032c67e143fade9ba50">feature_val1_t</a> &amp;ret) const =0</td></tr>
+<tr class="separator:acdd3d2a708b302c5a1596dd0161fcf13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48d871a191b0ea8a328895d8fa707573"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#a48d871a191b0ea8a328895d8fa707573">get_status</a> (std::map&lt; std::string, std::string &gt; &amp;) const =0</td></tr>
 <tr class="separator:a48d871a191b0ea8a328895d8fa707573"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa6c96603f46f115cddce1076532baa6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classjubatus_1_1core_1_1storage_1_1version.html">version</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#aaa6c96603f46f115cddce1076532baa6">get_version</a> () const =0</td></tr>
 <tr class="separator:aaa6c96603f46f115cddce1076532baa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a132de2dfafb98117c16f65ea643d160b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#a132de2dfafb98117c16f65ea643d160b">inp</a> (const <a class="el" href="namespacejubatus_1_1core_1_1common.html#a8834396b360f728705429b812ec15690">common::sfv_t</a> &amp;sfv, <a class="el" href="namespacejubatus_1_1core_1_1storage.html#a1a0f1b848bf2582470c8d5ee0cb76a58">map_feature_val1_t</a> &amp;ret) const =0</td></tr>
 <tr class="separator:a132de2dfafb98117c16f65ea643d160b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afff4d784b29421ec48b317f94d169cf2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#afff4d784b29421ec48b317f94d169cf2">pack</a> (<a class="el" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">framework::packer</a> &amp;packer) const =0</td></tr>
+<tr class="memitem:afff4d784b29421ec48b317f94d169cf2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#afff4d784b29421ec48b317f94d169cf2">pack</a> (<a class="el" href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">framework::packer</a> &amp;packer) const =0</td></tr>
 <tr class="separator:afff4d784b29421ec48b317f94d169cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1ceaef91dcc2039ea49dccaeac32634"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#af1ceaef91dcc2039ea49dccaeac32634">register_label</a> (const std::string &amp;label)=0</td></tr>
 <tr class="separator:af1ceaef91dcc2039ea49dccaeac32634"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,12 +155,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1bfcba049e2a251c7f40ea6f8123f4b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d43c3a6f9de515c0130b38d68cd11e8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#a5d43c3a6f9de515c0130b38d68cd11e8">set2</a> (const std::string &amp;feature, const std::string &amp;klass, const <a class="el" href="structjubatus_1_1core_1_1storage_1_1val2__t.html">val2_t</a> &amp;w)=0</td></tr>
 <tr class="separator:a5d43c3a6f9de515c0130b38d68cd11e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e5ef738bd4affa17282483c0bcd0ad2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#a3e5ef738bd4affa17282483c0bcd0ad2">set2_nolock</a> (const std::string &amp;feature, const std::string &amp;klass, const <a class="el" href="structjubatus_1_1core_1_1storage_1_1val2__t.html">val2_t</a> &amp;w)=0</td></tr>
+<tr class="separator:a3e5ef738bd4affa17282483c0bcd0ad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ef1a78a61e5d9b779951a614051b384"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#a2ef1a78a61e5d9b779951a614051b384">set3</a> (const std::string &amp;feature, const std::string &amp;klass, const <a class="el" href="structjubatus_1_1core_1_1storage_1_1val3__t.html">val3_t</a> &amp;w)=0</td></tr>
 <tr class="separator:a2ef1a78a61e5d9b779951a614051b384"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a982b544ffd3be65d76103822613b5a66"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#a982b544ffd3be65d76103822613b5a66">set3_nolock</a> (const std::string &amp;feature, const std::string &amp;klass, const <a class="el" href="structjubatus_1_1core_1_1storage_1_1val3__t.html">val3_t</a> &amp;w)=0</td></tr>
+<tr class="separator:a982b544ffd3be65d76103822613b5a66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af754027fc39448d68b902b92d03c17fe"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#af754027fc39448d68b902b92d03c17fe">set_average_and_clear_diff</a> (const <a class="el" href="structjubatus_1_1core_1_1storage_1_1diff__t.html">diff_t</a> &amp;)</td></tr>
 <tr class="separator:af754027fc39448d68b902b92d03c17fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f52241e88b3f029b9462af6832a75c5"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#a7f52241e88b3f029b9462af6832a75c5">set_label</a> (const std::string &amp;label)=0</td></tr>
 <tr class="separator:a7f52241e88b3f029b9462af6832a75c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a274938a55bbaefbec59e937bfa1e5d45"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#a274938a55bbaefbec59e937bfa1e5d45">set_nolock</a> (const std::string &amp;feature, const std::string &amp;klass, const <a class="el" href="namespacejubatus_1_1core_1_1storage.html#a2ed0dead770575be40e05e86b3337ff8">val1_t</a> &amp;w)=0</td></tr>
+<tr class="separator:a274938a55bbaefbec59e937bfa1e5d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add59224dcc99230d3d757959159cb6e0"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#add59224dcc99230d3d757959159cb6e0">type</a> () const =0</td></tr>
 <tr class="separator:add59224dcc99230d3d757959159cb6e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90c1ab20ec401539bf4de2b468c19d88"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#a90c1ab20ec401539bf4de2b468c19d88">unpack</a> (msgpack::object o)=0</td></tr>
@@ -165,7 +181,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="storage__base_8hpp_source.html#l00037">37</a> of file <a class="el" href="storage__base_8hpp_source.html">storage_base.hpp</a>.</p>
+<p>Definition at line <a class="el" href="storage__base_8hpp_source.html#l00038">38</a> of file <a class="el" href="storage__base_8hpp_source.html">storage_base.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a0ea483b4321457fc95e4c154c14cf147"></a>
 <div class="memitem">
@@ -188,9 +204,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="storage__base_8hpp_source.html#l00039">39</a> of file <a class="el" href="storage__base_8hpp_source.html">storage_base.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                          {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  }</div>
+<p>Definition at line <a class="el" href="storage__base_8hpp_source.html#l00040">40</a> of file <a class="el" href="storage__base_8hpp_source.html">storage_base.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                          {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -302,7 +318,7 @@ Here is the call graph for this function:</div>
 
 <p>Reimplemented from <a class="el" href="classjubatus_1_1core_1_1framework_1_1model.html#a171565e665abe39dfa4bf6ef1f225096">jubatus::core::framework::model</a>.</p>
 
-<p>Implemented in <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage.html#ae710f3217a02bdb37b1d141f06e6cbc4">jubatus::core::storage::local_storage</a>, and <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#a5bb4e42a6563f0b0c8fa364759108526">jubatus::core::storage::local_storage_mixture</a>.</p>
+<p>Implemented in <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#a5bb4e42a6563f0b0c8fa364759108526">jubatus::core::storage::local_storage_mixture</a>, and <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage.html#ae710f3217a02bdb37b1d141f06e6cbc4">jubatus::core::storage::local_storage</a>.</p>
 
 </div>
 </div>
@@ -328,7 +344,33 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage.html#a7240659fe52fc2e7cd52d72369067b6c">jubatus::core::storage::local_storage</a>, and <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#a80179f359458f3827a609b1661faeabf">jubatus::core::storage::local_storage_mixture</a>.</p>
+<p>Implemented in <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#a80179f359458f3827a609b1661faeabf">jubatus::core::storage::local_storage_mixture</a>, and <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage.html#a7240659fe52fc2e7cd52d72369067b6c">jubatus::core::storage::local_storage</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a55de6396de2b2f7e7163e368d348e972"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool jubatus::core::storage::storage_base::delete_label_nolock </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#affed7426cb8cab64202a033b8a432524">jubatus::core::storage::local_storage_mixture</a>, and <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage.html#a4dbf4715304fb56d14f4ae2098463af9">jubatus::core::storage::local_storage</a>.</p>
 
 </div>
 </div>
@@ -404,6 +446,42 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="ab00b7d359356139ec1701faedfe3c192"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void jubatus::core::storage::storage_base::get2_nolock </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>feature</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacejubatus_1_1core_1_1storage.html#ac1903c3c7299b32c19e3de42701e22dd">feature_val2_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>ret</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage.html#a4e821299f3b6fbf1746ec1feeb79d878">jubatus::core::storage::local_storage</a>, and <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#a17c57611dd2e71843087b18af4d00e78">jubatus::core::storage::local_storage_mixture</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ab3e50b8b4cb6426168c176a101a18f2d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -437,6 +515,42 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage.html#a54b6cfeb0d302b94c518a49ab9f65562">jubatus::core::storage::local_storage</a>, and <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#a82c7221ea1b2817f8ef1833abc9644ba">jubatus::core::storage::local_storage_mixture</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acb920349fd789af2ca923e6b34a80ea2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void jubatus::core::storage::storage_base::get3_nolock </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>feature</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacejubatus_1_1core_1_1storage.html#a267a5aa6255d61e2d5c8e0e03995dcb9">feature_val3_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>ret</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage.html#a27370276049bd008b521d66bbfc973eb">jubatus::core::storage::local_storage</a>, and <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#a333562303fb9298f8673db995325bbb5">jubatus::core::storage::local_storage_mixture</a>.</p>
 
 </div>
 </div>
@@ -495,7 +609,68 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage.html#abb6275b67891fe3031440e6e24630e55">jubatus::core::storage::local_storage</a>, and <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#ab9550d0273f3cfaf2e8b1c37fdbf7562">jubatus::core::storage::local_storage_mixture</a>.</p>
+<p>Implemented in <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#ab9550d0273f3cfaf2e8b1c37fdbf7562">jubatus::core::storage::local_storage_mixture</a>, and <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage.html#abb6275b67891fe3031440e6e24630e55">jubatus::core::storage::local_storage</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac62beded9b41ce55949b1bbf7ffed5e3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual util::concurrent::mutex&amp; jubatus::core::storage::storage_base::get_lock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage.html#ac78792f7b1da09e5432f05263bb87c90">jubatus::core::storage::local_storage</a>, and <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#ac4c4538fda40ab8f45fb3f2c105ef652">jubatus::core::storage::local_storage_mixture</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acdd3d2a708b302c5a1596dd0161fcf13"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void jubatus::core::storage::storage_base::get_nolock </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>feature</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacejubatus_1_1core_1_1storage.html#a14d8bb06dbf23032c67e143fade9ba50">feature_val1_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>ret</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage.html#a742b8aabd8b8224840103eaf5c64f33c">jubatus::core::storage::local_storage</a>, and <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#a8ab29d5c6f08890667c529e2de7ed89b">jubatus::core::storage::local_storage_mixture</a>.</p>
 
 </div>
 </div>
@@ -596,7 +771,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">virtual void jubatus::core::storage::storage_base::pack </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">framework::packer</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">framework::packer</a> &amp;&#160;</td>
           <td class="paramname"><em>packer</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -610,7 +785,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classjubatus_1_1core_1_1framework_1_1model.html#a9fdb1638abb6a9106798104fd6262e77">jubatus::core::framework::model</a>.</p>
 
-<p>Implemented in <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage.html#af4eba3fd78a63e917c2e5658ff320ee5">jubatus::core::storage::local_storage</a>, and <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#a502e5507db4f5ea2140992cae07e577b">jubatus::core::storage::local_storage_mixture</a>.</p>
+<p>Implemented in <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#a502e5507db4f5ea2140992cae07e577b">jubatus::core::storage::local_storage_mixture</a>, and <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage.html#af4eba3fd78a63e917c2e5658ff320ee5">jubatus::core::storage::local_storage</a>.</p>
 
 </div>
 </div>
@@ -636,7 +811,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage.html#a88c3c3a9dbc475da3f6df8b164dfa5fd">jubatus::core::storage::local_storage</a>, and <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#aae74e70ee44ae3ab061235e0abdfcf96">jubatus::core::storage::local_storage_mixture</a>.</p>
+<p>Implemented in <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#aae74e70ee44ae3ab061235e0abdfcf96">jubatus::core::storage::local_storage_mixture</a>, and <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage.html#a88c3c3a9dbc475da3f6df8b164dfa5fd">jubatus::core::storage::local_storage</a>.</p>
 
 </div>
 </div>
@@ -735,6 +910,48 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="a3e5ef738bd4affa17282483c0bcd0ad2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void jubatus::core::storage::storage_base::set2_nolock </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>feature</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>klass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structjubatus_1_1core_1_1storage_1_1val2__t.html">val2_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>w</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage.html#ab586ee175d3645d03a1065ef1269e09a">jubatus::core::storage::local_storage</a>, and <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#a9b51d5465347d0471d14025308176a01">jubatus::core::storage::local_storage_mixture</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a2ef1a78a61e5d9b779951a614051b384"></a>
 <div class="memitem">
 <div class="memproto">
@@ -774,6 +991,48 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage.html#a6dac473d824a6851c1a88df5c9a36b7e">jubatus::core::storage::local_storage</a>, and <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#aee9806cc72917161a7e9f7485b5b91a1">jubatus::core::storage::local_storage_mixture</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a982b544ffd3be65d76103822613b5a66"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void jubatus::core::storage::storage_base::set3_nolock </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>feature</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>klass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structjubatus_1_1core_1_1storage_1_1val3__t.html">val3_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>w</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage.html#ab3a5f7bdbab0d7f4032735d6a96cd544">jubatus::core::storage::local_storage</a>, and <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#ab08d64df5a1863c1140404f455ff6b0d">jubatus::core::storage::local_storage_mixture</a>.</p>
 
 </div>
 </div>
@@ -830,7 +1089,49 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage.html#a14b569295a0d00332efb1c09d7e41aea">jubatus::core::storage::local_storage</a>, and <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#aef619a57bee545d39ffe387f7688b5d3">jubatus::core::storage::local_storage_mixture</a>.</p>
+<p>Implemented in <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#aef619a57bee545d39ffe387f7688b5d3">jubatus::core::storage::local_storage_mixture</a>, and <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage.html#a14b569295a0d00332efb1c09d7e41aea">jubatus::core::storage::local_storage</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a274938a55bbaefbec59e937bfa1e5d45"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void jubatus::core::storage::storage_base::set_nolock </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>feature</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>klass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacejubatus_1_1core_1_1storage.html#a2ed0dead770575be40e05e86b3337ff8">val1_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>w</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage.html#a7c733da621efa1d6a3191ff1ace4ac33">jubatus::core::storage::local_storage</a>, and <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#a952e6a349fea076ef8054c5bea347716">jubatus::core::storage::local_storage_mixture</a>.</p>
 
 </div>
 </div>
@@ -883,7 +1184,7 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="classjubatus_1_1core_1_1framework_1_1model.html#af0e8eafe8e66072d8d23e9f48850a0e2">jubatus::core::framework::model</a>.</p>
 
-<p>Implemented in <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage.html#a0d8ced866e401945e48ed4b0f17bcc13">jubatus::core::storage::local_storage</a>, and <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#ab56dd22d36dcd866e96698f87ef5f06d">jubatus::core::storage::local_storage_mixture</a>.</p>
+<p>Implemented in <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#ab56dd22d36dcd866e96698f87ef5f06d">jubatus::core::storage::local_storage_mixture</a>, and <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage.html#a0d8ced866e401945e48ed4b0f17bcc13">jubatus::core::storage::local_storage</a>.</p>
 
 </div>
 </div>
@@ -984,7 +1285,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:40 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:11 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['length_5funmatch_5fexception',['length_unmatch_exception',['../classjubatus_1_1core_1_1table_1_1length__unmatch__exception.html',1,'jubatus::core::table']]],
+  ['length_5funmatch_5fexception',['length_unmatch_exception',['../classjubatus_1_1core_1_1storage_1_1length__unmatch__exception.html',1,'jubatus::core::storage']]],
   ['less_5fpair_5fand_5fkey',['less_pair_and_key',['../structjubatus_1_1core_1_1common_1_1assoc__vector_1_1less__pair__and__key.html',1,'jubatus::core::common::assoc_vector']]],
   ['libsvm_5fconverter',['libsvm_converter',['../classjubatus_1_1core_1_1fv__converter_1_1libsvm__converter.html',1,'jubatus::core::fv_converter']]],
   ['light_5flof',['light_lof',['../classjubatus_1_1core_1_1anomaly_1_1light__lof.html',1,'jubatus::core::anomaly']]],

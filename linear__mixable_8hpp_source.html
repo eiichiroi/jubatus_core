@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -122,7 +122,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classjubatus_1_1core_1_1framework_1_1diff__object__raw.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="classjubatus_1_1core_1_1framework_1_1diff__object__raw.html">diff_object_raw</a> {</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classjubatus_1_1core_1_1framework_1_1diff__object__raw.html#ac8c9756ebb1a60ef34dff550379ed8ac">~diff_object_raw</a>();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1framework_1_1diff__object__raw.html#a355ce5d7c108c6942af0cd02396e7f45">convert_binary</a>(<a class="code" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">packer</a>&amp;) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1framework_1_1diff__object__raw.html#a355ce5d7c108c6942af0cd02396e7f45">convert_binary</a>(<a class="code" href="classmsgpack_1_1packer.html">packer</a>&amp;) <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
 <div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="namespacejubatus_1_1core_1_1framework.html#a9e89d8fe1fe0b98f2f652bb86bc5a4a2">   35</a></span>&#160;<span class="keyword">typedef</span> jubatus::util::lang::shared_ptr&lt;diff_object_raw&gt; <a class="code" href="namespacejubatus_1_1core_1_1framework.html#a9e89d8fe1fe0b98f2f652bb86bc5a4a2">diff_object</a>;</div>
@@ -136,7 +136,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">virtual</span> diff_object <a class="code" href="classjubatus_1_1core_1_1framework_1_1linear__mixable.html#a37fb827c6d05a4d6729c9468620abd66">convert_diff_object</a>(<span class="keyword">const</span> msgpack::object&amp;) <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="comment">// mix assumes fold left?</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1framework_1_1linear__mixable.html#a57fe32863e356ac95c4887ef7195d87f">mix</a>(<span class="keyword">const</span> msgpack::object&amp; obj, diff_object) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1framework_1_1linear__mixable.html#a58f9f766e9c59f6a074207e9ac35939d">get_diff</a>(<a class="code" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">packer</a>&amp;) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1framework_1_1linear__mixable.html#a58f9f766e9c59f6a074207e9ac35939d">get_diff</a>(<a class="code" href="classmsgpack_1_1packer.html">packer</a>&amp;) <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classjubatus_1_1core_1_1framework_1_1linear__mixable.html#a6fb632ad48cfa1e3e4c8a0ac3a813fb6">put_diff</a>(<span class="keyword">const</span> diff_object&amp; obj) = 0;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
@@ -158,14 +158,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classjubatus_1_1core_1_1framework_1_1diff__object__raw_html_ac8c9756ebb1a60ef34dff550379ed8ac"><div class="ttname"><a href="classjubatus_1_1core_1_1framework_1_1diff__object__raw.html#ac8c9756ebb1a60ef34dff550379ed8ac">jubatus::core::framework::diff_object_raw::~diff_object_raw</a></div><div class="ttdeci">virtual ~diff_object_raw()</div><div class="ttdef"><b>Definition:</b> <a href="linear__mixable_8cpp_source.html#l00023">linear_mixable.cpp:23</a></div></div>
 <div class="ttc" id="mixable_8hpp_html"><div class="ttname"><a href="mixable_8hpp.html">mixable.hpp</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1framework_1_1linear__mixable_html_a37fb827c6d05a4d6729c9468620abd66"><div class="ttname"><a href="classjubatus_1_1core_1_1framework_1_1linear__mixable.html#a37fb827c6d05a4d6729c9468620abd66">jubatus::core::framework::linear_mixable::convert_diff_object</a></div><div class="ttdeci">virtual diff_object convert_diff_object(const msgpack::object &amp;) const =0</div></div>
-<div class="ttc" id="namespacejubatus_1_1core_1_1framework_html_a99dd974442916078e2a3458b1e85b254"><div class="ttname"><a href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">jubatus::core::framework::packer</a></div><div class="ttdeci">msgpack::packer&lt; jubatus_packer &gt; packer</div><div class="ttdef"><b>Definition:</b> <a href="packer_8hpp_source.html#l00043">packer.hpp:43</a></div></div>
+<div class="ttc" id="classmsgpack_1_1packer_html"><div class="ttname"><a href="classmsgpack_1_1packer.html">msgpack::packer</a></div><div class="ttdef"><b>Definition:</b> <a href="bandit__base_8hpp_source.html#l00026">bandit_base.hpp:26</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1framework_1_1linear__mixable_html_a58f9f766e9c59f6a074207e9ac35939d"><div class="ttname"><a href="classjubatus_1_1core_1_1framework_1_1linear__mixable.html#a58f9f766e9c59f6a074207e9ac35939d">jubatus::core::framework::linear_mixable::get_diff</a></div><div class="ttdeci">virtual void get_diff(packer &amp;) const =0</div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1framework_1_1diff__object__raw_html_a355ce5d7c108c6942af0cd02396e7f45"><div class="ttname"><a href="classjubatus_1_1core_1_1framework_1_1diff__object__raw.html#a355ce5d7c108c6942af0cd02396e7f45">jubatus::core::framework::diff_object_raw::convert_binary</a></div><div class="ttdeci">virtual void convert_binary(packer &amp;) const =0</div></div>
 <div class="ttc" id="packer_8hpp_html"><div class="ttname"><a href="packer_8hpp.html">packer.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:35 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:03 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

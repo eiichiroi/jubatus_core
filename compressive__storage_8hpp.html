@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -98,13 +98,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;msgpack.hpp&gt;</code><br />
 <code>#include &quot;<a class="el" href="storage_8hpp_source.html">storage.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="compressor_8hpp_source.html">compressor.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for compressive_storage.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="compressive__storage_8hpp__incl.png" border="0" usemap="#jubatus_2core_2clustering_2compressive__storage_8hpp" alt=""/></div>
 <map name="jubatus_2core_2clustering_2compressive__storage_8hpp" id="jubatus_2core_2clustering_2compressive__storage_8hpp">
-<area shape="rect" id="node5" href="storage_8hpp.html" title="storage.hpp" alt="" coords="1953,92,2045,117"/><area shape="rect" id="node41" href="compressor_8hpp.html" title="compressor.hpp" alt="" coords="2468,92,2584,117"/><area shape="rect" id="node9" href="mixable__helper_8hpp.html" title="../framework/mixable\l_helper.hpp" alt="" coords="1450,165,1594,204"/><area shape="rect" id="node23" href="version_8hpp.html" title="../common/version.hpp" alt="" coords="1482,399,1638,424"/><area shape="rect" id="node31" href="clustering__config_8hpp.html" title="clustering_config.hpp" alt="" coords="1764,325,1911,351"/><area shape="rect" id="node34" href="types_8hpp.html" title="types.hpp" alt="" coords="2701,252,2780,277"/><area shape="rect" id="node39" href="event__dispatcher_8hpp.html" title="event_dispatcher.hpp" alt="" coords="2138,325,2286,351"/><area shape="rect" id="node11" href="common_2exception_8hpp.html" title="../common/exception.hpp" alt="" coords="927,325,1098,351"/><area shape="rect" id="node22" href="model_8hpp.html" title="model.hpp" alt="" coords="1545,252,1629,277"/><area shape="rect" id="node27" href="linear__mixable_8hpp.html" title="linear_mixable.hpp" alt="" coords="1234,252,1367,277"/><area shape="rect" id="node30" href="push__mixable_8hpp.html" title="push_mixable.hpp" alt="" coords="1392,252,1521,277"/><area shape="rect" id="node18" href="exception__info_8hpp.html" title="exception_info.hpp" alt="" coords="358,399,491,424"/><area shape="rect" id="node26" href="packer_8hpp.html" title="packer.hpp" alt="" coords="1452,325,1538,351"/><area shape="rect" id="node28" href="mixable_8hpp.html" title="mixable.hpp" alt="" coords="1284,325,1378,351"/><area shape="rect" id="node36" href="common_2type_8hpp.html" title="../common/type.hpp" alt="" coords="2760,325,2899,351"/><area shape="rect" id="node37" href="datum_8hpp.html" title="../fv_converter/datum.hpp" alt="" coords="2563,325,2736,351"/><area shape="rect" id="node42" href="clustering_2util_8hpp.html" title="util.hpp" alt="" coords="2494,172,2558,197"/><area shape="rect" id="node43" href="discrete__distribution_8hpp.html" title="discrete_distribution.hpp" alt="" coords="2316,252,2482,277"/></map>
+<area shape="rect" id="node5" href="storage_8hpp.html" title="storage.hpp" alt="" coords="1062,92,1154,117"/><area shape="rect" id="node7" href="mixable__helper_8hpp.html" title="../framework/mixable\l_helper.hpp" alt="" coords="1450,165,1595,204"/><area shape="rect" id="node21" href="version_8hpp.html" title="../common/version.hpp" alt="" coords="1532,399,1689,424"/><area shape="rect" id="node29" href="clustering__config_8hpp.html" title="clustering_config.hpp" alt="" coords="110,325,258,351"/><area shape="rect" id="node32" href="types_8hpp.html" title="types.hpp" alt="" coords="727,252,806,277"/><area shape="rect" id="node37" href="event__dispatcher_8hpp.html" title="event_dispatcher.hpp" alt="" coords="1106,325,1254,351"/><area shape="rect" id="node9" href="common_2exception_8hpp.html" title="../common/exception.hpp" alt="" coords="2088,325,2258,351"/><area shape="rect" id="node20" href="model_8hpp.html" title="model.hpp" alt="" coords="1481,252,1564,277"/><area shape="rect" id="node25" href="linear__mixable_8hpp.html" title="linear_mixable.hpp" alt="" coords="1743,252,1876,277"/><area shape="rect" id="node28" href="push__mixable_8hpp.html" title="push_mixable.hpp" alt="" coords="1588,252,1718,277"/><area shape="rect" id="node16" href="exception__info_8hpp.html" title="exception_info.hpp" alt="" coords="2580,399,2713,424"/><area shape="rect" id="node24" href="packer_8hpp.html" title="packer.hpp" alt="" coords="1531,325,1618,351"/><area shape="rect" id="node26" href="mixable_8hpp.html" title="mixable.hpp" alt="" coords="1692,325,1785,351"/><area shape="rect" id="node34" href="common_2type_8hpp.html" title="../common/type.hpp" alt="" coords="841,325,980,351"/><area shape="rect" id="node35" href="datum_8hpp.html" title="../fv_converter/datum.hpp" alt="" coords="494,325,666,351"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
@@ -129,11 +128,13 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacejubatus_1_1core_1_1clustering"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1clustering.html">jubatus::core::clustering</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacejubatus_1_1core_1_1clustering_1_1compressor"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1clustering_1_1compressor.html">jubatus::core::clustering::compressor</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:36 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:04 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

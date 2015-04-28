@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -772,22 +772,28 @@ Here is the call graph for this function:</div>
 <p>Referenced by <a class="el" href="datum__to__fv__converter_8cpp_source.html#l00243">convert()</a>, and <a class="el" href="datum__to__fv__converter_8cpp_source.html#l00261">convert_and_update_weight()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;                                                       {</div>
 <div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">size_t</span> original_size = ret_fv.size();</div>
-<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1datum__to__fv__converter__impl.html#a060edc8ee0859ba55bd169b813cee650">combination_rules_</a>.size(); ++i) {</div>
-<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;      <span class="keyword">const</span> combination_feature_rule&amp; r = <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1datum__to__fv__converter__impl.html#a060edc8ee0859ba55bd169b813cee650">combination_rules_</a>[i];</div>
-<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0 ; j &lt; original_size - 1; ++j) {</div>
-<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> m = j + 1; m &lt; original_size; ++m) {</div>
-<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;          <span class="keywordflow">if</span> (r.matcher_left_-&gt;match(ret_fv[j].first)</div>
-<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;              &amp;&amp; r.matcher_right_-&gt;match(ret_fv[m].first)) {</div>
-<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;            r.feature_func_-&gt;add_feature(</div>
-<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;                ret_fv[j].first + <span class="stringliteral">&quot;&amp;&quot;</span> + ret_fv[m].first + <span class="stringliteral">&quot;/&quot;</span> + r.name_,</div>
-<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;                ret_fv[j].second,</div>
-<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;                ret_fv[m].second,</div>
-<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;                ret_fv);</div>
-<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;          }</div>
-<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;        }</div>
-<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;      }</div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;    }</div>
-<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;  }</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;    <span class="keywordflow">if</span> (original_size &lt; 2) {</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;      <span class="comment">// Must have at least 2 features to generate combinations.</span></div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;      <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;    }</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1datum__to__fv__converter__impl.html#a060edc8ee0859ba55bd169b813cee650">combination_rules_</a>.size(); ++i) {</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;      <span class="keyword">const</span> combination_feature_rule&amp; r = <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1datum__to__fv__converter__impl.html#a060edc8ee0859ba55bd169b813cee650">combination_rules_</a>[i];</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0 ; j &lt; original_size - 1; ++j) {</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> m = j + 1; m &lt; original_size; ++m) {</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;          <span class="keywordflow">if</span> (r.matcher_left_-&gt;match(ret_fv[j].first)</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;              &amp;&amp; r.matcher_right_-&gt;match(ret_fv[m].first)) {</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;            r.feature_func_-&gt;add_feature(</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;                ret_fv[j].first + <span class="stringliteral">&quot;&amp;&quot;</span> + ret_fv[m].first + <span class="stringliteral">&quot;/&quot;</span> + r.name_,</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;                ret_fv[j].second,</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;                ret_fv[m].second,</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;                ret_fv);</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;          }</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;        }</div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;      }</div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;    }</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;  }</div>
 <div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1datum__to__fv__converter__impl_html_a060edc8ee0859ba55bd169b813cee650"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1datum__to__fv__converter__impl.html#a060edc8ee0859ba55bd169b813cee650">jubatus::core::fv_converter::datum_to_fv_converter_impl::combination_rules_</a></div><div class="ttdeci">std::vector&lt; combination_feature_rule &gt; combination_rules_</div><div class="ttdef"><b>Definition:</b> <a href="datum__to__fv__converter_8cpp_source.html#l00155">datum_to_fv_converter.cpp:155</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
@@ -2314,7 +2320,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:39 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:08 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -113,6 +113,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:a4c27d50c5ea7a38aef3065b4456001f5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjubatus_1_1core_1_1bandit_1_1epsilon__greedy__config.html#a4c27d50c5ea7a38aef3065b4456001f5">assume_unrewarded</a></td></tr>
+<tr class="separator:a4c27d50c5ea7a38aef3065b4456001f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79b2d93c9da8921a10f057350a5da18a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjubatus_1_1core_1_1bandit_1_1epsilon__greedy__config.html#a79b2d93c9da8921a10f057350a5da18a">epsilon</a></td></tr>
 <tr class="separator:a79b2d93c9da8921a10f057350a5da18a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -144,15 +146,32 @@ template&lt;class Ar &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bandit__factory_8cpp_source.html#l00038">38</a> of file <a class="el" href="bandit__factory_8cpp_source.html">bandit_factory.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                         {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    ar &amp; JUBA_MEMBER(<a class="code" href="structjubatus_1_1core_1_1bandit_1_1epsilon__greedy__config.html#a79b2d93c9da8921a10f057350a5da18a">epsilon</a>);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  }</div>
-<div class="ttc" id="structjubatus_1_1core_1_1bandit_1_1epsilon__greedy__config_html_a79b2d93c9da8921a10f057350a5da18a"><div class="ttname"><a href="structjubatus_1_1core_1_1bandit_1_1epsilon__greedy__config.html#a79b2d93c9da8921a10f057350a5da18a">jubatus::core::bandit::epsilon_greedy_config::epsilon</a></div><div class="ttdeci">double epsilon</div><div class="ttdef"><b>Definition:</b> <a href="bandit__factory_8cpp_source.html#l00035">bandit_factory.cpp:35</a></div></div>
+<p>Definition at line <a class="el" href="bandit__factory_8cpp_source.html#l00039">39</a> of file <a class="el" href="bandit__factory_8cpp_source.html">bandit_factory.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                         {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    ar &amp; JUBA_MEMBER(<a class="code" href="structjubatus_1_1core_1_1bandit_1_1epsilon__greedy__config.html#a4c27d50c5ea7a38aef3065b4456001f5">assume_unrewarded</a>) &amp; JUBA_MEMBER(<a class="code" href="structjubatus_1_1core_1_1bandit_1_1epsilon__greedy__config.html#a79b2d93c9da8921a10f057350a5da18a">epsilon</a>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  }</div>
+<div class="ttc" id="structjubatus_1_1core_1_1bandit_1_1epsilon__greedy__config_html_a79b2d93c9da8921a10f057350a5da18a"><div class="ttname"><a href="structjubatus_1_1core_1_1bandit_1_1epsilon__greedy__config.html#a79b2d93c9da8921a10f057350a5da18a">jubatus::core::bandit::epsilon_greedy_config::epsilon</a></div><div class="ttdeci">double epsilon</div><div class="ttdef"><b>Definition:</b> <a href="bandit__factory_8cpp_source.html#l00036">bandit_factory.cpp:36</a></div></div>
+<div class="ttc" id="structjubatus_1_1core_1_1bandit_1_1epsilon__greedy__config_html_a4c27d50c5ea7a38aef3065b4456001f5"><div class="ttname"><a href="structjubatus_1_1core_1_1bandit_1_1epsilon__greedy__config.html#a4c27d50c5ea7a38aef3065b4456001f5">jubatus::core::bandit::epsilon_greedy_config::assume_unrewarded</a></div><div class="ttdeci">bool assume_unrewarded</div><div class="ttdef"><b>Definition:</b> <a href="bandit__factory_8cpp_source.html#l00035">bandit_factory.cpp:35</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a4c27d50c5ea7a38aef3065b4456001f5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool jubatus::core::bandit::epsilon_greedy_config::assume_unrewarded</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bandit__factory_8cpp_source.html#l00035">35</a> of file <a class="el" href="bandit__factory_8cpp_source.html">bandit_factory.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="bandit__factory_8cpp_source.html#l00073">jubatus::core::bandit::bandit_factory::create()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a79b2d93c9da8921a10f057350a5da18a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -163,9 +182,9 @@ template&lt;class Ar &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bandit__factory_8cpp_source.html#l00035">35</a> of file <a class="el" href="bandit__factory_8cpp_source.html">bandit_factory.cpp</a>.</p>
+<p>Definition at line <a class="el" href="bandit__factory_8cpp_source.html#l00036">36</a> of file <a class="el" href="bandit__factory_8cpp_source.html">bandit_factory.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="bandit__factory_8cpp_source.html#l00061">jubatus::core::bandit::bandit_factory::create()</a>.</p>
+<p>Referenced by <a class="el" href="bandit__factory_8cpp_source.html#l00073">jubatus::core::bandit::bandit_factory::create()</a>.</p>
 
 </div>
 </div>
@@ -175,7 +194,7 @@ template&lt;class Ar &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:37 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:05 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

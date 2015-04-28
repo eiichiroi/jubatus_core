@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -98,13 +98,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;string&gt;</code><br />
 <code>#include &quot;jubatus/util/lang/shared_ptr.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="jsonconfig_8hpp_source.html">../common/jsonconfig.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="column__table_8hpp_source.html">../table/column/column_table.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for nearest_neighbor_factory.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="nearest__neighbor__factory_8hpp__incl.png" border="0" usemap="#jubatus_2core_2nearest__neighbor_2nearest__neighbor__factory_8hpp" alt=""/></div>
 <map name="jubatus_2core_2nearest__neighbor_2nearest__neighbor__factory_8hpp" id="jubatus_2core_2nearest__neighbor_2nearest__neighbor__factory_8hpp">
-<area shape="rect" id="node5" href="jsonconfig_8hpp.html" title="../common/jsonconfig.hpp" alt="" coords="523,199,696,224"/><area shape="rect" id="node26" href="column__table_8hpp.html" title="../table/column/column\l_table.hpp" alt="" coords="1869,105,2024,144"/><area shape="rect" id="node6" href="config_8hpp.html" title="./jsonconfig/config.hpp" alt="" coords="532,372,686,397"/><area shape="rect" id="node12" href="common_2jsonconfig_2exception_8hpp.html" title="exception.hpp" alt="" coords="557,452,662,477"/><area shape="rect" id="node23" href="cast_8hpp.html" title="./jsonconfig/cast.hpp" alt="" coords="401,285,543,311"/><area shape="rect" id="node15" href="common_2exception_8hpp.html" title="../exception.hpp" alt="" coords="1790,525,1906,551"/><area shape="rect" id="node21" href="exception__info_8hpp.html" title="exception_info.hpp" alt="" coords="1052,599,1185,624"/><area shape="rect" id="node31" href="assert_8hpp.html" title="../../common/assert.hpp" alt="" coords="2229,452,2390,477"/><area shape="rect" id="node34" href="unordered__map_8hpp.html" title="../../common/unordered\l_map.hpp" alt="" coords="2822,279,2981,317"/><area shape="rect" id="node35" href="packer_8hpp.html" title="../../framework/packer.hpp" alt="" coords="2441,285,2615,311"/><area shape="rect" id="node36" href="storage__exception_8hpp.html" title="../storage_exception.hpp" alt="" coords="1936,452,2104,477"/><area shape="rect" id="node37" href="table_2column_2bit__vector_8hpp.html" title="bit_vector.hpp" alt="" coords="1720,372,1824,397"/><area shape="rect" id="node40" href="column__type_8hpp.html" title="column_type.hpp" alt="" coords="1325,285,1448,311"/><area shape="rect" id="node41" href="abstract__column_8hpp.html" title="abstract_column.hpp" alt="" coords="1654,199,1799,224"/><area shape="rect" id="node45" href="owner_8hpp.html" title="owner.hpp" alt="" coords="2440,372,2523,397"/><area shape="rect" id="node38" href="big__endian_8hpp.html" title="../../common/big_endian.hpp" alt="" coords="1368,452,1557,477"/></map>
+<area shape="rect" id="node5" href="jsonconfig_8hpp.html" title="../common/jsonconfig.hpp" alt="" coords="293,105,467,131"/><area shape="rect" id="node6" href="config_8hpp.html" title="./jsonconfig/config.hpp" alt="" coords="231,259,385,284"/><area shape="rect" id="node12" href="common_2jsonconfig_2exception_8hpp.html" title="exception.hpp" alt="" coords="532,339,636,364"/><area shape="rect" id="node23" href="cast_8hpp.html" title="./jsonconfig/cast.hpp" alt="" coords="377,179,519,204"/><area shape="rect" id="node15" href="common_2exception_8hpp.html" title="../exception.hpp" alt="" coords="701,412,816,437"/><area shape="rect" id="node21" href="exception__info_8hpp.html" title="exception_info.hpp" alt="" coords="480,485,613,511"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
@@ -124,16 +123,18 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacejubatus_1_1core_1_1nearest__neighbor"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1nearest__neighbor.html">jubatus::core::nearest_neighbor</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacejubatus_1_1core_1_1storage"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1storage.html">jubatus::core::storage</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a5f0762246614acea1205e17d514179f2"><td class="memItemLeft" align="right" valign="top">jubatus::util::lang::shared_ptr&lt; nearest_neighbor_base &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1nearest__neighbor.html#a5f0762246614acea1205e17d514179f2">jubatus::core::nearest_neighbor::create_nearest_neighbor</a> (const std::string &amp;name, const common::jsonconfig::config &amp;config, jubatus::util::lang::shared_ptr&lt; table::column_table &gt; table, const std::string &amp;id)</td></tr>
-<tr class="separator:a5f0762246614acea1205e17d514179f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad87f299e0e288a75376b1b40a128fb95"><td class="memItemLeft" align="right" valign="top">jubatus::util::lang::shared_ptr&lt; nearest_neighbor_base &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1nearest__neighbor.html#ad87f299e0e288a75376b1b40a128fb95">jubatus::core::nearest_neighbor::create_nearest_neighbor</a> (const std::string &amp;name, const common::jsonconfig::config &amp;config, jubatus::util::lang::shared_ptr&lt; storage::column_table &gt; table, const std::string &amp;id)</td></tr>
+<tr class="separator:ad87f299e0e288a75376b1b40a128fb95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:36 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:05 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

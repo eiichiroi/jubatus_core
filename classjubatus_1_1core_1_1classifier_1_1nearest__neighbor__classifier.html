@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -141,7 +141,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a41d80dd40f1987fa42d535b5a81bccaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f5475ba3ffdaf01893e526ee65aae19"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a7f5475ba3ffdaf01893e526ee65aae19">nearest_neighbor_classifier</a> (jubatus::util::lang::shared_ptr&lt; <a class="el" href="classjubatus_1_1core_1_1nearest__neighbor_1_1nearest__neighbor__base.html">nearest_neighbor::nearest_neighbor_base</a> &gt; nearest_neighbor_engine, size_t k, float alpha)</td></tr>
 <tr class="separator:a7f5475ba3ffdaf01893e526ee65aae19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a689f433022d051cf94a6b2ed8f83826a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a689f433022d051cf94a6b2ed8f83826a">pack</a> (<a class="el" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">framework::packer</a> &amp;pk) const </td></tr>
+<tr class="memitem:a689f433022d051cf94a6b2ed8f83826a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a689f433022d051cf94a6b2ed8f83826a">pack</a> (<a class="el" href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">framework::packer</a> &amp;pk) const </td></tr>
 <tr class="separator:a689f433022d051cf94a6b2ed8f83826a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a543a4d9b476302222eaa9ebdebd87100"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a543a4d9b476302222eaa9ebdebd87100">set_label</a> (const std::string &amp;label)</td></tr>
 <tr class="separator:a543a4d9b476302222eaa9ebdebd87100"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,12 +174,16 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a73734e075daf86c06936fd1f63fd5023"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07529374f0c316e3a9633bdb24d9efee"><td class="memItemLeft" align="right" valign="top">jubatus::util::math::random::mtrand&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a07529374f0c316e3a9633bdb24d9efee">rand_</a></td></tr>
 <tr class="separator:a07529374f0c316e3a9633bdb24d9efee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af989c1f47d2ce583444f0df47c9fb1f5"><td class="memItemLeft" align="right" valign="top">jubatus::util::concurrent::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#af989c1f47d2ce583444f0df47c9fb1f5">rand_mutex_</a></td></tr>
+<tr class="separator:af989c1f47d2ce583444f0df47c9fb1f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa088339499419e411060adac4a5b2ca7"><td class="memItemLeft" align="right" valign="top">jubatus::util::lang::shared_ptr&lt; <a class="el" href="classjubatus_1_1core_1_1unlearner_1_1unlearner__base.html">unlearner::unlearner_base</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#aa088339499419e411060adac4a5b2ca7">unlearner_</a></td></tr>
 <tr class="separator:aa088339499419e411060adac4a5b2ca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c49791615721c3c7a44ed8f895005cc"><td class="memItemLeft" align="right" valign="top">jubatus::util::concurrent::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a1c49791615721c3c7a44ed8f895005cc">unlearner_mutex_</a></td></tr>
+<tr class="separator:a1c49791615721c3c7a44ed8f895005cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00038">38</a> of file <a class="el" href="nearest__neighbor__classifier_8hpp_source.html">nearest_neighbor_classifier.hpp</a>.</p>
+<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00040">40</a> of file <a class="el" href="nearest__neighbor__classifier_8hpp_source.html">nearest_neighbor_classifier.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a7f5475ba3ffdaf01893e526ee65aae19"></a>
 <div class="memitem">
@@ -211,19 +215,19 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00072">72</a> of file <a class="el" href="nearest__neighbor__classifier_8cpp_source.html">nearest_neighbor_classifier.cpp</a>.</p>
+<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00075">75</a> of file <a class="el" href="nearest__neighbor__classifier_8cpp_source.html">nearest_neighbor_classifier.cpp</a>.</p>
 
 <p>References <a class="el" href="common_2exception_8hpp_source.html#l00079">JUBATUS_EXCEPTION</a>.</p>
-<div class="fragment"><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    : <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">nearest_neighbor_engine_</a>(engine), <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ac20c6ba1f68042890465740e32978320">k_</a>(k), <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a671f565d0f5d4f3b27ba6b52f3457b7d">alpha_</a>(alpha) {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordflow">if</span> (!(alpha &gt;= 0)) {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="common_2exception_8hpp.html#aff10b0eb90b477115ab3955c3995d327">JUBATUS_EXCEPTION</a>(common::invalid_parameter(</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="stringliteral">&quot;local_sensitivity should &gt;= 0&quot;</span>));</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_a671f565d0f5d4f3b27ba6b52f3457b7d"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a671f565d0f5d4f3b27ba6b52f3457b7d">jubatus::core::classifier::nearest_neighbor_classifier::alpha_</a></div><div class="ttdeci">float alpha_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00074">nearest_neighbor_classifier.hpp:74</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_ac20c6ba1f68042890465740e32978320"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ac20c6ba1f68042890465740e32978320">jubatus::core::classifier::nearest_neighbor_classifier::k_</a></div><div class="ttdeci">size_t k_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00073">nearest_neighbor_classifier.hpp:73</a></div></div>
+<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    : <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">nearest_neighbor_engine_</a>(engine), <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ac20c6ba1f68042890465740e32978320">k_</a>(k), <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a671f565d0f5d4f3b27ba6b52f3457b7d">alpha_</a>(alpha) {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordflow">if</span> (!(alpha &gt;= 0)) {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="common_2exception_8hpp.html#aff10b0eb90b477115ab3955c3995d327">JUBATUS_EXCEPTION</a>(common::invalid_parameter(</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="stringliteral">&quot;local_sensitivity should &gt;= 0&quot;</span>));</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_a671f565d0f5d4f3b27ba6b52f3457b7d"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a671f565d0f5d4f3b27ba6b52f3457b7d">jubatus::core::classifier::nearest_neighbor_classifier::alpha_</a></div><div class="ttdeci">float alpha_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00076">nearest_neighbor_classifier.hpp:76</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_ac20c6ba1f68042890465740e32978320"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ac20c6ba1f68042890465740e32978320">jubatus::core::classifier::nearest_neighbor_classifier::k_</a></div><div class="ttdeci">size_t k_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00075">nearest_neighbor_classifier.hpp:75</a></div></div>
 <div class="ttc" id="common_2exception_8hpp_html_aff10b0eb90b477115ab3955c3995d327"><div class="ttname"><a href="common_2exception_8hpp.html#aff10b0eb90b477115ab3955c3995d327">JUBATUS_EXCEPTION</a></div><div class="ttdeci">#define JUBATUS_EXCEPTION(e)</div><div class="ttdef"><b>Definition:</b> <a href="common_2exception_8hpp_source.html#l00079">exception.hpp:79</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_a73734e075daf86c06936fd1f63fd5023"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">jubatus::core::classifier::nearest_neighbor_classifier::nearest_neighbor_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; nearest_neighbor::nearest_neighbor_base &gt; nearest_neighbor_engine_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00071">nearest_neighbor_classifier.hpp:71</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_a73734e075daf86c06936fd1f63fd5023"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">jubatus::core::classifier::nearest_neighbor_classifier::nearest_neighbor_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; nearest_neighbor::nearest_neighbor_base &gt; nearest_neighbor_engine_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00073">nearest_neighbor_classifier.hpp:73</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -242,25 +246,25 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00102">102</a> of file <a class="el" href="nearest__neighbor__classifier_8cpp_source.html">nearest_neighbor_classifier.cpp</a>.</p>
+<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00110">110</a> of file <a class="el" href="nearest__neighbor__classifier_8cpp_source.html">nearest_neighbor_classifier.cpp</a>.</p>
 
-<p>References <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00118">classify_with_scores()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                                 {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <a class="code" href="namespacejubatus_1_1core_1_1classifier.html#a7f72da81e24d824251a9b9ecb4f83f3c">classify_result</a> result;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a9d2efb74d1b4417f6603d9c07c498724">classify_with_scores</a>(fv, result);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordtype">float</span> max_score = -FLT_MAX;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  std::string max_class;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keywordflow">for</span> (std::vector&lt;classify_result_elem&gt;::const_iterator it = result.begin();</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      it != result.end(); ++it) {</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">if</span> (it == result.begin() || it-&gt;score &gt; max_score) {</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      max_score = it-&gt;score;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      max_class = it-&gt;label;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  }</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keywordflow">return</span> max_class;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
+<p>References <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00126">classify_with_scores()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                                 {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <a class="code" href="namespacejubatus_1_1core_1_1classifier.html#a7f72da81e24d824251a9b9ecb4f83f3c">classify_result</a> result;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a9d2efb74d1b4417f6603d9c07c498724">classify_with_scores</a>(fv, result);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keywordtype">float</span> max_score = -FLT_MAX;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  std::string max_class;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keywordflow">for</span> (std::vector&lt;classify_result_elem&gt;::const_iterator it = result.begin();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      it != result.end(); ++it) {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">if</span> (it == result.begin() || it-&gt;score &gt; max_score) {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      max_score = it-&gt;score;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;      max_class = it-&gt;label;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordflow">return</span> max_class;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
 <div class="ttc" id="namespacejubatus_1_1core_1_1classifier_html_a7f72da81e24d824251a9b9ecb4f83f3c"><div class="ttname"><a href="namespacejubatus_1_1core_1_1classifier.html#a7f72da81e24d824251a9b9ecb4f83f3c">jubatus::core::classifier::classify_result</a></div><div class="ttdeci">std::vector&lt; classify_result_elem &gt; classify_result</div><div class="ttdef"><b>Definition:</b> <a href="classifier__type_8hpp_source.html#l00041">classifier_type.hpp:41</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_a9d2efb74d1b4417f6603d9c07c498724"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a9d2efb74d1b4417f6603d9c07c498724">jubatus::core::classifier::nearest_neighbor_classifier::classify_with_scores</a></div><div class="ttdeci">void classify_with_scores(const common::sfv_t &amp;fv, classify_result &amp;scores) const </div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8cpp_source.html#l00118">nearest_neighbor_classifier.cpp:118</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_a9d2efb74d1b4417f6603d9c07c498724"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a9d2efb74d1b4417f6603d9c07c498724">jubatus::core::classifier::nearest_neighbor_classifier::classify_with_scores</a></div><div class="ttdeci">void classify_with_scores(const common::sfv_t &amp;fv, classify_result &amp;scores) const </div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8cpp_source.html#l00126">nearest_neighbor_classifier.cpp:126</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -307,36 +311,36 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classjubatus_1_1core_1_1classifier_1_1classifier__base.html#a8b67e8ff48477bd0b1f397dab9cd03b9">jubatus::core::classifier::classifier_base</a>.</p>
 
-<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00118">118</a> of file <a class="el" href="nearest__neighbor__classifier_8cpp_source.html">nearest_neighbor_classifier.cpp</a>.</p>
+<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00126">126</a> of file <a class="el" href="nearest__neighbor__classifier_8cpp_source.html">nearest_neighbor_classifier.cpp</a>.</p>
 
-<p>References <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00074">alpha_</a>, <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00073">k_</a>, <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00072">labels_</a>, and <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00071">nearest_neighbor_engine_</a>.</p>
+<p>References <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00076">alpha_</a>, <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00075">k_</a>, <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00074">labels_</a>, and <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00073">nearest_neighbor_engine_</a>.</p>
 
-<p>Referenced by <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00102">classify()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                                                          {</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  std::vector&lt;std::pair&lt;std::string, float&gt; &gt; ids;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">nearest_neighbor_engine_</a>-&gt;neighbor_row(fv, ids, <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ac20c6ba1f68042890465740e32978320">k_</a>);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  std::map&lt;std::string, float&gt; m;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keywordflow">for</span> (unordered_set&lt;std::string&gt;::const_iterator iter = <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">labels_</a>.begin();</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;       iter != <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">labels_</a>.end(); ++iter) {</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    m.insert(std::make_pair(*iter, 0));</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  }</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; ids.size(); ++i) {</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    std::string label = get_label_from_id(ids[i].first);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    m[label] += std::exp(-<a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a671f565d0f5d4f3b27ba6b52f3457b7d">alpha_</a> * ids[i].second);</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  }</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  scores.clear();</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keywordflow">for</span> (std::map&lt;std::string, float&gt;::const_iterator iter = m.begin();</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;       iter != m.end(); ++iter) {</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    classify_result_elem elem(iter-&gt;first, iter-&gt;second);</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    scores.push_back(elem);</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  }</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_a671f565d0f5d4f3b27ba6b52f3457b7d"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a671f565d0f5d4f3b27ba6b52f3457b7d">jubatus::core::classifier::nearest_neighbor_classifier::alpha_</a></div><div class="ttdeci">float alpha_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00074">nearest_neighbor_classifier.hpp:74</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_ac20c6ba1f68042890465740e32978320"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ac20c6ba1f68042890465740e32978320">jubatus::core::classifier::nearest_neighbor_classifier::k_</a></div><div class="ttdeci">size_t k_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00073">nearest_neighbor_classifier.hpp:73</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_ad87d9ff05f8cbadaf4515fe7b5898b7a"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">jubatus::core::classifier::nearest_neighbor_classifier::labels_</a></div><div class="ttdeci">jubatus::util::data::unordered_set&lt; std::string &gt; labels_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00072">nearest_neighbor_classifier.hpp:72</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_a73734e075daf86c06936fd1f63fd5023"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">jubatus::core::classifier::nearest_neighbor_classifier::nearest_neighbor_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; nearest_neighbor::nearest_neighbor_base &gt; nearest_neighbor_engine_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00071">nearest_neighbor_classifier.hpp:71</a></div></div>
+<p>Referenced by <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00110">classify()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                                                          {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  std::vector&lt;std::pair&lt;std::string, float&gt; &gt; ids;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">nearest_neighbor_engine_</a>-&gt;neighbor_row(fv, ids, <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ac20c6ba1f68042890465740e32978320">k_</a>);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  std::map&lt;std::string, float&gt; m;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordflow">for</span> (unordered_set&lt;std::string&gt;::const_iterator iter = <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">labels_</a>.begin();</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;       iter != <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">labels_</a>.end(); ++iter) {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    m.insert(std::make_pair(*iter, 0));</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; ids.size(); ++i) {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    std::string label = get_label_from_id(ids[i].first);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    m[label] += std::exp(-<a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a671f565d0f5d4f3b27ba6b52f3457b7d">alpha_</a> * ids[i].second);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  }</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  scores.clear();</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keywordflow">for</span> (std::map&lt;std::string, float&gt;::const_iterator iter = m.begin();</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;       iter != m.end(); ++iter) {</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    classify_result_elem elem(iter-&gt;first, iter-&gt;second);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    scores.push_back(elem);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_a671f565d0f5d4f3b27ba6b52f3457b7d"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a671f565d0f5d4f3b27ba6b52f3457b7d">jubatus::core::classifier::nearest_neighbor_classifier::alpha_</a></div><div class="ttdeci">float alpha_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00076">nearest_neighbor_classifier.hpp:76</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_ac20c6ba1f68042890465740e32978320"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ac20c6ba1f68042890465740e32978320">jubatus::core::classifier::nearest_neighbor_classifier::k_</a></div><div class="ttdeci">size_t k_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00075">nearest_neighbor_classifier.hpp:75</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_ad87d9ff05f8cbadaf4515fe7b5898b7a"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">jubatus::core::classifier::nearest_neighbor_classifier::labels_</a></div><div class="ttdeci">jubatus::util::data::unordered_set&lt; std::string &gt; labels_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00074">nearest_neighbor_classifier.hpp:74</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_a73734e075daf86c06936fd1f63fd5023"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">jubatus::core::classifier::nearest_neighbor_classifier::nearest_neighbor_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; nearest_neighbor::nearest_neighbor_base &gt; nearest_neighbor_engine_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00073">nearest_neighbor_classifier.hpp:73</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -372,19 +376,19 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="classjubatus_1_1core_1_1classifier_1_1classifier__base.html#acc2ddf51bda8ebde4233dd2794dbaa3a">jubatus::core::classifier::classifier_base</a>.</p>
 
-<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00169">169</a> of file <a class="el" href="nearest__neighbor__classifier_8cpp_source.html">nearest_neighbor_classifier.cpp</a>.</p>
+<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00177">177</a> of file <a class="el" href="nearest__neighbor__classifier_8cpp_source.html">nearest_neighbor_classifier.cpp</a>.</p>
 
-<p>References <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00072">labels_</a>, <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00071">nearest_neighbor_engine_</a>, and <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00075">unlearner_</a>.</p>
-<div class="fragment"><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                                        {</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">nearest_neighbor_engine_</a>-&gt;clear();</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">labels_</a>.clear();</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#aa088339499419e411060adac4a5b2ca7">unlearner_</a>) {</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#aa088339499419e411060adac4a5b2ca7">unlearner_</a>-&gt;clear();</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  }</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_aa088339499419e411060adac4a5b2ca7"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#aa088339499419e411060adac4a5b2ca7">jubatus::core::classifier::nearest_neighbor_classifier::unlearner_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; unlearner::unlearner_base &gt; unlearner_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00075">nearest_neighbor_classifier.hpp:75</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_ad87d9ff05f8cbadaf4515fe7b5898b7a"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">jubatus::core::classifier::nearest_neighbor_classifier::labels_</a></div><div class="ttdeci">jubatus::util::data::unordered_set&lt; std::string &gt; labels_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00072">nearest_neighbor_classifier.hpp:72</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_a73734e075daf86c06936fd1f63fd5023"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">jubatus::core::classifier::nearest_neighbor_classifier::nearest_neighbor_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; nearest_neighbor::nearest_neighbor_base &gt; nearest_neighbor_engine_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00071">nearest_neighbor_classifier.hpp:71</a></div></div>
+<p>References <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00074">labels_</a>, <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00073">nearest_neighbor_engine_</a>, and <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00078">unlearner_</a>.</p>
+<div class="fragment"><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                                        {</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">nearest_neighbor_engine_</a>-&gt;clear();</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">labels_</a>.clear();</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#aa088339499419e411060adac4a5b2ca7">unlearner_</a>) {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#aa088339499419e411060adac4a5b2ca7">unlearner_</a>-&gt;clear();</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  }</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_aa088339499419e411060adac4a5b2ca7"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#aa088339499419e411060adac4a5b2ca7">jubatus::core::classifier::nearest_neighbor_classifier::unlearner_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; unlearner::unlearner_base &gt; unlearner_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00078">nearest_neighbor_classifier.hpp:78</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_ad87d9ff05f8cbadaf4515fe7b5898b7a"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">jubatus::core::classifier::nearest_neighbor_classifier::labels_</a></div><div class="ttdeci">jubatus::util::data::unordered_set&lt; std::string &gt; labels_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00074">nearest_neighbor_classifier.hpp:74</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_a73734e075daf86c06936fd1f63fd5023"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">jubatus::core::classifier::nearest_neighbor_classifier::nearest_neighbor_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; nearest_neighbor::nearest_neighbor_base &gt; nearest_neighbor_engine_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00073">nearest_neighbor_classifier.hpp:73</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -412,39 +416,39 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="classjubatus_1_1core_1_1classifier_1_1classifier__base.html#a168ebb7e574358f655a7b5964e307f53">jubatus::core::classifier::classifier_base</a>.</p>
 
-<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00141">141</a> of file <a class="el" href="nearest__neighbor__classifier_8cpp_source.html">nearest_neighbor_classifier.cpp</a>.</p>
+<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00149">149</a> of file <a class="el" href="nearest__neighbor__classifier_8cpp_source.html">nearest_neighbor_classifier.cpp</a>.</p>
 
-<p>References <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00072">labels_</a>, <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00071">nearest_neighbor_engine_</a>, and <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00075">unlearner_</a>.</p>
-<div class="fragment"><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                                                                     {</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">labels_</a>.erase(label) == 0) {</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  }</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  shared_ptr&lt;table::column_table&gt; table =</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;      <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">nearest_neighbor_engine_</a>-&gt;get_table();</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  std::vector&lt;std::string&gt; ids_to_be_deleted;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0, n = table-&gt;size(); i &lt; n; ++i) {</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    std::string <span class="keywordtype">id</span> = table-&gt;get_key(i);</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    std::string l = get_label_from_id(<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">if</span> (l == label) {</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;      ids_to_be_deleted.push_back(<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    }</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  }</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0, n = ids_to_be_deleted.size(); i &lt; n; ++i) {</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span> = ids_to_be_deleted[i];</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    table-&gt;delete_row(<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#aa088339499419e411060adac4a5b2ca7">unlearner_</a>) {</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#aa088339499419e411060adac4a5b2ca7">unlearner_</a>-&gt;remove(<span class="keywordtype">id</span>);</div>
+<p>References <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00074">labels_</a>, <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00073">nearest_neighbor_engine_</a>, and <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00078">unlearner_</a>.</p>
+<div class="fragment"><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                                                                     {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">labels_</a>.erase(label) == 0) {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  shared_ptr&lt;storage::column_table&gt; table =</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;      <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">nearest_neighbor_engine_</a>-&gt;get_table();</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  std::vector&lt;std::string&gt; ids_to_be_deleted;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0, n = table-&gt;size(); i &lt; n; ++i) {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    std::string <span class="keywordtype">id</span> = table-&gt;get_key(i);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    std::string l = get_label_from_id(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">if</span> (l == label) {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      ids_to_be_deleted.push_back(<span class="keywordtype">id</span>);</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    }</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  }</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_aa088339499419e411060adac4a5b2ca7"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#aa088339499419e411060adac4a5b2ca7">jubatus::core::classifier::nearest_neighbor_classifier::unlearner_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; unlearner::unlearner_base &gt; unlearner_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00075">nearest_neighbor_classifier.hpp:75</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_ad87d9ff05f8cbadaf4515fe7b5898b7a"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">jubatus::core::classifier::nearest_neighbor_classifier::labels_</a></div><div class="ttdeci">jubatus::util::data::unordered_set&lt; std::string &gt; labels_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00072">nearest_neighbor_classifier.hpp:72</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_a73734e075daf86c06936fd1f63fd5023"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">jubatus::core::classifier::nearest_neighbor_classifier::nearest_neighbor_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; nearest_neighbor::nearest_neighbor_base &gt; nearest_neighbor_engine_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00071">nearest_neighbor_classifier.hpp:71</a></div></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0, n = ids_to_be_deleted.size(); i &lt; n; ++i) {</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span> = ids_to_be_deleted[i];</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    table-&gt;delete_row(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#aa088339499419e411060adac4a5b2ca7">unlearner_</a>) {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;      <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#aa088339499419e411060adac4a5b2ca7">unlearner_</a>-&gt;remove(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_aa088339499419e411060adac4a5b2ca7"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#aa088339499419e411060adac4a5b2ca7">jubatus::core::classifier::nearest_neighbor_classifier::unlearner_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; unlearner::unlearner_base &gt; unlearner_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00078">nearest_neighbor_classifier.hpp:78</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_ad87d9ff05f8cbadaf4515fe7b5898b7a"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">jubatus::core::classifier::nearest_neighbor_classifier::labels_</a></div><div class="ttdeci">jubatus::util::data::unordered_set&lt; std::string &gt; labels_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00074">nearest_neighbor_classifier.hpp:74</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_a73734e075daf86c06936fd1f63fd5023"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">jubatus::core::classifier::nearest_neighbor_classifier::nearest_neighbor_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; nearest_neighbor::nearest_neighbor_base &gt; nearest_neighbor_engine_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00073">nearest_neighbor_classifier.hpp:73</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -471,18 +475,18 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="classjubatus_1_1core_1_1classifier_1_1classifier__base.html#a974e8d1e788412ed42619579499ff642">jubatus::core::classifier::classifier_base</a>.</p>
 
-<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00177">177</a> of file <a class="el" href="nearest__neighbor__classifier_8cpp_source.html">nearest_neighbor_classifier.cpp</a>.</p>
+<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00185">185</a> of file <a class="el" href="nearest__neighbor__classifier_8cpp_source.html">nearest_neighbor_classifier.cpp</a>.</p>
 
-<p>References <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00072">labels_</a>.</p>
-<div class="fragment"><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                                                                   {</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  std::vector&lt;std::string&gt; result;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <span class="keywordflow">for</span> (unordered_set&lt;std::string&gt;::const_iterator iter = <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">labels_</a>.begin();</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;       iter != <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">labels_</a>.end(); ++iter) {</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    result.push_back(*iter);</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  }</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_ad87d9ff05f8cbadaf4515fe7b5898b7a"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">jubatus::core::classifier::nearest_neighbor_classifier::labels_</a></div><div class="ttdeci">jubatus::util::data::unordered_set&lt; std::string &gt; labels_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00072">nearest_neighbor_classifier.hpp:72</a></div></div>
+<p>References <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00074">labels_</a>.</p>
+<div class="fragment"><div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                                                                   {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  std::vector&lt;std::string&gt; result;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <span class="keywordflow">for</span> (unordered_set&lt;std::string&gt;::const_iterator iter = <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">labels_</a>.begin();</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;       iter != <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">labels_</a>.end(); ++iter) {</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    result.push_back(*iter);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_ad87d9ff05f8cbadaf4515fe7b5898b7a"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">jubatus::core::classifier::nearest_neighbor_classifier::labels_</a></div><div class="ttdeci">jubatus::util::data::unordered_set&lt; std::string &gt; labels_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00074">nearest_neighbor_classifier.hpp:74</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -509,13 +513,13 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="classjubatus_1_1core_1_1classifier_1_1classifier__base.html#a02d1b366fea17315189bee2d313feda1">jubatus::core::classifier::classifier_base</a>.</p>
 
-<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00227">227</a> of file <a class="el" href="nearest__neighbor__classifier_8cpp_source.html">nearest_neighbor_classifier.cpp</a>.</p>
+<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00235">235</a> of file <a class="el" href="nearest__neighbor__classifier_8cpp_source.html">nearest_neighbor_classifier.cpp</a>.</p>
 
-<p>References <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00071">nearest_neighbor_engine_</a>.</p>
-<div class="fragment"><div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                                                           {</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">nearest_neighbor_engine_</a>-&gt;get_mixable();</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_a73734e075daf86c06936fd1f63fd5023"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">jubatus::core::classifier::nearest_neighbor_classifier::nearest_neighbor_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; nearest_neighbor::nearest_neighbor_base &gt; nearest_neighbor_engine_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00071">nearest_neighbor_classifier.hpp:71</a></div></div>
+<p>References <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00073">nearest_neighbor_engine_</a>.</p>
+<div class="fragment"><div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                                                           {</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">nearest_neighbor_engine_</a>-&gt;get_mixable();</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_a73734e075daf86c06936fd1f63fd5023"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">jubatus::core::classifier::nearest_neighbor_classifier::nearest_neighbor_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; nearest_neighbor::nearest_neighbor_base &gt; nearest_neighbor_engine_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00073">nearest_neighbor_classifier.hpp:73</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -543,10 +547,10 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="classjubatus_1_1core_1_1classifier_1_1classifier__base.html#aaacee7efd739fc794f53604a0c659faa">jubatus::core::classifier::classifier_base</a>.</p>
 
-<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00194">194</a> of file <a class="el" href="nearest__neighbor__classifier_8cpp_source.html">nearest_neighbor_classifier.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                                                {</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  <span class="comment">// unimplemented</span></div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;}</div>
+<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00202">202</a> of file <a class="el" href="nearest__neighbor__classifier_8cpp_source.html">nearest_neighbor_classifier.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                                                {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <span class="comment">// unimplemented</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -573,13 +577,13 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="classjubatus_1_1core_1_1classifier_1_1classifier__base.html#a4fcb91fd9f3250325732295ab9643f81">jubatus::core::classifier::classifier_base</a>.</p>
 
-<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00190">190</a> of file <a class="el" href="nearest__neighbor__classifier_8cpp_source.html">nearest_neighbor_classifier.cpp</a>.</p>
+<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00198">198</a> of file <a class="el" href="nearest__neighbor__classifier_8cpp_source.html">nearest_neighbor_classifier.cpp</a>.</p>
 
-<p>References <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00071">nearest_neighbor_engine_</a>.</p>
-<div class="fragment"><div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                                                  {</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  <span class="keywordflow">return</span> <span class="stringliteral">&quot;nearest_neighbor_classifier:&quot;</span> + <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">nearest_neighbor_engine_</a>-&gt;type();</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_a73734e075daf86c06936fd1f63fd5023"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">jubatus::core::classifier::nearest_neighbor_classifier::nearest_neighbor_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; nearest_neighbor::nearest_neighbor_base &gt; nearest_neighbor_engine_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00071">nearest_neighbor_classifier.hpp:71</a></div></div>
+<p>References <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00073">nearest_neighbor_engine_</a>.</p>
+<div class="fragment"><div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                                                  {</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  <span class="keywordflow">return</span> <span class="stringliteral">&quot;nearest_neighbor_classifier:&quot;</span> + <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">nearest_neighbor_engine_</a>-&gt;type();</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_a73734e075daf86c06936fd1f63fd5023"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">jubatus::core::classifier::nearest_neighbor_classifier::nearest_neighbor_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; nearest_neighbor::nearest_neighbor_base &gt; nearest_neighbor_engine_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00073">nearest_neighbor_classifier.hpp:73</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -593,7 +597,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void jubatus::core::classifier::nearest_neighbor_classifier::pack </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">framework::packer</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">framework::packer</a> &amp;&#160;</td>
           <td class="paramname"><em>pk</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -607,21 +611,21 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="classjubatus_1_1core_1_1classifier_1_1classifier__base.html#aa618bb50fb4781cc594c9ff69f0370d5">jubatus::core::classifier::classifier_base</a>.</p>
 
-<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00199">199</a> of file <a class="el" href="nearest__neighbor__classifier_8cpp_source.html">nearest_neighbor_classifier.cpp</a>.</p>
+<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00207">207</a> of file <a class="el" href="nearest__neighbor__classifier_8cpp_source.html">nearest_neighbor_classifier.cpp</a>.</p>
 
-<p>References <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00072">labels_</a>, and <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00071">nearest_neighbor_engine_</a>.</p>
-<div class="fragment"><div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                                                                {</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  pk.pack_array(2);</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">nearest_neighbor_engine_</a>-&gt;pack(pk);</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  pk.pack_array(<a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">labels_</a>.size());</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <span class="keywordflow">for</span> (unordered_set&lt;std::string&gt;::const_iterator iter = <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">labels_</a>.begin();</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;       iter != <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">labels_</a>.end(); ++iter) {</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    pk.pack(*iter);</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  }</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_ad87d9ff05f8cbadaf4515fe7b5898b7a"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">jubatus::core::classifier::nearest_neighbor_classifier::labels_</a></div><div class="ttdeci">jubatus::util::data::unordered_set&lt; std::string &gt; labels_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00072">nearest_neighbor_classifier.hpp:72</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_a73734e075daf86c06936fd1f63fd5023"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">jubatus::core::classifier::nearest_neighbor_classifier::nearest_neighbor_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; nearest_neighbor::nearest_neighbor_base &gt; nearest_neighbor_engine_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00071">nearest_neighbor_classifier.hpp:71</a></div></div>
+<p>References <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00074">labels_</a>, and <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00073">nearest_neighbor_engine_</a>.</p>
+<div class="fragment"><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                                                                {</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  pk.pack_array(2);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">nearest_neighbor_engine_</a>-&gt;pack(pk);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  pk.pack_array(<a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">labels_</a>.size());</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  <span class="keywordflow">for</span> (unordered_set&lt;std::string&gt;::const_iterator iter = <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">labels_</a>.begin();</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;       iter != <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">labels_</a>.end(); ++iter) {</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    pk.pack(*iter);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_ad87d9ff05f8cbadaf4515fe7b5898b7a"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">jubatus::core::classifier::nearest_neighbor_classifier::labels_</a></div><div class="ttdeci">jubatus::util::data::unordered_set&lt; std::string &gt; labels_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00074">nearest_neighbor_classifier.hpp:74</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_a73734e075daf86c06936fd1f63fd5023"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">jubatus::core::classifier::nearest_neighbor_classifier::nearest_neighbor_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; nearest_neighbor::nearest_neighbor_base &gt; nearest_neighbor_engine_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00073">nearest_neighbor_classifier.hpp:73</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -649,15 +653,15 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="classjubatus_1_1core_1_1classifier_1_1classifier__base.html#ab6a714af1cafc63fe04d526764f6dc6f">jubatus::core::classifier::classifier_base</a>.</p>
 
-<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00186">186</a> of file <a class="el" href="nearest__neighbor__classifier_8cpp_source.html">nearest_neighbor_classifier.cpp</a>.</p>
+<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00194">194</a> of file <a class="el" href="nearest__neighbor__classifier_8cpp_source.html">nearest_neighbor_classifier.cpp</a>.</p>
 
-<p>References <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00072">labels_</a>.</p>
+<p>References <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00074">labels_</a>.</p>
 
-<p>Referenced by <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00083">train()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                                                                  {</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">labels_</a>.insert(label).second;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_ad87d9ff05f8cbadaf4515fe7b5898b7a"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">jubatus::core::classifier::nearest_neighbor_classifier::labels_</a></div><div class="ttdeci">jubatus::util::data::unordered_set&lt; std::string &gt; labels_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00072">nearest_neighbor_classifier.hpp:72</a></div></div>
+<p>Referenced by <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00086">train()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                                                                  {</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">labels_</a>.insert(label).second;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_ad87d9ff05f8cbadaf4515fe7b5898b7a"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">jubatus::core::classifier::nearest_neighbor_classifier::labels_</a></div><div class="ttdeci">jubatus::util::data::unordered_set&lt; std::string &gt; labels_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00074">nearest_neighbor_classifier.hpp:74</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -694,14 +698,14 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="classjubatus_1_1core_1_1classifier_1_1classifier__base.html#a8d0f4d23c48cab128304083193f5e174">jubatus::core::classifier::classifier_base</a>.</p>
 
-<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00096">96</a> of file <a class="el" href="nearest__neighbor__classifier_8cpp_source.html">nearest_neighbor_classifier.cpp</a>.</p>
+<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00104">104</a> of file <a class="el" href="nearest__neighbor__classifier_8cpp_source.html">nearest_neighbor_classifier.cpp</a>.</p>
 
-<p>References <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00075">unlearner_</a>.</p>
-<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                                                         {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  label_unlearner-&gt;set_callback(<a class="code" href="namespacejubatus_1_1core_1_1unlearner.html#a866f38c42d7901fd23f1c2ce466b0fc2">unlearning_callback</a>(<span class="keyword">this</span>));</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#aa088339499419e411060adac4a5b2ca7">unlearner_</a> = label_unlearner;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_aa088339499419e411060adac4a5b2ca7"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#aa088339499419e411060adac4a5b2ca7">jubatus::core::classifier::nearest_neighbor_classifier::unlearner_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; unlearner::unlearner_base &gt; unlearner_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00075">nearest_neighbor_classifier.hpp:75</a></div></div>
+<p>References <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00078">unlearner_</a>.</p>
+<div class="fragment"><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                                                         {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  label_unlearner-&gt;set_callback(<a class="code" href="namespacejubatus_1_1core_1_1unlearner.html#a866f38c42d7901fd23f1c2ce466b0fc2">unlearning_callback</a>(<span class="keyword">this</span>));</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#aa088339499419e411060adac4a5b2ca7">unlearner_</a> = label_unlearner;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_aa088339499419e411060adac4a5b2ca7"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#aa088339499419e411060adac4a5b2ca7">jubatus::core::classifier::nearest_neighbor_classifier::unlearner_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; unlearner::unlearner_base &gt; unlearner_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00078">nearest_neighbor_classifier.hpp:78</a></div></div>
 <div class="ttc" id="namespacejubatus_1_1core_1_1unlearner_html_a866f38c42d7901fd23f1c2ce466b0fc2"><div class="ttname"><a href="namespacejubatus_1_1core_1_1unlearner.html#a866f38c42d7901fd23f1c2ce466b0fc2">jubatus::core::unlearner::unlearning_callback</a></div><div class="ttdeci">jubatus::util::lang::function&lt; void(std::string)&gt; unlearning_callback</div><div class="ttdef"><b>Definition:</b> <a href="unlearner__base_8hpp_source.html#l00027">unlearner_base.hpp:27</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -740,25 +744,32 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="classjubatus_1_1core_1_1classifier_1_1classifier__base.html#a6e48b81c428f416a35d407a251d6f39a">jubatus::core::classifier::classifier_base</a>.</p>
 
-<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00083">83</a> of file <a class="el" href="nearest__neighbor__classifier_8cpp_source.html">nearest_neighbor_classifier.cpp</a>.</p>
+<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00086">86</a> of file <a class="el" href="nearest__neighbor__classifier_8cpp_source.html">nearest_neighbor_classifier.cpp</a>.</p>
 
-<p>References <a class="el" href="common_2exception_8hpp_source.html#l00079">JUBATUS_EXCEPTION</a>, <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00071">nearest_neighbor_engine_</a>, <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00076">rand_</a>, <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00186">set_label()</a>, and <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00075">unlearner_</a>.</p>
-<div class="fragment"><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                                                   {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  std::string <span class="keywordtype">id</span> = make_id_from_label(label, <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a07529374f0c316e3a9633bdb24d9efee">rand_</a>);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#aa088339499419e411060adac4a5b2ca7">unlearner_</a>) {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#aa088339499419e411060adac4a5b2ca7">unlearner_</a>-&gt;touch(<span class="keywordtype">id</span>)) {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="common_2exception_8hpp.html#aff10b0eb90b477115ab3955c3995d327">JUBATUS_EXCEPTION</a>(common::exception::runtime_error(</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;          <span class="stringliteral">&quot;no more space available to add new ID: &quot;</span> + <span class="keywordtype">id</span>));</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">nearest_neighbor_engine_</a>-&gt;set_row(<span class="keywordtype">id</span>, fv);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a543a4d9b476302222eaa9ebdebd87100">set_label</a>(label);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_aa088339499419e411060adac4a5b2ca7"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#aa088339499419e411060adac4a5b2ca7">jubatus::core::classifier::nearest_neighbor_classifier::unlearner_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; unlearner::unlearner_base &gt; unlearner_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00075">nearest_neighbor_classifier.hpp:75</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_a543a4d9b476302222eaa9ebdebd87100"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a543a4d9b476302222eaa9ebdebd87100">jubatus::core::classifier::nearest_neighbor_classifier::set_label</a></div><div class="ttdeci">bool set_label(const std::string &amp;label)</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8cpp_source.html#l00186">nearest_neighbor_classifier.cpp:186</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_a07529374f0c316e3a9633bdb24d9efee"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a07529374f0c316e3a9633bdb24d9efee">jubatus::core::classifier::nearest_neighbor_classifier::rand_</a></div><div class="ttdeci">jubatus::util::math::random::mtrand rand_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00076">nearest_neighbor_classifier.hpp:76</a></div></div>
+<p>References <a class="el" href="common_2exception_8hpp_source.html#l00079">JUBATUS_EXCEPTION</a>, <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00073">nearest_neighbor_engine_</a>, <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00080">rand_</a>, <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00079">rand_mutex_</a>, <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00194">set_label()</a>, <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00078">unlearner_</a>, and <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00077">unlearner_mutex_</a>.</p>
+<div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                                                   {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  std::string id;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    util::concurrent::scoped_lock lk(<a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#af989c1f47d2ce583444f0df47c9fb1f5">rand_mutex_</a>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">id</span> = make_id_from_label(label, <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a07529374f0c316e3a9633bdb24d9efee">rand_</a>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#aa088339499419e411060adac4a5b2ca7">unlearner_</a>) {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    util::concurrent::scoped_lock unlearner_lk(<a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a1c49791615721c3c7a44ed8f895005cc">unlearner_mutex_</a>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#aa088339499419e411060adac4a5b2ca7">unlearner_</a>-&gt;touch(<span class="keywordtype">id</span>)) {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="common_2exception_8hpp.html#aff10b0eb90b477115ab3955c3995d327">JUBATUS_EXCEPTION</a>(common::exception::runtime_error(</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;          <span class="stringliteral">&quot;no more space available to add new ID: &quot;</span> + <span class="keywordtype">id</span>));</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">nearest_neighbor_engine_</a>-&gt;set_row(<span class="keywordtype">id</span>, fv);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a543a4d9b476302222eaa9ebdebd87100">set_label</a>(label);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_a1c49791615721c3c7a44ed8f895005cc"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a1c49791615721c3c7a44ed8f895005cc">jubatus::core::classifier::nearest_neighbor_classifier::unlearner_mutex_</a></div><div class="ttdeci">jubatus::util::concurrent::mutex unlearner_mutex_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00077">nearest_neighbor_classifier.hpp:77</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_aa088339499419e411060adac4a5b2ca7"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#aa088339499419e411060adac4a5b2ca7">jubatus::core::classifier::nearest_neighbor_classifier::unlearner_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; unlearner::unlearner_base &gt; unlearner_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00078">nearest_neighbor_classifier.hpp:78</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_a543a4d9b476302222eaa9ebdebd87100"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a543a4d9b476302222eaa9ebdebd87100">jubatus::core::classifier::nearest_neighbor_classifier::set_label</a></div><div class="ttdeci">bool set_label(const std::string &amp;label)</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8cpp_source.html#l00194">nearest_neighbor_classifier.cpp:194</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_a07529374f0c316e3a9633bdb24d9efee"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a07529374f0c316e3a9633bdb24d9efee">jubatus::core::classifier::nearest_neighbor_classifier::rand_</a></div><div class="ttdeci">jubatus::util::math::random::mtrand rand_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00080">nearest_neighbor_classifier.hpp:80</a></div></div>
 <div class="ttc" id="common_2exception_8hpp_html_aff10b0eb90b477115ab3955c3995d327"><div class="ttname"><a href="common_2exception_8hpp.html#aff10b0eb90b477115ab3955c3995d327">JUBATUS_EXCEPTION</a></div><div class="ttdeci">#define JUBATUS_EXCEPTION(e)</div><div class="ttdef"><b>Definition:</b> <a href="common_2exception_8hpp_source.html#l00079">exception.hpp:79</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_a73734e075daf86c06936fd1f63fd5023"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">jubatus::core::classifier::nearest_neighbor_classifier::nearest_neighbor_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; nearest_neighbor::nearest_neighbor_base &gt; nearest_neighbor_engine_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00071">nearest_neighbor_classifier.hpp:71</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_af989c1f47d2ce583444f0df47c9fb1f5"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#af989c1f47d2ce583444f0df47c9fb1f5">jubatus::core::classifier::nearest_neighbor_classifier::rand_mutex_</a></div><div class="ttdeci">jubatus::util::concurrent::mutex rand_mutex_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00079">nearest_neighbor_classifier.hpp:79</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_a73734e075daf86c06936fd1f63fd5023"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">jubatus::core::classifier::nearest_neighbor_classifier::nearest_neighbor_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; nearest_neighbor::nearest_neighbor_base &gt; nearest_neighbor_engine_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00073">nearest_neighbor_classifier.hpp:73</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -793,15 +804,15 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00231">231</a> of file <a class="el" href="nearest__neighbor__classifier_8cpp_source.html">nearest_neighbor_classifier.cpp</a>.</p>
+<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00239">239</a> of file <a class="el" href="nearest__neighbor__classifier_8cpp_source.html">nearest_neighbor_classifier.cpp</a>.</p>
 
-<p>References <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00071">nearest_neighbor_engine_</a>.</p>
+<p>References <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00073">nearest_neighbor_engine_</a>.</p>
 
-<p>Referenced by <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00064">jubatus::core::classifier::nearest_neighbor_classifier::unlearning_callback::operator()()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                                                                {</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">nearest_neighbor_engine_</a>-&gt;get_table()-&gt;delete_row(<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_a73734e075daf86c06936fd1f63fd5023"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">jubatus::core::classifier::nearest_neighbor_classifier::nearest_neighbor_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; nearest_neighbor::nearest_neighbor_base &gt; nearest_neighbor_engine_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00071">nearest_neighbor_classifier.hpp:71</a></div></div>
+<p>Referenced by <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00067">jubatus::core::classifier::nearest_neighbor_classifier::unlearning_callback::operator()()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                                                                {</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">nearest_neighbor_engine_</a>-&gt;get_table()-&gt;delete_row(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_a73734e075daf86c06936fd1f63fd5023"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">jubatus::core::classifier::nearest_neighbor_classifier::nearest_neighbor_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; nearest_neighbor::nearest_neighbor_base &gt; nearest_neighbor_engine_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00073">nearest_neighbor_classifier.hpp:73</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -838,27 +849,27 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="classjubatus_1_1core_1_1classifier_1_1classifier__base.html#ad91493145146fb564d7aeaf0d474fe96">jubatus::core::classifier::classifier_base</a>.</p>
 
-<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00210">210</a> of file <a class="el" href="nearest__neighbor__classifier_8cpp_source.html">nearest_neighbor_classifier.cpp</a>.</p>
+<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00218">218</a> of file <a class="el" href="nearest__neighbor__classifier_8cpp_source.html">nearest_neighbor_classifier.cpp</a>.</p>
 
-<p>References <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00072">labels_</a>, and <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00071">nearest_neighbor_engine_</a>.</p>
-<div class="fragment"><div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                                                        {</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  <span class="keywordflow">if</span> (o.type != msgpack::type::ARRAY || o.via.array.size != 2) {</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keywordflow">throw</span> msgpack::type_error();</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  }</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">nearest_neighbor_engine_</a>-&gt;unpack(o.via.array.ptr[0]);</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  msgpack::object labels = o.via.array.ptr[1];</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  <span class="keywordflow">if</span> (labels.type != msgpack::type::ARRAY) {</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordflow">throw</span> msgpack::type_error();</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  }</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; labels.via.array.size; ++i) {</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    std::string label;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    labels.via.array.ptr[i].convert(&amp;label);</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">labels_</a>.insert(label);</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  }</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_ad87d9ff05f8cbadaf4515fe7b5898b7a"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">jubatus::core::classifier::nearest_neighbor_classifier::labels_</a></div><div class="ttdeci">jubatus::util::data::unordered_set&lt; std::string &gt; labels_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00072">nearest_neighbor_classifier.hpp:72</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_a73734e075daf86c06936fd1f63fd5023"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">jubatus::core::classifier::nearest_neighbor_classifier::nearest_neighbor_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; nearest_neighbor::nearest_neighbor_base &gt; nearest_neighbor_engine_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00071">nearest_neighbor_classifier.hpp:71</a></div></div>
+<p>References <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00074">labels_</a>, and <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00073">nearest_neighbor_engine_</a>.</p>
+<div class="fragment"><div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                                                        {</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  <span class="keywordflow">if</span> (o.type != msgpack::type::ARRAY || o.via.array.size != 2) {</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordflow">throw</span> msgpack::type_error();</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  }</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">nearest_neighbor_engine_</a>-&gt;unpack(o.via.array.ptr[0]);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  msgpack::object labels = o.via.array.ptr[1];</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  <span class="keywordflow">if</span> (labels.type != msgpack::type::ARRAY) {</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordflow">throw</span> msgpack::type_error();</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  }</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; labels.via.array.size; ++i) {</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    std::string label;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    labels.via.array.ptr[i].convert(&amp;label);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <a class="code" href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">labels_</a>.insert(label);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_ad87d9ff05f8cbadaf4515fe7b5898b7a"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#ad87d9ff05f8cbadaf4515fe7b5898b7a">jubatus::core::classifier::nearest_neighbor_classifier::labels_</a></div><div class="ttdeci">jubatus::util::data::unordered_set&lt; std::string &gt; labels_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00074">nearest_neighbor_classifier.hpp:74</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier_html_a73734e075daf86c06936fd1f63fd5023"><div class="ttname"><a href="classjubatus_1_1core_1_1classifier_1_1nearest__neighbor__classifier.html#a73734e075daf86c06936fd1f63fd5023">jubatus::core::classifier::nearest_neighbor_classifier::nearest_neighbor_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; nearest_neighbor::nearest_neighbor_base &gt; nearest_neighbor_engine_</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor__classifier_8hpp_source.html#l00073">nearest_neighbor_classifier.hpp:73</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -881,9 +892,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00074">74</a> of file <a class="el" href="nearest__neighbor__classifier_8hpp_source.html">nearest_neighbor_classifier.hpp</a>.</p>
+<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00076">76</a> of file <a class="el" href="nearest__neighbor__classifier_8hpp_source.html">nearest_neighbor_classifier.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00118">classify_with_scores()</a>.</p>
+<p>Referenced by <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00126">classify_with_scores()</a>.</p>
 
 </div>
 </div>
@@ -905,9 +916,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00073">73</a> of file <a class="el" href="nearest__neighbor__classifier_8hpp_source.html">nearest_neighbor_classifier.hpp</a>.</p>
+<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00075">75</a> of file <a class="el" href="nearest__neighbor__classifier_8hpp_source.html">nearest_neighbor_classifier.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00118">classify_with_scores()</a>.</p>
+<p>Referenced by <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00126">classify_with_scores()</a>.</p>
 
 </div>
 </div>
@@ -929,9 +940,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00072">72</a> of file <a class="el" href="nearest__neighbor__classifier_8hpp_source.html">nearest_neighbor_classifier.hpp</a>.</p>
+<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00074">74</a> of file <a class="el" href="nearest__neighbor__classifier_8hpp_source.html">nearest_neighbor_classifier.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00118">classify_with_scores()</a>, <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00169">clear()</a>, <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00141">delete_label()</a>, <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00177">get_labels()</a>, <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00199">pack()</a>, <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00186">set_label()</a>, and <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00210">unpack()</a>.</p>
+<p>Referenced by <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00126">classify_with_scores()</a>, <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00177">clear()</a>, <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00149">delete_label()</a>, <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00185">get_labels()</a>, <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00207">pack()</a>, <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00194">set_label()</a>, and <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00218">unpack()</a>.</p>
 
 </div>
 </div>
@@ -953,9 +964,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00071">71</a> of file <a class="el" href="nearest__neighbor__classifier_8hpp_source.html">nearest_neighbor_classifier.hpp</a>.</p>
+<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00073">73</a> of file <a class="el" href="nearest__neighbor__classifier_8hpp_source.html">nearest_neighbor_classifier.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00118">classify_with_scores()</a>, <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00169">clear()</a>, <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00141">delete_label()</a>, <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00227">get_mixable()</a>, <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00190">name()</a>, <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00199">pack()</a>, <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00083">train()</a>, <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00231">unlearn_id()</a>, and <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00210">unpack()</a>.</p>
+<p>Referenced by <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00126">classify_with_scores()</a>, <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00177">clear()</a>, <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00149">delete_label()</a>, <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00235">get_mixable()</a>, <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00198">name()</a>, <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00207">pack()</a>, <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00086">train()</a>, <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00239">unlearn_id()</a>, and <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00218">unpack()</a>.</p>
 
 </div>
 </div>
@@ -977,9 +988,33 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00076">76</a> of file <a class="el" href="nearest__neighbor__classifier_8hpp_source.html">nearest_neighbor_classifier.hpp</a>.</p>
+<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00080">80</a> of file <a class="el" href="nearest__neighbor__classifier_8hpp_source.html">nearest_neighbor_classifier.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00083">train()</a>.</p>
+<p>Referenced by <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00086">train()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af989c1f47d2ce583444f0df47c9fb1f5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">jubatus::util::concurrent::mutex jubatus::core::classifier::nearest_neighbor_classifier::rand_mutex_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00079">79</a> of file <a class="el" href="nearest__neighbor__classifier_8hpp_source.html">nearest_neighbor_classifier.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00086">train()</a>.</p>
 
 </div>
 </div>
@@ -1001,9 +1036,33 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00075">75</a> of file <a class="el" href="nearest__neighbor__classifier_8hpp_source.html">nearest_neighbor_classifier.hpp</a>.</p>
+<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00078">78</a> of file <a class="el" href="nearest__neighbor__classifier_8hpp_source.html">nearest_neighbor_classifier.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00169">clear()</a>, <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00141">delete_label()</a>, <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00096">set_label_unlearner()</a>, and <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00083">train()</a>.</p>
+<p>Referenced by <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00177">clear()</a>, <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00149">delete_label()</a>, <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00104">set_label_unlearner()</a>, and <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00086">train()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1c49791615721c3c7a44ed8f895005cc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">jubatus::util::concurrent::mutex jubatus::core::classifier::nearest_neighbor_classifier::unlearner_mutex_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="nearest__neighbor__classifier_8hpp_source.html#l00077">77</a> of file <a class="el" href="nearest__neighbor__classifier_8hpp_source.html">nearest_neighbor_classifier.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="nearest__neighbor__classifier_8cpp_source.html#l00086">train()</a>.</p>
 
 </div>
 </div>
@@ -1014,7 +1073,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:37 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:06 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

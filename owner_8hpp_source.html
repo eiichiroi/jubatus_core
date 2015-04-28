@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>jubatus_core: jubatus/core/table/column/owner.hpp Source File</title>
+<title>jubatus_core: jubatus/core/storage/owner.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -83,7 +83,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_1edb74d5d337cf211f30cda3783e18ab.html">jubatus</a></li><li class="navelem"><a class="el" href="dir_15ddfb059ebb63c597edb88d7a25888f.html">core</a></li><li class="navelem"><a class="el" href="dir_686bd8fef719ae9c34e5b16c054fad97.html">table</a></li><li class="navelem"><a class="el" href="dir_38f9a08af221a53f67ddc5832a6fe65b.html">column</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_1edb74d5d337cf211f30cda3783e18ab.html">jubatus</a></li><li class="navelem"><a class="el" href="dir_15ddfb059ebb63c597edb88d7a25888f.html">core</a></li><li class="navelem"><a class="el" href="dir_8c7dd0846c927214302f36aa2d1fb79c.html">storage</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -107,8 +107,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">// License along with this library; if not, write to the Free Software</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#ifndef JUBATUS_CORE_TABLE_COLUMN_OWNER_HPP_</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#define JUBATUS_CORE_TABLE_COLUMN_OWNER_HPP_</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#ifndef JUBATUS_CORE_STORAGE_OWNER_HPP_</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#define JUBATUS_CORE_STORAGE_OWNER_HPP_</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;ostream&gt;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
@@ -116,48 +116,48 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacejubatus.html">jubatus</a> {</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>core {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>table {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>storage {</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structjubatus_1_1core_1_1table_1_1owner.html">   28</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structjubatus_1_1core_1_1table_1_1owner.html">owner</a> {</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structjubatus_1_1core_1_1table_1_1owner.html#afaa2b5518cfe3f6fb3aabd33aeec3cc3">   29</a></span>&#160;  std::string <a class="code" href="structjubatus_1_1core_1_1table_1_1owner.html#afaa2b5518cfe3f6fb3aabd33aeec3cc3">name</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structjubatus_1_1core_1_1storage_1_1owner.html">   28</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structjubatus_1_1core_1_1storage_1_1owner.html">owner</a> {</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structjubatus_1_1core_1_1storage_1_1owner.html#a14c2de303f1a3e6b2e9c016d1ca84a2e">   29</a></span>&#160;  std::string <a class="code" href="structjubatus_1_1core_1_1storage_1_1owner.html#a14c2de303f1a3e6b2e9c016d1ca84a2e">name</a>;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structjubatus_1_1core_1_1table_1_1owner.html#aca15d5c2b3da302dbdb3db720d6564dd">   31</a></span>&#160;  <a class="code" href="structjubatus_1_1core_1_1table_1_1owner.html#aca15d5c2b3da302dbdb3db720d6564dd">owner</a>() : name(<span class="stringliteral">&quot;(uninitialized)&quot;</span>) {</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structjubatus_1_1core_1_1storage_1_1owner.html#a39f6b1938e2c5d937b7aa95796f640ae">   31</a></span>&#160;  <a class="code" href="structjubatus_1_1core_1_1storage_1_1owner.html#a39f6b1938e2c5d937b7aa95796f640ae">owner</a>() : name(<span class="stringliteral">&quot;(uninitialized)&quot;</span>) {</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  }</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structjubatus_1_1core_1_1table_1_1owner.html#a5b1074fe7cecdcead0801748d0d6ca73">   33</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="structjubatus_1_1core_1_1table_1_1owner.html#a5b1074fe7cecdcead0801748d0d6ca73">owner</a>(<span class="keyword">const</span> std::string&amp; n) : name(n) {</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structjubatus_1_1core_1_1storage_1_1owner.html#aeba1fe170cda6bc54fec21791451541d">   33</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="structjubatus_1_1core_1_1storage_1_1owner.html#aeba1fe170cda6bc54fec21791451541d">owner</a>(<span class="keyword">const</span> std::string&amp; n) : name(n) {</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  }</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structjubatus_1_1core_1_1table_1_1owner.html#a58543710cbca5d2b7c9f1bbb57f9b86a">   36</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="structjubatus_1_1core_1_1table_1_1owner.html#a58543710cbca5d2b7c9f1bbb57f9b86a">operator==</a>(<span class="keyword">const</span> <a class="code" href="structjubatus_1_1core_1_1table_1_1owner.html">owner</a>&amp; rhs)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> name == rhs.<a class="code" href="structjubatus_1_1core_1_1table_1_1owner.html#afaa2b5518cfe3f6fb3aabd33aeec3cc3">name</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structjubatus_1_1core_1_1storage_1_1owner.html#a41f2837123d5a83c8addce3bcb4f7374">   36</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="structjubatus_1_1core_1_1storage_1_1owner.html#a41f2837123d5a83c8addce3bcb4f7374">operator==</a>(<span class="keyword">const</span> <a class="code" href="structjubatus_1_1core_1_1storage_1_1owner.html">owner</a>&amp; rhs)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> name == rhs.<a class="code" href="structjubatus_1_1core_1_1storage_1_1owner.html#a14c2de303f1a3e6b2e9c016d1ca84a2e">name</a>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  }</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structjubatus_1_1core_1_1table_1_1owner.html#a8d588d7af2f0de21c78602c5af6aada8">   39</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="structjubatus_1_1core_1_1table_1_1owner.html#a8d588d7af2f0de21c78602c5af6aada8">operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="structjubatus_1_1core_1_1table_1_1owner.html">owner</a>&amp; o)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">return</span> name &lt; o.<a class="code" href="structjubatus_1_1core_1_1table_1_1owner.html#afaa2b5518cfe3f6fb3aabd33aeec3cc3">name</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structjubatus_1_1core_1_1storage_1_1owner.html#aa0b8030491cb4dc7fa248c97f8eb4f83">   39</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="structjubatus_1_1core_1_1storage_1_1owner.html#aa0b8030491cb4dc7fa248c97f8eb4f83">operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="structjubatus_1_1core_1_1storage_1_1owner.html">owner</a>&amp; o)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">return</span> name &lt; o.<a class="code" href="structjubatus_1_1core_1_1storage_1_1owner.html#a14c2de303f1a3e6b2e9c016d1ca84a2e">name</a>;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  }</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="structjubatus_1_1core_1_1table_1_1owner.html#ac4db1d62abd40626b6d80e7ed6bb9fc2">   42</a></span>&#160;  <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="structjubatus_1_1core_1_1table_1_1owner.html#ac4db1d62abd40626b6d80e7ed6bb9fc2">operator&lt;&lt;</a>(std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="structjubatus_1_1core_1_1table_1_1owner.html">owner</a>&amp; o) {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    os &lt;&lt; <span class="stringliteral">&quot;owner[&quot;</span> &lt;&lt; o.<a class="code" href="structjubatus_1_1core_1_1table_1_1owner.html#afaa2b5518cfe3f6fb3aabd33aeec3cc3">name</a> &lt;&lt; <span class="stringliteral">&quot;]&quot;</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="structjubatus_1_1core_1_1storage_1_1owner.html#ac4db1d62abd40626b6d80e7ed6bb9fc2">   42</a></span>&#160;  <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="structjubatus_1_1core_1_1storage_1_1owner.html#ac4db1d62abd40626b6d80e7ed6bb9fc2">operator&lt;&lt;</a>(std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="structjubatus_1_1core_1_1storage_1_1owner.html">owner</a>&amp; o) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    os &lt;&lt; <span class="stringliteral">&quot;owner[&quot;</span> &lt;&lt; o.<a class="code" href="structjubatus_1_1core_1_1storage_1_1owner.html#a14c2de303f1a3e6b2e9c016d1ca84a2e">name</a> &lt;&lt; <span class="stringliteral">&quot;]&quot;</span>;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> os;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  }</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <a class="code" href="structjubatus_1_1core_1_1table_1_1owner.html#a1192081b915e900485f748990994fe52">MSGPACK_DEFINE</a>(name);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <a class="code" href="structjubatus_1_1core_1_1storage_1_1owner.html#af18676a67f513414b4f828e4f045166a">MSGPACK_DEFINE</a>(name);</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}  <span class="comment">// namespace table</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}  <span class="comment">// namespace storage</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}  <span class="comment">// namespace core</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}  <span class="comment">// namespace jubatus</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif  // JUBATUS_CORE_TABLE_COLUMN_OWNER_HPP_</span></div>
-<div class="ttc" id="structjubatus_1_1core_1_1table_1_1owner_html_a1192081b915e900485f748990994fe52"><div class="ttname"><a href="structjubatus_1_1core_1_1table_1_1owner.html#a1192081b915e900485f748990994fe52">jubatus::core::table::owner::MSGPACK_DEFINE</a></div><div class="ttdeci">MSGPACK_DEFINE(name)</div></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif  // JUBATUS_CORE_STORAGE_OWNER_HPP_</span></div>
 <div class="ttc" id="namespacejubatus_html"><div class="ttname"><a href="namespacejubatus.html">jubatus</a></div><div class="ttdef"><b>Definition:</b> <a href="anomaly__base_8cpp_source.html#l00029">anomaly_base.cpp:29</a></div></div>
-<div class="ttc" id="structjubatus_1_1core_1_1table_1_1owner_html_afaa2b5518cfe3f6fb3aabd33aeec3cc3"><div class="ttname"><a href="structjubatus_1_1core_1_1table_1_1owner.html#afaa2b5518cfe3f6fb3aabd33aeec3cc3">jubatus::core::table::owner::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> <a href="owner_8hpp_source.html#l00029">owner.hpp:29</a></div></div>
-<div class="ttc" id="structjubatus_1_1core_1_1table_1_1owner_html_aca15d5c2b3da302dbdb3db720d6564dd"><div class="ttname"><a href="structjubatus_1_1core_1_1table_1_1owner.html#aca15d5c2b3da302dbdb3db720d6564dd">jubatus::core::table::owner::owner</a></div><div class="ttdeci">owner()</div><div class="ttdef"><b>Definition:</b> <a href="owner_8hpp_source.html#l00031">owner.hpp:31</a></div></div>
-<div class="ttc" id="structjubatus_1_1core_1_1table_1_1owner_html_a5b1074fe7cecdcead0801748d0d6ca73"><div class="ttname"><a href="structjubatus_1_1core_1_1table_1_1owner.html#a5b1074fe7cecdcead0801748d0d6ca73">jubatus::core::table::owner::owner</a></div><div class="ttdeci">owner(const std::string &amp;n)</div><div class="ttdef"><b>Definition:</b> <a href="owner_8hpp_source.html#l00033">owner.hpp:33</a></div></div>
-<div class="ttc" id="structjubatus_1_1core_1_1table_1_1owner_html_a58543710cbca5d2b7c9f1bbb57f9b86a"><div class="ttname"><a href="structjubatus_1_1core_1_1table_1_1owner.html#a58543710cbca5d2b7c9f1bbb57f9b86a">jubatus::core::table::owner::operator==</a></div><div class="ttdeci">bool operator==(const owner &amp;rhs) const </div><div class="ttdef"><b>Definition:</b> <a href="owner_8hpp_source.html#l00036">owner.hpp:36</a></div></div>
-<div class="ttc" id="structjubatus_1_1core_1_1table_1_1owner_html_ac4db1d62abd40626b6d80e7ed6bb9fc2"><div class="ttname"><a href="structjubatus_1_1core_1_1table_1_1owner.html#ac4db1d62abd40626b6d80e7ed6bb9fc2">jubatus::core::table::owner::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const owner &amp;o)</div><div class="ttdef"><b>Definition:</b> <a href="owner_8hpp_source.html#l00042">owner.hpp:42</a></div></div>
-<div class="ttc" id="structjubatus_1_1core_1_1table_1_1owner_html"><div class="ttname"><a href="structjubatus_1_1core_1_1table_1_1owner.html">jubatus::core::table::owner</a></div><div class="ttdef"><b>Definition:</b> <a href="owner_8hpp_source.html#l00028">owner.hpp:28</a></div></div>
-<div class="ttc" id="structjubatus_1_1core_1_1table_1_1owner_html_a8d588d7af2f0de21c78602c5af6aada8"><div class="ttname"><a href="structjubatus_1_1core_1_1table_1_1owner.html#a8d588d7af2f0de21c78602c5af6aada8">jubatus::core::table::owner::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const owner &amp;o) const </div><div class="ttdef"><b>Definition:</b> <a href="owner_8hpp_source.html#l00039">owner.hpp:39</a></div></div>
+<div class="ttc" id="structjubatus_1_1core_1_1storage_1_1owner_html"><div class="ttname"><a href="structjubatus_1_1core_1_1storage_1_1owner.html">jubatus::core::storage::owner</a></div><div class="ttdef"><b>Definition:</b> <a href="owner_8hpp_source.html#l00028">owner.hpp:28</a></div></div>
+<div class="ttc" id="structjubatus_1_1core_1_1storage_1_1owner_html_a39f6b1938e2c5d937b7aa95796f640ae"><div class="ttname"><a href="structjubatus_1_1core_1_1storage_1_1owner.html#a39f6b1938e2c5d937b7aa95796f640ae">jubatus::core::storage::owner::owner</a></div><div class="ttdeci">owner()</div><div class="ttdef"><b>Definition:</b> <a href="owner_8hpp_source.html#l00031">owner.hpp:31</a></div></div>
+<div class="ttc" id="structjubatus_1_1core_1_1storage_1_1owner_html_aeba1fe170cda6bc54fec21791451541d"><div class="ttname"><a href="structjubatus_1_1core_1_1storage_1_1owner.html#aeba1fe170cda6bc54fec21791451541d">jubatus::core::storage::owner::owner</a></div><div class="ttdeci">owner(const std::string &amp;n)</div><div class="ttdef"><b>Definition:</b> <a href="owner_8hpp_source.html#l00033">owner.hpp:33</a></div></div>
+<div class="ttc" id="structjubatus_1_1core_1_1storage_1_1owner_html_a41f2837123d5a83c8addce3bcb4f7374"><div class="ttname"><a href="structjubatus_1_1core_1_1storage_1_1owner.html#a41f2837123d5a83c8addce3bcb4f7374">jubatus::core::storage::owner::operator==</a></div><div class="ttdeci">bool operator==(const owner &amp;rhs) const </div><div class="ttdef"><b>Definition:</b> <a href="owner_8hpp_source.html#l00036">owner.hpp:36</a></div></div>
+<div class="ttc" id="structjubatus_1_1core_1_1storage_1_1owner_html_ac4db1d62abd40626b6d80e7ed6bb9fc2"><div class="ttname"><a href="structjubatus_1_1core_1_1storage_1_1owner.html#ac4db1d62abd40626b6d80e7ed6bb9fc2">jubatus::core::storage::owner::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const owner &amp;o)</div><div class="ttdef"><b>Definition:</b> <a href="owner_8hpp_source.html#l00042">owner.hpp:42</a></div></div>
+<div class="ttc" id="structjubatus_1_1core_1_1storage_1_1owner_html_af18676a67f513414b4f828e4f045166a"><div class="ttname"><a href="structjubatus_1_1core_1_1storage_1_1owner.html#af18676a67f513414b4f828e4f045166a">jubatus::core::storage::owner::MSGPACK_DEFINE</a></div><div class="ttdeci">MSGPACK_DEFINE(name)</div></div>
+<div class="ttc" id="structjubatus_1_1core_1_1storage_1_1owner_html_a14c2de303f1a3e6b2e9c016d1ca84a2e"><div class="ttname"><a href="structjubatus_1_1core_1_1storage_1_1owner.html#a14c2de303f1a3e6b2e9c016d1ca84a2e">jubatus::core::storage::owner::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> <a href="owner_8hpp_source.html#l00029">owner.hpp:29</a></div></div>
+<div class="ttc" id="structjubatus_1_1core_1_1storage_1_1owner_html_aa0b8030491cb4dc7fa248c97f8eb4f83"><div class="ttname"><a href="structjubatus_1_1core_1_1storage_1_1owner.html#aa0b8030491cb4dc7fa248c97f8eb4f83">jubatus::core::storage::owner::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const owner &amp;o) const </div><div class="ttdef"><b>Definition:</b> <a href="owner_8hpp_source.html#l00039">owner.hpp:39</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:35 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:03 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

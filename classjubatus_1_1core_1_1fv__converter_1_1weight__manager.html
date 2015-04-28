@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -131,7 +131,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a550a99d7ef6bc891c9bba4c40affc1eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd4865556d37d2eea64a6f20429d621b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#abd4865556d37d2eea64a6f20429d621b">MSGPACK_DEFINE</a> (<a class="el" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a984778494058629b09db70561fead7bf">version_</a>, <a class="el" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">diff_weights_</a>, <a class="el" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a45c931a66f9ae6ae089b2cb82d3a959b">master_weights_</a>)</td></tr>
 <tr class="separator:abd4865556d37d2eea64a6f20429d621b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bc9309b5317473eb8bd0aba2673de0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a0bc9309b5317473eb8bd0aba2673de0f">pack</a> (<a class="el" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">framework::packer</a> &amp;pk) const </td></tr>
+<tr class="memitem:a0bc9309b5317473eb8bd0aba2673de0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a0bc9309b5317473eb8bd0aba2673de0f">pack</a> (<a class="el" href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">framework::packer</a> &amp;pk) const </td></tr>
 <tr class="separator:a0bc9309b5317473eb8bd0aba2673de0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7af56fc7f56508fbd73ef532f246641"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#ad7af56fc7f56508fbd73ef532f246641">put_diff</a> (const <a class="el" href="structjubatus_1_1core_1_1fv__converter_1_1versioned__weight__diff.html">versioned_weight_diff</a> &amp;diff)</td></tr>
 <tr class="separator:ad7af56fc7f56508fbd73ef532f246641"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,6 +164,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:aacb457fe24e098d42683ff9450bd21a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45c931a66f9ae6ae089b2cb82d3a959b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html">keyword_weights</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a45c931a66f9ae6ae089b2cb82d3a959b">master_weights_</a></td></tr>
 <tr class="separator:a45c931a66f9ae6ae089b2cb82d3a959b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ff95ecaf6be00dececc726799645945"><td class="memItemLeft" align="right" valign="top">util::concurrent::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a3ff95ecaf6be00dececc726799645945">mutex_</a></td></tr>
+<tr class="separator:a3ff95ecaf6be00dececc726799645945"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a984778494058629b09db70561fead7bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classjubatus_1_1core_1_1storage_1_1version.html">storage::version</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a984778494058629b09db70561fead7bf">version_</a></td></tr>
 <tr class="separator:a984778494058629b09db70561fead7bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -184,12 +186,12 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="weight__manager_8cpp_source.html#l00062">62</a> of file <a class="el" href="weight__manager_8cpp_source.html">weight_manager.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    : <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">diff_weights_</a>(),</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a45c931a66f9ae6ae089b2cb82d3a959b">master_weights_</a>() {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_aacb457fe24e098d42683ff9450bd21a0"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">jubatus::core::fv_converter::weight_manager::diff_weights_</a></div><div class="ttdeci">keyword_weights diff_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00130">weight_manager.hpp:130</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a45c931a66f9ae6ae089b2cb82d3a959b"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a45c931a66f9ae6ae089b2cb82d3a959b">jubatus::core::fv_converter::weight_manager::master_weights_</a></div><div class="ttdeci">keyword_weights master_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00131">weight_manager.hpp:131</a></div></div>
+<p>Definition at line <a class="el" href="weight__manager_8cpp_source.html#l00065">65</a> of file <a class="el" href="weight__manager_8cpp_source.html">weight_manager.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    : <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">diff_weights_</a>(),</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a45c931a66f9ae6ae089b2cb82d3a959b">master_weights_</a>() {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_aacb457fe24e098d42683ff9450bd21a0"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">jubatus::core::fv_converter::weight_manager::diff_weights_</a></div><div class="ttdeci">keyword_weights diff_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00137">weight_manager.hpp:137</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a45c931a66f9ae6ae089b2cb82d3a959b"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a45c931a66f9ae6ae089b2cb82d3a959b">jubatus::core::fv_converter::weight_manager::master_weights_</a></div><div class="ttdeci">keyword_weights master_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00138">weight_manager.hpp:138</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -218,14 +220,16 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="weight__manager_8cpp_source.html#l00103">103</a> of file <a class="el" href="weight__manager_8cpp_source.html">weight_manager.cpp</a>.</p>
+<p>Definition at line <a class="el" href="weight__manager_8cpp_source.html#l00108">108</a> of file <a class="el" href="weight__manager_8cpp_source.html">weight_manager.cpp</a>.</p>
 
-<p>References <a class="el" href="keyword__weights_8cpp_source.html#l00057">jubatus::core::fv_converter::keyword_weights::add_weight()</a>, and <a class="el" href="weight__manager_8hpp_source.html#l00130">diff_weights_</a>.</p>
-<div class="fragment"><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                                                                  {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">diff_weights_</a>.<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a9a859f8142b138e28820dbf69cf5046e">add_weight</a>(key, weight);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
+<p>References <a class="el" href="keyword__weights_8cpp_source.html#l00057">jubatus::core::fv_converter::keyword_weights::add_weight()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00137">diff_weights_</a>, and <a class="el" href="weight__manager_8hpp_source.html#l00135">mutex_</a>.</p>
+<div class="fragment"><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                                                                  {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  scoped_lock lk(<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a3ff95ecaf6be00dececc726799645945">mutex_</a>);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">diff_weights_</a>.<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a9a859f8142b138e28820dbf69cf5046e">add_weight</a>(key, weight);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a3ff95ecaf6be00dececc726799645945"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a3ff95ecaf6be00dececc726799645945">jubatus::core::fv_converter::weight_manager::mutex_</a></div><div class="ttdeci">util::concurrent::mutex mutex_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00135">weight_manager.hpp:135</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights_html_a9a859f8142b138e28820dbf69cf5046e"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a9a859f8142b138e28820dbf69cf5046e">jubatus::core::fv_converter::keyword_weights::add_weight</a></div><div class="ttdeci">void add_weight(const std::string &amp;key, float weight)</div><div class="ttdef"><b>Definition:</b> <a href="keyword__weights_8cpp_source.html#l00057">keyword_weights.cpp:57</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_aacb457fe24e098d42683ff9450bd21a0"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">jubatus::core::fv_converter::weight_manager::diff_weights_</a></div><div class="ttdeci">keyword_weights diff_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00130">weight_manager.hpp:130</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_aacb457fe24e098d42683ff9450bd21a0"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">jubatus::core::fv_converter::weight_manager::diff_weights_</a></div><div class="ttdeci">keyword_weights diff_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00137">weight_manager.hpp:137</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -261,16 +265,18 @@ Here is the call graph for this function:</div>
 
 <p>Reimplemented from <a class="el" href="classjubatus_1_1core_1_1framework_1_1model.html#a171565e665abe39dfa4bf6ef1f225096">jubatus::core::framework::model</a>.</p>
 
-<p>Definition at line <a class="el" href="weight__manager_8hpp_source.html#l00084">84</a> of file <a class="el" href="weight__manager_8hpp_source.html">weight_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="weight__manager_8hpp_source.html#l00086">86</a> of file <a class="el" href="weight__manager_8hpp_source.html">weight_manager.hpp</a>.</p>
 
-<p>References <a class="el" href="keyword__weights_8cpp_source.html#l00078">jubatus::core::fv_converter::keyword_weights::clear()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00130">diff_weights_</a>, and <a class="el" href="weight__manager_8hpp_source.html#l00131">master_weights_</a>.</p>
-<div class="fragment"><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;               {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">diff_weights_</a>.<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a94c4d3e57093c933f9d98d189b9b8e81">clear</a>();</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a45c931a66f9ae6ae089b2cb82d3a959b">master_weights_</a>.<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a94c4d3e57093c933f9d98d189b9b8e81">clear</a>();</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  }</div>
-<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_aacb457fe24e098d42683ff9450bd21a0"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">jubatus::core::fv_converter::weight_manager::diff_weights_</a></div><div class="ttdeci">keyword_weights diff_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00130">weight_manager.hpp:130</a></div></div>
+<p>References <a class="el" href="keyword__weights_8cpp_source.html#l00078">jubatus::core::fv_converter::keyword_weights::clear()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00137">diff_weights_</a>, <a class="el" href="weight__manager_8hpp_source.html#l00138">master_weights_</a>, and <a class="el" href="weight__manager_8hpp_source.html#l00135">mutex_</a>.</p>
+<div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;               {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    util::concurrent::scoped_lock lk(<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a3ff95ecaf6be00dececc726799645945">mutex_</a>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">diff_weights_</a>.<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a94c4d3e57093c933f9d98d189b9b8e81">clear</a>();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a45c931a66f9ae6ae089b2cb82d3a959b">master_weights_</a>.<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a94c4d3e57093c933f9d98d189b9b8e81">clear</a>();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  }</div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a3ff95ecaf6be00dececc726799645945"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a3ff95ecaf6be00dececc726799645945">jubatus::core::fv_converter::weight_manager::mutex_</a></div><div class="ttdeci">util::concurrent::mutex mutex_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00135">weight_manager.hpp:135</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_aacb457fe24e098d42683ff9450bd21a0"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">jubatus::core::fv_converter::weight_manager::diff_weights_</a></div><div class="ttdeci">keyword_weights diff_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00137">weight_manager.hpp:137</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights_html_a94c4d3e57093c933f9d98d189b9b8e81"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a94c4d3e57093c933f9d98d189b9b8e81">jubatus::core::fv_converter::keyword_weights::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition:</b> <a href="keyword__weights_8cpp_source.html#l00078">keyword_weights.cpp:78</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a45c931a66f9ae6ae089b2cb82d3a959b"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a45c931a66f9ae6ae089b2cb82d3a959b">jubatus::core::fv_converter::weight_manager::master_weights_</a></div><div class="ttdeci">keyword_weights master_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00131">weight_manager.hpp:131</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a45c931a66f9ae6ae089b2cb82d3a959b"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a45c931a66f9ae6ae089b2cb82d3a959b">jubatus::core::fv_converter::weight_manager::master_weights_</a></div><div class="ttdeci">keyword_weights master_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00138">weight_manager.hpp:138</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -307,12 +313,14 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="weight__manager_8hpp_source.html#l00059">59</a> of file <a class="el" href="weight__manager_8hpp_source.html">weight_manager.hpp</a>.</p>
 
-<p>References <a class="el" href="weight__manager_8hpp_source.html#l00130">diff_weights_</a>, and <a class="el" href="weight__manager_8hpp_source.html#l00129">version_</a>.</p>
+<p>References <a class="el" href="weight__manager_8hpp_source.html#l00137">diff_weights_</a>, <a class="el" href="weight__manager_8hpp_source.html#l00135">mutex_</a>, and <a class="el" href="weight__manager_8hpp_source.html#l00136">version_</a>.</p>
 <div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                                   {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    diff = versioned_weight_diff(<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">diff_weights_</a>, <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a984778494058629b09db70561fead7bf">version_</a>);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  }</div>
-<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_aacb457fe24e098d42683ff9450bd21a0"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">jubatus::core::fv_converter::weight_manager::diff_weights_</a></div><div class="ttdeci">keyword_weights diff_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00130">weight_manager.hpp:130</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a984778494058629b09db70561fead7bf"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a984778494058629b09db70561fead7bf">jubatus::core::fv_converter::weight_manager::version_</a></div><div class="ttdeci">storage::version version_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00129">weight_manager.hpp:129</a></div></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    util::concurrent::scoped_lock lk(<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a3ff95ecaf6be00dececc726799645945">mutex_</a>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    diff = versioned_weight_diff(<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">diff_weights_</a>, <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a984778494058629b09db70561fead7bf">version_</a>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  }</div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a3ff95ecaf6be00dececc726799645945"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a3ff95ecaf6be00dececc726799645945">jubatus::core::fv_converter::weight_manager::mutex_</a></div><div class="ttdeci">util::concurrent::mutex mutex_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00135">weight_manager.hpp:135</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_aacb457fe24e098d42683ff9450bd21a0"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">jubatus::core::fv_converter::weight_manager::diff_weights_</a></div><div class="ttdeci">keyword_weights diff_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00137">weight_manager.hpp:137</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a984778494058629b09db70561fead7bf"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a984778494058629b09db70561fead7bf">jubatus::core::fv_converter::weight_manager::version_</a></div><div class="ttdeci">storage::version version_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00136">weight_manager.hpp:136</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -337,18 +345,18 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="weight__manager_8hpp_source.html#l00112">112</a> of file <a class="el" href="weight__manager_8hpp_source.html">weight_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="weight__manager_8hpp_source.html#l00118">118</a> of file <a class="el" href="weight__manager_8hpp_source.html">weight_manager.hpp</a>.</p>
 
-<p>References <a class="el" href="weight__manager_8hpp_source.html#l00130">diff_weights_</a>, <a class="el" href="keyword__weights_8hpp_source.html#l00041">jubatus::core::fv_converter::keyword_weights::get_document_count()</a>, and <a class="el" href="weight__manager_8hpp_source.html#l00131">master_weights_</a>.</p>
+<p>References <a class="el" href="weight__manager_8hpp_source.html#l00137">diff_weights_</a>, <a class="el" href="keyword__weights_8hpp_source.html#l00040">jubatus::core::fv_converter::keyword_weights::get_document_count()</a>, and <a class="el" href="weight__manager_8hpp_source.html#l00138">master_weights_</a>.</p>
 
-<p>Referenced by <a class="el" href="weight__manager_8cpp_source.html#l00079">get_global_weight()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                                      {</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">diff_weights_</a>.<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a4f026bc080bf750f58e9ddbbfe70fc39">get_document_count</a>() +</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a45c931a66f9ae6ae089b2cb82d3a959b">master_weights_</a>.<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a4f026bc080bf750f58e9ddbbfe70fc39">get_document_count</a>();</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  }</div>
-<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_aacb457fe24e098d42683ff9450bd21a0"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">jubatus::core::fv_converter::weight_manager::diff_weights_</a></div><div class="ttdeci">keyword_weights diff_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00130">weight_manager.hpp:130</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights_html_a4f026bc080bf750f58e9ddbbfe70fc39"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a4f026bc080bf750f58e9ddbbfe70fc39">jubatus::core::fv_converter::keyword_weights::get_document_count</a></div><div class="ttdeci">uint64_t get_document_count() const </div><div class="ttdef"><b>Definition:</b> <a href="keyword__weights_8hpp_source.html#l00041">keyword_weights.hpp:41</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a45c931a66f9ae6ae089b2cb82d3a959b"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a45c931a66f9ae6ae089b2cb82d3a959b">jubatus::core::fv_converter::weight_manager::master_weights_</a></div><div class="ttdeci">keyword_weights master_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00131">weight_manager.hpp:131</a></div></div>
+<p>Referenced by <a class="el" href="weight__manager_8cpp_source.html#l00084">get_global_weight()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                                      {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">diff_weights_</a>.<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a4f026bc080bf750f58e9ddbbfe70fc39">get_document_count</a>() +</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a45c931a66f9ae6ae089b2cb82d3a959b">master_weights_</a>.<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a4f026bc080bf750f58e9ddbbfe70fc39">get_document_count</a>();</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  }</div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_aacb457fe24e098d42683ff9450bd21a0"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">jubatus::core::fv_converter::weight_manager::diff_weights_</a></div><div class="ttdeci">keyword_weights diff_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00137">weight_manager.hpp:137</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights_html_a4f026bc080bf750f58e9ddbbfe70fc39"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a4f026bc080bf750f58e9ddbbfe70fc39">jubatus::core::fv_converter::keyword_weights::get_document_count</a></div><div class="ttdeci">uint64_t get_document_count() const </div><div class="ttdef"><b>Definition:</b> <a href="keyword__weights_8hpp_source.html#l00040">keyword_weights.hpp:40</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a45c931a66f9ae6ae089b2cb82d3a959b"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a45c931a66f9ae6ae089b2cb82d3a959b">jubatus::core::fv_converter::weight_manager::master_weights_</a></div><div class="ttdeci">keyword_weights master_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00138">weight_manager.hpp:138</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -392,18 +400,18 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="weight__manager_8hpp_source.html#l00117">117</a> of file <a class="el" href="weight__manager_8hpp_source.html">weight_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="weight__manager_8hpp_source.html#l00123">123</a> of file <a class="el" href="weight__manager_8hpp_source.html">weight_manager.hpp</a>.</p>
 
-<p>References <a class="el" href="weight__manager_8hpp_source.html#l00130">diff_weights_</a>, <a class="el" href="keyword__weights_8hpp_source.html#l00037">jubatus::core::fv_converter::keyword_weights::get_document_frequency()</a>, and <a class="el" href="weight__manager_8hpp_source.html#l00131">master_weights_</a>.</p>
+<p>References <a class="el" href="weight__manager_8hpp_source.html#l00137">diff_weights_</a>, <a class="el" href="keyword__weights_8hpp_source.html#l00036">jubatus::core::fv_converter::keyword_weights::get_document_frequency()</a>, and <a class="el" href="weight__manager_8hpp_source.html#l00138">master_weights_</a>.</p>
 
-<p>Referenced by <a class="el" href="weight__manager_8cpp_source.html#l00079">get_global_weight()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                                                            {</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">diff_weights_</a>.<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a082182a20ba9dc529ad2589a728287eb">get_document_frequency</a>(key) +</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a45c931a66f9ae6ae089b2cb82d3a959b">master_weights_</a>.<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a082182a20ba9dc529ad2589a728287eb">get_document_frequency</a>(key);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  }</div>
-<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_aacb457fe24e098d42683ff9450bd21a0"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">jubatus::core::fv_converter::weight_manager::diff_weights_</a></div><div class="ttdeci">keyword_weights diff_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00130">weight_manager.hpp:130</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a45c931a66f9ae6ae089b2cb82d3a959b"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a45c931a66f9ae6ae089b2cb82d3a959b">jubatus::core::fv_converter::weight_manager::master_weights_</a></div><div class="ttdeci">keyword_weights master_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00131">weight_manager.hpp:131</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights_html_a082182a20ba9dc529ad2589a728287eb"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a082182a20ba9dc529ad2589a728287eb">jubatus::core::fv_converter::keyword_weights::get_document_frequency</a></div><div class="ttdeci">size_t get_document_frequency(const std::string &amp;key) const </div><div class="ttdef"><b>Definition:</b> <a href="keyword__weights_8hpp_source.html#l00037">keyword_weights.hpp:37</a></div></div>
+<p>Referenced by <a class="el" href="weight__manager_8cpp_source.html#l00084">get_global_weight()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                                                            {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">diff_weights_</a>.<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a082182a20ba9dc529ad2589a728287eb">get_document_frequency</a>(key) +</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a45c931a66f9ae6ae089b2cb82d3a959b">master_weights_</a>.<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a082182a20ba9dc529ad2589a728287eb">get_document_frequency</a>(key);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  }</div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_aacb457fe24e098d42683ff9450bd21a0"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">jubatus::core::fv_converter::weight_manager::diff_weights_</a></div><div class="ttdeci">keyword_weights diff_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00137">weight_manager.hpp:137</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a45c931a66f9ae6ae089b2cb82d3a959b"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a45c931a66f9ae6ae089b2cb82d3a959b">jubatus::core::fv_converter::weight_manager::master_weights_</a></div><div class="ttdeci">keyword_weights master_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00138">weight_manager.hpp:138</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights_html_a082182a20ba9dc529ad2589a728287eb"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a082182a20ba9dc529ad2589a728287eb">jubatus::core::fv_converter::keyword_weights::get_document_frequency</a></div><div class="ttdeci">size_t get_document_frequency(const std::string &amp;key) const </div><div class="ttdef"><b>Definition:</b> <a href="keyword__weights_8hpp_source.html#l00036">keyword_weights.hpp:36</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -447,37 +455,37 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="weight__manager_8cpp_source.html#l00079">79</a> of file <a class="el" href="weight__manager_8cpp_source.html">weight_manager.cpp</a>.</p>
+<p>Definition at line <a class="el" href="weight__manager_8cpp_source.html#l00084">84</a> of file <a class="el" href="weight__manager_8cpp_source.html">weight_manager.cpp</a>.</p>
 
-<p>References <a class="el" href="weight__manager_8hpp_source.html#l00112">get_document_count()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00117">get_document_frequency()</a>, and <a class="el" href="weight__manager_8hpp_source.html#l00122">get_user_weight()</a>.</p>
+<p>References <a class="el" href="weight__manager_8hpp_source.html#l00118">get_document_count()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00123">get_document_frequency()</a>, and <a class="el" href="weight__manager_8hpp_source.html#l00128">get_user_weight()</a>.</p>
 
-<p>Referenced by <a class="el" href="weight__manager_8cpp_source.html#l00071">get_weight()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                                                                   {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordtype">size_t</span> p = key.find_last_of(<span class="charliteral">&#39;/&#39;</span>);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordflow">if</span> (p == std::string::npos) {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">return</span> 1.0;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  std::string type = key.substr(p + 1);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;bin&quot;</span>) {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">return</span> 1.0;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;idf&quot;</span>) {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">double</span> doc_count = <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aceb34379f25bc6801ef636660d3c878b">get_document_count</a>();</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">double</span> doc_freq = <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a0e4eecb9e41c7420e50ebb86dabde468">get_document_frequency</a>(key);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">return</span> std::log((doc_count + 1) / (doc_freq + 1));</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;weight&quot;</span>) {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    p = key.find_last_of(<span class="charliteral">&#39;#&#39;</span>);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">if</span> (p == std::string::npos) {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#abc9c244a6baa2be348ae70715433f842">get_user_weight</a>(key.substr(0, p));</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a0e4eecb9e41c7420e50ebb86dabde468"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a0e4eecb9e41c7420e50ebb86dabde468">jubatus::core::fv_converter::weight_manager::get_document_frequency</a></div><div class="ttdeci">size_t get_document_frequency(const std::string &amp;key) const </div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00117">weight_manager.hpp:117</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_abc9c244a6baa2be348ae70715433f842"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#abc9c244a6baa2be348ae70715433f842">jubatus::core::fv_converter::weight_manager::get_user_weight</a></div><div class="ttdeci">double get_user_weight(const std::string &amp;key) const </div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00122">weight_manager.hpp:122</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_aceb34379f25bc6801ef636660d3c878b"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aceb34379f25bc6801ef636660d3c878b">jubatus::core::fv_converter::weight_manager::get_document_count</a></div><div class="ttdeci">uint64_t get_document_count() const </div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00112">weight_manager.hpp:112</a></div></div>
+<p>Referenced by <a class="el" href="weight__manager_8cpp_source.html#l00075">get_weight()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                                                                   {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">size_t</span> p = key.find_last_of(<span class="charliteral">&#39;/&#39;</span>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordflow">if</span> (p == std::string::npos) {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> 1.0;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  std::string type = key.substr(p + 1);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;bin&quot;</span>) {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">return</span> 1.0;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;idf&quot;</span>) {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">double</span> doc_count = <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aceb34379f25bc6801ef636660d3c878b">get_document_count</a>();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">double</span> doc_freq = <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a0e4eecb9e41c7420e50ebb86dabde468">get_document_frequency</a>(key);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">return</span> std::log((doc_count + 1) / (doc_freq + 1));</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;weight&quot;</span>) {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    p = key.find_last_of(<span class="charliteral">&#39;#&#39;</span>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">if</span> (p == std::string::npos) {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#abc9c244a6baa2be348ae70715433f842">get_user_weight</a>(key.substr(0, p));</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a0e4eecb9e41c7420e50ebb86dabde468"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a0e4eecb9e41c7420e50ebb86dabde468">jubatus::core::fv_converter::weight_manager::get_document_frequency</a></div><div class="ttdeci">size_t get_document_frequency(const std::string &amp;key) const </div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00123">weight_manager.hpp:123</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_abc9c244a6baa2be348ae70715433f842"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#abc9c244a6baa2be348ae70715433f842">jubatus::core::fv_converter::weight_manager::get_user_weight</a></div><div class="ttdeci">double get_user_weight(const std::string &amp;key) const </div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00128">weight_manager.hpp:128</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_aceb34379f25bc6801ef636660d3c878b"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aceb34379f25bc6801ef636660d3c878b">jubatus::core::fv_converter::weight_manager::get_document_count</a></div><div class="ttdeci">uint64_t get_document_count() const </div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00118">weight_manager.hpp:118</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -521,18 +529,18 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="weight__manager_8hpp_source.html#l00122">122</a> of file <a class="el" href="weight__manager_8hpp_source.html">weight_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="weight__manager_8hpp_source.html#l00128">128</a> of file <a class="el" href="weight__manager_8hpp_source.html">weight_manager.hpp</a>.</p>
 
-<p>References <a class="el" href="weight__manager_8hpp_source.html#l00130">diff_weights_</a>, <a class="el" href="keyword__weights_8cpp_source.html#l00061">jubatus::core::fv_converter::keyword_weights::get_user_weight()</a>, and <a class="el" href="weight__manager_8hpp_source.html#l00131">master_weights_</a>.</p>
+<p>References <a class="el" href="weight__manager_8hpp_source.html#l00137">diff_weights_</a>, <a class="el" href="keyword__weights_8cpp_source.html#l00061">jubatus::core::fv_converter::keyword_weights::get_user_weight()</a>, and <a class="el" href="weight__manager_8hpp_source.html#l00138">master_weights_</a>.</p>
 
-<p>Referenced by <a class="el" href="weight__manager_8cpp_source.html#l00079">get_global_weight()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                                                     {</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">diff_weights_</a>.<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a919a6c4e2648a3e0bb3abd393d760bf9">get_user_weight</a>(key) +</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a45c931a66f9ae6ae089b2cb82d3a959b">master_weights_</a>.<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a919a6c4e2648a3e0bb3abd393d760bf9">get_user_weight</a>(key);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  }</div>
+<p>Referenced by <a class="el" href="weight__manager_8cpp_source.html#l00084">get_global_weight()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                                                     {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">diff_weights_</a>.<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a919a6c4e2648a3e0bb3abd393d760bf9">get_user_weight</a>(key) +</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a45c931a66f9ae6ae089b2cb82d3a959b">master_weights_</a>.<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a919a6c4e2648a3e0bb3abd393d760bf9">get_user_weight</a>(key);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  }</div>
 <div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights_html_a919a6c4e2648a3e0bb3abd393d760bf9"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a919a6c4e2648a3e0bb3abd393d760bf9">jubatus::core::fv_converter::keyword_weights::get_user_weight</a></div><div class="ttdeci">float get_user_weight(const std::string &amp;key) const </div><div class="ttdef"><b>Definition:</b> <a href="keyword__weights_8cpp_source.html#l00061">keyword_weights.cpp:61</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_aacb457fe24e098d42683ff9450bd21a0"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">jubatus::core::fv_converter::weight_manager::diff_weights_</a></div><div class="ttdeci">keyword_weights diff_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00130">weight_manager.hpp:130</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a45c931a66f9ae6ae089b2cb82d3a959b"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a45c931a66f9ae6ae089b2cb82d3a959b">jubatus::core::fv_converter::weight_manager::master_weights_</a></div><div class="ttdeci">keyword_weights master_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00131">weight_manager.hpp:131</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_aacb457fe24e098d42683ff9450bd21a0"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">jubatus::core::fv_converter::weight_manager::diff_weights_</a></div><div class="ttdeci">keyword_weights diff_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00137">weight_manager.hpp:137</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a45c931a66f9ae6ae089b2cb82d3a959b"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a45c931a66f9ae6ae089b2cb82d3a959b">jubatus::core::fv_converter::weight_manager::master_weights_</a></div><div class="ttdeci">keyword_weights master_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00138">weight_manager.hpp:138</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -575,13 +583,13 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="weight__manager_8hpp_source.html#l00089">89</a> of file <a class="el" href="weight__manager_8hpp_source.html">weight_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="weight__manager_8hpp_source.html#l00092">92</a> of file <a class="el" href="weight__manager_8hpp_source.html">weight_manager.hpp</a>.</p>
 
-<p>References <a class="el" href="weight__manager_8hpp_source.html#l00129">version_</a>.</p>
-<div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                                     {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a984778494058629b09db70561fead7bf">version_</a>;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  }</div>
-<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a984778494058629b09db70561fead7bf"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a984778494058629b09db70561fead7bf">jubatus::core::fv_converter::weight_manager::version_</a></div><div class="ttdeci">storage::version version_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00129">weight_manager.hpp:129</a></div></div>
+<p>References <a class="el" href="weight__manager_8hpp_source.html#l00136">version_</a>.</p>
+<div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                                     {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a984778494058629b09db70561fead7bf">version_</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  }</div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a984778494058629b09db70561fead7bf"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a984778494058629b09db70561fead7bf">jubatus::core::fv_converter::weight_manager::version_</a></div><div class="ttdeci">storage::version version_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00136">weight_manager.hpp:136</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -599,17 +607,19 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="weight__manager_8cpp_source.html#l00071">71</a> of file <a class="el" href="weight__manager_8cpp_source.html">weight_manager.cpp</a>.</p>
+<p>Definition at line <a class="el" href="weight__manager_8cpp_source.html#l00075">75</a> of file <a class="el" href="weight__manager_8cpp_source.html">weight_manager.cpp</a>.</p>
 
-<p>References <a class="el" href="weight__manager_8cpp_source.html#l00079">get_global_weight()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                                                     {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordflow">for</span> (common::sfv_t::iterator it = fv.begin(); it != fv.end(); ++it) {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">double</span> global_weight = <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a1aab907096fd6e9e6954fa734b4cbea6">get_global_weight</a>(it-&gt;first);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    it-&gt;second = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(it-&gt;second * global_weight);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  fv.erase(remove_if(fv.begin(), fv.end(), is_zero()), fv.end());</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a1aab907096fd6e9e6954fa734b4cbea6"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a1aab907096fd6e9e6954fa734b4cbea6">jubatus::core::fv_converter::weight_manager::get_global_weight</a></div><div class="ttdeci">double get_global_weight(const std::string &amp;key) const </div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8cpp_source.html#l00079">weight_manager.cpp:79</a></div></div>
+<p>References <a class="el" href="weight__manager_8cpp_source.html#l00084">get_global_weight()</a>, and <a class="el" href="weight__manager_8hpp_source.html#l00135">mutex_</a>.</p>
+<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                                                     {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  scoped_lock lk(<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a3ff95ecaf6be00dececc726799645945">mutex_</a>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordflow">for</span> (common::sfv_t::iterator it = fv.begin(); it != fv.end(); ++it) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">double</span> global_weight = <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a1aab907096fd6e9e6954fa734b4cbea6">get_global_weight</a>(it-&gt;first);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    it-&gt;second = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(it-&gt;second * global_weight);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  fv.erase(remove_if(fv.begin(), fv.end(), is_zero()), fv.end());</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a3ff95ecaf6be00dececc726799645945"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a3ff95ecaf6be00dececc726799645945">jubatus::core::fv_converter::weight_manager::mutex_</a></div><div class="ttdeci">util::concurrent::mutex mutex_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00135">weight_manager.hpp:135</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a1aab907096fd6e9e6954fa734b4cbea6"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a1aab907096fd6e9e6954fa734b4cbea6">jubatus::core::fv_converter::weight_manager::get_global_weight</a></div><div class="ttdeci">double get_global_weight(const std::string &amp;key) const </div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8cpp_source.html#l00084">weight_manager.cpp:84</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -654,16 +664,16 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="weight__manager_8hpp_source.html#l00074">74</a> of file <a class="el" href="weight__manager_8hpp_source.html">weight_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="weight__manager_8hpp_source.html#l00076">76</a> of file <a class="el" href="weight__manager_8hpp_source.html">weight_manager.hpp</a>.</p>
 
 <p>References <a class="el" href="keyword__weights_8cpp_source.html#l00070">jubatus::core::fv_converter::keyword_weights::merge()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00047">jubatus::core::fv_converter::versioned_weight_diff::version_</a>, and <a class="el" href="weight__manager_8hpp_source.html#l00046">jubatus::core::fv_converter::versioned_weight_diff::weights_</a>.</p>
-<div class="fragment"><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                                        {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">if</span> (lhs.version_ == acc.version_) {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      acc.weights_.merge(lhs.weights_);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (lhs.version_ &gt; acc.version_) {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      acc = lhs;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  }</div>
+<div class="fragment"><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                                        {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">if</span> (lhs.version_ == acc.version_) {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      acc.weights_.merge(lhs.weights_);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (lhs.version_ &gt; acc.version_) {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      acc = lhs;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  }</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -718,7 +728,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void jubatus::core::fv_converter::weight_manager::pack </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">framework::packer</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">framework::packer</a> &amp;&#160;</td>
           <td class="paramname"><em>pk</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -732,10 +742,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classjubatus_1_1core_1_1framework_1_1model.html#a9fdb1638abb6a9106798104fd6262e77">jubatus::core::framework::model</a>.</p>
 
-<p>Definition at line <a class="el" href="weight__manager_8hpp_source.html#l00095">95</a> of file <a class="el" href="weight__manager_8hpp_source.html">weight_manager.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                                       {</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    pk.pack(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  }</div>
+<p>Definition at line <a class="el" href="weight__manager_8hpp_source.html#l00098">98</a> of file <a class="el" href="weight__manager_8hpp_source.html">weight_manager.hpp</a>.</p>
+
+<p>References <a class="el" href="weight__manager_8hpp_source.html#l00135">mutex_</a>.</p>
+<div class="fragment"><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                                       {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    util::concurrent::scoped_lock lk(<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a3ff95ecaf6be00dececc726799645945">mutex_</a>);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    pk.pack(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  }</div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a3ff95ecaf6be00dececc726799645945"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a3ff95ecaf6be00dececc726799645945">jubatus::core::fv_converter::weight_manager::mutex_</a></div><div class="ttdeci">util::concurrent::mutex mutex_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00135">weight_manager.hpp:135</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -761,25 +775,27 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="weight__manager_8hpp_source.html#l00063">63</a> of file <a class="el" href="weight__manager_8hpp_source.html">weight_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="weight__manager_8hpp_source.html#l00064">64</a> of file <a class="el" href="weight__manager_8hpp_source.html">weight_manager.hpp</a>.</p>
 
-<p>References <a class="el" href="keyword__weights_8cpp_source.html#l00078">jubatus::core::fv_converter::keyword_weights::clear()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00130">diff_weights_</a>, <a class="el" href="version_8hpp_source.html#l00032">jubatus::core::storage::version::increment()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00131">master_weights_</a>, <a class="el" href="keyword__weights_8cpp_source.html#l00070">jubatus::core::fv_converter::keyword_weights::merge()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00047">jubatus::core::fv_converter::versioned_weight_diff::version_</a>, <a class="el" href="weight__manager_8hpp_source.html#l00129">version_</a>, and <a class="el" href="weight__manager_8hpp_source.html#l00046">jubatus::core::fv_converter::versioned_weight_diff::weights_</a>.</p>
-<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                                                   {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">if</span> (diff.version_ == <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a984778494058629b09db70561fead7bf">version_</a>) {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a45c931a66f9ae6ae089b2cb82d3a959b">master_weights_</a>.<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#aead5582638e1dbd624b6a3c1268be300">merge</a>(diff.weights_);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">diff_weights_</a>.<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a94c4d3e57093c933f9d98d189b9b8e81">clear</a>();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a984778494058629b09db70561fead7bf">version_</a>.<a class="code" href="classjubatus_1_1core_1_1storage_1_1version.html#aacb2ff5476885e94127c492818ba0920">increment</a>();</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  }</div>
+<p>References <a class="el" href="keyword__weights_8cpp_source.html#l00078">jubatus::core::fv_converter::keyword_weights::clear()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00137">diff_weights_</a>, <a class="el" href="version_8hpp_source.html#l00032">jubatus::core::storage::version::increment()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00138">master_weights_</a>, <a class="el" href="keyword__weights_8cpp_source.html#l00070">jubatus::core::fv_converter::keyword_weights::merge()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00135">mutex_</a>, <a class="el" href="weight__manager_8hpp_source.html#l00047">jubatus::core::fv_converter::versioned_weight_diff::version_</a>, <a class="el" href="weight__manager_8hpp_source.html#l00136">version_</a>, and <a class="el" href="weight__manager_8hpp_source.html#l00046">jubatus::core::fv_converter::versioned_weight_diff::weights_</a>.</p>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                                   {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    util::concurrent::scoped_lock lk(<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a3ff95ecaf6be00dececc726799645945">mutex_</a>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">if</span> (diff.version_ == <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a984778494058629b09db70561fead7bf">version_</a>) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a45c931a66f9ae6ae089b2cb82d3a959b">master_weights_</a>.<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#aead5582638e1dbd624b6a3c1268be300">merge</a>(diff.weights_);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">diff_weights_</a>.<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a94c4d3e57093c933f9d98d189b9b8e81">clear</a>();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a984778494058629b09db70561fead7bf">version_</a>.<a class="code" href="classjubatus_1_1core_1_1storage_1_1version.html#aacb2ff5476885e94127c492818ba0920">increment</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  }</div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a3ff95ecaf6be00dececc726799645945"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a3ff95ecaf6be00dececc726799645945">jubatus::core::fv_converter::weight_manager::mutex_</a></div><div class="ttdeci">util::concurrent::mutex mutex_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00135">weight_manager.hpp:135</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights_html_aead5582638e1dbd624b6a3c1268be300"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#aead5582638e1dbd624b6a3c1268be300">jubatus::core::fv_converter::keyword_weights::merge</a></div><div class="ttdeci">void merge(const keyword_weights &amp;w)</div><div class="ttdef"><b>Definition:</b> <a href="keyword__weights_8cpp_source.html#l00070">keyword_weights.cpp:70</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1storage_1_1version_html_aacb2ff5476885e94127c492818ba0920"><div class="ttname"><a href="classjubatus_1_1core_1_1storage_1_1version.html#aacb2ff5476885e94127c492818ba0920">jubatus::core::storage::version::increment</a></div><div class="ttdeci">void increment()</div><div class="ttdef"><b>Definition:</b> <a href="version_8hpp_source.html#l00032">version.hpp:32</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_aacb457fe24e098d42683ff9450bd21a0"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">jubatus::core::fv_converter::weight_manager::diff_weights_</a></div><div class="ttdeci">keyword_weights diff_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00130">weight_manager.hpp:130</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_aacb457fe24e098d42683ff9450bd21a0"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">jubatus::core::fv_converter::weight_manager::diff_weights_</a></div><div class="ttdeci">keyword_weights diff_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00137">weight_manager.hpp:137</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights_html_a94c4d3e57093c933f9d98d189b9b8e81"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a94c4d3e57093c933f9d98d189b9b8e81">jubatus::core::fv_converter::keyword_weights::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition:</b> <a href="keyword__weights_8cpp_source.html#l00078">keyword_weights.cpp:78</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a45c931a66f9ae6ae089b2cb82d3a959b"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a45c931a66f9ae6ae089b2cb82d3a959b">jubatus::core::fv_converter::weight_manager::master_weights_</a></div><div class="ttdeci">keyword_weights master_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00131">weight_manager.hpp:131</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a984778494058629b09db70561fead7bf"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a984778494058629b09db70561fead7bf">jubatus::core::fv_converter::weight_manager::version_</a></div><div class="ttdeci">storage::version version_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00129">weight_manager.hpp:129</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a45c931a66f9ae6ae089b2cb82d3a959b"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a45c931a66f9ae6ae089b2cb82d3a959b">jubatus::core::fv_converter::weight_manager::master_weights_</a></div><div class="ttdeci">keyword_weights master_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00138">weight_manager.hpp:138</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a984778494058629b09db70561fead7bf"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a984778494058629b09db70561fead7bf">jubatus::core::fv_converter::weight_manager::version_</a></div><div class="ttdeci">storage::version version_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00136">weight_manager.hpp:136</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -813,20 +829,22 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="weight__manager_8hpp_source.html#l00103">103</a> of file <a class="el" href="weight__manager_8hpp_source.html">weight_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="weight__manager_8hpp_source.html#l00108">108</a> of file <a class="el" href="weight__manager_8hpp_source.html">weight_manager.hpp</a>.</p>
 
-<p>References <a class="el" href="weight__manager_8hpp_source.html#l00130">diff_weights_</a>, <a class="el" href="weight__manager_8hpp_source.html#l00131">master_weights_</a>, <a class="el" href="keyword__weights_8cpp_source.html#l00084">jubatus::core::fv_converter::keyword_weights::to_string()</a>, and <a class="el" href="weight__manager_8hpp_source.html#l00129">version_</a>.</p>
-<div class="fragment"><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                              {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    std::stringstream ss;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    ss &lt;&lt; <span class="stringliteral">&quot;version:&quot;</span> &lt;&lt; <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a984778494058629b09db70561fead7bf">version_</a></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;       &lt;&lt; <span class="stringliteral">&quot; diff_weights:&quot;</span> &lt;&lt; <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">diff_weights_</a>.<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a31c928d9644d53d5c482495776d66864">to_string</a>()</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;       &lt;&lt; <span class="stringliteral">&quot; master_weights:&quot;</span> &lt;&lt; <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a45c931a66f9ae6ae089b2cb82d3a959b">master_weights_</a>.<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a31c928d9644d53d5c482495776d66864">to_string</a>();</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">return</span> ss.str();</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  }</div>
+<p>References <a class="el" href="weight__manager_8hpp_source.html#l00137">diff_weights_</a>, <a class="el" href="weight__manager_8hpp_source.html#l00138">master_weights_</a>, <a class="el" href="weight__manager_8hpp_source.html#l00135">mutex_</a>, <a class="el" href="keyword__weights_8cpp_source.html#l00084">jubatus::core::fv_converter::keyword_weights::to_string()</a>, and <a class="el" href="weight__manager_8hpp_source.html#l00136">version_</a>.</p>
+<div class="fragment"><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                              {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    util::concurrent::scoped_lock lk(<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a3ff95ecaf6be00dececc726799645945">mutex_</a>);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    std::stringstream ss;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    ss &lt;&lt; <span class="stringliteral">&quot;version:&quot;</span> &lt;&lt; <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a984778494058629b09db70561fead7bf">version_</a></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;       &lt;&lt; <span class="stringliteral">&quot; diff_weights:&quot;</span> &lt;&lt; <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">diff_weights_</a>.<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a31c928d9644d53d5c482495776d66864">to_string</a>()</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;       &lt;&lt; <span class="stringliteral">&quot; master_weights:&quot;</span> &lt;&lt; <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a45c931a66f9ae6ae089b2cb82d3a959b">master_weights_</a>.<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a31c928d9644d53d5c482495776d66864">to_string</a>();</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">return</span> ss.str();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  }</div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a3ff95ecaf6be00dececc726799645945"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a3ff95ecaf6be00dececc726799645945">jubatus::core::fv_converter::weight_manager::mutex_</a></div><div class="ttdeci">util::concurrent::mutex mutex_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00135">weight_manager.hpp:135</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights_html_a31c928d9644d53d5c482495776d66864"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a31c928d9644d53d5c482495776d66864">jubatus::core::fv_converter::keyword_weights::to_string</a></div><div class="ttdeci">std::string to_string() const </div><div class="ttdef"><b>Definition:</b> <a href="keyword__weights_8cpp_source.html#l00084">keyword_weights.cpp:84</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_aacb457fe24e098d42683ff9450bd21a0"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">jubatus::core::fv_converter::weight_manager::diff_weights_</a></div><div class="ttdeci">keyword_weights diff_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00130">weight_manager.hpp:130</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a45c931a66f9ae6ae089b2cb82d3a959b"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a45c931a66f9ae6ae089b2cb82d3a959b">jubatus::core::fv_converter::weight_manager::master_weights_</a></div><div class="ttdeci">keyword_weights master_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00131">weight_manager.hpp:131</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a984778494058629b09db70561fead7bf"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a984778494058629b09db70561fead7bf">jubatus::core::fv_converter::weight_manager::version_</a></div><div class="ttdeci">storage::version version_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00129">weight_manager.hpp:129</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_aacb457fe24e098d42683ff9450bd21a0"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">jubatus::core::fv_converter::weight_manager::diff_weights_</a></div><div class="ttdeci">keyword_weights diff_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00137">weight_manager.hpp:137</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a45c931a66f9ae6ae089b2cb82d3a959b"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a45c931a66f9ae6ae089b2cb82d3a959b">jubatus::core::fv_converter::weight_manager::master_weights_</a></div><div class="ttdeci">keyword_weights master_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00138">weight_manager.hpp:138</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a984778494058629b09db70561fead7bf"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a984778494058629b09db70561fead7bf">jubatus::core::fv_converter::weight_manager::version_</a></div><div class="ttdeci">storage::version version_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00136">weight_manager.hpp:136</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -863,10 +881,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classjubatus_1_1core_1_1framework_1_1model.html#af0e8eafe8e66072d8d23e9f48850a0e2">jubatus::core::framework::model</a>.</p>
 
-<p>Definition at line <a class="el" href="weight__manager_8hpp_source.html#l00099">99</a> of file <a class="el" href="weight__manager_8hpp_source.html">weight_manager.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                               {</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    o.convert(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  }</div>
+<p>Definition at line <a class="el" href="weight__manager_8hpp_source.html#l00103">103</a> of file <a class="el" href="weight__manager_8hpp_source.html">weight_manager.hpp</a>.</p>
+
+<p>References <a class="el" href="weight__manager_8hpp_source.html#l00135">mutex_</a>.</p>
+<div class="fragment"><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                               {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    util::concurrent::scoped_lock lk(<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a3ff95ecaf6be00dececc726799645945">mutex_</a>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    o.convert(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  }</div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a3ff95ecaf6be00dececc726799645945"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a3ff95ecaf6be00dececc726799645945">jubatus::core::fv_converter::weight_manager::mutex_</a></div><div class="ttdeci">util::concurrent::mutex mutex_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00135">weight_manager.hpp:135</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -884,14 +906,16 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="weight__manager_8cpp_source.html#l00067">67</a> of file <a class="el" href="weight__manager_8cpp_source.html">weight_manager.cpp</a>.</p>
+<p>Definition at line <a class="el" href="weight__manager_8cpp_source.html#l00070">70</a> of file <a class="el" href="weight__manager_8cpp_source.html">weight_manager.cpp</a>.</p>
 
-<p>References <a class="el" href="weight__manager_8hpp_source.html#l00130">diff_weights_</a>, and <a class="el" href="keyword__weights_8cpp_source.html#l00050">jubatus::core::fv_converter::keyword_weights::update_document_frequency()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                                                        {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">diff_weights_</a>.<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a490a1336c1ed32dfaa262b1b973983f0">update_document_frequency</a>(fv);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<p>References <a class="el" href="weight__manager_8hpp_source.html#l00137">diff_weights_</a>, <a class="el" href="weight__manager_8hpp_source.html#l00135">mutex_</a>, and <a class="el" href="keyword__weights_8cpp_source.html#l00050">jubatus::core::fv_converter::keyword_weights::update_document_frequency()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                                                        {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  scoped_lock lk(<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a3ff95ecaf6be00dececc726799645945">mutex_</a>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">diff_weights_</a>.<a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a490a1336c1ed32dfaa262b1b973983f0">update_document_frequency</a>(fv);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_a3ff95ecaf6be00dececc726799645945"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a3ff95ecaf6be00dececc726799645945">jubatus::core::fv_converter::weight_manager::mutex_</a></div><div class="ttdeci">util::concurrent::mutex mutex_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00135">weight_manager.hpp:135</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights_html_a490a1336c1ed32dfaa262b1b973983f0"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a490a1336c1ed32dfaa262b1b973983f0">jubatus::core::fv_converter::keyword_weights::update_document_frequency</a></div><div class="ttdeci">void update_document_frequency(const common::sfv_t &amp;fv)</div><div class="ttdef"><b>Definition:</b> <a href="keyword__weights_8cpp_source.html#l00050">keyword_weights.cpp:50</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_aacb457fe24e098d42683ff9450bd21a0"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">jubatus::core::fv_converter::weight_manager::diff_weights_</a></div><div class="ttdeci">keyword_weights diff_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00130">weight_manager.hpp:130</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html_aacb457fe24e098d42683ff9450bd21a0"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">jubatus::core::fv_converter::weight_manager::diff_weights_</a></div><div class="ttdeci">keyword_weights diff_weights_</div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00137">weight_manager.hpp:137</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -923,9 +947,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="weight__manager_8hpp_source.html#l00130">130</a> of file <a class="el" href="weight__manager_8hpp_source.html">weight_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="weight__manager_8hpp_source.html#l00137">137</a> of file <a class="el" href="weight__manager_8hpp_source.html">weight_manager.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="weight__manager_8cpp_source.html#l00103">add_weight()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00084">clear()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00059">get_diff()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00112">get_document_count()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00117">get_document_frequency()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00122">get_user_weight()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00063">put_diff()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00103">to_string()</a>, and <a class="el" href="weight__manager_8cpp_source.html#l00067">update_weight()</a>.</p>
+<p>Referenced by <a class="el" href="weight__manager_8cpp_source.html#l00108">add_weight()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00086">clear()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00059">get_diff()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00118">get_document_count()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00123">get_document_frequency()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00128">get_user_weight()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00064">put_diff()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00108">to_string()</a>, and <a class="el" href="weight__manager_8cpp_source.html#l00070">update_weight()</a>.</p>
 
 </div>
 </div>
@@ -947,9 +971,33 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="weight__manager_8hpp_source.html#l00131">131</a> of file <a class="el" href="weight__manager_8hpp_source.html">weight_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="weight__manager_8hpp_source.html#l00138">138</a> of file <a class="el" href="weight__manager_8hpp_source.html">weight_manager.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="weight__manager_8hpp_source.html#l00084">clear()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00112">get_document_count()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00117">get_document_frequency()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00122">get_user_weight()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00063">put_diff()</a>, and <a class="el" href="weight__manager_8hpp_source.html#l00103">to_string()</a>.</p>
+<p>Referenced by <a class="el" href="weight__manager_8hpp_source.html#l00086">clear()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00118">get_document_count()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00123">get_document_frequency()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00128">get_user_weight()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00064">put_diff()</a>, and <a class="el" href="weight__manager_8hpp_source.html#l00108">to_string()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3ff95ecaf6be00dececc726799645945"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">util::concurrent::mutex jubatus::core::fv_converter::weight_manager::mutex_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="weight__manager_8hpp_source.html#l00135">135</a> of file <a class="el" href="weight__manager_8hpp_source.html">weight_manager.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="weight__manager_8cpp_source.html#l00108">add_weight()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00086">clear()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00059">get_diff()</a>, <a class="el" href="weight__manager_8cpp_source.html#l00075">get_weight()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00098">pack()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00064">put_diff()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00108">to_string()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00103">unpack()</a>, and <a class="el" href="weight__manager_8cpp_source.html#l00070">update_weight()</a>.</p>
 
 </div>
 </div>
@@ -971,9 +1019,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="weight__manager_8hpp_source.html#l00129">129</a> of file <a class="el" href="weight__manager_8hpp_source.html">weight_manager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="weight__manager_8hpp_source.html#l00136">136</a> of file <a class="el" href="weight__manager_8hpp_source.html">weight_manager.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="weight__manager_8hpp_source.html#l00059">get_diff()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00089">get_version()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00063">put_diff()</a>, and <a class="el" href="weight__manager_8hpp_source.html#l00103">to_string()</a>.</p>
+<p>Referenced by <a class="el" href="weight__manager_8hpp_source.html#l00059">get_diff()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00092">get_version()</a>, <a class="el" href="weight__manager_8hpp_source.html#l00064">put_diff()</a>, and <a class="el" href="weight__manager_8hpp_source.html#l00108">to_string()</a>.</p>
 
 </div>
 </div>
@@ -984,7 +1032,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:39 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:09 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

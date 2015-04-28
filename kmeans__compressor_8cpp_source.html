@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -112,248 +112,251 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;cfloat&gt;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;stack&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;../common/assert.hpp&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">using</span> std::min;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">using</span> std::max;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">using</span> std::stack;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">using</span> std::pair;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">using</span> std::vector;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacejubatus.html">jubatus</a> {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">namespace </span>core {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">namespace </span>clustering {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">namespace </span>compressor {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">namespace </span>{</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">struct </span>compare_by_first {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">bool</span> operator() (</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <span class="keyword">const</span> std::pair&lt;T, S&gt;&amp; p1,</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="keyword">const</span> std::pair&lt;T, S&gt;&amp; p2)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> p1.first &lt; p2.first;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordtype">void</span> partial_sort_by(</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">const</span> std::vector&lt;double&gt;&amp; scores,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    std::vector&lt;T&gt;&amp; array,</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">size_t</span> size) {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <a class="code" href="assert_8hpp.html#af081e193c837f5c70c497cf50a7bf64e">JUBATUS_ASSERT_EQ</a>(scores.size(),</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                    array.size(),</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    <span class="stringliteral">&quot;lengths of scores and data must be same.&quot;</span>);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  std::vector&lt;std::pair&lt;double, T&gt; &gt; pairs(scores.size());</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; scores.size(); ++i) {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    pairs[i].first = scores[i];</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a82a8f4749e600affc8b16bf983de3b99">swap</a>(pairs[i].second, array[i]);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  size = std::min(size, pairs.size());</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  std::partial_sort(pairs.begin(),</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                    pairs.begin() + size,</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                    pairs.end(),</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                    compare_by_first());</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  array.resize(size);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; size; ++i) {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a82a8f4749e600affc8b16bf983de3b99">swap</a>(pairs[i].second, array[i]);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keywordtype">void</span> bicriteria_as_coreset(</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a48de8167542a0d2c8baa448f7c7b0bec">wplist</a>&amp; src,</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a48de8167542a0d2c8baa448f7c7b0bec">wplist</a> bic,</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">size_t</span> dstsize,</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a48de8167542a0d2c8baa448f7c7b0bec">wplist</a>&amp; dst) {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <a class="code" href="assert_8hpp.html#a61c794aef0f4e38595342639e9fedeca">JUBATUS_ASSERT_GE</a>(dstsize, dst.size(), <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keyword">typedef</span> wplist::const_iterator citer;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keyword">typedef</span> wplist::iterator iter;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  bic.resize(dstsize - dst.size());</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordflow">for</span> (iter it = bic.begin(); it != bic.end(); ++it) {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    it-&gt;weight = 0;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  }</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordflow">for</span> (citer it = dst.begin(); it != dst.end(); ++it) {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    pair&lt;int, double&gt; m = <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#aca7a690a0fa2b47cdda6336430d03cdb">min_dist</a>(*it, bic);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    bic[m.first].weight -= it-&gt;weight;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordflow">for</span> (citer it = src.begin(); it != src.end(); ++it) {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    pair&lt;int, double&gt; m = <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#aca7a690a0fa2b47cdda6336430d03cdb">min_dist</a>(*it, bic);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    bic[m.first].weight += it-&gt;weight;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  dst.insert(dst.end(), bic.begin(), bic.end());</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordflow">for</span> (iter it = dst.begin(); it != dst.end(); ++it) {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">if</span> (it-&gt;weight &lt; 0) {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      it-&gt;weight = 0;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  }</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}  <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#ade9620c0943a4d9a4d40870c45ee9e0b">  106</a></span>&#160;<a class="code" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#ade9620c0943a4d9a4d40870c45ee9e0b">kmeans_compressor::kmeans_compressor</a>(<span class="keyword">const</span> <a class="code" href="structjubatus_1_1core_1_1clustering_1_1clustering__config.html">clustering_config</a>&amp; cfg)</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  : <a class="code" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1compressor.html">compressor</a>(cfg) {</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a20b38c3f5de78e5be188c0cc803e9489">  110</a></span>&#160;<a class="code" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a20b38c3f5de78e5be188c0cc803e9489">kmeans_compressor::~kmeans_compressor</a>() {</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a4a8eda9f7606b2921e03b1560080d5ca">  113</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a4a8eda9f7606b2921e03b1560080d5ca">kmeans_compressor::compress</a>(</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a48de8167542a0d2c8baa448f7c7b0bec">wplist</a>&amp; src,</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">size_t</span> bsize,</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">size_t</span> dstsize,</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a48de8167542a0d2c8baa448f7c7b0bec">wplist</a>&amp; dst) {</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordflow">if</span> (dstsize &gt;= src.size()) {</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a8436abd00d8cbdd9fcd86ae6860eb142">concat</a>(src, dst);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  }</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a48de8167542a0d2c8baa448f7c7b0bec">wplist</a> bicriteria;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a6b118b22d146df95ba3a6c1b89ad531e">get_bicriteria</a>(src, bsize, dstsize, bicriteria);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keywordflow">if</span> (bicriteria.size() &lt; dstsize) {</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a48de8167542a0d2c8baa448f7c7b0bec">wplist</a> srcclone = src;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <a class="code" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a5bcdf5d66bcb7d6b6706a6b0b8b81215">bicriteria_to_coreset</a>(</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        srcclone,</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        bicriteria,</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        dstsize - bicriteria.size(),</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        dst);</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  }</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  bicriteria_as_coreset(src, bicriteria, dstsize, dst);</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;}</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a6b118b22d146df95ba3a6c1b89ad531e">  135</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a6b118b22d146df95ba3a6c1b89ad531e">kmeans_compressor::get_bicriteria</a>(</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a48de8167542a0d2c8baa448f7c7b0bec">wplist</a>&amp; src,</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordtype">size_t</span> bsize,</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordtype">size_t</span> dstsize,</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a48de8167542a0d2c8baa448f7c7b0bec">wplist</a>&amp; dst) {</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  dst.clear();</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a48de8167542a0d2c8baa448f7c7b0bec">wplist</a> resid = src;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  vector&lt;double&gt; weights(src.size());</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="keywordtype">double</span> r =</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    (1 - std::exp(bsize * (std::log(bsize) - std::log(src.size())) / dstsize))</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;      / 2;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  r = max(0.1, r);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  std::vector&lt;size_t&gt; ind(bsize);</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <span class="keywordflow">while</span> (resid.size() &gt; 1 &amp;&amp; dst.size() &lt; dstsize) {</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    weights.resize(resid.size());</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">for</span> (wplist::const_iterator it = resid.begin(); it != resid.end(); ++it) {</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;      weights[it - resid.begin()] = it-&gt;weight;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="comment">// Sample `bsize` points and insert them to the result</span></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <a class="code" href="classjubatus_1_1core_1_1clustering_1_1discrete__distribution.html">discrete_distribution</a> d(weights.begin(), weights.end());</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    std::generate(ind.begin(), ind.end(), d);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    std::sort(ind.begin(), ind.end());</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    ind.erase(std::unique(ind.begin(), ind.end()), ind.end());</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">for</span> (std::vector&lt;size_t&gt;::iterator it = ind.begin();</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;         it != ind.end(); ++it) {</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;      dst.push_back(resid[*it]);</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    }</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="comment">// Remove `r` nearest points from `resid`</span></div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    std::vector&lt;double&gt; distances;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordflow">for</span> (wplist::iterator itr = resid.begin(); itr != resid.end(); ++itr) {</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;      distances.push_back(-<a class="code" href="namespacejubatus_1_1core_1_1clustering.html#aca7a690a0fa2b47cdda6336430d03cdb">min_dist</a>(*itr, dst).second);</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    }</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="comment">// TODO(unno): Is `r` lesser than 1.0?</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordtype">size_t</span> size = std::min(resid.size(),</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                           <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(resid.size() * r));</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordflow">if</span> (size == 0) {</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;      size = 1;</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    }</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    partial_sort_by(distances, resid, size);</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  }</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;}</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
-<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a57ac1224740698a0e9577662beb95be2">  182</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a57ac1224740698a0e9577662beb95be2">kmeans_compressor::get_probability</a>(</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keyword">const</span> <a class="code" href="structjubatus_1_1core_1_1clustering_1_1weighted__point.html">weighted_point</a>&amp; p,</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#aca7a690a0fa2b47cdda6336430d03cdb">min_dist</a>,</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keyword">const</span> <a class="code" href="structjubatus_1_1core_1_1clustering_1_1weighted__point.html">weighted_point</a>&amp; bp,</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordtype">double</span> bp_score,</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordtype">double</span> weight_sum,</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordtype">double</span> squared_min_dist_sum) {</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  <span class="keywordflow">return</span> std::ceil(weight_sum * (</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;      min_dist * min_dist * p.<a class="code" href="structjubatus_1_1core_1_1clustering_1_1weighted__point.html#a06f30dac5976c84d61a0bad5eb151f74">weight</a> / squared_min_dist_sum)) + 1;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;}</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
-<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a5bcdf5d66bcb7d6b6706a6b0b8b81215">  193</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a5bcdf5d66bcb7d6b6706a6b0b8b81215">kmeans_compressor::bicriteria_to_coreset</a>(</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a48de8167542a0d2c8baa448f7c7b0bec">wplist</a>&amp; src,</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a48de8167542a0d2c8baa448f7c7b0bec">wplist</a>&amp; bicriteria,</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordtype">size_t</span> dstsize,</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a48de8167542a0d2c8baa448f7c7b0bec">wplist</a>&amp; dst) {</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  <span class="keywordflow">if</span> (bicriteria.size() == 0) {</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    dst = src;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  }</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  <span class="keywordtype">double</span> weight_sum = 0;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  <span class="keywordtype">double</span> squared_min_dist_sum = 0;</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  std::vector&lt;size_t&gt; nearest_indexes(src.size());</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  std::vector&lt;double&gt; nearest_distances(src.size());</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  std::vector&lt;double&gt; bicriteria_scores(bicriteria.size());</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; src.size(); ++i) {</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordtype">double</span> weight = src[i].weight;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    std::pair&lt;int, double&gt; m = <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#aca7a690a0fa2b47cdda6336430d03cdb">min_dist</a>(src[i], bicriteria);</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    nearest_indexes[i] = m.first;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    nearest_distances[i] = m.second;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    bicriteria_scores[m.first] += weight;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    squared_min_dist_sum += m.second * m.second * weight;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    weight_sum += weight;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  }</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  std::vector&lt;double&gt; weights;</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  <span class="keywordtype">double</span> sumw = 0;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; src.size(); ++i) {</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordtype">double</span> prob = <a class="code" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a57ac1224740698a0e9577662beb95be2">get_probability</a>(</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        src[i],</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        nearest_distances[i],</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        bicriteria[nearest_indexes[i]],</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        bicriteria_scores[nearest_indexes[i]],</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        weight_sum,</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        squared_min_dist_sum);</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    weights.push_back(prob);</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    sumw += prob;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  }</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1clustering_1_1discrete__distribution.html">discrete_distribution</a> d(weights.begin(), weights.end());</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  std::vector&lt;size_t&gt; ind(dstsize);</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  std::generate(ind.begin(), ind.end(), d);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;limits&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;stack&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;../common/assert.hpp&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">using</span> std::min;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">using</span> std::max;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">using</span> std::stack;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">using</span> std::pair;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">using</span> std::vector;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacejubatus.html">jubatus</a> {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">namespace </span>core {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">namespace </span>clustering {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">namespace </span>compressor {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">namespace </span>{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">struct </span>compare_by_first {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> S&gt;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordtype">bool</span> operator() (</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="keyword">const</span> std::pair&lt;T, S&gt;&amp; p1,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      <span class="keyword">const</span> std::pair&lt;T, S&gt;&amp; p2)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">return</span> p1.first &lt; p2.first;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">void</span> partial_sort_by(</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">const</span> std::vector&lt;double&gt;&amp; scores,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    std::vector&lt;T&gt;&amp; array,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">size_t</span> size) {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="assert_8hpp.html#af081e193c837f5c70c497cf50a7bf64e">JUBATUS_ASSERT_EQ</a>(scores.size(),</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    array.size(),</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                    <span class="stringliteral">&quot;lengths of scores and data must be same.&quot;</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  std::vector&lt;std::pair&lt;double, T&gt; &gt; pairs(scores.size());</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; scores.size(); ++i) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    pairs[i].first = scores[i];</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a82a8f4749e600affc8b16bf983de3b99">swap</a>(pairs[i].second, array[i]);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  size = std::min(size, pairs.size());</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  std::partial_sort(pairs.begin(),</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                    pairs.begin() + size,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                    pairs.end(),</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                    compare_by_first());</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  array.resize(size);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; size; ++i) {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a82a8f4749e600affc8b16bf983de3b99">swap</a>(pairs[i].second, array[i]);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keywordtype">void</span> bicriteria_as_coreset(</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a48de8167542a0d2c8baa448f7c7b0bec">wplist</a>&amp; src,</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a48de8167542a0d2c8baa448f7c7b0bec">wplist</a> bic,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">size_t</span> dstsize,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a48de8167542a0d2c8baa448f7c7b0bec">wplist</a>&amp; dst) {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <a class="code" href="assert_8hpp.html#a61c794aef0f4e38595342639e9fedeca">JUBATUS_ASSERT_GE</a>(dstsize, dst.size(), <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keyword">typedef</span> wplist::const_iterator citer;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keyword">typedef</span> wplist::iterator iter;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  bic.resize(dstsize - dst.size());</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordflow">for</span> (iter it = bic.begin(); it != bic.end(); ++it) {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    it-&gt;weight = 0;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keywordflow">for</span> (citer it = dst.begin(); it != dst.end(); ++it) {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    pair&lt;int, double&gt; m = <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#aca7a690a0fa2b47cdda6336430d03cdb">min_dist</a>(*it, bic);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    bic[m.first].weight -= it-&gt;weight;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keywordflow">for</span> (citer it = src.begin(); it != src.end(); ++it) {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    pair&lt;int, double&gt; m = <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#aca7a690a0fa2b47cdda6336430d03cdb">min_dist</a>(*it, bic);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    bic[m.first].weight += it-&gt;weight;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  dst.insert(dst.end(), bic.begin(), bic.end());</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordflow">for</span> (iter it = dst.begin(); it != dst.end(); ++it) {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">if</span> (it-&gt;weight &lt; 0) {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      it-&gt;weight = 0;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}  <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#ade9620c0943a4d9a4d40870c45ee9e0b">  107</a></span>&#160;<a class="code" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#ade9620c0943a4d9a4d40870c45ee9e0b">kmeans_compressor::kmeans_compressor</a>(<span class="keyword">const</span> <a class="code" href="structjubatus_1_1core_1_1clustering_1_1clustering__config.html">clustering_config</a>&amp; cfg)</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  : <a class="code" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1compressor.html">compressor</a>(cfg) {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a20b38c3f5de78e5be188c0cc803e9489">  111</a></span>&#160;<a class="code" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a20b38c3f5de78e5be188c0cc803e9489">kmeans_compressor::~kmeans_compressor</a>() {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a4a8eda9f7606b2921e03b1560080d5ca">  114</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a4a8eda9f7606b2921e03b1560080d5ca">kmeans_compressor::compress</a>(</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a48de8167542a0d2c8baa448f7c7b0bec">wplist</a>&amp; src,</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">size_t</span> bsize,</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">size_t</span> dstsize,</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a48de8167542a0d2c8baa448f7c7b0bec">wplist</a>&amp; dst) {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordflow">if</span> (dstsize &gt;= src.size()) {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a8436abd00d8cbdd9fcd86ae6860eb142">concat</a>(src, dst);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a48de8167542a0d2c8baa448f7c7b0bec">wplist</a> bicriteria;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a6b118b22d146df95ba3a6c1b89ad531e">get_bicriteria</a>(src, bsize, dstsize, bicriteria);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="keywordflow">if</span> (bicriteria.size() &lt; dstsize) {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a48de8167542a0d2c8baa448f7c7b0bec">wplist</a> srcclone = src;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <a class="code" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a5bcdf5d66bcb7d6b6706a6b0b8b81215">bicriteria_to_coreset</a>(</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        srcclone,</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        bicriteria,</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        dstsize - bicriteria.size(),</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        dst);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  bicriteria_as_coreset(src, bicriteria, dstsize, dst);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a6b118b22d146df95ba3a6c1b89ad531e">  136</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a6b118b22d146df95ba3a6c1b89ad531e">kmeans_compressor::get_bicriteria</a>(</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a48de8167542a0d2c8baa448f7c7b0bec">wplist</a>&amp; src,</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordtype">size_t</span> bsize,</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordtype">size_t</span> dstsize,</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a48de8167542a0d2c8baa448f7c7b0bec">wplist</a>&amp; dst) {</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  dst.clear();</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a48de8167542a0d2c8baa448f7c7b0bec">wplist</a> resid = src;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  vector&lt;double&gt; weights(src.size());</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <span class="keywordtype">double</span> r =</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    (1 - std::exp(bsize * (std::log(bsize) - std::log(src.size())) / dstsize))</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;      / 2;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  r = max(0.1, r);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  std::vector&lt;size_t&gt; ind(bsize);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  <span class="keywordflow">while</span> (resid.size() &gt; 1 &amp;&amp; dst.size() &lt; dstsize) {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    weights.resize(resid.size());</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordflow">for</span> (wplist::const_iterator it = resid.begin(); it != resid.end(); ++it) {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;      weights[it - resid.begin()] = it-&gt;weight;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    }</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="comment">// Sample `bsize` points and insert them to the result</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <a class="code" href="classjubatus_1_1core_1_1clustering_1_1discrete__distribution.html">discrete_distribution</a> d(weights.begin(), weights.end());</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    std::generate(ind.begin(), ind.end(), d);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    std::sort(ind.begin(), ind.end());</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    ind.erase(std::unique(ind.begin(), ind.end()), ind.end());</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordflow">for</span> (std::vector&lt;size_t&gt;::iterator it = ind.begin();</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;         it != ind.end(); ++it) {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;      dst.push_back(resid[*it]);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    }</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="comment">// Remove `r` nearest points from `resid`</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    std::vector&lt;double&gt; distances;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordflow">for</span> (wplist::iterator itr = resid.begin(); itr != resid.end(); ++itr) {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;      distances.push_back(-<a class="code" href="namespacejubatus_1_1core_1_1clustering.html#aca7a690a0fa2b47cdda6336430d03cdb">min_dist</a>(*itr, dst).second);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="comment">// TODO(unno): Is `r` lesser than 1.0?</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordtype">size_t</span> size = std::min(resid.size(),</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                           <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(resid.size() * r));</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordflow">if</span> (size == 0) {</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;      size = 1;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    partial_sort_by(distances, resid, size);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;}</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a57ac1224740698a0e9577662beb95be2">  183</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a57ac1224740698a0e9577662beb95be2">kmeans_compressor::get_probability</a>(</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keyword">const</span> <a class="code" href="structjubatus_1_1core_1_1clustering_1_1weighted__point.html">weighted_point</a>&amp; p,</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#aca7a690a0fa2b47cdda6336430d03cdb">min_dist</a>,</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keyword">const</span> <a class="code" href="structjubatus_1_1core_1_1clustering_1_1weighted__point.html">weighted_point</a>&amp; bp,</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordtype">double</span> bp_score,</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordtype">double</span> weight_sum,</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordtype">double</span> squared_min_dist_sum) {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  <span class="keywordflow">return</span> std::ceil(weight_sum * (</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;      min_dist * min_dist * p.<a class="code" href="structjubatus_1_1core_1_1clustering_1_1weighted__point.html#a06f30dac5976c84d61a0bad5eb151f74">weight</a> / squared_min_dist_sum)) + 1;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;}</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
+<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a5bcdf5d66bcb7d6b6706a6b0b8b81215">  194</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a5bcdf5d66bcb7d6b6706a6b0b8b81215">kmeans_compressor::bicriteria_to_coreset</a>(</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a48de8167542a0d2c8baa448f7c7b0bec">wplist</a>&amp; src,</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a48de8167542a0d2c8baa448f7c7b0bec">wplist</a>&amp; bicriteria,</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordtype">size_t</span> dstsize,</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#a48de8167542a0d2c8baa448f7c7b0bec">wplist</a>&amp; dst) {</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  <span class="keywordflow">if</span> (bicriteria.size() == 0) {</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    dst = src;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  <span class="keywordtype">double</span> weight_sum = 0;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <span class="keywordtype">double</span> squared_min_dist_sum = 0;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  std::vector&lt;size_t&gt; nearest_indexes(src.size());</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  std::vector&lt;double&gt; nearest_distances(src.size());</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  std::vector&lt;double&gt; bicriteria_scores(bicriteria.size());</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; src.size(); ++i) {</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordtype">double</span> weight = src[i].weight;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    std::pair&lt;int, double&gt; m = <a class="code" href="namespacejubatus_1_1core_1_1clustering.html#aca7a690a0fa2b47cdda6336430d03cdb">min_dist</a>(src[i], bicriteria);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    nearest_indexes[i] = m.first;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    nearest_distances[i] = m.second;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    bicriteria_scores[m.first] += weight;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    squared_min_dist_sum += m.second * m.second * weight;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    weight_sum += weight;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  }</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  squared_min_dist_sum = std::max(squared_min_dist_sum,</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                                  std::numeric_limits&lt;double&gt;::min());</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  std::vector&lt;double&gt; weights;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  <span class="keywordtype">double</span> sumw = 0;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; src.size(); ++i) {</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordtype">double</span> prob = <a class="code" href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a57ac1224740698a0e9577662beb95be2">get_probability</a>(</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        src[i],</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        nearest_distances[i],</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        bicriteria[nearest_indexes[i]],</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        bicriteria_scores[nearest_indexes[i]],</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        weight_sum,</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        squared_min_dist_sum);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    weights.push_back(prob);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    sumw += prob;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1clustering_1_1discrete__distribution.html">discrete_distribution</a> d(weights.begin(), weights.end());</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <span class="keywordflow">for</span> (std::vector&lt;size_t&gt;::iterator it = ind.begin(); it != ind.end(); ++it) {</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordtype">size_t</span> index = *it;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <a class="code" href="structjubatus_1_1core_1_1clustering_1_1weighted__point.html">weighted_point</a> sample = src[index];</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordtype">double</span> prob = weights[index] / sumw;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    sample.<a class="code" href="structjubatus_1_1core_1_1clustering_1_1weighted__point.html#a06f30dac5976c84d61a0bad5eb151f74">weight</a> *= 1.0 / dstsize / prob;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    dst.push_back(sample);</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  }</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;}</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;}  <span class="comment">// namespace compressor</span></div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;}  <span class="comment">// namespace clustering</span></div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;}  <span class="comment">// namespace core</span></div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;}  <span class="comment">// namespace jubatus</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  std::vector&lt;size_t&gt; ind(dstsize);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  std::generate(ind.begin(), ind.end(), d);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <span class="keywordflow">for</span> (std::vector&lt;size_t&gt;::iterator it = ind.begin(); it != ind.end(); ++it) {</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keywordtype">size_t</span> index = *it;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <a class="code" href="structjubatus_1_1core_1_1clustering_1_1weighted__point.html">weighted_point</a> sample = src[index];</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordtype">double</span> prob = weights[index] / sumw;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    sample.<a class="code" href="structjubatus_1_1core_1_1clustering_1_1weighted__point.html#a06f30dac5976c84d61a0bad5eb151f74">weight</a> *= 1.0 / dstsize / prob;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    dst.push_back(sample);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  }</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;}</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;}  <span class="comment">// namespace compressor</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;}  <span class="comment">// namespace clustering</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;}  <span class="comment">// namespace core</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;}  <span class="comment">// namespace jubatus</span></div>
 <div class="ttc" id="assert_8hpp_html_af081e193c837f5c70c497cf50a7bf64e"><div class="ttname"><a href="assert_8hpp.html#af081e193c837f5c70c497cf50a7bf64e">JUBATUS_ASSERT_EQ</a></div><div class="ttdeci">#define JUBATUS_ASSERT_EQ(a, b, messages)</div><div class="ttdef"><b>Definition:</b> <a href="assert_8hpp_source.html#l00063">assert.hpp:63</a></div></div>
 <div class="ttc" id="namespacejubatus_html"><div class="ttname"><a href="namespacejubatus.html">jubatus</a></div><div class="ttdef"><b>Definition:</b> <a href="anomaly__base_8cpp_source.html#l00029">anomaly_base.cpp:29</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor_html_a4a8eda9f7606b2921e03b1560080d5ca"><div class="ttname"><a href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a4a8eda9f7606b2921e03b1560080d5ca">jubatus::core::clustering::compressor::kmeans_compressor::compress</a></div><div class="ttdeci">void compress(const wplist &amp;src, size_t bsize, size_t dstsize, wplist &amp;dst)</div><div class="ttdef"><b>Definition:</b> <a href="kmeans__compressor_8cpp_source.html#l00113">kmeans_compressor.cpp:113</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor_html_a4a8eda9f7606b2921e03b1560080d5ca"><div class="ttname"><a href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a4a8eda9f7606b2921e03b1560080d5ca">jubatus::core::clustering::compressor::kmeans_compressor::compress</a></div><div class="ttdeci">void compress(const wplist &amp;src, size_t bsize, size_t dstsize, wplist &amp;dst)</div><div class="ttdef"><b>Definition:</b> <a href="kmeans__compressor_8cpp_source.html#l00114">kmeans_compressor.cpp:114</a></div></div>
 <div class="ttc" id="kmeans__compressor_8hpp_html"><div class="ttname"><a href="kmeans__compressor_8hpp.html">kmeans_compressor.hpp</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor_html_a6b118b22d146df95ba3a6c1b89ad531e"><div class="ttname"><a href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a6b118b22d146df95ba3a6c1b89ad531e">jubatus::core::clustering::compressor::kmeans_compressor::get_bicriteria</a></div><div class="ttdeci">void get_bicriteria(const wplist &amp;src, size_t bsize, size_t dstsize, wplist &amp;dst)</div><div class="ttdef"><b>Definition:</b> <a href="kmeans__compressor_8cpp_source.html#l00135">kmeans_compressor.cpp:135</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor_html_ade9620c0943a4d9a4d40870c45ee9e0b"><div class="ttname"><a href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#ade9620c0943a4d9a4d40870c45ee9e0b">jubatus::core::clustering::compressor::kmeans_compressor::kmeans_compressor</a></div><div class="ttdeci">kmeans_compressor(const clustering_config &amp;cfg)</div><div class="ttdef"><b>Definition:</b> <a href="kmeans__compressor_8cpp_source.html#l00106">kmeans_compressor.cpp:106</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor_html_a6b118b22d146df95ba3a6c1b89ad531e"><div class="ttname"><a href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a6b118b22d146df95ba3a6c1b89ad531e">jubatus::core::clustering::compressor::kmeans_compressor::get_bicriteria</a></div><div class="ttdeci">void get_bicriteria(const wplist &amp;src, size_t bsize, size_t dstsize, wplist &amp;dst)</div><div class="ttdef"><b>Definition:</b> <a href="kmeans__compressor_8cpp_source.html#l00136">kmeans_compressor.cpp:136</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor_html_ade9620c0943a4d9a4d40870c45ee9e0b"><div class="ttname"><a href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#ade9620c0943a4d9a4d40870c45ee9e0b">jubatus::core::clustering::compressor::kmeans_compressor::kmeans_compressor</a></div><div class="ttdeci">kmeans_compressor(const clustering_config &amp;cfg)</div><div class="ttdef"><b>Definition:</b> <a href="kmeans__compressor_8cpp_source.html#l00107">kmeans_compressor.cpp:107</a></div></div>
 <div class="ttc" id="namespacejubatus_1_1core_1_1clustering_html_a8436abd00d8cbdd9fcd86ae6860eb142"><div class="ttname"><a href="namespacejubatus_1_1core_1_1clustering.html#a8436abd00d8cbdd9fcd86ae6860eb142">jubatus::core::clustering::concat</a></div><div class="ttdeci">void concat(const wplist &amp;src, wplist &amp;dst)</div><div class="ttdef"><b>Definition:</b> <a href="clustering_2util_8cpp_source.html#l00033">util.cpp:33</a></div></div>
 <div class="ttc" id="namespacejubatus_1_1core_1_1clustering_html_aca7a690a0fa2b47cdda6336430d03cdb"><div class="ttname"><a href="namespacejubatus_1_1core_1_1clustering.html#aca7a690a0fa2b47cdda6336430d03cdb">jubatus::core::clustering::min_dist</a></div><div class="ttdeci">pair&lt; size_t, double &gt; min_dist(const common::sfv_t &amp;p, const vector&lt; common::sfv_t &gt; &amp;P)</div><div class="ttdef"><b>Definition:</b> <a href="clustering_2util_8cpp_source.html#l00182">util.cpp:182</a></div></div>
 <div class="ttc" id="assert_8hpp_html_a61c794aef0f4e38595342639e9fedeca"><div class="ttname"><a href="assert_8hpp.html#a61c794aef0f4e38595342639e9fedeca">JUBATUS_ASSERT_GE</a></div><div class="ttdeci">#define JUBATUS_ASSERT_GE(a, b, messages)</div><div class="ttdef"><b>Definition:</b> <a href="assert_8hpp_source.html#l00071">assert.hpp:71</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor_html_a20b38c3f5de78e5be188c0cc803e9489"><div class="ttname"><a href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a20b38c3f5de78e5be188c0cc803e9489">jubatus::core::clustering::compressor::kmeans_compressor::~kmeans_compressor</a></div><div class="ttdeci">~kmeans_compressor()</div><div class="ttdef"><b>Definition:</b> <a href="kmeans__compressor_8cpp_source.html#l00110">kmeans_compressor.cpp:110</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor_html_a57ac1224740698a0e9577662beb95be2"><div class="ttname"><a href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a57ac1224740698a0e9577662beb95be2">jubatus::core::clustering::compressor::kmeans_compressor::get_probability</a></div><div class="ttdeci">virtual double get_probability(const weighted_point &amp;p, double min_dist, const weighted_point &amp;nearest_bp, double bp_score, double weight_sum, double squared_min_dist_sum)</div><div class="ttdef"><b>Definition:</b> <a href="kmeans__compressor_8cpp_source.html#l00182">kmeans_compressor.cpp:182</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor_html_a20b38c3f5de78e5be188c0cc803e9489"><div class="ttname"><a href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a20b38c3f5de78e5be188c0cc803e9489">jubatus::core::clustering::compressor::kmeans_compressor::~kmeans_compressor</a></div><div class="ttdeci">~kmeans_compressor()</div><div class="ttdef"><b>Definition:</b> <a href="kmeans__compressor_8cpp_source.html#l00111">kmeans_compressor.cpp:111</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor_html_a57ac1224740698a0e9577662beb95be2"><div class="ttname"><a href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a57ac1224740698a0e9577662beb95be2">jubatus::core::clustering::compressor::kmeans_compressor::get_probability</a></div><div class="ttdeci">virtual double get_probability(const weighted_point &amp;p, double min_dist, const weighted_point &amp;nearest_bp, double bp_score, double weight_sum, double squared_min_dist_sum)</div><div class="ttdef"><b>Definition:</b> <a href="kmeans__compressor_8cpp_source.html#l00183">kmeans_compressor.cpp:183</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1clustering_1_1compressor_1_1compressor_html"><div class="ttname"><a href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1compressor.html">jubatus::core::clustering::compressor::compressor</a></div><div class="ttdef"><b>Definition:</b> <a href="compressor_8hpp_source.html#l00030">compressor.hpp:30</a></div></div>
 <div class="ttc" id="structjubatus_1_1core_1_1clustering_1_1clustering__config_html"><div class="ttname"><a href="structjubatus_1_1core_1_1clustering_1_1clustering__config.html">jubatus::core::clustering::clustering_config</a></div><div class="ttdef"><b>Definition:</b> <a href="clustering__config_8hpp_source.html#l00029">clustering_config.hpp:29</a></div></div>
 <div class="ttc" id="namespacejubatus_1_1core_1_1clustering_html_a82a8f4749e600affc8b16bf983de3b99"><div class="ttname"><a href="namespacejubatus_1_1core_1_1clustering.html#a82a8f4749e600affc8b16bf983de3b99">jubatus::core::clustering::swap</a></div><div class="ttdeci">void swap(weighted_point &amp;p1, weighted_point &amp;p2)</div><div class="ttdef"><b>Definition:</b> <a href="types_8hpp_source.html#l00047">types.hpp:47</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor_html_a5bcdf5d66bcb7d6b6706a6b0b8b81215"><div class="ttname"><a href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a5bcdf5d66bcb7d6b6706a6b0b8b81215">jubatus::core::clustering::compressor::kmeans_compressor::bicriteria_to_coreset</a></div><div class="ttdeci">void bicriteria_to_coreset(const wplist &amp;src, const wplist &amp;bicriteria, size_t dstsize, wplist &amp;dst)</div><div class="ttdef"><b>Definition:</b> <a href="kmeans__compressor_8cpp_source.html#l00193">kmeans_compressor.cpp:193</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor_html_a5bcdf5d66bcb7d6b6706a6b0b8b81215"><div class="ttname"><a href="classjubatus_1_1core_1_1clustering_1_1compressor_1_1kmeans__compressor.html#a5bcdf5d66bcb7d6b6706a6b0b8b81215">jubatus::core::clustering::compressor::kmeans_compressor::bicriteria_to_coreset</a></div><div class="ttdeci">void bicriteria_to_coreset(const wplist &amp;src, const wplist &amp;bicriteria, size_t dstsize, wplist &amp;dst)</div><div class="ttdef"><b>Definition:</b> <a href="kmeans__compressor_8cpp_source.html#l00194">kmeans_compressor.cpp:194</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1clustering_1_1discrete__distribution_html"><div class="ttname"><a href="classjubatus_1_1core_1_1clustering_1_1discrete__distribution.html">jubatus::core::clustering::discrete_distribution</a></div><div class="ttdef"><b>Definition:</b> <a href="discrete__distribution_8hpp_source.html#l00027">discrete_distribution.hpp:27</a></div></div>
 <div class="ttc" id="namespacejubatus_1_1core_1_1clustering_html_a48de8167542a0d2c8baa448f7c7b0bec"><div class="ttname"><a href="namespacejubatus_1_1core_1_1clustering.html#a48de8167542a0d2c8baa448f7c7b0bec">jubatus::core::clustering::wplist</a></div><div class="ttdeci">std::vector&lt; weighted_point &gt; wplist</div><div class="ttdef"><b>Definition:</b> <a href="types_8hpp_source.html#l00055">types.hpp:55</a></div></div>
 <div class="ttc" id="structjubatus_1_1core_1_1clustering_1_1weighted__point_html_a06f30dac5976c84d61a0bad5eb151f74"><div class="ttname"><a href="structjubatus_1_1core_1_1clustering_1_1weighted__point.html#a06f30dac5976c84d61a0bad5eb151f74">jubatus::core::clustering::weighted_point::weight</a></div><div class="ttdeci">double weight</div><div class="ttdef"><b>Definition:</b> <a href="types_8hpp_source.html#l00042">types.hpp:42</a></div></div>
@@ -361,7 +364,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:35 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:02 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

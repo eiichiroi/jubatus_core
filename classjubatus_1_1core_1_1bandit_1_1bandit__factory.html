@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -113,7 +113,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="bandit__factory_8hpp_source.html#l00031">31</a> of file <a class="el" href="bandit__factory_8hpp_source.html">bandit_factory.hpp</a>.</p>
+<p>Definition at line <a class="el" href="bandit__factory_8hpp_source.html#l00032">32</a> of file <a class="el" href="bandit__factory_8hpp_source.html">bandit_factory.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="ac320732723d2fd6c3d6dbe2d0768004b"></a>
 <div class="memitem">
@@ -147,42 +147,52 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bandit__factory_8cpp_source.html#l00061">61</a> of file <a class="el" href="bandit__factory_8cpp_source.html">bandit_factory.cpp</a>.</p>
+<p>Definition at line <a class="el" href="bandit__factory_8cpp_source.html#l00073">73</a> of file <a class="el" href="bandit__factory_8cpp_source.html">bandit_factory.cpp</a>.</p>
 
-<p>References <a class="el" href="bandit__factory_8cpp_source.html#l00035">jubatus::core::bandit::epsilon_greedy_config::epsilon</a>, <a class="el" href="bandit__factory_8cpp_source.html#l00053">jubatus::core::bandit::exp3_config::gamma</a>, <a class="el" href="common_2exception_8hpp_source.html#l00079">JUBATUS_EXCEPTION</a>, <a class="el" href="bandit__factory_8cpp_source.html#l00044">jubatus::core::bandit::softmax_config::tau</a>, and <a class="el" href="config_8hpp_source.html#l00084">jubatus::core::common::jsonconfig::config::type()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                                         {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordflow">if</span> (name == <span class="stringliteral">&quot;epsilon_greedy&quot;</span>) {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">if</span> (param.type() == json::json::Null) {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="common_2exception_8hpp.html#aff10b0eb90b477115ab3955c3995d327">JUBATUS_EXCEPTION</a>(</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;          common::config_exception() &lt;&lt; <a class="code" href="namespacejubatus_1_1core_1_1common_1_1exception.html#ae636bb5b7830b44a92d86c4aa445548e">common::exception::error_message</a>(</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;              <span class="stringliteral">&quot;parameter block is not specified in config&quot;</span>));</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    epsilon_greedy_config conf =</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        config_cast_check&lt;epsilon_greedy_config&gt;(param);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> shared_ptr&lt;bandit_base&gt;(<span class="keyword">new</span> epsilon_greedy(conf.epsilon));</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (name == <span class="stringliteral">&quot;ucb1&quot;</span>) {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> shared_ptr&lt;bandit_base&gt;(<span class="keyword">new</span> ucb1());</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (name == <span class="stringliteral">&quot;softmax&quot;</span>) {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">if</span> (param.type() == json::json::Null) {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="common_2exception_8hpp.html#aff10b0eb90b477115ab3955c3995d327">JUBATUS_EXCEPTION</a>(</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;          common::config_exception() &lt;&lt; <a class="code" href="namespacejubatus_1_1core_1_1common_1_1exception.html#ae636bb5b7830b44a92d86c4aa445548e">common::exception::error_message</a>(</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;              <span class="stringliteral">&quot;parameter block is not specified in config&quot;</span>));</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    softmax_config conf = config_cast_check&lt;softmax_config&gt;(param);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">return</span> shared_ptr&lt;bandit_base&gt;(<span class="keyword">new</span> softmax(conf.tau));</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (name == <span class="stringliteral">&quot;exp3&quot;</span>) {</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">if</span> (param.type() == json::json::Null) {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="common_2exception_8hpp.html#aff10b0eb90b477115ab3955c3995d327">JUBATUS_EXCEPTION</a>(</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;          common::config_exception() &lt;&lt; <a class="code" href="namespacejubatus_1_1core_1_1common_1_1exception.html#ae636bb5b7830b44a92d86c4aa445548e">common::exception::error_message</a>(</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;              <span class="stringliteral">&quot;parameter block is not specified in config&quot;</span>));</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    exp3_config conf = config_cast_check&lt;exp3_config&gt;(param);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">return</span> shared_ptr&lt;bandit_base&gt;(<span class="keyword">new</span> exp3(conf.gamma));</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="common_2exception_8hpp.html#aff10b0eb90b477115ab3955c3995d327">JUBATUS_EXCEPTION</a>(</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        common::unsupported_method(<span class="stringliteral">&quot;bandit(&quot;</span> + name + <span class="stringliteral">&quot;)&quot;</span>));</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<p>References <a class="el" href="bandit__factory_8cpp_source.html#l00035">jubatus::core::bandit::epsilon_greedy_config::assume_unrewarded</a>, <a class="el" href="bandit__factory_8cpp_source.html#l00045">jubatus::core::bandit::ucb1_config::assume_unrewarded</a>, <a class="el" href="bandit__factory_8cpp_source.html#l00054">jubatus::core::bandit::softmax_config::assume_unrewarded</a>, <a class="el" href="bandit__factory_8cpp_source.html#l00064">jubatus::core::bandit::exp3_config::assume_unrewarded</a>, <a class="el" href="bandit__factory_8cpp_source.html#l00036">jubatus::core::bandit::epsilon_greedy_config::epsilon</a>, <a class="el" href="bandit__factory_8cpp_source.html#l00065">jubatus::core::bandit::exp3_config::gamma</a>, <a class="el" href="common_2exception_8hpp_source.html#l00079">JUBATUS_EXCEPTION</a>, <a class="el" href="bandit__factory_8cpp_source.html#l00055">jubatus::core::bandit::softmax_config::tau</a>, and <a class="el" href="config_8hpp_source.html#l00084">jubatus::core::common::jsonconfig::config::type()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                                         {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keywordflow">if</span> (name == <span class="stringliteral">&quot;epsilon_greedy&quot;</span>) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">if</span> (param.type() == json::json::Null) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="common_2exception_8hpp.html#aff10b0eb90b477115ab3955c3995d327">JUBATUS_EXCEPTION</a>(</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;          common::config_exception() &lt;&lt; <a class="code" href="namespacejubatus_1_1core_1_1common_1_1exception.html#ae636bb5b7830b44a92d86c4aa445548e">common::exception::error_message</a>(</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;              <span class="stringliteral">&quot;parameter block is not specified in config&quot;</span>));</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    epsilon_greedy_config conf =</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        config_cast_check&lt;epsilon_greedy_config&gt;(param);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">return</span> shared_ptr&lt;bandit_base&gt;(</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keyword">new</span> epsilon_greedy(conf.assume_unrewarded, conf.epsilon));</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (name == <span class="stringliteral">&quot;ucb1&quot;</span>) {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">if</span> (param.type() == json::json::Null) {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="common_2exception_8hpp.html#aff10b0eb90b477115ab3955c3995d327">JUBATUS_EXCEPTION</a>(</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;          common::config_exception() &lt;&lt; <a class="code" href="namespacejubatus_1_1core_1_1common_1_1exception.html#ae636bb5b7830b44a92d86c4aa445548e">common::exception::error_message</a>(</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;              <span class="stringliteral">&quot;parameter block is not specified in config&quot;</span>));</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    ucb1_config conf =</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        config_cast_check&lt;ucb1_config&gt;(param);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> shared_ptr&lt;bandit_base&gt;(<span class="keyword">new</span> ucb1(conf.assume_unrewarded));</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (name == <span class="stringliteral">&quot;softmax&quot;</span>) {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">if</span> (param.type() == json::json::Null) {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="common_2exception_8hpp.html#aff10b0eb90b477115ab3955c3995d327">JUBATUS_EXCEPTION</a>(</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;          common::config_exception() &lt;&lt; <a class="code" href="namespacejubatus_1_1core_1_1common_1_1exception.html#ae636bb5b7830b44a92d86c4aa445548e">common::exception::error_message</a>(</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;              <span class="stringliteral">&quot;parameter block is not specified in config&quot;</span>));</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    softmax_config conf = config_cast_check&lt;softmax_config&gt;(param);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">return</span> shared_ptr&lt;bandit_base&gt;(</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keyword">new</span> softmax(conf.assume_unrewarded, conf.tau));</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (name == <span class="stringliteral">&quot;exp3&quot;</span>) {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">if</span> (param.type() == json::json::Null) {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="common_2exception_8hpp.html#aff10b0eb90b477115ab3955c3995d327">JUBATUS_EXCEPTION</a>(</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;          common::config_exception() &lt;&lt; <a class="code" href="namespacejubatus_1_1core_1_1common_1_1exception.html#ae636bb5b7830b44a92d86c4aa445548e">common::exception::error_message</a>(</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;              <span class="stringliteral">&quot;parameter block is not specified in config&quot;</span>));</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    exp3_config conf = config_cast_check&lt;exp3_config&gt;(param);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">return</span> shared_ptr&lt;bandit_base&gt;(</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keyword">new</span> exp3(conf.assume_unrewarded, conf.gamma));</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="common_2exception_8hpp.html#aff10b0eb90b477115ab3955c3995d327">JUBATUS_EXCEPTION</a>(</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        common::unsupported_method(<span class="stringliteral">&quot;bandit(&quot;</span> + name + <span class="stringliteral">&quot;)&quot;</span>));</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
 <div class="ttc" id="common_2exception_8hpp_html_aff10b0eb90b477115ab3955c3995d327"><div class="ttname"><a href="common_2exception_8hpp.html#aff10b0eb90b477115ab3955c3995d327">JUBATUS_EXCEPTION</a></div><div class="ttdeci">#define JUBATUS_EXCEPTION(e)</div><div class="ttdef"><b>Definition:</b> <a href="common_2exception_8hpp_source.html#l00079">exception.hpp:79</a></div></div>
 <div class="ttc" id="namespacejubatus_1_1core_1_1common_1_1exception_html_ae636bb5b7830b44a92d86c4aa445548e"><div class="ttname"><a href="namespacejubatus_1_1core_1_1common_1_1exception.html#ae636bb5b7830b44a92d86c4aa445548e">jubatus::core::common::exception::error_message</a></div><div class="ttdeci">error_info&lt; struct error_message_, std::string &gt; error_message</div><div class="ttdef"><b>Definition:</b> <a href="common_2exception_8hpp_source.html#l00059">exception.hpp:59</a></div></div>
 </div><!-- fragment -->
@@ -204,7 +214,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:37 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:05 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

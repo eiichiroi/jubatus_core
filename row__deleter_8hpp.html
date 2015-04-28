@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>jubatus_core: jubatus/core/table/column/row_deleter.hpp File Reference</title>
+<title>jubatus_core: jubatus/core/storage/row_deleter.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -83,7 +83,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_1edb74d5d337cf211f30cda3783e18ab.html">jubatus</a></li><li class="navelem"><a class="el" href="dir_15ddfb059ebb63c597edb88d7a25888f.html">core</a></li><li class="navelem"><a class="el" href="dir_686bd8fef719ae9c34e5b16c054fad97.html">table</a></li><li class="navelem"><a class="el" href="dir_38f9a08af221a53f67ddc5832a6fe65b.html">column</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_1edb74d5d337cf211f30cda3783e18ab.html">jubatus</a></li><li class="navelem"><a class="el" href="dir_15ddfb059ebb63c597edb88d7a25888f.html">core</a></li><li class="navelem"><a class="el" href="dir_8c7dd0846c927214302f36aa2d1fb79c.html">storage</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -100,23 +100,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for row_deleter.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="row__deleter_8hpp__incl.png" border="0" usemap="#jubatus_2core_2table_2column_2row__deleter_8hpp" alt=""/></div>
-<map name="jubatus_2core_2table_2column_2row__deleter_8hpp" id="jubatus_2core_2table_2column_2row__deleter_8hpp">
-<area shape="rect" id="node4" href="column__table_8hpp.html" title="column_table.hpp" alt="" coords="719,92,845,117"/><area shape="rect" id="node16" href="assert_8hpp.html" title="../../common/assert.hpp" alt="" coords="1064,412,1225,437"/><area shape="rect" id="node19" href="common_2exception_8hpp.html" title="../../common/exception.hpp" alt="" coords="757,485,938,511"/><area shape="rect" id="node27" href="unordered__map_8hpp.html" title="../../common/unordered\l_map.hpp" alt="" coords="377,165,536,204"/><area shape="rect" id="node28" href="packer_8hpp.html" title="../../framework/packer.hpp" alt="" coords="689,259,864,284"/><area shape="rect" id="node29" href="storage__exception_8hpp.html" title="../storage_exception.hpp" alt="" coords="1665,412,1832,437"/><area shape="rect" id="node30" href="table_2column_2bit__vector_8hpp.html" title="bit_vector.hpp" alt="" coords="1092,339,1197,364"/><area shape="rect" id="node33" href="column__type_8hpp.html" title="column_type.hpp" alt="" coords="1755,259,1878,284"/><area shape="rect" id="node34" href="abstract__column_8hpp.html" title="abstract_column.hpp" alt="" coords="1168,172,1313,197"/><area shape="rect" id="node38" href="owner_8hpp.html" title="owner.hpp" alt="" coords="2211,339,2294,364"/><area shape="rect" id="node25" href="exception__info_8hpp.html" title="exception_info.hpp" alt="" coords="482,559,615,584"/><area shape="rect" id="node31" href="big__endian_8hpp.html" title="../../common/big_endian.hpp" alt="" coords="1299,412,1489,437"/></map>
+<div class="center"><img src="row__deleter_8hpp__incl.png" border="0" usemap="#jubatus_2core_2storage_2row__deleter_8hpp" alt=""/></div>
+<map name="jubatus_2core_2storage_2row__deleter_8hpp" id="jubatus_2core_2storage_2row__deleter_8hpp">
+<area shape="rect" id="node4" href="column__table_8hpp.html" title="column_table.hpp" alt="" coords="737,92,864,117"/><area shape="rect" id="node15" href="assert_8hpp.html" title="../common/assert.hpp" alt="" coords="1912,412,2062,437"/><area shape="rect" id="node19" href="common_2exception_8hpp.html" title="../common/exception.hpp" alt="" coords="511,485,682,511"/><area shape="rect" id="node27" href="unordered__map_8hpp.html" title="../common/unordered\l_map.hpp" alt="" coords="501,165,649,204"/><area shape="rect" id="node28" href="packer_8hpp.html" title="../framework/packer.hpp" alt="" coords="941,259,1105,284"/><area shape="rect" id="node29" href="storage__exception_8hpp.html" title="storage_exception.hpp" alt="" coords="1489,412,1645,437"/><area shape="rect" id="node30" href="bit__vector_8hpp.html" title="bit_vector.hpp" alt="" coords="1147,339,1251,364"/><area shape="rect" id="node33" href="column__type_8hpp.html" title="column_type.hpp" alt="" coords="1230,259,1353,284"/><area shape="rect" id="node35" href="abstract__column_8hpp.html" title="abstract_column.hpp" alt="" coords="1368,172,1513,197"/><area shape="rect" id="node39" href="owner_8hpp.html" title="owner.hpp" alt="" coords="2243,339,2326,364"/><area shape="rect" id="node25" href="exception__info_8hpp.html" title="exception_info.hpp" alt="" coords="325,559,458,584"/><area shape="rect" id="node31" href="big__endian_8hpp.html" title="../common/big_endian.hpp" alt="" coords="1235,412,1414,437"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="row__deleter_8hpp__dep__incl.png" border="0" usemap="#jubatus_2core_2table_2column_2row__deleter_8hppdep" alt=""/></div>
-<map name="jubatus_2core_2table_2column_2row__deleter_8hppdep" id="jubatus_2core_2table_2column_2row__deleter_8hppdep">
-<area shape="rect" id="node2" href="nearest__neighbor_8cpp.html" title="jubatus/core/driver\l/nearest_neighbor.cpp" alt="" coords="12,92,165,131"/></map>
+<div class="center"><img src="row__deleter_8hpp__dep__incl.png" border="0" usemap="#jubatus_2core_2storage_2row__deleter_8hppdep" alt=""/></div>
+<map name="jubatus_2core_2storage_2row__deleter_8hppdep" id="jubatus_2core_2storage_2row__deleter_8hppdep">
+<area shape="rect" id="node2" href="nearest__neighbor_8cpp.html" title="jubatus/core/driver\l/nearest_neighbor.cpp" alt="" coords="5,92,159,131"/></map>
 </div>
 </div>
 <p><a href="row__deleter_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1table_1_1row__deleter.html">jubatus::core::table::row_deleter</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1storage_1_1row__deleter.html">jubatus::core::storage::row_deleter</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -125,13 +125,13 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacejubatus_1_1core"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core.html">jubatus::core</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacejubatus_1_1core_1_1table"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1table.html">jubatus::core::table</a></td></tr>
+<tr class="memitem:namespacejubatus_1_1core_1_1storage"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1storage.html">jubatus::core::storage</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:36 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:05 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

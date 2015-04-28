@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -88,17 +88,47 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">jubatus::core::storage::detail Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1storage_1_1detail_1_1abstract__column.html">abstract_column</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1storage_1_1detail_1_1abstract__column__base.html">abstract_column_base</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjubatus_1_1core_1_1storage_1_1detail_1_1bitcount__impl.html">bitcount_impl</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjubatus_1_1core_1_1storage_1_1detail_1_1bitcount__impl_3_01_t_00_011_01_4.html">bitcount_impl&lt; T, 1 &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjubatus_1_1core_1_1storage_1_1detail_1_1bitcount__impl_3_01_t_00_012_01_4.html">bitcount_impl&lt; T, 2 &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjubatus_1_1core_1_1storage_1_1detail_1_1bitcount__impl_3_01_t_00_014_01_4.html">bitcount_impl&lt; T, 4 &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjubatus_1_1core_1_1storage_1_1detail_1_1bitcount__impl_3_01_t_00_018_01_4.html">bitcount_impl&lt; T, 8 &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a190276b23bd3cd2905120c9ec1bb4d5a"><td class="memTemplParams" colspan="2">template&lt;class E , class F &gt; </td></tr>
 <tr class="memitem:a190276b23bd3cd2905120c9ec1bb4d5a"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; std::string, E &gt; &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1storage_1_1detail.html#a190276b23bd3cd2905120c9ec1bb4d5a">binop</a> (std::vector&lt; std::pair&lt; std::string, E &gt; &gt; &amp;lhs, std::vector&lt; std::pair&lt; std::string, E &gt; &gt; rhs, F f, E default_value=E())</td></tr>
 <tr class="separator:a190276b23bd3cd2905120c9ec1bb4d5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6ec0737c63cf22b4c0eb3dc07944596"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1storage_1_1detail.html#af6ec0737c63cf22b4c0eb3dc07944596">bitcount</a> (unsigned bits)</td></tr>
+<tr class="separator:af6ec0737c63cf22b4c0eb3dc07944596"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14d1826ab7752615348f9376c2276190"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1storage_1_1detail.html#a14d1826ab7752615348f9376c2276190">bitcount</a> (unsigned long bits)</td></tr>
+<tr class="separator:a14d1826ab7752615348f9376c2276190"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25be91543194182d6eceaa3346d8f231"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1storage_1_1detail.html#a25be91543194182d6eceaa3346d8f231">bitcount</a> (unsigned long long bits)</td></tr>
+<tr class="separator:a25be91543194182d6eceaa3346d8f231"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e66e0e12f749d46000f21a94495540b"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a0e66e0e12f749d46000f21a94495540b"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1storage_1_1detail.html#a0e66e0e12f749d46000f21a94495540b">bitcount</a> (T)</td></tr>
+<tr class="separator:a0e66e0e12f749d46000f21a94495540b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05aa022bf08585f0b35edf58b4b6c107"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a05aa022bf08585f0b35edf58b4b6c107"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1storage_1_1detail.html#a05aa022bf08585f0b35edf58b4b6c107">bitcount_dispatcher</a> (T bits)</td></tr>
+<tr class="separator:a05aa022bf08585f0b35edf58b4b6c107"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46b9124cc42ba5d6446a563704715637"><td class="memTemplParams" colspan="2">template&lt;class E &gt; </td></tr>
 <tr class="memitem:a46b9124cc42ba5d6446a563704715637"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; std::string, E &gt; &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1storage_1_1detail.html#a46b9124cc42ba5d6446a563704715637">mult_scalar</a> (std::vector&lt; std::pair&lt; std::string, E &gt; &gt; &amp;lhs, double d)</td></tr>
 <tr class="separator:a46b9124cc42ba5d6446a563704715637"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -183,6 +213,212 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="af6ec0737c63cf22b4c0eb3dc07944596"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int jubatus::core::storage::detail::bitcount </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>bits</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bit__vector_8hpp_source.html#l00102">102</a> of file <a class="el" href="bit__vector_8hpp_source.html">bit_vector.hpp</a>.</p>
+
+<p>References <a class="el" href="bit__vector_8hpp_source.html#l00094">bitcount_dispatcher()</a>.</p>
+
+<p>Referenced by <a class="el" href="bit__vector_8hpp_source.html#l00296">jubatus::core::storage::bit_vector_base&lt; uint64_t &gt;::bit_count()</a>, and <a class="el" href="bit__vector_8hpp_source.html#l00276">jubatus::core::storage::bit_vector_base&lt; uint64_t &gt;::calc_hamming_distance()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                                   {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="namespacejubatus_1_1core_1_1storage_1_1detail.html#a05aa022bf08585f0b35edf58b4b6c107">bitcount_dispatcher</a>(bits);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
+<div class="ttc" id="namespacejubatus_1_1core_1_1storage_1_1detail_html_a05aa022bf08585f0b35edf58b4b6c107"><div class="ttname"><a href="namespacejubatus_1_1core_1_1storage_1_1detail.html#a05aa022bf08585f0b35edf58b4b6c107">jubatus::core::storage::detail::bitcount_dispatcher</a></div><div class="ttdeci">int bitcount_dispatcher(T bits)</div><div class="ttdef"><b>Definition:</b> <a href="bit__vector_8hpp_source.html#l00094">bit_vector.hpp:94</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacejubatus_1_1core_1_1storage_1_1detail_af6ec0737c63cf22b4c0eb3dc07944596_cgraph.png" border="0" usemap="#namespacejubatus_1_1core_1_1storage_1_1detail_af6ec0737c63cf22b4c0eb3dc07944596_cgraph" alt=""/></div>
+<map name="namespacejubatus_1_1core_1_1storage_1_1detail_af6ec0737c63cf22b4c0eb3dc07944596_cgraph" id="namespacejubatus_1_1core_1_1storage_1_1detail_af6ec0737c63cf22b4c0eb3dc07944596_cgraph">
+<area shape="rect" id="node2" href="namespacejubatus_1_1core_1_1storage_1_1detail.html#a05aa022bf08585f0b35edf58b4b6c107" title="jubatus::core::storage\l::detail::bitcount_dispatcher" alt="" coords="203,5,387,44"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacejubatus_1_1core_1_1storage_1_1detail_af6ec0737c63cf22b4c0eb3dc07944596_icgraph.png" border="0" usemap="#namespacejubatus_1_1core_1_1storage_1_1detail_af6ec0737c63cf22b4c0eb3dc07944596_icgraph" alt=""/></div>
+<map name="namespacejubatus_1_1core_1_1storage_1_1detail_af6ec0737c63cf22b4c0eb3dc07944596_icgraph" id="namespacejubatus_1_1core_1_1storage_1_1detail_af6ec0737c63cf22b4c0eb3dc07944596_icgraph">
+<area shape="rect" id="node2" href="classjubatus_1_1core_1_1storage_1_1bit__vector__base.html#af8b6a1431f2de97df503dbf6e6f8af54" title="jubatus::core::storage\l::bit_vector_base\&lt; uint64\l_t \&gt;::bit_count" alt="" coords="215,5,385,57"/><area shape="rect" id="node3" href="classjubatus_1_1core_1_1storage_1_1bit__vector__base.html#a5782693c740084ae417fb4464d8faf43" title="jubatus::core::storage\l::bit_vector_base\&lt; uint64\l_t \&gt;::calc_hamming_distance" alt="" coords="203,81,397,133"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a14d1826ab7752615348f9376c2276190"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int jubatus::core::storage::detail::bitcount </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramname"><em>bits</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bit__vector_8hpp_source.html#l00106">106</a> of file <a class="el" href="bit__vector_8hpp_source.html">bit_vector.hpp</a>.</p>
+
+<p>References <a class="el" href="bit__vector_8hpp_source.html#l00094">bitcount_dispatcher()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                                        {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="namespacejubatus_1_1core_1_1storage_1_1detail.html#a05aa022bf08585f0b35edf58b4b6c107">bitcount_dispatcher</a>(bits);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
+<div class="ttc" id="namespacejubatus_1_1core_1_1storage_1_1detail_html_a05aa022bf08585f0b35edf58b4b6c107"><div class="ttname"><a href="namespacejubatus_1_1core_1_1storage_1_1detail.html#a05aa022bf08585f0b35edf58b4b6c107">jubatus::core::storage::detail::bitcount_dispatcher</a></div><div class="ttdeci">int bitcount_dispatcher(T bits)</div><div class="ttdef"><b>Definition:</b> <a href="bit__vector_8hpp_source.html#l00094">bit_vector.hpp:94</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacejubatus_1_1core_1_1storage_1_1detail_a14d1826ab7752615348f9376c2276190_cgraph.png" border="0" usemap="#namespacejubatus_1_1core_1_1storage_1_1detail_a14d1826ab7752615348f9376c2276190_cgraph" alt=""/></div>
+<map name="namespacejubatus_1_1core_1_1storage_1_1detail_a14d1826ab7752615348f9376c2276190_cgraph" id="namespacejubatus_1_1core_1_1storage_1_1detail_a14d1826ab7752615348f9376c2276190_cgraph">
+<area shape="rect" id="node2" href="namespacejubatus_1_1core_1_1storage_1_1detail.html#a05aa022bf08585f0b35edf58b4b6c107" title="jubatus::core::storage\l::detail::bitcount_dispatcher" alt="" coords="203,5,387,44"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a25be91543194182d6eceaa3346d8f231"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int jubatus::core::storage::detail::bitcount </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long long&#160;</td>
+          <td class="paramname"><em>bits</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bit__vector_8hpp_source.html#l00110">110</a> of file <a class="el" href="bit__vector_8hpp_source.html">bit_vector.hpp</a>.</p>
+
+<p>References <a class="el" href="bit__vector_8hpp_source.html#l00094">bitcount_dispatcher()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                                             {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="namespacejubatus_1_1core_1_1storage_1_1detail.html#a05aa022bf08585f0b35edf58b4b6c107">bitcount_dispatcher</a>(bits);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div>
+<div class="ttc" id="namespacejubatus_1_1core_1_1storage_1_1detail_html_a05aa022bf08585f0b35edf58b4b6c107"><div class="ttname"><a href="namespacejubatus_1_1core_1_1storage_1_1detail.html#a05aa022bf08585f0b35edf58b4b6c107">jubatus::core::storage::detail::bitcount_dispatcher</a></div><div class="ttdeci">int bitcount_dispatcher(T bits)</div><div class="ttdef"><b>Definition:</b> <a href="bit__vector_8hpp_source.html#l00094">bit_vector.hpp:94</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacejubatus_1_1core_1_1storage_1_1detail_a25be91543194182d6eceaa3346d8f231_cgraph.png" border="0" usemap="#namespacejubatus_1_1core_1_1storage_1_1detail_a25be91543194182d6eceaa3346d8f231_cgraph" alt=""/></div>
+<map name="namespacejubatus_1_1core_1_1storage_1_1detail_a25be91543194182d6eceaa3346d8f231_cgraph" id="namespacejubatus_1_1core_1_1storage_1_1detail_a25be91543194182d6eceaa3346d8f231_cgraph">
+<area shape="rect" id="node2" href="namespacejubatus_1_1core_1_1storage_1_1detail.html#a05aa022bf08585f0b35edf58b4b6c107" title="jubatus::core::storage\l::detail::bitcount_dispatcher" alt="" coords="203,5,387,44"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a0e66e0e12f749d46000f21a94495540b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int jubatus::core::storage::detail::bitcount </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a05aa022bf08585f0b35edf58b4b6c107"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int jubatus::core::storage::detail::bitcount_dispatcher </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>bits</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bit__vector_8hpp_source.html#l00094">94</a> of file <a class="el" href="bit__vector_8hpp_source.html">bit_vector.hpp</a>.</p>
+
+<p>Referenced by <a class="el" href="bit__vector_8hpp_source.html#l00102">bitcount()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                                       {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#ifdef __GNUG__</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keywordflow">return</span> fast_bitcount(bits);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordflow">return</span> bitcount_impl&lt;T, sizeof(T)&gt;::call(bits);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacejubatus_1_1core_1_1storage_1_1detail_a05aa022bf08585f0b35edf58b4b6c107_icgraph.png" border="0" usemap="#namespacejubatus_1_1core_1_1storage_1_1detail_a05aa022bf08585f0b35edf58b4b6c107_icgraph" alt=""/></div>
+<map name="namespacejubatus_1_1core_1_1storage_1_1detail_a05aa022bf08585f0b35edf58b4b6c107_icgraph" id="namespacejubatus_1_1core_1_1storage_1_1detail_a05aa022bf08585f0b35edf58b4b6c107_icgraph">
+<area shape="rect" id="node2" href="namespacejubatus_1_1core_1_1storage_1_1detail.html#af6ec0737c63cf22b4c0eb3dc07944596" title="jubatus::core::storage\l::detail::bitcount" alt="" coords="237,51,387,89"/><area shape="rect" id="node3" href="classjubatus_1_1core_1_1storage_1_1bit__vector__base.html#af8b6a1431f2de97df503dbf6e6f8af54" title="jubatus::core::storage\l::bit_vector_base\&lt; uint64\l_t \&gt;::bit_count" alt="" coords="446,5,617,57"/><area shape="rect" id="node4" href="classjubatus_1_1core_1_1storage_1_1bit__vector__base.html#a5782693c740084ae417fb4464d8faf43" title="jubatus::core::storage\l::bit_vector_base\&lt; uint64\l_t \&gt;::calc_hamming_distance" alt="" coords="435,81,629,133"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="a46b9124cc42ba5d6446a563704715637"></a>
 <div class="memitem">
 <div class="memproto">
@@ -233,7 +469,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:40 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:11 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

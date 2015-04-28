@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -162,9 +162,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classjubatus_1_1core_1_1fv__converter_1_1datum__to__fv__converter__impl.html#a9b506d685d738816b106ca40ac83caba">jubatus::core::fv_converter::datum_to_fv_converter_impl</a>
 </li>
 <li>debug_print()
-: <a class="el" href="classjubatus_1_1core_1_1storage_1_1bit__vector.html#a32f90136c7f19280f46933f450d7da73">jubatus::core::storage::bit_vector</a>
+: <a class="el" href="classjubatus_1_1core_1_1storage_1_1bit__vector__base.html#ae5eb0c17a968feba1e39d1e9579e6ccb">jubatus::core::storage::bit_vector_base&lt; bit_base &gt;</a>
 , <a class="el" href="classjubatus_1_1core_1_1storage_1_1lsh__vector.html#aff64d6a7ead2d8608c167e0e6c017c5b">jubatus::core::storage::lsh_vector</a>
-, <a class="el" href="structjubatus_1_1core_1_1table_1_1bit__vector__base.html#a2b58ff58d8446284fc116c334e845e38">jubatus::core::table::bit_vector_base&lt; bit_base &gt;</a>
 </li>
 <li>decode_row()
 : <a class="el" href="classjubatus_1_1core_1_1driver_1_1recommender.html#a68dd54554fcfb08ffd807a236b28282b">jubatus::core::driver::recommender</a>
@@ -215,11 +214,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#a80179f359458f3827a609b1661faeabf">jubatus::core::storage::local_storage_mixture</a>
 , <a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#a33061b32008232de3e55c5d39c0f7961">jubatus::core::storage::storage_base</a>
 </li>
+<li>delete_label_nolock()
+: <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage.html#a4dbf4715304fb56d14f4ae2098463af9">jubatus::core::storage::local_storage</a>
+, <a class="el" href="classjubatus_1_1core_1_1storage_1_1local__storage__mixture.html#affed7426cb8cab64202a033b8a432524">jubatus::core::storage::local_storage_mixture</a>
+, <a class="el" href="classjubatus_1_1core_1_1storage_1_1storage__base.html#a55de6396de2b2f7e7163e368d348e972">jubatus::core::storage::storage_base</a>
+</li>
 <li>delete_row()
-: <a class="el" href="classjubatus_1_1core_1_1table_1_1column__table.html#ae786a76b4918101ffc2d5a476db4c3b2">jubatus::core::table::column_table</a>
+: <a class="el" href="classjubatus_1_1core_1_1storage_1_1column__table.html#a5aa29d1b20a832c537319a8ca2096954">jubatus::core::storage::column_table</a>
 </li>
 <li>delete_row_()
-: <a class="el" href="classjubatus_1_1core_1_1table_1_1column__table.html#ad02e8a5917176aebd7cf599c9fff1143">jubatus::core::table::column_table</a>
+: <a class="el" href="classjubatus_1_1core_1_1storage_1_1column__table.html#a90c41c820d86bac73baaf9e217a634f3">jubatus::core::storage::column_table</a>
 </li>
 <li>diagnostic_information()
 : <a class="el" href="classjubatus_1_1core_1_1common_1_1exception_1_1jubatus__exception.html#ac726e6a334e7b6ed4d80dc5dc0edc67e">jubatus::core::common::exception::jubatus_exception</a>
@@ -243,7 +247,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#aacb457fe24e098d42683ff9450bd21a0">jubatus::core::fv_converter::weight_manager</a>
 </li>
 <li>diffv()
-: <a class="el" href="structjubatus_1_1core_1_1framework_1_1diffv.html#a29b20758afb7645904f506ad795e0981">jubatus::core::framework::diffv</a>
+: <a class="el" href="structjubatus_1_1core_1_1framework_1_1diffv.html#a07e8af34f3a9fbcff8a8af449b8116f5">jubatus::core::framework::diffv</a>
 </li>
 <li>discrete_distribution()
 : <a class="el" href="classjubatus_1_1core_1_1clustering_1_1discrete__distribution.html#abbf3e62d36150e6fc9f7e1e40f090ed2">jubatus::core::clustering::discrete_distribution</a>
@@ -265,30 +269,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classjubatus_1_1core_1_1fv__converter_1_1keyword__weights.html#a61c0a8c54a7fe91479b1ed0de8cba538">jubatus::core::fv_converter::keyword_weights</a>
 </li>
 <li>double_type
-: <a class="el" href="classjubatus_1_1core_1_1table_1_1column__type.html#a4e99359af30a43eb88bf1b352974198ea7968c9e1d24791b55e6c096e090f4fc4">jubatus::core::table::column_type</a>
+: <a class="el" href="classjubatus_1_1core_1_1storage_1_1column__type.html#ab386b62bbcbf1e5df3e78ca945674566a596596a0f83c6c95cdf9d2a377965307">jubatus::core::storage::column_type</a>
 </li>
 <li>driver_base()
-: <a class="el" href="classjubatus_1_1core_1_1driver_1_1driver__base.html#a6e6f5cfa75f0238927872babfabb75ea">jubatus::core::driver::driver_base</a>
+: <a class="el" href="classjubatus_1_1core_1_1driver_1_1driver__base.html#abe48e2c4abb63c81a1d71c0e10d93492">jubatus::core::driver::driver_base</a>
 </li>
 <li>dump()
-: <a class="el" href="classjubatus_1_1core_1_1table_1_1column__table.html#a0166933e7ea518a60f760f2b76b6f67a">jubatus::core::table::column_table</a>
-, <a class="el" href="classjubatus_1_1core_1_1table_1_1column__type.html#ae4818bc10f37dbf0ccb4b64d77d8c2cb">jubatus::core::table::column_type</a>
-, <a class="el" href="classjubatus_1_1core_1_1table_1_1detail_1_1abstract__column.html#aeb85c2322c4ec69ca659002a9ae974af">jubatus::core::table::detail::abstract_column</a>
-, <a class="el" href="classjubatus_1_1core_1_1table_1_1detail_1_1abstract__column__base.html#a9ddf71d4d1d3220d8c9bb66ace87c70c">jubatus::core::table::detail::abstract_column_base</a>
-, <a class="el" href="classjubatus_1_1core_1_1table_1_1typed__column.html#a06db9fe328e8f70729f8a8cc5a3e6f00">jubatus::core::table::typed_column&lt; T &gt;</a>
-, <a class="el" href="classjubatus_1_1core_1_1table_1_1typed__column_3_01bit__vector_01_4.html#ae37adbcf8b7e580084527395314bbaa8">jubatus::core::table::typed_column&lt; bit_vector &gt;</a>
+: <a class="el" href="classjubatus_1_1core_1_1storage_1_1detail_1_1abstract__column.html#a66123e13928d6a689d43636658113431">jubatus::core::storage::detail::abstract_column</a>
+, <a class="el" href="classjubatus_1_1core_1_1storage_1_1detail_1_1abstract__column__base.html#a154ec8403c0c0306042e13c3230a6189">jubatus::core::storage::detail::abstract_column_base</a>
+, <a class="el" href="classjubatus_1_1core_1_1storage_1_1typed__column.html#a260c42693a48c128b4e672bff0bbe758">jubatus::core::storage::typed_column&lt; T &gt;</a>
+, <a class="el" href="classjubatus_1_1core_1_1storage_1_1typed__column_3_01bit__vector_01_4.html#aa7273a75bd445904fcbb7b99765533fd">jubatus::core::storage::typed_column&lt; bit_vector &gt;</a>
 </li>
 <li>dump_json()
-: <a class="el" href="classjubatus_1_1core_1_1table_1_1column__table.html#a2f3a5d9b57ea5bc49f23f8bd270153ce">jubatus::core::table::column_table</a>
+: <a class="el" href="classjubatus_1_1core_1_1storage_1_1column__table.html#abd61076e744a77a3a1d232b956c7334f">jubatus::core::storage::column_table</a>
 </li>
 <li>duplicate()
-: <a class="el" href="structjubatus_1_1core_1_1table_1_1bit__vector__base.html#a8c757bd7b8a4f5c3f998069da0cae02c">jubatus::core::table::bit_vector_base&lt; bit_base &gt;</a>
+: <a class="el" href="classjubatus_1_1core_1_1storage_1_1bit__vector__base.html#a68466e4358150fe14552212244abf4ab">jubatus::core::storage::bit_vector_base&lt; bit_base &gt;</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:41 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:12 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

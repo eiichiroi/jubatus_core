@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -134,7 +134,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2452dd5801f99ef71ca78f9cf8376a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1c265e07ff88cc9f4ab7988c78fda7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1driver_1_1classifier.html#ac1c265e07ff88cc9f4ab7988c78fda7e">get_status</a> (std::map&lt; std::string, std::string &gt; &amp;status) const </td></tr>
 <tr class="separator:ac1c265e07ff88cc9f4ab7988c78fda7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8971a0a1b58bc5f04afc5451f18d1f2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1driver_1_1classifier.html#a8971a0a1b58bc5f04afc5451f18d1f2f">pack</a> (<a class="el" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">framework::packer</a> &amp;pk) const </td></tr>
+<tr class="memitem:a8971a0a1b58bc5f04afc5451f18d1f2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1driver_1_1classifier.html#a8971a0a1b58bc5f04afc5451f18d1f2f">pack</a> (<a class="el" href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">framework::packer</a> &amp;pk) const </td></tr>
 <tr class="separator:a8971a0a1b58bc5f04afc5451f18d1f2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab59a115829b1ce604a0b94403d3f0c4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1driver_1_1classifier.html#aab59a115829b1ce604a0b94403d3f0c4">set_label</a> (const std::string &amp;label)</td></tr>
 <tr class="separator:aab59a115829b1ce604a0b94403d3f0c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,7 +174,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="driver_2classifier_8hpp_source.html#l00035">35</a> of file <a class="el" href="driver_2classifier_8hpp_source.html">classifier.hpp</a>.</p>
+<p>Definition at line <a class="el" href="driver_2classifier_8hpp_source.html#l00040">40</a> of file <a class="el" href="driver_2classifier_8hpp_source.html">classifier.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a929c1a2bcd3d24ebc9e9c7125f93f301"></a>
 <div class="memitem">
@@ -186,7 +186,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="driver_2classifier_8hpp_source.html#l00037">37</a> of file <a class="el" href="driver_2classifier_8hpp_source.html">classifier.hpp</a>.</p>
+<p>Definition at line <a class="el" href="driver_2classifier_8hpp_source.html#l00042">42</a> of file <a class="el" href="driver_2classifier_8hpp_source.html">classifier.hpp</a>.</p>
 
 </div>
 </div>
@@ -215,24 +215,24 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="classifier_8cpp_source.html#l00041">41</a> of file <a class="el" href="classifier_8cpp_source.html">classifier.cpp</a>.</p>
+<p>Definition at line <a class="el" href="classifier_8cpp_source.html#l00042">42</a> of file <a class="el" href="classifier_8cpp_source.html">classifier.cpp</a>.</p>
 
-<p>References <a class="el" href="driver_2classifier_8hpp_source.html#l00064">classifier_</a>, <a class="el" href="driver_2classifier_8hpp_source.html#l00063">converter_</a>, <a class="el" href="mixable__helper_8hpp_source.html#l00063">jubatus::core::framework::linear_mixable_helper&lt; Model, Diff &gt;::get_model()</a>, <a class="el" href="driver_8cpp_source.html#l00242">jubatus::core::driver::driver_base::register_mixable()</a>, and <a class="el" href="driver_2classifier_8hpp_source.html#l00065">wm_</a>.</p>
-<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    : <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#a1b30f56dc4254d6cccbc4c85721a6cca">converter_</a>(converter)</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    , <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">classifier_</a>(classifier_method)</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    , <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#a7c5b1a2084a7b87071a83b487761338c">wm_</a>(<a class="code" href="namespacejubatus_1_1core_1_1recommender.html#a721a2fd03d429e6dcd819024da52a5ea">mixable_weight_manager::model_ptr</a>(<span class="keyword">new</span> <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html">weight_manager</a>)) {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1driver__base.html#a0c6a2edadf5d0616a764da24c7fa8b64">register_mixable</a>(<a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">classifier_</a>-&gt;get_mixable());</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1driver__base.html#a0c6a2edadf5d0616a764da24c7fa8b64">register_mixable</a>(&amp;<a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#a7c5b1a2084a7b87071a83b487761338c">wm_</a>);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#a1b30f56dc4254d6cccbc4c85721a6cca">converter_</a>-&gt;set_weight_manager(<a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#a7c5b1a2084a7b87071a83b487761338c">wm_</a>.<a class="code" href="classjubatus_1_1core_1_1framework_1_1linear__mixable__helper.html#a84aea9b6cc47f51dd8064ea1243b8992">get_model</a>());</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1framework_1_1linear__mixable__helper_html_a84aea9b6cc47f51dd8064ea1243b8992"><div class="ttname"><a href="classjubatus_1_1core_1_1framework_1_1linear__mixable__helper.html#a84aea9b6cc47f51dd8064ea1243b8992">jubatus::core::framework::linear_mixable_helper::get_model</a></div><div class="ttdeci">model_ptr get_model() const </div><div class="ttdef"><b>Definition:</b> <a href="mixable__helper_8hpp_source.html#l00063">mixable_helper.hpp:63</a></div></div>
+<p>References <a class="el" href="driver_2classifier_8hpp_source.html#l00070">classifier_</a>, <a class="el" href="driver_2classifier_8hpp_source.html#l00069">converter_</a>, <a class="el" href="mixable__helper_8hpp_source.html#l00062">jubatus::core::framework::linear_mixable_helper&lt; Model, Diff &gt;::get_model()</a>, <a class="el" href="driver_8cpp_source.html#l00242">jubatus::core::driver::driver_base::register_mixable()</a>, and <a class="el" href="driver_2classifier_8hpp_source.html#l00071">wm_</a>.</p>
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    : <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#a1b30f56dc4254d6cccbc4c85721a6cca">converter_</a>(converter)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    , <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">classifier_</a>(classifier_method)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    , <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#a7c5b1a2084a7b87071a83b487761338c">wm_</a>(<a class="code" href="namespacejubatus_1_1core_1_1recommender.html#a721a2fd03d429e6dcd819024da52a5ea">mixable_weight_manager::model_ptr</a>(<span class="keyword">new</span> <a class="code" href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html">weight_manager</a>)) {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1driver__base.html#a0c6a2edadf5d0616a764da24c7fa8b64">register_mixable</a>(<a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">classifier_</a>-&gt;get_mixable());</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1driver__base.html#a0c6a2edadf5d0616a764da24c7fa8b64">register_mixable</a>(&amp;<a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#a7c5b1a2084a7b87071a83b487761338c">wm_</a>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#a1b30f56dc4254d6cccbc4c85721a6cca">converter_</a>-&gt;set_weight_manager(<a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#a7c5b1a2084a7b87071a83b487761338c">wm_</a>.<a class="code" href="classjubatus_1_1core_1_1framework_1_1linear__mixable__helper.html#a84aea9b6cc47f51dd8064ea1243b8992">get_model</a>());</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1framework_1_1linear__mixable__helper_html_a84aea9b6cc47f51dd8064ea1243b8992"><div class="ttname"><a href="classjubatus_1_1core_1_1framework_1_1linear__mixable__helper.html#a84aea9b6cc47f51dd8064ea1243b8992">jubatus::core::framework::linear_mixable_helper::get_model</a></div><div class="ttdeci">model_ptr get_model() const </div><div class="ttdef"><b>Definition:</b> <a href="mixable__helper_8hpp_source.html#l00062">mixable_helper.hpp:62</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1fv__converter_1_1weight__manager_html"><div class="ttname"><a href="classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html">jubatus::core::fv_converter::weight_manager</a></div><div class="ttdef"><b>Definition:</b> <a href="weight__manager_8hpp_source.html#l00050">weight_manager.hpp:50</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_a1b30f56dc4254d6cccbc4c85721a6cca"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#a1b30f56dc4254d6cccbc4c85721a6cca">jubatus::core::driver::classifier::converter_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; fv_converter::datum_to_fv_converter &gt; converter_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00063">classifier.hpp:63</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_af9431743b86b66c73c155bbabbbb26ec"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">jubatus::core::driver::classifier::classifier_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; classifier_base &gt; classifier_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00064">classifier.hpp:64</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_a7c5b1a2084a7b87071a83b487761338c"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#a7c5b1a2084a7b87071a83b487761338c">jubatus::core::driver::classifier::wm_</a></div><div class="ttdeci">fv_converter::mixable_weight_manager wm_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00065">classifier.hpp:65</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_a1b30f56dc4254d6cccbc4c85721a6cca"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#a1b30f56dc4254d6cccbc4c85721a6cca">jubatus::core::driver::classifier::converter_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; fv_converter::datum_to_fv_converter &gt; converter_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00069">classifier.hpp:69</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_af9431743b86b66c73c155bbabbbb26ec"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">jubatus::core::driver::classifier::classifier_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; classifier_base &gt; classifier_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00070">classifier.hpp:70</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_a7c5b1a2084a7b87071a83b487761338c"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#a7c5b1a2084a7b87071a83b487761338c">jubatus::core::driver::classifier::wm_</a></div><div class="ttdeci">fv_converter::mixable_weight_manager wm_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00071">classifier.hpp:71</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1driver_1_1driver__base_html_a0c6a2edadf5d0616a764da24c7fa8b64"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1driver__base.html#a0c6a2edadf5d0616a764da24c7fa8b64">jubatus::core::driver::driver_base::register_mixable</a></div><div class="ttdeci">void register_mixable(framework::mixable *mixable)</div><div class="ttdef"><b>Definition:</b> <a href="driver_8cpp_source.html#l00242">driver.cpp:242</a></div></div>
-<div class="ttc" id="namespacejubatus_1_1core_1_1recommender_html_a721a2fd03d429e6dcd819024da52a5ea"><div class="ttname"><a href="namespacejubatus_1_1core_1_1recommender.html#a721a2fd03d429e6dcd819024da52a5ea">jubatus::core::recommender::model_ptr</a></div><div class="ttdeci">storage::mixable_lsh_index_storage::model_ptr model_ptr</div><div class="ttdef"><b>Definition:</b> <a href="recommender_2euclid__lsh_8cpp_source.html#l00096">euclid_lsh.cpp:96</a></div></div>
+<div class="ttc" id="namespacejubatus_1_1core_1_1recommender_html_a721a2fd03d429e6dcd819024da52a5ea"><div class="ttname"><a href="namespacejubatus_1_1core_1_1recommender.html#a721a2fd03d429e6dcd819024da52a5ea">jubatus::core::recommender::model_ptr</a></div><div class="ttdeci">storage::mixable_lsh_index_storage::model_ptr model_ptr</div><div class="ttdef"><b>Definition:</b> <a href="recommender_2euclid__lsh_8cpp_source.html#l00090">euclid_lsh.cpp:90</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -266,9 +266,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="classifier_8cpp_source.html#l00053">53</a> of file <a class="el" href="classifier_8cpp_source.html">classifier.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                        {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<p>Definition at line <a class="el" href="classifier_8cpp_source.html#l00054">54</a> of file <a class="el" href="classifier_8cpp_source.html">classifier.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                        {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -287,20 +287,20 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="classifier_8cpp_source.html#l00063">63</a> of file <a class="el" href="classifier_8cpp_source.html">classifier.cpp</a>.</p>
+<p>Definition at line <a class="el" href="classifier_8cpp_source.html#l00064">64</a> of file <a class="el" href="classifier_8cpp_source.html">classifier.cpp</a>.</p>
 
-<p>References <a class="el" href="driver_2classifier_8hpp_source.html#l00064">classifier_</a>, <a class="el" href="driver_2classifier_8hpp_source.html#l00063">converter_</a>, and <a class="el" href="namespacejubatus_1_1core_1_1common_1_1jsonconfig.html#a04e9956193c1365cc36e32875c892543">jubatus::core::common::jsonconfig::v()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                         {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <a class="code" href="namespacejubatus_1_1core_1_1common.html#a8834396b360f728705429b812ec15690">common::sfv_t</a> <a class="code" href="namespacejubatus_1_1core_1_1common_1_1jsonconfig.html#a04e9956193c1365cc36e32875c892543">v</a>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#a1b30f56dc4254d6cccbc4c85721a6cca">converter_</a>-&gt;convert(data, v);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <a class="code" href="namespacejubatus_1_1core_1_1classifier.html#a7f72da81e24d824251a9b9ecb4f83f3c">jubatus::core::classifier::classify_result</a> scores;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">classifier_</a>-&gt;classify_with_scores(v, scores);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordflow">return</span> scores;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<p>References <a class="el" href="driver_2classifier_8hpp_source.html#l00070">classifier_</a>, <a class="el" href="driver_2classifier_8hpp_source.html#l00069">converter_</a>, and <a class="el" href="namespacejubatus_1_1core_1_1common_1_1jsonconfig.html#a04e9956193c1365cc36e32875c892543">jubatus::core::common::jsonconfig::v()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                                         {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <a class="code" href="namespacejubatus_1_1core_1_1common.html#a8834396b360f728705429b812ec15690">common::sfv_t</a> <a class="code" href="namespacejubatus_1_1core_1_1common_1_1jsonconfig.html#a04e9956193c1365cc36e32875c892543">v</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#a1b30f56dc4254d6cccbc4c85721a6cca">converter_</a>-&gt;convert(data, v);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <a class="code" href="namespacejubatus_1_1core_1_1classifier.html#a7f72da81e24d824251a9b9ecb4f83f3c">jubatus::core::classifier::classify_result</a> scores;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">classifier_</a>-&gt;classify_with_scores(v, scores);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordflow">return</span> scores;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
 <div class="ttc" id="namespacejubatus_1_1core_1_1classifier_html_a7f72da81e24d824251a9b9ecb4f83f3c"><div class="ttname"><a href="namespacejubatus_1_1core_1_1classifier.html#a7f72da81e24d824251a9b9ecb4f83f3c">jubatus::core::classifier::classify_result</a></div><div class="ttdeci">std::vector&lt; classify_result_elem &gt; classify_result</div><div class="ttdef"><b>Definition:</b> <a href="classifier__type_8hpp_source.html#l00041">classifier_type.hpp:41</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_a1b30f56dc4254d6cccbc4c85721a6cca"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#a1b30f56dc4254d6cccbc4c85721a6cca">jubatus::core::driver::classifier::converter_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; fv_converter::datum_to_fv_converter &gt; converter_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00063">classifier.hpp:63</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_af9431743b86b66c73c155bbabbbb26ec"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">jubatus::core::driver::classifier::classifier_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; classifier_base &gt; classifier_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00064">classifier.hpp:64</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_a1b30f56dc4254d6cccbc4c85721a6cca"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#a1b30f56dc4254d6cccbc4c85721a6cca">jubatus::core::driver::classifier::converter_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; fv_converter::datum_to_fv_converter &gt; converter_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00069">classifier.hpp:69</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_af9431743b86b66c73c155bbabbbb26ec"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">jubatus::core::driver::classifier::classifier_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; classifier_base &gt; classifier_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00070">classifier.hpp:70</a></div></div>
 <div class="ttc" id="namespacejubatus_1_1core_1_1common_1_1jsonconfig_html_a04e9956193c1365cc36e32875c892543"><div class="ttname"><a href="namespacejubatus_1_1core_1_1common_1_1jsonconfig.html#a04e9956193c1365cc36e32875c892543">jubatus::core::common::jsonconfig::v</a></div><div class="ttdeci">std::vector&lt; T &gt; v(size)</div></div>
 <div class="ttc" id="namespacejubatus_1_1core_1_1common_html_a8834396b360f728705429b812ec15690"><div class="ttname"><a href="namespacejubatus_1_1core_1_1common.html#a8834396b360f728705429b812ec15690">jubatus::core::common::sfv_t</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; std::string, float &gt; &gt; sfv_t</div><div class="ttdef"><b>Definition:</b> <a href="common_2type_8hpp_source.html#l00029">type.hpp:29</a></div></div>
 </div><!-- fragment -->
@@ -338,15 +338,15 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classjubatus_1_1core_1_1driver_1_1driver__base.html#a9b34af539d84836a7c8a5539a1730c8c">jubatus::core::driver::driver_base</a>.</p>
 
-<p>Definition at line <a class="el" href="classifier_8cpp_source.html#l00081">81</a> of file <a class="el" href="classifier_8cpp_source.html">classifier.cpp</a>.</p>
+<p>Definition at line <a class="el" href="classifier_8cpp_source.html#l00082">82</a> of file <a class="el" href="classifier_8cpp_source.html">classifier.cpp</a>.</p>
 
-<p>References <a class="el" href="driver_2classifier_8hpp_source.html#l00064">classifier_</a>, and <a class="el" href="driver_2classifier_8hpp_source.html#l00063">converter_</a>.</p>
-<div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                       {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">classifier_</a>-&gt;clear();</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#a1b30f56dc4254d6cccbc4c85721a6cca">converter_</a>-&gt;clear_weights();</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_a1b30f56dc4254d6cccbc4c85721a6cca"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#a1b30f56dc4254d6cccbc4c85721a6cca">jubatus::core::driver::classifier::converter_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; fv_converter::datum_to_fv_converter &gt; converter_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00063">classifier.hpp:63</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_af9431743b86b66c73c155bbabbbb26ec"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">jubatus::core::driver::classifier::classifier_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; classifier_base &gt; classifier_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00064">classifier.hpp:64</a></div></div>
+<p>References <a class="el" href="driver_2classifier_8hpp_source.html#l00070">classifier_</a>, and <a class="el" href="driver_2classifier_8hpp_source.html#l00069">converter_</a>.</p>
+<div class="fragment"><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                       {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">classifier_</a>-&gt;clear();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#a1b30f56dc4254d6cccbc4c85721a6cca">converter_</a>-&gt;clear_weights();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_a1b30f56dc4254d6cccbc4c85721a6cca"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#a1b30f56dc4254d6cccbc4c85721a6cca">jubatus::core::driver::classifier::converter_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; fv_converter::datum_to_fv_converter &gt; converter_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00069">classifier.hpp:69</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_af9431743b86b66c73c155bbabbbb26ec"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">jubatus::core::driver::classifier::classifier_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; classifier_base &gt; classifier_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00070">classifier.hpp:70</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -364,13 +364,13 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="classifier_8cpp_source.html#l00077">77</a> of file <a class="el" href="classifier_8cpp_source.html">classifier.cpp</a>.</p>
+<p>Definition at line <a class="el" href="classifier_8cpp_source.html#l00078">78</a> of file <a class="el" href="classifier_8cpp_source.html">classifier.cpp</a>.</p>
 
-<p>References <a class="el" href="driver_2classifier_8hpp_source.html#l00064">classifier_</a>.</p>
-<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                                                    {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">classifier_</a>-&gt;delete_label(label);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_af9431743b86b66c73c155bbabbbb26ec"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">jubatus::core::driver::classifier::classifier_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; classifier_base &gt; classifier_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00064">classifier.hpp:64</a></div></div>
+<p>References <a class="el" href="driver_2classifier_8hpp_source.html#l00070">classifier_</a>.</p>
+<div class="fragment"><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                                                    {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">classifier_</a>-&gt;delete_label(label);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_af9431743b86b66c73c155bbabbbb26ec"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">jubatus::core::driver::classifier::classifier_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; classifier_base &gt; classifier_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00070">classifier.hpp:70</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -387,13 +387,13 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="classifier_8cpp_source.html#l00086">86</a> of file <a class="el" href="classifier_8cpp_source.html">classifier.cpp</a>.</p>
+<p>Definition at line <a class="el" href="classifier_8cpp_source.html#l00087">87</a> of file <a class="el" href="classifier_8cpp_source.html">classifier.cpp</a>.</p>
 
-<p>References <a class="el" href="driver_2classifier_8hpp_source.html#l00064">classifier_</a>.</p>
-<div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                                                  {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">classifier_</a>-&gt;get_labels();</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_af9431743b86b66c73c155bbabbbb26ec"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">jubatus::core::driver::classifier::classifier_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; classifier_base &gt; classifier_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00064">classifier.hpp:64</a></div></div>
+<p>References <a class="el" href="driver_2classifier_8hpp_source.html#l00070">classifier_</a>.</p>
+<div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                                                  {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">classifier_</a>-&gt;get_labels();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_af9431743b86b66c73c155bbabbbb26ec"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">jubatus::core::driver::classifier::classifier_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; classifier_base &gt; classifier_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00070">classifier.hpp:70</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -411,13 +411,13 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="classifier_8cpp_source.html#l00073">73</a> of file <a class="el" href="classifier_8cpp_source.html">classifier.cpp</a>.</p>
+<p>Definition at line <a class="el" href="classifier_8cpp_source.html#l00074">74</a> of file <a class="el" href="classifier_8cpp_source.html">classifier.cpp</a>.</p>
 
-<p>References <a class="el" href="driver_2classifier_8hpp_source.html#l00064">classifier_</a>.</p>
-<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                                                                {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">classifier_</a>-&gt;get_status(status);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_af9431743b86b66c73c155bbabbbb26ec"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">jubatus::core::driver::classifier::classifier_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; classifier_base &gt; classifier_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00064">classifier.hpp:64</a></div></div>
+<p>References <a class="el" href="driver_2classifier_8hpp_source.html#l00070">classifier_</a>.</p>
+<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                                                                {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">classifier_</a>-&gt;get_status(status);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_af9431743b86b66c73c155bbabbbb26ec"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">jubatus::core::driver::classifier::classifier_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; classifier_base &gt; classifier_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00070">classifier.hpp:70</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -431,7 +431,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void jubatus::core::driver::classifier::pack </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">framework::packer</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">framework::packer</a> &amp;&#160;</td>
           <td class="paramname"><em>pk</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -445,17 +445,17 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classjubatus_1_1core_1_1driver_1_1driver__base.html#a14c00352c8e2d6711786d3f65f61287c">jubatus::core::driver::driver_base</a>.</p>
 
-<p>Definition at line <a class="el" href="classifier_8cpp_source.html#l00093">93</a> of file <a class="el" href="classifier_8cpp_source.html">classifier.cpp</a>.</p>
+<p>Definition at line <a class="el" href="classifier_8cpp_source.html#l00094">94</a> of file <a class="el" href="classifier_8cpp_source.html">classifier.cpp</a>.</p>
 
-<p>References <a class="el" href="driver_2classifier_8hpp_source.html#l00064">classifier_</a>, <a class="el" href="mixable__helper_8hpp_source.html#l00063">jubatus::core::framework::linear_mixable_helper&lt; Model, Diff &gt;::get_model()</a>, and <a class="el" href="driver_2classifier_8hpp_source.html#l00065">wm_</a>.</p>
-<div class="fragment"><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                                               {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  pk.pack_array(2);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">classifier_</a>-&gt;pack(pk);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#a7c5b1a2084a7b87071a83b487761338c">wm_</a>.<a class="code" href="classjubatus_1_1core_1_1framework_1_1linear__mixable__helper.html#a84aea9b6cc47f51dd8064ea1243b8992">get_model</a>()-&gt;pack(pk);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1framework_1_1linear__mixable__helper_html_a84aea9b6cc47f51dd8064ea1243b8992"><div class="ttname"><a href="classjubatus_1_1core_1_1framework_1_1linear__mixable__helper.html#a84aea9b6cc47f51dd8064ea1243b8992">jubatus::core::framework::linear_mixable_helper::get_model</a></div><div class="ttdeci">model_ptr get_model() const </div><div class="ttdef"><b>Definition:</b> <a href="mixable__helper_8hpp_source.html#l00063">mixable_helper.hpp:63</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_af9431743b86b66c73c155bbabbbb26ec"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">jubatus::core::driver::classifier::classifier_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; classifier_base &gt; classifier_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00064">classifier.hpp:64</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_a7c5b1a2084a7b87071a83b487761338c"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#a7c5b1a2084a7b87071a83b487761338c">jubatus::core::driver::classifier::wm_</a></div><div class="ttdeci">fv_converter::mixable_weight_manager wm_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00065">classifier.hpp:65</a></div></div>
+<p>References <a class="el" href="driver_2classifier_8hpp_source.html#l00070">classifier_</a>, <a class="el" href="mixable__helper_8hpp_source.html#l00062">jubatus::core::framework::linear_mixable_helper&lt; Model, Diff &gt;::get_model()</a>, and <a class="el" href="driver_2classifier_8hpp_source.html#l00071">wm_</a>.</p>
+<div class="fragment"><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                                               {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  pk.pack_array(2);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">classifier_</a>-&gt;pack(pk);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#a7c5b1a2084a7b87071a83b487761338c">wm_</a>.<a class="code" href="classjubatus_1_1core_1_1framework_1_1linear__mixable__helper.html#a84aea9b6cc47f51dd8064ea1243b8992">get_model</a>()-&gt;pack(pk);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1framework_1_1linear__mixable__helper_html_a84aea9b6cc47f51dd8064ea1243b8992"><div class="ttname"><a href="classjubatus_1_1core_1_1framework_1_1linear__mixable__helper.html#a84aea9b6cc47f51dd8064ea1243b8992">jubatus::core::framework::linear_mixable_helper::get_model</a></div><div class="ttdeci">model_ptr get_model() const </div><div class="ttdef"><b>Definition:</b> <a href="mixable__helper_8hpp_source.html#l00062">mixable_helper.hpp:62</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_af9431743b86b66c73c155bbabbbb26ec"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">jubatus::core::driver::classifier::classifier_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; classifier_base &gt; classifier_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00070">classifier.hpp:70</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_a7c5b1a2084a7b87071a83b487761338c"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#a7c5b1a2084a7b87071a83b487761338c">jubatus::core::driver::classifier::wm_</a></div><div class="ttdeci">fv_converter::mixable_weight_manager wm_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00071">classifier.hpp:71</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -482,13 +482,13 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="classifier_8cpp_source.html#l00089">89</a> of file <a class="el" href="classifier_8cpp_source.html">classifier.cpp</a>.</p>
+<p>Definition at line <a class="el" href="classifier_8cpp_source.html#l00090">90</a> of file <a class="el" href="classifier_8cpp_source.html">classifier.cpp</a>.</p>
 
-<p>References <a class="el" href="driver_2classifier_8hpp_source.html#l00064">classifier_</a>.</p>
-<div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                                                 {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">classifier_</a>-&gt;set_label(label);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_af9431743b86b66c73c155bbabbbb26ec"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">jubatus::core::driver::classifier::classifier_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; classifier_base &gt; classifier_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00064">classifier.hpp:64</a></div></div>
+<p>References <a class="el" href="driver_2classifier_8hpp_source.html#l00070">classifier_</a>.</p>
+<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                                                 {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">classifier_</a>-&gt;set_label(label);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_af9431743b86b66c73c155bbabbbb26ec"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">jubatus::core::driver::classifier::classifier_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; classifier_base &gt; classifier_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00070">classifier.hpp:70</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -516,17 +516,17 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="classifier_8cpp_source.html#l00056">56</a> of file <a class="el" href="classifier_8cpp_source.html">classifier.cpp</a>.</p>
+<p>Definition at line <a class="el" href="classifier_8cpp_source.html#l00057">57</a> of file <a class="el" href="classifier_8cpp_source.html">classifier.cpp</a>.</p>
 
-<p>References <a class="el" href="driver_2classifier_8hpp_source.html#l00064">classifier_</a>, <a class="el" href="driver_2classifier_8hpp_source.html#l00063">converter_</a>, <a class="el" href="vector__util_8cpp_source.html#l00028">jubatus::core::common::sort_and_merge()</a>, and <a class="el" href="namespacejubatus_1_1core_1_1common_1_1jsonconfig.html#a04e9956193c1365cc36e32875c892543">jubatus::core::common::jsonconfig::v()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                                                                         {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <a class="code" href="namespacejubatus_1_1core_1_1common.html#a8834396b360f728705429b812ec15690">common::sfv_t</a> <a class="code" href="namespacejubatus_1_1core_1_1common_1_1jsonconfig.html#a04e9956193c1365cc36e32875c892543">v</a>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#a1b30f56dc4254d6cccbc4c85721a6cca">converter_</a>-&gt;convert_and_update_weight(data, v);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <a class="code" href="namespacejubatus_1_1core_1_1common.html#a2150d5f5d851aaad02781b8592d064bb">common::sort_and_merge</a>(v);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">classifier_</a>-&gt;train(v, label);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_a1b30f56dc4254d6cccbc4c85721a6cca"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#a1b30f56dc4254d6cccbc4c85721a6cca">jubatus::core::driver::classifier::converter_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; fv_converter::datum_to_fv_converter &gt; converter_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00063">classifier.hpp:63</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_af9431743b86b66c73c155bbabbbb26ec"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">jubatus::core::driver::classifier::classifier_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; classifier_base &gt; classifier_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00064">classifier.hpp:64</a></div></div>
+<p>References <a class="el" href="driver_2classifier_8hpp_source.html#l00070">classifier_</a>, <a class="el" href="driver_2classifier_8hpp_source.html#l00069">converter_</a>, <a class="el" href="vector__util_8cpp_source.html#l00028">jubatus::core::common::sort_and_merge()</a>, and <a class="el" href="namespacejubatus_1_1core_1_1common_1_1jsonconfig.html#a04e9956193c1365cc36e32875c892543">jubatus::core::common::jsonconfig::v()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                                                                         {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <a class="code" href="namespacejubatus_1_1core_1_1common.html#a8834396b360f728705429b812ec15690">common::sfv_t</a> <a class="code" href="namespacejubatus_1_1core_1_1common_1_1jsonconfig.html#a04e9956193c1365cc36e32875c892543">v</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#a1b30f56dc4254d6cccbc4c85721a6cca">converter_</a>-&gt;convert_and_update_weight(data, v);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="namespacejubatus_1_1core_1_1common.html#a2150d5f5d851aaad02781b8592d064bb">common::sort_and_merge</a>(v);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">classifier_</a>-&gt;train(v, label);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_a1b30f56dc4254d6cccbc4c85721a6cca"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#a1b30f56dc4254d6cccbc4c85721a6cca">jubatus::core::driver::classifier::converter_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; fv_converter::datum_to_fv_converter &gt; converter_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00069">classifier.hpp:69</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_af9431743b86b66c73c155bbabbbb26ec"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">jubatus::core::driver::classifier::classifier_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; classifier_base &gt; classifier_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00070">classifier.hpp:70</a></div></div>
 <div class="ttc" id="namespacejubatus_1_1core_1_1common_1_1jsonconfig_html_a04e9956193c1365cc36e32875c892543"><div class="ttname"><a href="namespacejubatus_1_1core_1_1common_1_1jsonconfig.html#a04e9956193c1365cc36e32875c892543">jubatus::core::common::jsonconfig::v</a></div><div class="ttdeci">std::vector&lt; T &gt; v(size)</div></div>
 <div class="ttc" id="namespacejubatus_1_1core_1_1common_html_a2150d5f5d851aaad02781b8592d064bb"><div class="ttname"><a href="namespacejubatus_1_1core_1_1common.html#a2150d5f5d851aaad02781b8592d064bb">jubatus::core::common::sort_and_merge</a></div><div class="ttdeci">void sort_and_merge(sfv_t &amp;sfv)</div><div class="ttdef"><b>Definition:</b> <a href="vector__util_8cpp_source.html#l00028">vector_util.cpp:28</a></div></div>
 <div class="ttc" id="namespacejubatus_1_1core_1_1common_html_a8834396b360f728705429b812ec15690"><div class="ttname"><a href="namespacejubatus_1_1core_1_1common.html#a8834396b360f728705429b812ec15690">jubatus::core::common::sfv_t</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; std::string, float &gt; &gt; sfv_t</div><div class="ttdef"><b>Definition:</b> <a href="common_2type_8hpp_source.html#l00029">type.hpp:29</a></div></div>
@@ -566,24 +566,24 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classjubatus_1_1core_1_1driver_1_1driver__base.html#a55e468838825a4f4534b0a0a895bfb1f">jubatus::core::driver::driver_base</a>.</p>
 
-<p>Definition at line <a class="el" href="classifier_8cpp_source.html#l00099">99</a> of file <a class="el" href="classifier_8cpp_source.html">classifier.cpp</a>.</p>
+<p>Definition at line <a class="el" href="classifier_8cpp_source.html#l00100">100</a> of file <a class="el" href="classifier_8cpp_source.html">classifier.cpp</a>.</p>
 
-<p>References <a class="el" href="driver_2classifier_8hpp_source.html#l00064">classifier_</a>, <a class="el" href="driver_2classifier_8hpp_source.html#l00063">converter_</a>, <a class="el" href="mixable__helper_8hpp_source.html#l00063">jubatus::core::framework::linear_mixable_helper&lt; Model, Diff &gt;::get_model()</a>, and <a class="el" href="driver_2classifier_8hpp_source.html#l00065">wm_</a>.</p>
-<div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                                       {</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordflow">if</span> (o.type != msgpack::type::ARRAY || o.via.array.size != 2) {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">throw</span> msgpack::type_error();</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  }</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="comment">// clear before load</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">classifier_</a>-&gt;clear();</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#a1b30f56dc4254d6cccbc4c85721a6cca">converter_</a>-&gt;clear_weights();</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">classifier_</a>-&gt;unpack(o.via.array.ptr[0]);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#a7c5b1a2084a7b87071a83b487761338c">wm_</a>.<a class="code" href="classjubatus_1_1core_1_1framework_1_1linear__mixable__helper.html#a84aea9b6cc47f51dd8064ea1243b8992">get_model</a>()-&gt;unpack(o.via.array.ptr[1]);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1framework_1_1linear__mixable__helper_html_a84aea9b6cc47f51dd8064ea1243b8992"><div class="ttname"><a href="classjubatus_1_1core_1_1framework_1_1linear__mixable__helper.html#a84aea9b6cc47f51dd8064ea1243b8992">jubatus::core::framework::linear_mixable_helper::get_model</a></div><div class="ttdeci">model_ptr get_model() const </div><div class="ttdef"><b>Definition:</b> <a href="mixable__helper_8hpp_source.html#l00063">mixable_helper.hpp:63</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_a1b30f56dc4254d6cccbc4c85721a6cca"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#a1b30f56dc4254d6cccbc4c85721a6cca">jubatus::core::driver::classifier::converter_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; fv_converter::datum_to_fv_converter &gt; converter_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00063">classifier.hpp:63</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_af9431743b86b66c73c155bbabbbb26ec"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">jubatus::core::driver::classifier::classifier_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; classifier_base &gt; classifier_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00064">classifier.hpp:64</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_a7c5b1a2084a7b87071a83b487761338c"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#a7c5b1a2084a7b87071a83b487761338c">jubatus::core::driver::classifier::wm_</a></div><div class="ttdeci">fv_converter::mixable_weight_manager wm_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00065">classifier.hpp:65</a></div></div>
+<p>References <a class="el" href="driver_2classifier_8hpp_source.html#l00070">classifier_</a>, <a class="el" href="driver_2classifier_8hpp_source.html#l00069">converter_</a>, <a class="el" href="mixable__helper_8hpp_source.html#l00062">jubatus::core::framework::linear_mixable_helper&lt; Model, Diff &gt;::get_model()</a>, and <a class="el" href="driver_2classifier_8hpp_source.html#l00071">wm_</a>.</p>
+<div class="fragment"><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                                       {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keywordflow">if</span> (o.type != msgpack::type::ARRAY || o.via.array.size != 2) {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">throw</span> msgpack::type_error();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="comment">// clear before load</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">classifier_</a>-&gt;clear();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#a1b30f56dc4254d6cccbc4c85721a6cca">converter_</a>-&gt;clear_weights();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">classifier_</a>-&gt;unpack(o.via.array.ptr[0]);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1driver_1_1classifier.html#a7c5b1a2084a7b87071a83b487761338c">wm_</a>.<a class="code" href="classjubatus_1_1core_1_1framework_1_1linear__mixable__helper.html#a84aea9b6cc47f51dd8064ea1243b8992">get_model</a>()-&gt;unpack(o.via.array.ptr[1]);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1framework_1_1linear__mixable__helper_html_a84aea9b6cc47f51dd8064ea1243b8992"><div class="ttname"><a href="classjubatus_1_1core_1_1framework_1_1linear__mixable__helper.html#a84aea9b6cc47f51dd8064ea1243b8992">jubatus::core::framework::linear_mixable_helper::get_model</a></div><div class="ttdeci">model_ptr get_model() const </div><div class="ttdef"><b>Definition:</b> <a href="mixable__helper_8hpp_source.html#l00062">mixable_helper.hpp:62</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_a1b30f56dc4254d6cccbc4c85721a6cca"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#a1b30f56dc4254d6cccbc4c85721a6cca">jubatus::core::driver::classifier::converter_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; fv_converter::datum_to_fv_converter &gt; converter_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00069">classifier.hpp:69</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_af9431743b86b66c73c155bbabbbb26ec"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#af9431743b86b66c73c155bbabbbb26ec">jubatus::core::driver::classifier::classifier_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; classifier_base &gt; classifier_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00070">classifier.hpp:70</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1driver_1_1classifier_html_a7c5b1a2084a7b87071a83b487761338c"><div class="ttname"><a href="classjubatus_1_1core_1_1driver_1_1classifier.html#a7c5b1a2084a7b87071a83b487761338c">jubatus::core::driver::classifier::wm_</a></div><div class="ttdeci">fv_converter::mixable_weight_manager wm_</div><div class="ttdef"><b>Definition:</b> <a href="driver_2classifier_8hpp_source.html#l00071">classifier.hpp:71</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -615,9 +615,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="driver_2classifier_8hpp_source.html#l00064">64</a> of file <a class="el" href="driver_2classifier_8hpp_source.html">classifier.hpp</a>.</p>
+<p>Definition at line <a class="el" href="driver_2classifier_8hpp_source.html#l00070">70</a> of file <a class="el" href="driver_2classifier_8hpp_source.html">classifier.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="classifier_8cpp_source.html#l00041">classifier()</a>, <a class="el" href="classifier_8cpp_source.html#l00063">classify()</a>, <a class="el" href="classifier_8cpp_source.html#l00081">clear()</a>, <a class="el" href="classifier_8cpp_source.html#l00077">delete_label()</a>, <a class="el" href="classifier_8cpp_source.html#l00086">get_labels()</a>, <a class="el" href="classifier_8cpp_source.html#l00073">get_status()</a>, <a class="el" href="classifier_8cpp_source.html#l00093">pack()</a>, <a class="el" href="classifier_8cpp_source.html#l00089">set_label()</a>, <a class="el" href="classifier_8cpp_source.html#l00056">train()</a>, and <a class="el" href="classifier_8cpp_source.html#l00099">unpack()</a>.</p>
+<p>Referenced by <a class="el" href="classifier_8cpp_source.html#l00042">classifier()</a>, <a class="el" href="classifier_8cpp_source.html#l00064">classify()</a>, <a class="el" href="classifier_8cpp_source.html#l00082">clear()</a>, <a class="el" href="classifier_8cpp_source.html#l00078">delete_label()</a>, <a class="el" href="classifier_8cpp_source.html#l00087">get_labels()</a>, <a class="el" href="classifier_8cpp_source.html#l00074">get_status()</a>, <a class="el" href="classifier_8cpp_source.html#l00094">pack()</a>, <a class="el" href="classifier_8cpp_source.html#l00090">set_label()</a>, <a class="el" href="classifier_8cpp_source.html#l00057">train()</a>, and <a class="el" href="classifier_8cpp_source.html#l00100">unpack()</a>.</p>
 
 </div>
 </div>
@@ -639,9 +639,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="driver_2classifier_8hpp_source.html#l00063">63</a> of file <a class="el" href="driver_2classifier_8hpp_source.html">classifier.hpp</a>.</p>
+<p>Definition at line <a class="el" href="driver_2classifier_8hpp_source.html#l00069">69</a> of file <a class="el" href="driver_2classifier_8hpp_source.html">classifier.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="classifier_8cpp_source.html#l00041">classifier()</a>, <a class="el" href="classifier_8cpp_source.html#l00063">classify()</a>, <a class="el" href="classifier_8cpp_source.html#l00081">clear()</a>, <a class="el" href="classifier_8cpp_source.html#l00056">train()</a>, and <a class="el" href="classifier_8cpp_source.html#l00099">unpack()</a>.</p>
+<p>Referenced by <a class="el" href="classifier_8cpp_source.html#l00042">classifier()</a>, <a class="el" href="classifier_8cpp_source.html#l00064">classify()</a>, <a class="el" href="classifier_8cpp_source.html#l00082">clear()</a>, <a class="el" href="classifier_8cpp_source.html#l00057">train()</a>, and <a class="el" href="classifier_8cpp_source.html#l00100">unpack()</a>.</p>
 
 </div>
 </div>
@@ -663,9 +663,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="driver_2classifier_8hpp_source.html#l00065">65</a> of file <a class="el" href="driver_2classifier_8hpp_source.html">classifier.hpp</a>.</p>
+<p>Definition at line <a class="el" href="driver_2classifier_8hpp_source.html#l00071">71</a> of file <a class="el" href="driver_2classifier_8hpp_source.html">classifier.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="classifier_8cpp_source.html#l00041">classifier()</a>, <a class="el" href="classifier_8cpp_source.html#l00093">pack()</a>, and <a class="el" href="classifier_8cpp_source.html#l00099">unpack()</a>.</p>
+<p>Referenced by <a class="el" href="classifier_8cpp_source.html#l00042">classifier()</a>, <a class="el" href="classifier_8cpp_source.html#l00094">pack()</a>, and <a class="el" href="classifier_8cpp_source.html#l00100">unpack()</a>.</p>
 
 </div>
 </div>
@@ -676,7 +676,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:38 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:08 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

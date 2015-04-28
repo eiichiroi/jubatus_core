@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -113,12 +113,14 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:ae778f5cab0f79f877931e91d86919a0e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjubatus_1_1core_1_1bandit_1_1softmax__config.html#ae778f5cab0f79f877931e91d86919a0e">assume_unrewarded</a></td></tr>
+<tr class="separator:ae778f5cab0f79f877931e91d86919a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab072e95dd0793bf8cdb6f0fe3d6f814c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjubatus_1_1core_1_1bandit_1_1softmax__config.html#ab072e95dd0793bf8cdb6f0fe3d6f814c">tau</a></td></tr>
 <tr class="separator:ab072e95dd0793bf8cdb6f0fe3d6f814c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="bandit__factory_8cpp_source.html#l00043">43</a> of file <a class="el" href="bandit__factory_8cpp_source.html">bandit_factory.cpp</a>.</p>
+<p>Definition at line <a class="el" href="bandit__factory_8cpp_source.html#l00053">53</a> of file <a class="el" href="bandit__factory_8cpp_source.html">bandit_factory.cpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a8ca929d6431c21e8dc3a6e396710d855"></a>
 <div class="memitem">
@@ -144,15 +146,32 @@ template&lt;class Ar &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bandit__factory_8cpp_source.html#l00047">47</a> of file <a class="el" href="bandit__factory_8cpp_source.html">bandit_factory.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                         {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    ar &amp; JUBA_MEMBER(<a class="code" href="structjubatus_1_1core_1_1bandit_1_1softmax__config.html#ab072e95dd0793bf8cdb6f0fe3d6f814c">tau</a>);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  }</div>
-<div class="ttc" id="structjubatus_1_1core_1_1bandit_1_1softmax__config_html_ab072e95dd0793bf8cdb6f0fe3d6f814c"><div class="ttname"><a href="structjubatus_1_1core_1_1bandit_1_1softmax__config.html#ab072e95dd0793bf8cdb6f0fe3d6f814c">jubatus::core::bandit::softmax_config::tau</a></div><div class="ttdeci">double tau</div><div class="ttdef"><b>Definition:</b> <a href="bandit__factory_8cpp_source.html#l00044">bandit_factory.cpp:44</a></div></div>
+<p>Definition at line <a class="el" href="bandit__factory_8cpp_source.html#l00058">58</a> of file <a class="el" href="bandit__factory_8cpp_source.html">bandit_factory.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                         {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    ar &amp; JUBA_MEMBER(<a class="code" href="structjubatus_1_1core_1_1bandit_1_1softmax__config.html#ae778f5cab0f79f877931e91d86919a0e">assume_unrewarded</a>) &amp; JUBA_MEMBER(<a class="code" href="structjubatus_1_1core_1_1bandit_1_1softmax__config.html#ab072e95dd0793bf8cdb6f0fe3d6f814c">tau</a>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  }</div>
+<div class="ttc" id="structjubatus_1_1core_1_1bandit_1_1softmax__config_html_ab072e95dd0793bf8cdb6f0fe3d6f814c"><div class="ttname"><a href="structjubatus_1_1core_1_1bandit_1_1softmax__config.html#ab072e95dd0793bf8cdb6f0fe3d6f814c">jubatus::core::bandit::softmax_config::tau</a></div><div class="ttdeci">double tau</div><div class="ttdef"><b>Definition:</b> <a href="bandit__factory_8cpp_source.html#l00055">bandit_factory.cpp:55</a></div></div>
+<div class="ttc" id="structjubatus_1_1core_1_1bandit_1_1softmax__config_html_ae778f5cab0f79f877931e91d86919a0e"><div class="ttname"><a href="structjubatus_1_1core_1_1bandit_1_1softmax__config.html#ae778f5cab0f79f877931e91d86919a0e">jubatus::core::bandit::softmax_config::assume_unrewarded</a></div><div class="ttdeci">bool assume_unrewarded</div><div class="ttdef"><b>Definition:</b> <a href="bandit__factory_8cpp_source.html#l00054">bandit_factory.cpp:54</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="ae778f5cab0f79f877931e91d86919a0e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool jubatus::core::bandit::softmax_config::assume_unrewarded</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="bandit__factory_8cpp_source.html#l00054">54</a> of file <a class="el" href="bandit__factory_8cpp_source.html">bandit_factory.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="bandit__factory_8cpp_source.html#l00073">jubatus::core::bandit::bandit_factory::create()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ab072e95dd0793bf8cdb6f0fe3d6f814c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -163,9 +182,9 @@ template&lt;class Ar &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="bandit__factory_8cpp_source.html#l00044">44</a> of file <a class="el" href="bandit__factory_8cpp_source.html">bandit_factory.cpp</a>.</p>
+<p>Definition at line <a class="el" href="bandit__factory_8cpp_source.html#l00055">55</a> of file <a class="el" href="bandit__factory_8cpp_source.html">bandit_factory.cpp</a>.</p>
 
-<p>Referenced by <a class="el" href="bandit__factory_8cpp_source.html#l00061">jubatus::core::bandit::bandit_factory::create()</a>.</p>
+<p>Referenced by <a class="el" href="bandit__factory_8cpp_source.html#l00073">jubatus::core::bandit::bandit_factory::create()</a>.</p>
 
 </div>
 </div>
@@ -175,7 +194,7 @@ template&lt;class Ar &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:37 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:05 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

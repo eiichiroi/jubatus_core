@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -154,7 +154,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad86b9744279be39be1f8e7adf4ebae2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae372cb0fa705c763621f72a4794ffc80"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1burst_1_1burst_1_1impl__.html#ae372cb0fa705c763621f72a4794ffc80">impl_</a> (const <a class="el" href="structjubatus_1_1core_1_1burst_1_1burst__options.html">burst_options</a> &amp;options)</td></tr>
 <tr class="separator:ae372cb0fa705c763621f72a4794ffc80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c6855379e0677214a7ae0b08ca1c5a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1burst_1_1burst_1_1impl__.html#a0c6855379e0677214a7ae0b08ca1c5a9">pack</a> (<a class="el" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">framework::packer</a> &amp;packer) const </td></tr>
+<tr class="memitem:a0c6855379e0677214a7ae0b08ca1c5a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1burst_1_1burst_1_1impl__.html#a0c6855379e0677214a7ae0b08ca1c5a9">pack</a> (<a class="el" href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">framework::packer</a> &amp;packer) const </td></tr>
 <tr class="separator:a0c6855379e0677214a7ae0b08ca1c5a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9ed0383a5a903551991b12c981de126"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1burst_1_1burst_1_1impl__.html#ae9ed0383a5a903551991b12c981de126">put_diff</a> (const <a class="el" href="classjubatus_1_1core_1_1burst_1_1burst_1_1diff__t.html">diff_t</a> &amp;diff)</td></tr>
 <tr class="separator:ae9ed0383a5a903551991b12c981de126"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1029,7 +1029,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void jubatus::core::burst::burst::impl_::pack </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">framework::packer</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">framework::packer</a> &amp;&#160;</td>
           <td class="paramname"><em>packer</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -1045,29 +1045,29 @@ Here is the caller graph for this function:</div>
 
 <p>References <a class="el" href="burst_2burst_8cpp_source.html#l00450">aggregators_</a>, <a class="el" href="burst_2burst_8cpp_source.html#l00449">options_</a>, and <a class="el" href="burst_2burst_8cpp_source.html#l00451">storages_</a>.</p>
 <div class="fragment"><div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;                                           {</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">packer</a>.pack_array(3);</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">packer</a>.pack_array(3);</div>
 <div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">packer</a>.pack(<a class="code" href="classjubatus_1_1core_1_1burst_1_1burst_1_1impl__.html#a8691da1492bedc0d94911f75bb98067f">options_</a>);</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">packer</a>.pack(<a class="code" href="classjubatus_1_1core_1_1burst_1_1burst_1_1impl__.html#a8691da1492bedc0d94911f75bb98067f">options_</a>);</div>
 <div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">packer</a>.pack_map(<a class="code" href="classjubatus_1_1core_1_1burst_1_1burst_1_1impl__.html#a475775d16a8c16254cdb1eb79d5aa8f9">storages_</a>.size());</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">packer</a>.pack_map(<a class="code" href="classjubatus_1_1core_1_1burst_1_1burst_1_1impl__.html#a475775d16a8c16254cdb1eb79d5aa8f9">storages_</a>.size());</div>
 <div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    <span class="keywordflow">for</span> (storages_t::const_iterator iter = <a class="code" href="classjubatus_1_1core_1_1burst_1_1burst_1_1impl__.html#a475775d16a8c16254cdb1eb79d5aa8f9">storages_</a>.begin();</div>
 <div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;         iter != <a class="code" href="classjubatus_1_1core_1_1burst_1_1burst_1_1impl__.html#a475775d16a8c16254cdb1eb79d5aa8f9">storages_</a>.end(); ++iter) {</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;      <a class="code" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">packer</a>.pack(iter-&gt;first);</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;      <a class="code" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">packer</a>.pack_array(2);</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;      <a class="code" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">packer</a>.pack(iter-&gt;second.get_params());</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;      iter-&gt;second.get_storage()-&gt;pack(<a class="code" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">packer</a>);</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;      <a class="code" href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">packer</a>.pack(iter-&gt;first);</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;      <a class="code" href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">packer</a>.pack_array(2);</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;      <a class="code" href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">packer</a>.pack(iter-&gt;second.get_params());</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;      iter-&gt;second.get_storage()-&gt;pack(<a class="code" href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">packer</a>);</div>
 <div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    }</div>
 <div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">packer</a>.pack_map(<a class="code" href="classjubatus_1_1core_1_1burst_1_1burst_1_1impl__.html#a7c6d47c8111638e534676ea1046767b2">aggregators_</a>.size());</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">packer</a>.pack_map(<a class="code" href="classjubatus_1_1core_1_1burst_1_1burst_1_1impl__.html#a7c6d47c8111638e534676ea1046767b2">aggregators_</a>.size());</div>
 <div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    <span class="keywordflow">for</span> (aggregators_t::const_iterator iter = <a class="code" href="classjubatus_1_1core_1_1burst_1_1burst_1_1impl__.html#a7c6d47c8111638e534676ea1046767b2">aggregators_</a>.begin();</div>
 <div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;         iter != <a class="code" href="classjubatus_1_1core_1_1burst_1_1burst_1_1impl__.html#a7c6d47c8111638e534676ea1046767b2">aggregators_</a>.end(); ++iter) {</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;      <a class="code" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">packer</a>.pack(iter-&gt;first);</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;      iter-&gt;second.get_aggregator()-&gt;pack(<a class="code" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">packer</a>);</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;      <a class="code" href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">packer</a>.pack(iter-&gt;first);</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;      iter-&gt;second.get_aggregator()-&gt;pack(<a class="code" href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">packer</a>);</div>
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    }</div>
 <div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;  }</div>
 <div class="ttc" id="classjubatus_1_1core_1_1burst_1_1burst_1_1impl___html_a7c6d47c8111638e534676ea1046767b2"><div class="ttname"><a href="classjubatus_1_1core_1_1burst_1_1burst_1_1impl__.html#a7c6d47c8111638e534676ea1046767b2">jubatus::core::burst::burst::impl_::aggregators_</a></div><div class="ttdeci">aggregators_t aggregators_</div><div class="ttdef"><b>Definition:</b> <a href="burst_2burst_8cpp_source.html#l00450">burst.cpp:450</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1burst_1_1burst_1_1impl___html_a8691da1492bedc0d94911f75bb98067f"><div class="ttname"><a href="classjubatus_1_1core_1_1burst_1_1burst_1_1impl__.html#a8691da1492bedc0d94911f75bb98067f">jubatus::core::burst::burst::impl_::options_</a></div><div class="ttdeci">burst_options options_</div><div class="ttdef"><b>Definition:</b> <a href="burst_2burst_8cpp_source.html#l00449">burst.cpp:449</a></div></div>
-<div class="ttc" id="namespacejubatus_1_1core_1_1framework_html_a99dd974442916078e2a3458b1e85b254"><div class="ttname"><a href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">jubatus::core::framework::packer</a></div><div class="ttdeci">msgpack::packer&lt; jubatus_packer &gt; packer</div><div class="ttdef"><b>Definition:</b> <a href="packer_8hpp_source.html#l00043">packer.hpp:43</a></div></div>
+<div class="ttc" id="namespacejubatus_1_1core_1_1framework_html_a352834534d9a8d7a43dc7c73f0b65aa9"><div class="ttname"><a href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">jubatus::core::framework::packer</a></div><div class="ttdeci">msgpack::packer&lt; jubatus_packer &gt; packer</div><div class="ttdef"><b>Definition:</b> <a href="bandit__base_8hpp_source.html#l00031">bandit_base.hpp:31</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1burst_1_1burst_1_1impl___html_a475775d16a8c16254cdb1eb79d5aa8f9"><div class="ttname"><a href="classjubatus_1_1core_1_1burst_1_1burst_1_1impl__.html#a475775d16a8c16254cdb1eb79d5aa8f9">jubatus::core::burst::burst::impl_::storages_</a></div><div class="ttdeci">storages_t storages_</div><div class="ttdef"><b>Definition:</b> <a href="burst_2burst_8cpp_source.html#l00451">burst.cpp:451</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -1547,7 +1547,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:37 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:06 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

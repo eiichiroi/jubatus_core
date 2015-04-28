@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -116,178 +116,179 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;jubatus/util/lang/cast.h&quot;</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;../storage/fixed_size_heap.hpp&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="lsh__function_8hpp.html">lsh_function.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">using</span> std::map;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">using</span> std::pair;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">using</span> std::make_pair;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">using</span> std::string;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">using</span> std::vector;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">using</span> jubatus::util::lang::lexical_cast;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">using</span> <a class="code" href="classjubatus_1_1core_1_1table_1_1column__table.html">jubatus::core::table::column_table</a>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">using</span> <a class="code" href="classjubatus_1_1core_1_1table_1_1column__type.html">jubatus::core::table::column_type</a>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">using</span> <a class="code" href="structjubatus_1_1core_1_1table_1_1owner.html">jubatus::core::table::owner</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">using</span> <a class="code" href="namespacejubatus_1_1core_1_1table.html#a597ad028f4c4f02f9ec3aab000a02f9f">jubatus::core::table::bit_vector</a>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">using</span> <a class="code" href="namespacejubatus_1_1core_1_1table.html#ac5074e1e00bd8f05cc49ae3f5aa210d3">jubatus::core::table::const_bit_vector_column</a>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">using</span> <a class="code" href="namespacejubatus_1_1core_1_1table.html#a6519096bafcb787207136979bc849b4c">jubatus::core::table::const_float_column</a>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacejubatus.html">jubatus</a> {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">namespace </span>core {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">namespace </span>nearest_neighbor {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">namespace </span>{</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keywordtype">float</span> squared_l2norm(<span class="keyword">const</span> <a class="code" href="namespacejubatus_1_1core_1_1common.html#a8834396b360f728705429b812ec15690">common::sfv_t</a>&amp; sfv) {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordtype">float</span> sqnorm = 0;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; sfv.size(); ++i) {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    sqnorm += sfv[i].second * sfv[i].second;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordflow">return</span> sqnorm;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keywordtype">float</span> l2norm(<span class="keyword">const</span> <a class="code" href="namespacejubatus_1_1core_1_1common.html#a8834396b360f728705429b812ec15690">common::sfv_t</a>&amp; sfv) {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordflow">return</span> std::sqrt(squared_l2norm(sfv));</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}  <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<a class="code" href="classjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh.html#a494b86db31db2666435ef605fc51d4a9">euclid_lsh::euclid_lsh</a>(</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">const</span> config&amp; conf,</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    jubatus::util::lang::shared_ptr&lt;column_table&gt; table,</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>)</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    : nearest_neighbor_base(table, id) {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  set_config(conf);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  vector&lt;column_type&gt; schema;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  fill_schema(schema);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  get_table()-&gt;init(schema);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;euclid_lsh::euclid_lsh(</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">const</span> config&amp; conf,</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    jubatus::util::lang::shared_ptr&lt;column_table&gt; table,</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    vector&lt;column_type&gt;&amp; schema,</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>)</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    : nearest_neighbor_base(table, id) {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  set_config(conf);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  fill_schema(schema);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh.html#a0fe67925b0c2205f08948d2d94dd3fd0">   82</a></span>&#160;<span class="keywordtype">void</span> euclid_lsh::set_row(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; <span class="keywordtype">id</span>, <span class="keyword">const</span> <a class="code" href="namespacejubatus_1_1core_1_1common.html#a8834396b360f728705429b812ec15690">common::sfv_t</a>&amp; sfv) {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="comment">// TODO(beam2d): support nested algorithm, e.g. when used by lof and then we</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="comment">// cannot suppose that the first two columns are assigned to euclid_lsh.</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  get_table()-&gt;add(<span class="keywordtype">id</span>, <a class="code" href="structjubatus_1_1core_1_1table_1_1owner.html">owner</a>(my_id_), <a class="code" href="namespacejubatus_1_1core_1_1nearest__neighbor.html#add7ba4da560d8e510506a89ffb760705">cosine_lsh</a>(sfv, hash_num_), l2norm(sfv));</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">void</span> euclid_lsh::neighbor_row(</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacejubatus_1_1core_1_1common.html#a8834396b360f728705429b812ec15690">common::sfv_t</a>&amp; query,</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    vector&lt;pair&lt;string, float&gt; &gt;&amp; ids,</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    uint64_t ret_num)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  neighbor_row_from_hash(</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <a class="code" href="namespacejubatus_1_1core_1_1nearest__neighbor.html#add7ba4da560d8e510506a89ffb760705">cosine_lsh</a>(query, hash_num_),</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      l2norm(query),</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      ids,</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      ret_num);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keywordtype">void</span> euclid_lsh::neighbor_row(</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">const</span> std::string&amp; query_id,</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    vector&lt;pair&lt;string, float&gt; &gt;&amp; ids,</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    uint64_t ret_num)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keyword">const</span> pair&lt;bool, uint64_t&gt; maybe_index =</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      get_const_table()-&gt;exact_match(query_id);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordflow">if</span> (!maybe_index.first) {</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    ids.clear();</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  }</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keyword">const</span> <a class="code" href="namespacejubatus_1_1core_1_1table.html#a597ad028f4c4f02f9ec3aab000a02f9f">bit_vector</a> bv = lsh_column()[maybe_index.second];</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">float</span> norm = norm_column()[maybe_index.second];</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  neighbor_row_from_hash(bv, norm, ids, ret_num);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="classjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh.html#ae12d74a7d0e387db3f2df536b62850bb">  115</a></span>&#160;<span class="keywordtype">void</span> euclid_lsh::set_config(<span class="keyword">const</span> <a class="code" href="structjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh_1_1config.html">config</a>&amp; conf) {</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keywordflow">if</span> (!(1 &lt;= conf.<a class="code" href="structjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh_1_1config.html#a690ecbdee9a71fcef53a65cc83e8bb3b">hash_num</a>)) {</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="common_2exception_8hpp.html#aff10b0eb90b477115ab3955c3995d327">JUBATUS_EXCEPTION</a>(</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <a class="code" href="classjubatus_1_1core_1_1common_1_1invalid__parameter.html">common::invalid_parameter</a>(<span class="stringliteral">&quot;1 &lt;= hash_num&quot;</span>));</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  }</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  hash_num_ = conf.<a class="code" href="structjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh_1_1config.html#a690ecbdee9a71fcef53a65cc83e8bb3b">hash_num</a>;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="classjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh.html#ae5c5b1573fda727f6a57c74d77916438">  124</a></span>&#160;<span class="keywordtype">void</span> euclid_lsh::fill_schema(vector&lt;column_type&gt;&amp; schema) {</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  first_column_id_ = schema.size();</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  schema.push_back(<a class="code" href="classjubatus_1_1core_1_1table_1_1column__type.html">column_type</a>(column_type::bit_vector_type, hash_num_));</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  schema.push_back(<a class="code" href="classjubatus_1_1core_1_1table_1_1column__type.html">column_type</a>(column_type::float_type));</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
-<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="classjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh.html#a1ad20c0b5088ba771062c793062a32c0">  130</a></span>&#160;<a class="code" href="namespacejubatus_1_1core_1_1table.html#ac5074e1e00bd8f05cc49ae3f5aa210d3">const_bit_vector_column</a>&amp; euclid_lsh::lsh_column()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="keywordflow">return</span> get_const_table()-&gt;get_bit_vector_column(first_column_id_);</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh.html#af041465380465a2a3c6b39e6b43f17bc">  134</a></span>&#160;<a class="code" href="namespacejubatus_1_1core_1_1table.html#a6519096bafcb787207136979bc849b4c">const_float_column</a>&amp; euclid_lsh::norm_column()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="keywordflow">return</span> get_const_table()-&gt;get_float_column(first_column_id_ + 1);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;}</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
-<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="classjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh.html#a78e01a1d9690a382594185c68a24da83">  138</a></span>&#160;<span class="keywordtype">void</span> euclid_lsh::neighbor_row_from_hash(</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacejubatus_1_1core_1_1table.html#a597ad028f4c4f02f9ec3aab000a02f9f">bit_vector</a>&amp; bv,</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordtype">float</span> norm,</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    vector&lt;pair&lt;string, float&gt; &gt;&amp; ids,</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    uint64_t ret_num)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  jubatus::util::lang::shared_ptr&lt;const column_table&gt; table = get_const_table();</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1storage_1_1fixed__size__heap.html">jubatus::core::storage::fixed_size_heap&lt;pair&lt;float, size_t&gt;</a> &gt; heap(ret_num);</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  {</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1table.html#ac5074e1e00bd8f05cc49ae3f5aa210d3">const_bit_vector_column</a>&amp; bv_col = lsh_column();</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1table.html#a6519096bafcb787207136979bc849b4c">const_float_column</a>&amp; norm_col = norm_column();</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">float</span> denom = bv.bit_num();</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; table-&gt;size(); ++i) {</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">size_t</span> hamm_dist = bv.calc_hamming_distance(bv_col[i]);</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">float</span> theta = hamm_dist * M_PI / denom;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">float</span> score =</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;          norm_col[i] * (norm_col[i] - 2 * norm * std::cos(theta));</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;      heap.<a class="code" href="classjubatus_1_1core_1_1storage_1_1fixed__size__heap.html#a97c8d5265fe3cee77d8459c079700b81">push</a>(make_pair(score, i));</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    }</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  }</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  vector&lt;pair&lt;float, size_t&gt; &gt; sorted;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  heap.<a class="code" href="classjubatus_1_1core_1_1storage_1_1fixed__size__heap.html#a21dc286c4b443a00c613ac7a27cd1924">get_sorted</a>(sorted);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  ids.clear();</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="namespacejubatus_1_1core_1_1regression.html#afc6ae9d9819f97d3d182378f51a5ce88">squared_norm</a> = norm * norm;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; sorted.size(); ++i) {</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    ids.push_back(make_pair(table-&gt;get_key(sorted[i].second),</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                            std::sqrt(squared_norm + sorted[i].first)));</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  }</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;}</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;}  <span class="comment">// namespace nearest_neighbor</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;}  <span class="comment">// namespace core</span></div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;}  <span class="comment">// namespace jubatus</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;../storage/column_table.hpp&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="lsh__function_8hpp.html">lsh_function.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">using</span> std::map;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">using</span> std::pair;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">using</span> std::make_pair;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">using</span> std::string;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">using</span> std::vector;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">using</span> jubatus::util::lang::lexical_cast;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">using</span> <a class="code" href="classjubatus_1_1core_1_1storage_1_1column__table.html">jubatus::core::storage::column_table</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">using</span> <a class="code" href="classjubatus_1_1core_1_1storage_1_1column__type.html">jubatus::core::storage::column_type</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">using</span> <a class="code" href="structjubatus_1_1core_1_1storage_1_1owner.html">jubatus::core::storage::owner</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">using</span> <a class="code" href="namespacejubatus_1_1core_1_1storage.html#a3cf0187e222972df167b5f987cbc3b4e">jubatus::core::storage::bit_vector</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">using</span> <a class="code" href="namespacejubatus_1_1core_1_1storage.html#a63667ab3881bcaac68e5c148d4bc05ff">jubatus::core::storage::const_bit_vector_column</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">using</span> <a class="code" href="namespacejubatus_1_1core_1_1storage.html#adb29be410ddc86ec6fee895fe7a1ac8a">jubatus::core::storage::const_float_column</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacejubatus.html">jubatus</a> {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">namespace </span>core {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">namespace </span>nearest_neighbor {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">namespace </span>{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">float</span> squared_l2norm(<span class="keyword">const</span> <a class="code" href="namespacejubatus_1_1core_1_1common.html#a8834396b360f728705429b812ec15690">common::sfv_t</a>&amp; sfv) {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordtype">float</span> sqnorm = 0;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; sfv.size(); ++i) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    sqnorm += sfv[i].second * sfv[i].second;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordflow">return</span> sqnorm;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">float</span> l2norm(<span class="keyword">const</span> <a class="code" href="namespacejubatus_1_1core_1_1common.html#a8834396b360f728705429b812ec15690">common::sfv_t</a>&amp; sfv) {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordflow">return</span> std::sqrt(squared_l2norm(sfv));</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}  <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<a class="code" href="classjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh.html#a0805e0270c0529afdd2fbd6469c0ccbf">euclid_lsh::euclid_lsh</a>(</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">const</span> config&amp; conf,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    jubatus::util::lang::shared_ptr&lt;column_table&gt; table,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    : nearest_neighbor_base(table, id) {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  set_config(conf);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  vector&lt;column_type&gt; schema;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  fill_schema(schema);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  get_table()-&gt;init(schema);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;euclid_lsh::euclid_lsh(</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">const</span> config&amp; conf,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    jubatus::util::lang::shared_ptr&lt;column_table&gt; table,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    vector&lt;column_type&gt;&amp; schema,</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    : nearest_neighbor_base(table, id) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  set_config(conf);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  fill_schema(schema);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh.html#a0fe67925b0c2205f08948d2d94dd3fd0">   83</a></span>&#160;<span class="keywordtype">void</span> euclid_lsh::set_row(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; <span class="keywordtype">id</span>, <span class="keyword">const</span> <a class="code" href="namespacejubatus_1_1core_1_1common.html#a8834396b360f728705429b812ec15690">common::sfv_t</a>&amp; sfv) {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="comment">// TODO(beam2d): support nested algorithm, e.g. when used by lof and then we</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="comment">// cannot suppose that the first two columns are assigned to euclid_lsh.</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  get_table()-&gt;add(<span class="keywordtype">id</span>, <a class="code" href="structjubatus_1_1core_1_1storage_1_1owner.html">owner</a>(my_id_), <a class="code" href="namespacejubatus_1_1core_1_1nearest__neighbor.html#ab773a4c647d221e9477f85c5f106c993">cosine_lsh</a>(sfv, hash_num_), l2norm(sfv));</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keywordtype">void</span> euclid_lsh::neighbor_row(</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacejubatus_1_1core_1_1common.html#a8834396b360f728705429b812ec15690">common::sfv_t</a>&amp; query,</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    vector&lt;pair&lt;string, float&gt; &gt;&amp; ids,</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    uint64_t ret_num)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  neighbor_row_from_hash(</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      <a class="code" href="namespacejubatus_1_1core_1_1nearest__neighbor.html#ab773a4c647d221e9477f85c5f106c993">cosine_lsh</a>(query, hash_num_),</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      l2norm(query),</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      ids,</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      ret_num);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keywordtype">void</span> euclid_lsh::neighbor_row(</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">const</span> std::string&amp; query_id,</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    vector&lt;pair&lt;string, float&gt; &gt;&amp; ids,</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    uint64_t ret_num)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keyword">const</span> pair&lt;bool, uint64_t&gt; maybe_index =</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      get_const_table()-&gt;exact_match(query_id);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordflow">if</span> (!maybe_index.first) {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    ids.clear();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keyword">const</span> <a class="code" href="namespacejubatus_1_1core_1_1storage.html#a3cf0187e222972df167b5f987cbc3b4e">bit_vector</a> bv = lsh_column()[maybe_index.second];</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">float</span> norm = norm_column()[maybe_index.second];</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  neighbor_row_from_hash(bv, norm, ids, ret_num);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="classjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh.html#ae12d74a7d0e387db3f2df536b62850bb">  116</a></span>&#160;<span class="keywordtype">void</span> euclid_lsh::set_config(<span class="keyword">const</span> <a class="code" href="structjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh_1_1config.html">config</a>&amp; conf) {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keywordflow">if</span> (!(1 &lt;= conf.<a class="code" href="structjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh_1_1config.html#a690ecbdee9a71fcef53a65cc83e8bb3b">hash_num</a>)) {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="common_2exception_8hpp.html#aff10b0eb90b477115ab3955c3995d327">JUBATUS_EXCEPTION</a>(</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <a class="code" href="classjubatus_1_1core_1_1common_1_1invalid__parameter.html">common::invalid_parameter</a>(<span class="stringliteral">&quot;1 &lt;= hash_num&quot;</span>));</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  hash_num_ = conf.<a class="code" href="structjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh_1_1config.html#a690ecbdee9a71fcef53a65cc83e8bb3b">hash_num</a>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="classjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh.html#a4fcd68aa365ff14731fe4397b0a28127">  125</a></span>&#160;<span class="keywordtype">void</span> euclid_lsh::fill_schema(vector&lt;column_type&gt;&amp; schema) {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  first_column_id_ = schema.size();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  schema.push_back(<a class="code" href="classjubatus_1_1core_1_1storage_1_1column__type.html">column_type</a>(column_type::bit_vector_type, hash_num_));</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  schema.push_back(<a class="code" href="classjubatus_1_1core_1_1storage_1_1column__type.html">column_type</a>(column_type::float_type));</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;}</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="classjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh.html#a1ad20c0b5088ba771062c793062a32c0">  131</a></span>&#160;<a class="code" href="namespacejubatus_1_1core_1_1storage.html#a63667ab3881bcaac68e5c148d4bc05ff">const_bit_vector_column</a>&amp; euclid_lsh::lsh_column()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordflow">return</span> get_const_table()-&gt;get_bit_vector_column(first_column_id_);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;}</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="classjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh.html#af041465380465a2a3c6b39e6b43f17bc">  135</a></span>&#160;<a class="code" href="namespacejubatus_1_1core_1_1storage.html#adb29be410ddc86ec6fee895fe7a1ac8a">const_float_column</a>&amp; euclid_lsh::norm_column()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <span class="keywordflow">return</span> get_const_table()-&gt;get_float_column(first_column_id_ + 1);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="classjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh.html#a965be3bafb41ccf5dc7e37e41c7dd0a5">  139</a></span>&#160;<span class="keywordtype">void</span> euclid_lsh::neighbor_row_from_hash(</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacejubatus_1_1core_1_1storage.html#a3cf0187e222972df167b5f987cbc3b4e">bit_vector</a>&amp; bv,</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordtype">float</span> norm,</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    vector&lt;pair&lt;string, float&gt; &gt;&amp; ids,</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    uint64_t ret_num)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  jubatus::util::lang::shared_ptr&lt;const column_table&gt; table = get_const_table();</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1storage_1_1fixed__size__heap.html">jubatus::core::storage::fixed_size_heap&lt;pair&lt;float, size_t&gt;</a> &gt; heap(ret_num);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1storage.html#a63667ab3881bcaac68e5c148d4bc05ff">const_bit_vector_column</a>&amp; bv_col = lsh_column();</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1storage.html#adb29be410ddc86ec6fee895fe7a1ac8a">const_float_column</a>&amp; norm_col = norm_column();</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">float</span> denom = bv.bit_num();</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; table-&gt;size(); ++i) {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">size_t</span> hamm_dist = bv.calc_hamming_distance(bv_col[i]);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">float</span> theta = hamm_dist * M_PI / denom;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">float</span> score =</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;          norm_col[i] * (norm_col[i] - 2 * norm * std::cos(theta));</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;      heap.<a class="code" href="classjubatus_1_1core_1_1storage_1_1fixed__size__heap.html#a97c8d5265fe3cee77d8459c079700b81">push</a>(make_pair(score, i));</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  vector&lt;pair&lt;float, size_t&gt; &gt; sorted;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  heap.<a class="code" href="classjubatus_1_1core_1_1storage_1_1fixed__size__heap.html#a21dc286c4b443a00c613ac7a27cd1924">get_sorted</a>(sorted);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  ids.clear();</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="namespacejubatus_1_1core_1_1regression.html#afc6ae9d9819f97d3d182378f51a5ce88">squared_norm</a> = norm * norm;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; sorted.size(); ++i) {</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    ids.push_back(make_pair(table-&gt;get_key(sorted[i].second),</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                            std::sqrt(squared_norm + sorted[i].first)));</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  }</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;}</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;}  <span class="comment">// namespace nearest_neighbor</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;}  <span class="comment">// namespace core</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;}  <span class="comment">// namespace jubatus</span></div>
 <div class="ttc" id="classjubatus_1_1core_1_1common_1_1invalid__parameter_html"><div class="ttname"><a href="classjubatus_1_1core_1_1common_1_1invalid__parameter.html">jubatus::core::common::invalid_parameter</a></div><div class="ttdef"><b>Definition:</b> <a href="common_2exception_8hpp_source.html#l00349">exception.hpp:349</a></div></div>
-<div class="ttc" id="structjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh_1_1config_html_a690ecbdee9a71fcef53a65cc83e8bb3b"><div class="ttname"><a href="structjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh_1_1config.html#a690ecbdee9a71fcef53a65cc83e8bb3b">jubatus::core::nearest_neighbor::euclid_lsh::config::hash_num</a></div><div class="ttdeci">int32_t hash_num</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor_2euclid__lsh_8hpp_source.html#l00040">euclid_lsh.hpp:40</a></div></div>
+<div class="ttc" id="structjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh_1_1config_html_a690ecbdee9a71fcef53a65cc83e8bb3b"><div class="ttname"><a href="structjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh_1_1config.html#a690ecbdee9a71fcef53a65cc83e8bb3b">jubatus::core::nearest_neighbor::euclid_lsh::config::hash_num</a></div><div class="ttdeci">int32_t hash_num</div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor_2euclid__lsh_8hpp_source.html#l00043">euclid_lsh.hpp:43</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1storage_1_1fixed__size__heap_html_a21dc286c4b443a00c613ac7a27cd1924"><div class="ttname"><a href="classjubatus_1_1core_1_1storage_1_1fixed__size__heap.html#a21dc286c4b443a00c613ac7a27cd1924">jubatus::core::storage::fixed_size_heap::get_sorted</a></div><div class="ttdeci">void get_sorted(std::vector&lt; T &gt; &amp;v) const </div><div class="ttdef"><b>Definition:</b> <a href="fixed__size__heap_8hpp_source.html#l00056">fixed_size_heap.hpp:56</a></div></div>
 <div class="ttc" id="namespacejubatus_html"><div class="ttname"><a href="namespacejubatus.html">jubatus</a></div><div class="ttdef"><b>Definition:</b> <a href="anomaly__base_8cpp_source.html#l00029">anomaly_base.cpp:29</a></div></div>
-<div class="ttc" id="namespacejubatus_1_1core_1_1table_html_ac5074e1e00bd8f05cc49ae3f5aa210d3"><div class="ttname"><a href="namespacejubatus_1_1core_1_1table.html#ac5074e1e00bd8f05cc49ae3f5aa210d3">jubatus::core::table::const_bit_vector_column</a></div><div class="ttdeci">const bit_vector_column const_bit_vector_column</div><div class="ttdef"><b>Definition:</b> <a href="abstract__column_8hpp_source.html#l00377">abstract_column.hpp:377</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1table_1_1column__table_html"><div class="ttname"><a href="classjubatus_1_1core_1_1table_1_1column__table.html">jubatus::core::table::column_table</a></div><div class="ttdef"><b>Definition:</b> <a href="column__table_8hpp_source.html#l00056">column_table.hpp:56</a></div></div>
+<div class="ttc" id="structjubatus_1_1core_1_1storage_1_1owner_html"><div class="ttname"><a href="structjubatus_1_1core_1_1storage_1_1owner.html">jubatus::core::storage::owner</a></div><div class="ttdef"><b>Definition:</b> <a href="owner_8hpp_source.html#l00028">owner.hpp:28</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1storage_1_1column__type_html"><div class="ttname"><a href="classjubatus_1_1core_1_1storage_1_1column__type.html">jubatus::core::storage::column_type</a></div><div class="ttdef"><b>Definition:</b> <a href="column__type_8hpp_source.html#l00032">column_type.hpp:32</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1storage_1_1fixed__size__heap_html_a97c8d5265fe3cee77d8459c079700b81"><div class="ttname"><a href="classjubatus_1_1core_1_1storage_1_1fixed__size__heap.html#a97c8d5265fe3cee77d8459c079700b81">jubatus::core::storage::fixed_size_heap::push</a></div><div class="ttdeci">void push(const T &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="fixed__size__heap_8hpp_source.html#l00041">fixed_size_heap.hpp:41</a></div></div>
 <div class="ttc" id="namespacejubatus_1_1core_1_1regression_html_afc6ae9d9819f97d3d182378f51a5ce88"><div class="ttname"><a href="namespacejubatus_1_1core_1_1regression.html#afc6ae9d9819f97d3d182378f51a5ce88">jubatus::core::regression::squared_norm</a></div><div class="ttdeci">static float squared_norm(const common::sfv_t &amp;fv)</div><div class="ttdef"><b>Definition:</b> <a href="regression_2passive__aggressive_8cpp_source.html#l00054">passive_aggressive.cpp:54</a></div></div>
+<div class="ttc" id="namespacejubatus_1_1core_1_1storage_html_a63667ab3881bcaac68e5c148d4bc05ff"><div class="ttname"><a href="namespacejubatus_1_1core_1_1storage.html#a63667ab3881bcaac68e5c148d4bc05ff">jubatus::core::storage::const_bit_vector_column</a></div><div class="ttdeci">const bit_vector_column const_bit_vector_column</div><div class="ttdef"><b>Definition:</b> <a href="bit__vector__ranking_8hpp_source.html#l00033">bit_vector_ranking.hpp:33</a></div></div>
 <div class="ttc" id="common_2exception_8hpp_html_aff10b0eb90b477115ab3955c3995d327"><div class="ttname"><a href="common_2exception_8hpp.html#aff10b0eb90b477115ab3955c3995d327">JUBATUS_EXCEPTION</a></div><div class="ttdeci">#define JUBATUS_EXCEPTION(e)</div><div class="ttdef"><b>Definition:</b> <a href="common_2exception_8hpp_source.html#l00079">exception.hpp:79</a></div></div>
 <div class="ttc" id="lsh__function_8hpp_html"><div class="ttname"><a href="lsh__function_8hpp.html">lsh_function.hpp</a></div></div>
-<div class="ttc" id="structjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh_1_1config_html"><div class="ttname"><a href="structjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh_1_1config.html">jubatus::core::nearest_neighbor::euclid_lsh::config</a></div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor_2euclid__lsh_8hpp_source.html#l00034">euclid_lsh.hpp:34</a></div></div>
+<div class="ttc" id="structjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh_1_1config_html"><div class="ttname"><a href="structjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh_1_1config.html">jubatus::core::nearest_neighbor::euclid_lsh::config</a></div><div class="ttdef"><b>Definition:</b> <a href="nearest__neighbor_2euclid__lsh_8hpp_source.html#l00037">euclid_lsh.hpp:37</a></div></div>
 <div class="ttc" id="classjubatus_1_1core_1_1storage_1_1fixed__size__heap_html"><div class="ttname"><a href="classjubatus_1_1core_1_1storage_1_1fixed__size__heap.html">jubatus::core::storage::fixed_size_heap</a></div><div class="ttdef"><b>Definition:</b> <a href="fixed__size__heap_8hpp_source.html#l00029">fixed_size_heap.hpp:29</a></div></div>
 <div class="ttc" id="nearest__neighbor_2euclid__lsh_8hpp_html"><div class="ttname"><a href="nearest__neighbor_2euclid__lsh_8hpp.html">euclid_lsh.hpp</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh_html_a494b86db31db2666435ef605fc51d4a9"><div class="ttname"><a href="classjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh.html#a494b86db31db2666435ef605fc51d4a9">jubatus::core::nearest_neighbor::euclid_lsh::euclid_lsh</a></div><div class="ttdeci">euclid_lsh(const config &amp;conf, jubatus::util::lang::shared_ptr&lt; table::column_table &gt; table, const std::string &amp;id)</div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1table_1_1column__type_html"><div class="ttname"><a href="classjubatus_1_1core_1_1table_1_1column__type.html">jubatus::core::table::column_type</a></div><div class="ttdef"><b>Definition:</b> <a href="column__type_8hpp_source.html#l00032">column_type.hpp:32</a></div></div>
-<div class="ttc" id="namespacejubatus_1_1core_1_1table_html_a597ad028f4c4f02f9ec3aab000a02f9f"><div class="ttname"><a href="namespacejubatus_1_1core_1_1table.html#a597ad028f4c4f02f9ec3aab000a02f9f">jubatus::core::table::bit_vector</a></div><div class="ttdeci">bit_vector_base&lt; uint64_t &gt; bit_vector</div><div class="ttdef"><b>Definition:</b> <a href="table_2column_2bit__vector_8hpp_source.html#l00417">bit_vector.hpp:417</a></div></div>
-<div class="ttc" id="structjubatus_1_1core_1_1table_1_1owner_html"><div class="ttname"><a href="structjubatus_1_1core_1_1table_1_1owner.html">jubatus::core::table::owner</a></div><div class="ttdef"><b>Definition:</b> <a href="owner_8hpp_source.html#l00028">owner.hpp:28</a></div></div>
+<div class="ttc" id="namespacejubatus_1_1core_1_1storage_html_a3cf0187e222972df167b5f987cbc3b4e"><div class="ttname"><a href="namespacejubatus_1_1core_1_1storage.html#a3cf0187e222972df167b5f987cbc3b4e">jubatus::core::storage::bit_vector</a></div><div class="ttdeci">bit_vector_base&lt; uint64_t &gt; bit_vector</div><div class="ttdef"><b>Definition:</b> <a href="bit__vector__ranking_8hpp_source.html#l00027">bit_vector_ranking.hpp:27</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1storage_1_1column__table_html"><div class="ttname"><a href="classjubatus_1_1core_1_1storage_1_1column__table.html">jubatus::core::storage::column_table</a></div><div class="ttdef"><b>Definition:</b> <a href="column__table_8hpp_source.html#l00055">column_table.hpp:55</a></div></div>
 <div class="ttc" id="namespacejubatus_1_1core_1_1common_html_a8834396b360f728705429b812ec15690"><div class="ttname"><a href="namespacejubatus_1_1core_1_1common.html#a8834396b360f728705429b812ec15690">jubatus::core::common::sfv_t</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; std::string, float &gt; &gt; sfv_t</div><div class="ttdef"><b>Definition:</b> <a href="common_2type_8hpp_source.html#l00029">type.hpp:29</a></div></div>
-<div class="ttc" id="namespacejubatus_1_1core_1_1nearest__neighbor_html_add7ba4da560d8e510506a89ffb760705"><div class="ttname"><a href="namespacejubatus_1_1core_1_1nearest__neighbor.html#add7ba4da560d8e510506a89ffb760705">jubatus::core::nearest_neighbor::cosine_lsh</a></div><div class="ttdeci">bit_vector cosine_lsh(const common::sfv_t &amp;sfv, uint32_t hash_num)</div><div class="ttdef"><b>Definition:</b> <a href="lsh__function_8cpp_source.html#l00051">lsh_function.cpp:51</a></div></div>
-<div class="ttc" id="namespacejubatus_1_1core_1_1table_html_a6519096bafcb787207136979bc849b4c"><div class="ttname"><a href="namespacejubatus_1_1core_1_1table.html#a6519096bafcb787207136979bc849b4c">jubatus::core::table::const_float_column</a></div><div class="ttdeci">const typed_column&lt; float &gt; const_float_column</div><div class="ttdef"><b>Definition:</b> <a href="abstract__column_8hpp_source.html#l00374">abstract_column.hpp:374</a></div></div>
+<div class="ttc" id="namespacejubatus_1_1core_1_1nearest__neighbor_html_ab773a4c647d221e9477f85c5f106c993"><div class="ttname"><a href="namespacejubatus_1_1core_1_1nearest__neighbor.html#ab773a4c647d221e9477f85c5f106c993">jubatus::core::nearest_neighbor::cosine_lsh</a></div><div class="ttdeci">bit_vector cosine_lsh(const common::sfv_t &amp;sfv, uint32_t hash_num)</div><div class="ttdef"><b>Definition:</b> <a href="lsh__function_8cpp_source.html#l00053">lsh_function.cpp:53</a></div></div>
+<div class="ttc" id="namespacejubatus_1_1core_1_1storage_html_adb29be410ddc86ec6fee895fe7a1ac8a"><div class="ttname"><a href="namespacejubatus_1_1core_1_1storage.html#adb29be410ddc86ec6fee895fe7a1ac8a">jubatus::core::storage::const_float_column</a></div><div class="ttdeci">const typed_column&lt; float &gt; const_float_column</div><div class="ttdef"><b>Definition:</b> <a href="abstract__column_8hpp_source.html#l00381">abstract_column.hpp:381</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh_html_a0805e0270c0529afdd2fbd6469c0ccbf"><div class="ttname"><a href="classjubatus_1_1core_1_1nearest__neighbor_1_1euclid__lsh.html#a0805e0270c0529afdd2fbd6469c0ccbf">jubatus::core::nearest_neighbor::euclid_lsh::euclid_lsh</a></div><div class="ttdeci">euclid_lsh(const config &amp;conf, jubatus::util::lang::shared_ptr&lt; storage::column_table &gt; table, const std::string &amp;id)</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:35 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:03 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

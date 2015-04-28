@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -97,13 +97,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;jubatus/util/math/random.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="hash_8hpp_source.html">../common/hash.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="common_2type_8hpp_source.html">../common/type.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="bit__vector_8hpp_source.html">../storage/bit_vector.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="lsh__function_8hpp_source.html">lsh_function.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for lsh_function.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="lsh__function_8cpp__incl.png" border="0" usemap="#jubatus_2core_2nearest__neighbor_2lsh__function_8cpp" alt=""/></div>
 <map name="jubatus_2core_2nearest__neighbor_2lsh__function_8cpp" id="jubatus_2core_2nearest__neighbor_2lsh__function_8cpp">
-<area shape="rect" id="node4" href="hash_8hpp.html" title="../common/hash.hpp" alt="" coords="43,252,185,277"/><area shape="rect" id="node7" href="lsh__function_8hpp.html" title="lsh_function.hpp" alt="" coords="311,92,429,117"/><area shape="rect" id="node8" href="common_2type_8hpp.html" title="../common/type.hpp" alt="" coords="209,252,347,277"/><area shape="rect" id="node10" href="table_2column_2bit__vector_8hpp.html" title="../table/column/bit\l_vector.hpp" alt="" coords="887,165,1013,204"/><area shape="rect" id="node15" href="assert_8hpp.html" title="../../common/assert.hpp" alt="" coords="1511,252,1672,277"/><area shape="rect" id="node18" href="common_2exception_8hpp.html" title="../../common/exception.hpp" alt="" coords="1199,325,1381,351"/><area shape="rect" id="node29" href="big__endian_8hpp.html" title="../../common/big_endian.hpp" alt="" coords="473,252,662,277"/><area shape="rect" id="node31" href="storage__exception_8hpp.html" title="../storage_exception.hpp" alt="" coords="1013,252,1180,277"/><area shape="rect" id="node26" href="exception__info_8hpp.html" title="exception_info.hpp" alt="" coords="1627,399,1761,424"/></map>
+<area shape="rect" id="node4" href="hash_8hpp.html" title="../common/hash.hpp" alt="" coords="1765,239,1907,264"/><area shape="rect" id="node7" href="common_2type_8hpp.html" title="../common/type.hpp" alt="" coords="1931,239,2069,264"/><area shape="rect" id="node9" href="bit__vector_8hpp.html" title="../storage/bit_vector.hpp" alt="" coords="1165,165,1328,191"/><area shape="rect" id="node31" href="lsh__function_8hpp.html" title="lsh_function.hpp" alt="" coords="1674,92,1792,117"/><area shape="rect" id="node13" href="assert_8hpp.html" title="../common/assert.hpp" alt="" coords="160,385,309,411"/><area shape="rect" id="node17" href="common_2exception_8hpp.html" title="../common/exception.hpp" alt="" coords="776,312,946,337"/><area shape="rect" id="node28" href="big__endian_8hpp.html" title="../common/big_endian.hpp" alt="" coords="1309,239,1488,264"/><area shape="rect" id="node30" href="storage__exception_8hpp.html" title="storage_exception.hpp" alt="" coords="1027,239,1183,264"/><area shape="rect" id="node25" href="exception__info_8hpp.html" title="exception_info.hpp" alt="" coords="605,385,738,411"/></map>
 </div>
 </div>
 <p><a href="lsh__function_8cpp_source.html">Go to the source code of this file.</a></p>
@@ -121,15 +123,15 @@ Namespaces</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a5327537ebeed9181646a1371644f7a85"><td class="memItemLeft" align="right" valign="top">bit_vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1nearest__neighbor.html#a5327537ebeed9181646a1371644f7a85">jubatus::core::nearest_neighbor::binarize</a> (const vector&lt; float &gt; &amp;proj)</td></tr>
 <tr class="separator:a5327537ebeed9181646a1371644f7a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add7ba4da560d8e510506a89ffb760705"><td class="memItemLeft" align="right" valign="top">bit_vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1nearest__neighbor.html#add7ba4da560d8e510506a89ffb760705">jubatus::core::nearest_neighbor::cosine_lsh</a> (const common::sfv_t &amp;sfv, uint32_t hash_num)</td></tr>
-<tr class="separator:add7ba4da560d8e510506a89ffb760705"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab773a4c647d221e9477f85c5f106c993"><td class="memItemLeft" align="right" valign="top">bit_vector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1nearest__neighbor.html#ab773a4c647d221e9477f85c5f106c993">jubatus::core::nearest_neighbor::cosine_lsh</a> (const common::sfv_t &amp;sfv, uint32_t hash_num)</td></tr>
+<tr class="separator:ab773a4c647d221e9477f85c5f106c993"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a2e6700871bb164e6d7aa48b191d501"><td class="memItemLeft" align="right" valign="top">vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1nearest__neighbor.html#a4a2e6700871bb164e6d7aa48b191d501">jubatus::core::nearest_neighbor::random_projection</a> (const common::sfv_t &amp;sfv, uint32_t hash_num)</td></tr>
 <tr class="separator:a4a2e6700871bb164e6d7aa48b191d501"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:36 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:05 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

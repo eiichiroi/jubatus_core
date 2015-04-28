@@ -10,6 +10,6 @@ var searchData=
   ['vc_5f',['vc_',['../classjubatus_1_1core_1_1framework_1_1mixable__versioned__table.html#a905fa9544c5f11f9a924e9704a23cd43',1,'jubatus::core::framework::mixable_versioned_table']]],
   ['version_5f',['version_',['../structjubatus_1_1core_1_1fv__converter_1_1versioned__weight__diff.html#a49edc55e625e927187aed7d6b5662cbf',1,'jubatus::core::fv_converter::versioned_weight_diff::version_()'],['../classjubatus_1_1core_1_1fv__converter_1_1weight__manager.html#a984778494058629b09db70561fead7bf',1,'jubatus::core::fv_converter::weight_manager::version_()'],['../classjubatus_1_1core_1_1storage_1_1sparse__matrix__storage.html#ac7b4d5b0f4f9f529d2dc286bcad4693d',1,'jubatus::core::storage::sparse_matrix_storage::version_()']]],
   ['version_5fnumber_5f',['version_number_',['../classjubatus_1_1core_1_1storage_1_1version.html#ad7fc9f125c2ad84b399d34e3fb474b6f',1,'jubatus::core::storage::version']]],
-  ['versions_5f',['versions_',['../classjubatus_1_1core_1_1table_1_1column__table.html#a92e45061b87d9ad14768a9fa09e5ba13',1,'jubatus::core::table::column_table']]],
+  ['versions_5f',['versions_',['../classjubatus_1_1core_1_1storage_1_1column__table.html#aa8d365f1577997d218ac2b40da40f67b',1,'jubatus::core::storage::column_table']]],
   ['vs',['vs',['../namespacejubatus_1_1core_1_1common_1_1jsonconfig.html#ace26a87f913396fe1416db49891b56d5',1,'jubatus::core::common::jsonconfig']]]
 ];

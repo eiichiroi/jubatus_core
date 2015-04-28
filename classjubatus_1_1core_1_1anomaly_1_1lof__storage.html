@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -148,7 +148,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae6626e647cda13314d47bf91b7faa446"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4770ac896dfcd2977f3080a985a219c4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4770ac896dfcd2977f3080a985a219c4">name</a> () const </td></tr>
 <tr class="separator:a4770ac896dfcd2977f3080a985a219c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2998f15dd8badf1338590705d9f2a93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#ad2998f15dd8badf1338590705d9f2a93">pack</a> (<a class="el" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">framework::packer</a> &amp;packer) const </td></tr>
+<tr class="memitem:ad2998f15dd8badf1338590705d9f2a93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#ad2998f15dd8badf1338590705d9f2a93">pack</a> (<a class="el" href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">framework::packer</a> &amp;packer) const </td></tr>
 <tr class="separator:ad2998f15dd8badf1338590705d9f2a93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2af327ee2539d66250bbfde6080b90ea"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a2af327ee2539d66250bbfde6080b90ea">put_diff</a> (const <a class="el" href="namespacejubatus_1_1core_1_1anomaly.html#a65ba969b8f3c2362d139729e0ccd2258">lof_table_t</a> &amp;mixed_diff)</td></tr>
 <tr class="separator:a2af327ee2539d66250bbfde6080b90ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -211,7 +211,7 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="lof__storage_8hpp_source.html#l00051">51</a> of file <a class="el" href="lof__storage_8hpp_source.html">lof_storage.hpp</a>.</p>
+<p>Definition at line <a class="el" href="lof__storage_8hpp_source.html#l00052">52</a> of file <a class="el" href="lof__storage_8hpp_source.html">lof_storage.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="acef3d953c67e9b590871c127b2bf8aca"></a>
 <div class="memitem">
@@ -235,11 +235,11 @@ Private Attributes</h2></td></tr>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;              recommender::euclid_lsh::config())), <span class="stringliteral">&quot;&quot;</span>)) {</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
 <div class="ttc" id="classjubatus_1_1core_1_1recommender_1_1recommender__factory_html_af142a3d231a808293ebcde7d6c3a7940"><div class="ttname"><a href="classjubatus_1_1core_1_1recommender_1_1recommender__factory.html#af142a3d231a808293ebcde7d6c3a7940">jubatus::core::recommender::recommender_factory::create_recommender</a></div><div class="ttdeci">static jubatus::util::lang::shared_ptr&lt; recommender_base &gt; create_recommender(const std::string &amp;name, const common::jsonconfig::config &amp;param, const std::string &amp;id)</div><div class="ttdef"><b>Definition:</b> <a href="recommender__factory_8cpp_source.html#l00056">recommender_factory.cpp:56</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_adfb108b4859883584e2186f33d5b71a2"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#adfb108b4859883584e2186f33d5b71a2">jubatus::core::anomaly::lof_storage::DEFAULT_NEIGHBOR_NUM</a></div><div class="ttdeci">static const uint32_t DEFAULT_NEIGHBOR_NUM</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00053">lof_storage.hpp:53</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a5531ae02faea5d6a9fe6d8c6a7a09100"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5531ae02faea5d6a9fe6d8c6a7a09100">jubatus::core::anomaly::lof_storage::DEFAULT_REVERSE_NN_NUM</a></div><div class="ttdeci">static const uint32_t DEFAULT_REVERSE_NN_NUM</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00054">lof_storage.hpp:54</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a9cae728978ffb8293c2d11aec0db0bea"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">jubatus::core::anomaly::lof_storage::nn_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; core::recommender::recommender_base &gt; nn_engine_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00164">lof_storage.hpp:164</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a5f3882d5b445c5fb33fe78a401ecd95e"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5f3882d5b445c5fb33fe78a401ecd95e">jubatus::core::anomaly::lof_storage::neighbor_num_</a></div><div class="ttdeci">uint32_t neighbor_num_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00160">lof_storage.hpp:160</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a65ed6209b7608d4e4e5bcff537f8c14e"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a65ed6209b7608d4e4e5bcff537f8c14e">jubatus::core::anomaly::lof_storage::reverse_nn_num_</a></div><div class="ttdeci">uint32_t reverse_nn_num_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00161">lof_storage.hpp:161</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_adfb108b4859883584e2186f33d5b71a2"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#adfb108b4859883584e2186f33d5b71a2">jubatus::core::anomaly::lof_storage::DEFAULT_NEIGHBOR_NUM</a></div><div class="ttdeci">static const uint32_t DEFAULT_NEIGHBOR_NUM</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00054">lof_storage.hpp:54</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a5531ae02faea5d6a9fe6d8c6a7a09100"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5531ae02faea5d6a9fe6d8c6a7a09100">jubatus::core::anomaly::lof_storage::DEFAULT_REVERSE_NN_NUM</a></div><div class="ttdeci">static const uint32_t DEFAULT_REVERSE_NN_NUM</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00055">lof_storage.hpp:55</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a9cae728978ffb8293c2d11aec0db0bea"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">jubatus::core::anomaly::lof_storage::nn_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; core::recommender::recommender_base &gt; nn_engine_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00165">lof_storage.hpp:165</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a5f3882d5b445c5fb33fe78a401ecd95e"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5f3882d5b445c5fb33fe78a401ecd95e">jubatus::core::anomaly::lof_storage::neighbor_num_</a></div><div class="ttdeci">uint32_t neighbor_num_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00161">lof_storage.hpp:161</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a65ed6209b7608d4e4e5bcff537f8c14e"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a65ed6209b7608d4e4e5bcff537f8c14e">jubatus::core::anomaly::lof_storage::reverse_nn_num_</a></div><div class="ttdeci">uint32_t reverse_nn_num_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00162">lof_storage.hpp:162</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -342,18 +342,18 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00118">118</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00125">125</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
 
-<p>References <a class="el" href="lof__storage_8hpp_source.html#l00157">lof_table_</a>, <a class="el" href="lof__storage_8hpp_source.html#l00158">lof_table_diff_</a>, and <a class="el" href="lof__storage_8hpp_source.html#l00164">nn_engine_</a>.</p>
-<div class="fragment"><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                        {</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <a class="code" href="namespacejubatus_1_1core_1_1anomaly.html#a65ba969b8f3c2362d139729e0ccd2258">lof_table_t</a>().swap(<a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#ab77eb1c8aff0b6e11369113df0bf8270">lof_table_</a>);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <a class="code" href="namespacejubatus_1_1core_1_1anomaly.html#a65ba969b8f3c2362d139729e0ccd2258">lof_table_t</a>().swap(<a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">lof_table_diff_</a>);</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">nn_engine_</a>-&gt;clear();</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a9cae728978ffb8293c2d11aec0db0bea"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">jubatus::core::anomaly::lof_storage::nn_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; core::recommender::recommender_base &gt; nn_engine_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00164">lof_storage.hpp:164</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a4b2bf4b9acbdc1ae03e07185bc2796c5"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">jubatus::core::anomaly::lof_storage::lof_table_diff_</a></div><div class="ttdeci">lof_table_t lof_table_diff_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00158">lof_storage.hpp:158</a></div></div>
-<div class="ttc" id="namespacejubatus_1_1core_1_1anomaly_html_a65ba969b8f3c2362d139729e0ccd2258"><div class="ttname"><a href="namespacejubatus_1_1core_1_1anomaly.html#a65ba969b8f3c2362d139729e0ccd2258">jubatus::core::anomaly::lof_table_t</a></div><div class="ttdeci">jubatus::util::data::unordered_map&lt; std::string, lof_entry &gt; lof_table_t</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00049">lof_storage.hpp:49</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_ab77eb1c8aff0b6e11369113df0bf8270"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#ab77eb1c8aff0b6e11369113df0bf8270">jubatus::core::anomaly::lof_storage::lof_table_</a></div><div class="ttdeci">lof_table_t lof_table_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00157">lof_storage.hpp:157</a></div></div>
+<p>References <a class="el" href="lof__storage_8hpp_source.html#l00158">lof_table_</a>, <a class="el" href="lof__storage_8hpp_source.html#l00159">lof_table_diff_</a>, and <a class="el" href="lof__storage_8hpp_source.html#l00165">nn_engine_</a>.</p>
+<div class="fragment"><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                        {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <a class="code" href="namespacejubatus_1_1core_1_1anomaly.html#a65ba969b8f3c2362d139729e0ccd2258">lof_table_t</a>().swap(<a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#ab77eb1c8aff0b6e11369113df0bf8270">lof_table_</a>);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <a class="code" href="namespacejubatus_1_1core_1_1anomaly.html#a65ba969b8f3c2362d139729e0ccd2258">lof_table_t</a>().swap(<a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">lof_table_diff_</a>);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">nn_engine_</a>-&gt;clear();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a9cae728978ffb8293c2d11aec0db0bea"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">jubatus::core::anomaly::lof_storage::nn_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; core::recommender::recommender_base &gt; nn_engine_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00165">lof_storage.hpp:165</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a4b2bf4b9acbdc1ae03e07185bc2796c5"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">jubatus::core::anomaly::lof_storage::lof_table_diff_</a></div><div class="ttdeci">lof_table_t lof_table_diff_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00159">lof_storage.hpp:159</a></div></div>
+<div class="ttc" id="namespacejubatus_1_1core_1_1anomaly_html_a65ba969b8f3c2362d139729e0ccd2258"><div class="ttname"><a href="namespacejubatus_1_1core_1_1anomaly.html#a65ba969b8f3c2362d139729e0ccd2258">jubatus::core::anomaly::lof_table_t</a></div><div class="ttdeci">jubatus::util::data::unordered_map&lt; std::string, lof_entry &gt; lof_table_t</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00050">lof_storage.hpp:50</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_ab77eb1c8aff0b6e11369113df0bf8270"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#ab77eb1c8aff0b6e11369113df0bf8270">jubatus::core::anomaly::lof_storage::lof_table_</a></div><div class="ttdeci">lof_table_t lof_table_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00158">lof_storage.hpp:158</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -440,35 +440,37 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Based on the given neighbors (list of ID and the distance to it), get the LRDs for each neighbor points and return the calculated LRD for the point. <code>neighbors</code> donesn't have to be sorted. </p>
 
-<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00247">247</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00260">260</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
 
-<p>References <a class="el" href="lof__storage_8cpp_source.html#l00151">get_kdist()</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00168">get_lrd()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                                                      {</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  <span class="keywordflow">if</span> (neighbors.empty()) {</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordflow">return</span> numeric_limits&lt;float&gt;::infinity();</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  }</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  <span class="comment">// collect lrd values of the nearest neighbors</span></div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  neighbor_lrd.clear();</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; neighbors.size(); ++i) {</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    neighbor_lrd[neighbors[i].first] = <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a2f0d82758aa93a5cfc081796c8b4a9eb">get_lrd</a>(neighbors[i].first);</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  }</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  <span class="comment">// return lrd of the query</span></div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  <span class="keywordtype">float</span> sum_reachability = 0;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; neighbors.size(); ++i) {</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    sum_reachability += max(neighbors[i].second, <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a171632f47b346d2edcf0e071a6a6511c">get_kdist</a>(neighbors[i].first));</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  }</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  <span class="keywordflow">if</span> (sum_reachability == 0) {</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keywordflow">return</span> numeric_limits&lt;float&gt;::infinity();</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  }</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  <span class="keywordflow">return</span> neighbors.size() / sum_reachability;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a171632f47b346d2edcf0e071a6a6511c"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a171632f47b346d2edcf0e071a6a6511c">jubatus::core::anomaly::lof_storage::get_kdist</a></div><div class="ttdeci">float get_kdist(const std::string &amp;row) const </div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00151">lof_storage.cpp:151</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a2f0d82758aa93a5cfc081796c8b4a9eb"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a2f0d82758aa93a5cfc081796c8b4a9eb">jubatus::core::anomaly::lof_storage::get_lrd</a></div><div class="ttdeci">float get_lrd(const std::string &amp;row) const </div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00168">lof_storage.cpp:168</a></div></div>
+<p>References <a class="el" href="lof__storage_8cpp_source.html#l00158">get_kdist()</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00175">get_lrd()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                                                      {</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  <span class="keywordflow">if</span> (neighbors.empty()) {</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordflow">return</span> numeric_limits&lt;float&gt;::infinity();</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  }</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  <span class="comment">// collect lrd values of the nearest neighbors</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  neighbor_lrd.clear();</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; neighbors.size(); ++i) {</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    neighbor_lrd[neighbors[i].first] = <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a2f0d82758aa93a5cfc081796c8b4a9eb">get_lrd</a>(neighbors[i].first);</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  }</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  <span class="comment">// return lrd of the query</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  <span class="keywordtype">float</span> sum_reachability = 0;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; neighbors.size(); ++i) {</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    sum_reachability += max(neighbors[i].second, <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a171632f47b346d2edcf0e071a6a6511c">get_kdist</a>(neighbors[i].first));</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  }</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  <span class="comment">// All the neighbors seem to have a same feature vector.</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  <span class="keywordflow">if</span> (sum_reachability == 0) {</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keywordflow">return</span> numeric_limits&lt;float&gt;::infinity();</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  }</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  <span class="keywordflow">return</span> neighbors.size() / sum_reachability;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a171632f47b346d2edcf0e071a6a6511c"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a171632f47b346d2edcf0e071a6a6511c">jubatus::core::anomaly::lof_storage::get_kdist</a></div><div class="ttdeci">float get_kdist(const std::string &amp;row) const </div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00158">lof_storage.cpp:158</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a2f0d82758aa93a5cfc081796c8b4a9eb"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a2f0d82758aa93a5cfc081796c8b4a9eb">jubatus::core::anomaly::lof_storage::get_lrd</a></div><div class="ttdeci">float get_lrd(const std::string &amp;row) const </div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00175">lof_storage.cpp:175</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -512,22 +514,23 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Collect neighbors for the given ID. </p>
 
-<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00273">273</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00290">290</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
 
-<p>References <a class="el" href="lof__storage_8hpp_source.html#l00164">nn_engine_</a>, and <a class="el" href="lof__storage_8hpp_source.html#l00161">reverse_nn_num_</a>.</p>
+<p>References <a class="el" href="lof__storage_8hpp_source.html#l00165">nn_engine_</a>, and <a class="el" href="lof__storage_8hpp_source.html#l00162">reverse_nn_num_</a>.</p>
 
-<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00128">update_row()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                                     {</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  vector&lt;pair&lt;string, float&gt; &gt; neighbors;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">nn_engine_</a>-&gt;neighbor_row(row, neighbors, <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a65ed6209b7608d4e4e5bcff537f8c14e">reverse_nn_num_</a>);</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; neighbors.size(); ++i) {</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    nn.insert(neighbors[i].first);</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  }</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a9cae728978ffb8293c2d11aec0db0bea"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">jubatus::core::anomaly::lof_storage::nn_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; core::recommender::recommender_base &gt; nn_engine_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00164">lof_storage.hpp:164</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a65ed6209b7608d4e4e5bcff537f8c14e"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a65ed6209b7608d4e4e5bcff537f8c14e">jubatus::core::anomaly::lof_storage::reverse_nn_num_</a></div><div class="ttdeci">uint32_t reverse_nn_num_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00161">lof_storage.hpp:161</a></div></div>
+<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00135">update_row()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                                     {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;  vector&lt;pair&lt;string, float&gt; &gt; neighbors;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">nn_engine_</a>-&gt;neighbor_row(row, neighbors, <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a65ed6209b7608d4e4e5bcff537f8c14e">reverse_nn_num_</a>);</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; neighbors.size(); ++i) {</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    nn.insert(neighbors[i].first);</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  }</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a9cae728978ffb8293c2d11aec0db0bea"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">jubatus::core::anomaly::lof_storage::nn_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; core::recommender::recommender_base &gt; nn_engine_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00165">lof_storage.hpp:165</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a65ed6209b7608d4e4e5bcff537f8c14e"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a65ed6209b7608d4e4e5bcff537f8c14e">jubatus::core::anomaly::lof_storage::reverse_nn_num_</a></div><div class="ttdeci">uint32_t reverse_nn_num_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00162">lof_storage.hpp:162</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -554,15 +557,15 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00124">124</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00131">131</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
 
-<p>References <a class="el" href="lof__storage_8hpp_source.html#l00164">nn_engine_</a>.</p>
+<p>References <a class="el" href="lof__storage_8hpp_source.html#l00165">nn_engine_</a>.</p>
 
-<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00189">update_all()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                                                           {</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">nn_engine_</a>-&gt;get_all_row_ids(ids);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a9cae728978ffb8293c2d11aec0db0bea"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">jubatus::core::anomaly::lof_storage::nn_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; core::recommender::recommender_base &gt; nn_engine_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00164">lof_storage.hpp:164</a></div></div>
+<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00196">update_all()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                                                           {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">nn_engine_</a>-&gt;get_all_row_ids(ids);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a9cae728978ffb8293c2d11aec0db0bea"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">jubatus::core::anomaly::lof_storage::nn_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; core::recommender::recommender_base &gt; nn_engine_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00165">lof_storage.hpp:165</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -589,13 +592,13 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00208">208</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00215">215</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
 
-<p>References <a class="el" href="lof__storage_8hpp_source.html#l00158">lof_table_diff_</a>.</p>
-<div class="fragment"><div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                                                  {</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  diff = <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">lof_table_diff_</a>;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a4b2bf4b9acbdc1ae03e07185bc2796c5"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">jubatus::core::anomaly::lof_storage::lof_table_diff_</a></div><div class="ttdeci">lof_table_t lof_table_diff_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00158">lof_storage.hpp:158</a></div></div>
+<p>References <a class="el" href="lof__storage_8hpp_source.html#l00159">lof_table_diff_</a>.</p>
+<div class="fragment"><div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                                                  {</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  diff = <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">lof_table_diff_</a>;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a4b2bf4b9acbdc1ae03e07185bc2796c5"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">jubatus::core::anomaly::lof_storage::lof_table_diff_</a></div><div class="ttdeci">lof_table_t lof_table_diff_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00159">lof_storage.hpp:159</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -613,32 +616,32 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00151">151</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00158">158</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
 
-<p>References <a class="el" href="lof__storage_8cpp_source.html#l00243">is_removed()</a>, <a class="el" href="common_2exception_8hpp_source.html#l00079">JUBATUS_EXCEPTION</a>, <a class="el" href="lof__storage_8hpp_source.html#l00157">lof_table_</a>, and <a class="el" href="lof__storage_8hpp_source.html#l00158">lof_table_diff_</a>.</p>
+<p>References <a class="el" href="lof__storage_8cpp_source.html#l00250">is_removed()</a>, <a class="el" href="common_2exception_8hpp_source.html#l00079">JUBATUS_EXCEPTION</a>, <a class="el" href="lof__storage_8hpp_source.html#l00158">lof_table_</a>, and <a class="el" href="lof__storage_8hpp_source.html#l00159">lof_table_diff_</a>.</p>
 
-<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00247">collect_lrds_from_neighbors()</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00326">update_lrd_with_neighbors()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                                                    {</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  lof_table_t::const_iterator it = <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">lof_table_diff_</a>.find(row);</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="keywordflow">if</span> (it == <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">lof_table_diff_</a>.end()) {</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    it = <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#ab77eb1c8aff0b6e11369113df0bf8270">lof_table_</a>.find(row);</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">if</span> (it == <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#ab77eb1c8aff0b6e11369113df0bf8270">lof_table_</a>.end()) {</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="common_2exception_8hpp.html#aff10b0eb90b477115ab3955c3995d327">JUBATUS_EXCEPTION</a>(</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        common::exception::runtime_error(<span class="stringliteral">&quot;specified row does not exist&quot;</span>)</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        &lt;&lt; <a class="code" href="namespacejubatus_1_1core_1_1common_1_1exception.html#ae636bb5b7830b44a92d86c4aa445548e">common::exception::error_message</a>(<span class="stringliteral">&quot;row id: &quot;</span> + row));</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    }</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a66e8ad44a1ddf60bf88a01dc18d49f81">is_removed</a>(it-&gt;second)) {</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="common_2exception_8hpp.html#aff10b0eb90b477115ab3955c3995d327">JUBATUS_EXCEPTION</a>(</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      common::exception::runtime_error(<span class="stringliteral">&quot;specified row is recently removed&quot;</span>)</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;      &lt;&lt; <a class="code" href="namespacejubatus_1_1core_1_1common_1_1exception.html#ae636bb5b7830b44a92d86c4aa445548e">common::exception::error_message</a>(<span class="stringliteral">&quot;row id: &quot;</span> + row));</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  }</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <span class="keywordflow">return</span> it-&gt;second.kdist;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a66e8ad44a1ddf60bf88a01dc18d49f81"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a66e8ad44a1ddf60bf88a01dc18d49f81">jubatus::core::anomaly::lof_storage::is_removed</a></div><div class="ttdeci">static bool is_removed(const lof_entry &amp;entry)</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00243">lof_storage.cpp:243</a></div></div>
+<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00260">collect_lrds_from_neighbors()</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00359">update_lrd_with_neighbors()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                                                    {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  lof_table_t::const_iterator it = <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">lof_table_diff_</a>.find(row);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  <span class="keywordflow">if</span> (it == <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">lof_table_diff_</a>.end()) {</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    it = <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#ab77eb1c8aff0b6e11369113df0bf8270">lof_table_</a>.find(row);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordflow">if</span> (it == <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#ab77eb1c8aff0b6e11369113df0bf8270">lof_table_</a>.end()) {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="common_2exception_8hpp.html#aff10b0eb90b477115ab3955c3995d327">JUBATUS_EXCEPTION</a>(</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        common::exception::runtime_error(<span class="stringliteral">&quot;specified row does not exist&quot;</span>)</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        &lt;&lt; <a class="code" href="namespacejubatus_1_1core_1_1common_1_1exception.html#ae636bb5b7830b44a92d86c4aa445548e">common::exception::error_message</a>(<span class="stringliteral">&quot;row id: &quot;</span> + row));</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a66e8ad44a1ddf60bf88a01dc18d49f81">is_removed</a>(it-&gt;second)) {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="common_2exception_8hpp.html#aff10b0eb90b477115ab3955c3995d327">JUBATUS_EXCEPTION</a>(</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;      common::exception::runtime_error(<span class="stringliteral">&quot;specified row is recently removed&quot;</span>)</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;      &lt;&lt; <a class="code" href="namespacejubatus_1_1core_1_1common_1_1exception.html#ae636bb5b7830b44a92d86c4aa445548e">common::exception::error_message</a>(<span class="stringliteral">&quot;row id: &quot;</span> + row));</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  <span class="keywordflow">return</span> it-&gt;second.kdist;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a66e8ad44a1ddf60bf88a01dc18d49f81"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a66e8ad44a1ddf60bf88a01dc18d49f81">jubatus::core::anomaly::lof_storage::is_removed</a></div><div class="ttdeci">static bool is_removed(const lof_entry &amp;entry)</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00250">lof_storage.cpp:250</a></div></div>
 <div class="ttc" id="common_2exception_8hpp_html_aff10b0eb90b477115ab3955c3995d327"><div class="ttname"><a href="common_2exception_8hpp.html#aff10b0eb90b477115ab3955c3995d327">JUBATUS_EXCEPTION</a></div><div class="ttdeci">#define JUBATUS_EXCEPTION(e)</div><div class="ttdef"><b>Definition:</b> <a href="common_2exception_8hpp_source.html#l00079">exception.hpp:79</a></div></div>
 <div class="ttc" id="namespacejubatus_1_1core_1_1common_1_1exception_html_ae636bb5b7830b44a92d86c4aa445548e"><div class="ttname"><a href="namespacejubatus_1_1core_1_1common_1_1exception.html#ae636bb5b7830b44a92d86c4aa445548e">jubatus::core::common::exception::error_message</a></div><div class="ttdeci">error_info&lt; struct error_message_, std::string &gt; error_message</div><div class="ttdef"><b>Definition:</b> <a href="common_2exception_8hpp_source.html#l00059">exception.hpp:59</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a4b2bf4b9acbdc1ae03e07185bc2796c5"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">jubatus::core::anomaly::lof_storage::lof_table_diff_</a></div><div class="ttdeci">lof_table_t lof_table_diff_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00158">lof_storage.hpp:158</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_ab77eb1c8aff0b6e11369113df0bf8270"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#ab77eb1c8aff0b6e11369113df0bf8270">jubatus::core::anomaly::lof_storage::lof_table_</a></div><div class="ttdeci">lof_table_t lof_table_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00157">lof_storage.hpp:157</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a4b2bf4b9acbdc1ae03e07185bc2796c5"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">jubatus::core::anomaly::lof_storage::lof_table_diff_</a></div><div class="ttdeci">lof_table_t lof_table_diff_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00159">lof_storage.hpp:159</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_ab77eb1c8aff0b6e11369113df0bf8270"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#ab77eb1c8aff0b6e11369113df0bf8270">jubatus::core::anomaly::lof_storage::lof_table_</a></div><div class="ttdeci">lof_table_t lof_table_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00158">lof_storage.hpp:158</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -674,32 +677,32 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00168">168</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00175">175</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
 
-<p>References <a class="el" href="lof__storage_8cpp_source.html#l00243">is_removed()</a>, <a class="el" href="common_2exception_8hpp_source.html#l00079">JUBATUS_EXCEPTION</a>, <a class="el" href="lof__storage_8hpp_source.html#l00157">lof_table_</a>, and <a class="el" href="lof__storage_8hpp_source.html#l00158">lof_table_diff_</a>.</p>
+<p>References <a class="el" href="lof__storage_8cpp_source.html#l00250">is_removed()</a>, <a class="el" href="common_2exception_8hpp_source.html#l00079">JUBATUS_EXCEPTION</a>, <a class="el" href="lof__storage_8hpp_source.html#l00158">lof_table_</a>, and <a class="el" href="lof__storage_8hpp_source.html#l00159">lof_table_diff_</a>.</p>
 
-<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00247">collect_lrds_from_neighbors()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                                                  {</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  lof_table_t::const_iterator it = <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">lof_table_diff_</a>.find(row);</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <span class="keywordflow">if</span> (it == <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">lof_table_diff_</a>.end()) {</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    it = <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#ab77eb1c8aff0b6e11369113df0bf8270">lof_table_</a>.find(row);</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordflow">if</span> (it == <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#ab77eb1c8aff0b6e11369113df0bf8270">lof_table_</a>.end()) {</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="common_2exception_8hpp.html#aff10b0eb90b477115ab3955c3995d327">JUBATUS_EXCEPTION</a>(</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        common::exception::runtime_error(<span class="stringliteral">&quot;specified row does not exist&quot;</span>)</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        &lt;&lt; <a class="code" href="namespacejubatus_1_1core_1_1common_1_1exception.html#ae636bb5b7830b44a92d86c4aa445548e">common::exception::error_message</a>(<span class="stringliteral">&quot;row id: &quot;</span> + row));</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    }</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a66e8ad44a1ddf60bf88a01dc18d49f81">is_removed</a>(it-&gt;second)) {</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="common_2exception_8hpp.html#aff10b0eb90b477115ab3955c3995d327">JUBATUS_EXCEPTION</a>(</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;      common::exception::runtime_error(<span class="stringliteral">&quot;specified row is recently removed&quot;</span>)</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;      &lt;&lt; <a class="code" href="namespacejubatus_1_1core_1_1common_1_1exception.html#ae636bb5b7830b44a92d86c4aa445548e">common::exception::error_message</a>(<span class="stringliteral">&quot;row id: &quot;</span> + row));</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  }</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="keywordflow">return</span> it-&gt;second.lrd;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a66e8ad44a1ddf60bf88a01dc18d49f81"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a66e8ad44a1ddf60bf88a01dc18d49f81">jubatus::core::anomaly::lof_storage::is_removed</a></div><div class="ttdeci">static bool is_removed(const lof_entry &amp;entry)</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00243">lof_storage.cpp:243</a></div></div>
+<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00260">collect_lrds_from_neighbors()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                                                  {</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  lof_table_t::const_iterator it = <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">lof_table_diff_</a>.find(row);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  <span class="keywordflow">if</span> (it == <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">lof_table_diff_</a>.end()) {</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    it = <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#ab77eb1c8aff0b6e11369113df0bf8270">lof_table_</a>.find(row);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">if</span> (it == <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#ab77eb1c8aff0b6e11369113df0bf8270">lof_table_</a>.end()) {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="common_2exception_8hpp.html#aff10b0eb90b477115ab3955c3995d327">JUBATUS_EXCEPTION</a>(</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        common::exception::runtime_error(<span class="stringliteral">&quot;specified row does not exist&quot;</span>)</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        &lt;&lt; <a class="code" href="namespacejubatus_1_1core_1_1common_1_1exception.html#ae636bb5b7830b44a92d86c4aa445548e">common::exception::error_message</a>(<span class="stringliteral">&quot;row id: &quot;</span> + row));</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    }</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a66e8ad44a1ddf60bf88a01dc18d49f81">is_removed</a>(it-&gt;second)) {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="common_2exception_8hpp.html#aff10b0eb90b477115ab3955c3995d327">JUBATUS_EXCEPTION</a>(</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;      common::exception::runtime_error(<span class="stringliteral">&quot;specified row is recently removed&quot;</span>)</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;      &lt;&lt; <a class="code" href="namespacejubatus_1_1core_1_1common_1_1exception.html#ae636bb5b7830b44a92d86c4aa445548e">common::exception::error_message</a>(<span class="stringliteral">&quot;row id: &quot;</span> + row));</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  <span class="keywordflow">return</span> it-&gt;second.lrd;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a66e8ad44a1ddf60bf88a01dc18d49f81"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a66e8ad44a1ddf60bf88a01dc18d49f81">jubatus::core::anomaly::lof_storage::is_removed</a></div><div class="ttdeci">static bool is_removed(const lof_entry &amp;entry)</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00250">lof_storage.cpp:250</a></div></div>
 <div class="ttc" id="common_2exception_8hpp_html_aff10b0eb90b477115ab3955c3995d327"><div class="ttname"><a href="common_2exception_8hpp.html#aff10b0eb90b477115ab3955c3995d327">JUBATUS_EXCEPTION</a></div><div class="ttdeci">#define JUBATUS_EXCEPTION(e)</div><div class="ttdef"><b>Definition:</b> <a href="common_2exception_8hpp_source.html#l00079">exception.hpp:79</a></div></div>
 <div class="ttc" id="namespacejubatus_1_1core_1_1common_1_1exception_html_ae636bb5b7830b44a92d86c4aa445548e"><div class="ttname"><a href="namespacejubatus_1_1core_1_1common_1_1exception.html#ae636bb5b7830b44a92d86c4aa445548e">jubatus::core::common::exception::error_message</a></div><div class="ttdeci">error_info&lt; struct error_message_, std::string &gt; error_message</div><div class="ttdef"><b>Definition:</b> <a href="common_2exception_8hpp_source.html#l00059">exception.hpp:59</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a4b2bf4b9acbdc1ae03e07185bc2796c5"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">jubatus::core::anomaly::lof_storage::lof_table_diff_</a></div><div class="ttdeci">lof_table_t lof_table_diff_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00158">lof_storage.hpp:158</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_ab77eb1c8aff0b6e11369113df0bf8270"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#ab77eb1c8aff0b6e11369113df0bf8270">jubatus::core::anomaly::lof_storage::lof_table_</a></div><div class="ttdeci">lof_table_t lof_table_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00157">lof_storage.hpp:157</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a4b2bf4b9acbdc1ae03e07185bc2796c5"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">jubatus::core::anomaly::lof_storage::lof_table_diff_</a></div><div class="ttdeci">lof_table_t lof_table_diff_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00159">lof_storage.hpp:159</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_ab77eb1c8aff0b6e11369113df0bf8270"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#ab77eb1c8aff0b6e11369113df0bf8270">jubatus::core::anomaly::lof_storage::lof_table_</a></div><div class="ttdeci">lof_table_t lof_table_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00158">lof_storage.hpp:158</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -742,10 +745,10 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="lof__storage_8hpp_source.html#l00119">119</a> of file <a class="el" href="lof__storage_8hpp_source.html">lof_storage.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                                     {</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">return</span> storage::version();</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  }</div>
+<p>Definition at line <a class="el" href="lof__storage_8hpp_source.html#l00120">120</a> of file <a class="el" href="lof__storage_8hpp_source.html">lof_storage.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                                     {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">return</span> storage::version();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -763,14 +766,14 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00185">185</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00192">192</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
 
-<p>References <a class="el" href="lof__storage_8hpp_source.html#l00157">lof_table_</a>, and <a class="el" href="lof__storage_8hpp_source.html#l00158">lof_table_diff_</a>.</p>
-<div class="fragment"><div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                                                 {</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">lof_table_diff_</a>.count(row) &gt; 0 || <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#ab77eb1c8aff0b6e11369113df0bf8270">lof_table_</a>.count(row) &gt; 0;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a4b2bf4b9acbdc1ae03e07185bc2796c5"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">jubatus::core::anomaly::lof_storage::lof_table_diff_</a></div><div class="ttdeci">lof_table_t lof_table_diff_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00158">lof_storage.hpp:158</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_ab77eb1c8aff0b6e11369113df0bf8270"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#ab77eb1c8aff0b6e11369113df0bf8270">jubatus::core::anomaly::lof_storage::lof_table_</a></div><div class="ttdeci">lof_table_t lof_table_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00157">lof_storage.hpp:157</a></div></div>
+<p>References <a class="el" href="lof__storage_8hpp_source.html#l00158">lof_table_</a>, and <a class="el" href="lof__storage_8hpp_source.html#l00159">lof_table_diff_</a>.</p>
+<div class="fragment"><div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                                                 {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">lof_table_diff_</a>.count(row) &gt; 0 || <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#ab77eb1c8aff0b6e11369113df0bf8270">lof_table_</a>.count(row) &gt; 0;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a4b2bf4b9acbdc1ae03e07185bc2796c5"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">jubatus::core::anomaly::lof_storage::lof_table_diff_</a></div><div class="ttdeci">lof_table_t lof_table_diff_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00159">lof_storage.hpp:159</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_ab77eb1c8aff0b6e11369113df0bf8270"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#ab77eb1c8aff0b6e11369113df0bf8270">jubatus::core::anomaly::lof_storage::lof_table_</a></div><div class="ttdeci">lof_table_t lof_table_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00158">lof_storage.hpp:158</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -796,14 +799,14 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00243">243</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00250">250</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
 
-<p>References <a class="el" href="lof__storage_8hpp_source.html#l00043">jubatus::core::anomaly::lof_entry::kdist</a>.</p>
+<p>References <a class="el" href="lof__storage_8hpp_source.html#l00044">jubatus::core::anomaly::lof_entry::kdist</a>.</p>
 
-<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00151">get_kdist()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00168">get_lrd()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00225">mix()</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00212">put_diff()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                                                   {</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  <span class="keywordflow">return</span> entry.kdist &lt; 0;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;}</div>
+<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00158">get_kdist()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00175">get_lrd()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00232">mix()</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00219">put_diff()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                                                   {</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  <span class="keywordflow">return</span> entry.kdist &lt; 0;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;}</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -838,14 +841,14 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00238">238</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00245">245</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
 
-<p>References <a class="el" href="lof__storage_8hpp_source.html#l00043">jubatus::core::anomaly::lof_entry::kdist</a>.</p>
+<p>References <a class="el" href="lof__storage_8hpp_source.html#l00044">jubatus::core::anomaly::lof_entry::kdist</a>.</p>
 
-<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00225">mix()</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00113">remove_row()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                                               {</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  entry.kdist = -1;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;}</div>
+<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00232">mix()</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00120">remove_row()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                                               {</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  entry.kdist = -1;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;}</div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -882,20 +885,20 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00225">225</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00232">232</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
 
-<p>References <a class="el" href="lof__storage_8cpp_source.html#l00243">is_removed()</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00238">mark_removed()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                                                                    {</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  <span class="keywordflow">for</span> (lof_table_t::const_iterator it = lhs.begin(); it != lhs.end(); ++it) {</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a66e8ad44a1ddf60bf88a01dc18d49f81">is_removed</a>(it-&gt;second)) {</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;      <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a45a7819ada8f9d6e233f7102cc7629b0">mark_removed</a>(rhs[it-&gt;first]);</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;      rhs.insert(*it);</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    }</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  }</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a66e8ad44a1ddf60bf88a01dc18d49f81"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a66e8ad44a1ddf60bf88a01dc18d49f81">jubatus::core::anomaly::lof_storage::is_removed</a></div><div class="ttdeci">static bool is_removed(const lof_entry &amp;entry)</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00243">lof_storage.cpp:243</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a45a7819ada8f9d6e233f7102cc7629b0"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a45a7819ada8f9d6e233f7102cc7629b0">jubatus::core::anomaly::lof_storage::mark_removed</a></div><div class="ttdeci">static void mark_removed(lof_entry &amp;entry)</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00238">lof_storage.cpp:238</a></div></div>
+<p>References <a class="el" href="lof__storage_8cpp_source.html#l00250">is_removed()</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00245">mark_removed()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                                                                    {</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  <span class="keywordflow">for</span> (lof_table_t::const_iterator it = lhs.begin(); it != lhs.end(); ++it) {</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a66e8ad44a1ddf60bf88a01dc18d49f81">is_removed</a>(it-&gt;second)) {</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;      <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a45a7819ada8f9d6e233f7102cc7629b0">mark_removed</a>(rhs[it-&gt;first]);</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;      rhs.insert(*it);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    }</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  }</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a66e8ad44a1ddf60bf88a01dc18d49f81"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a66e8ad44a1ddf60bf88a01dc18d49f81">jubatus::core::anomaly::lof_storage::is_removed</a></div><div class="ttdeci">static bool is_removed(const lof_entry &amp;entry)</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00250">lof_storage.cpp:250</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a45a7819ada8f9d6e233f7102cc7629b0"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a45a7819ada8f9d6e233f7102cc7629b0">jubatus::core::anomaly::lof_storage::mark_removed</a></div><div class="ttdeci">static void mark_removed(lof_entry &amp;entry)</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00245">lof_storage.cpp:245</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -959,10 +962,10 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00147">147</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                               {</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <span class="keywordflow">return</span> <span class="stringliteral">&quot;lof_storage&quot;</span>;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;}</div>
+<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00154">154</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                               {</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <span class="keywordflow">return</span> <span class="stringliteral">&quot;lof_storage&quot;</span>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -976,7 +979,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void jubatus::core::anomaly::lof_storage::pack </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">framework::packer</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">framework::packer</a> &amp;&#160;</td>
           <td class="paramname"><em>packer</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -988,11 +991,11 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="lof__storage_8hpp_source.html#l00123">123</a> of file <a class="el" href="lof__storage_8hpp_source.html">lof_storage.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                                           {</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">packer</a>.pack(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  }</div>
-<div class="ttc" id="namespacejubatus_1_1core_1_1framework_html_a99dd974442916078e2a3458b1e85b254"><div class="ttname"><a href="namespacejubatus_1_1core_1_1framework.html#a99dd974442916078e2a3458b1e85b254">jubatus::core::framework::packer</a></div><div class="ttdeci">msgpack::packer&lt; jubatus_packer &gt; packer</div><div class="ttdef"><b>Definition:</b> <a href="packer_8hpp_source.html#l00043">packer.hpp:43</a></div></div>
+<p>Definition at line <a class="el" href="lof__storage_8hpp_source.html#l00124">124</a> of file <a class="el" href="lof__storage_8hpp_source.html">lof_storage.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                                           {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">packer</a>.pack(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  }</div>
+<div class="ttc" id="namespacejubatus_1_1core_1_1framework_html_a352834534d9a8d7a43dc7c73f0b65aa9"><div class="ttname"><a href="namespacejubatus_1_1core_1_1framework.html#a352834534d9a8d7a43dc7c73f0b65aa9">jubatus::core::framework::packer</a></div><div class="ttdeci">msgpack::packer&lt; jubatus_packer &gt; packer</div><div class="ttdef"><b>Definition:</b> <a href="bandit__base_8hpp_source.html#l00031">bandit_base.hpp:31</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1010,24 +1013,24 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00212">212</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00219">219</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
 
-<p>References <a class="el" href="lof__storage_8cpp_source.html#l00243">is_removed()</a>, <a class="el" href="lof__storage_8hpp_source.html#l00157">lof_table_</a>, and <a class="el" href="lof__storage_8hpp_source.html#l00158">lof_table_diff_</a>.</p>
-<div class="fragment"><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                                                        {</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  <span class="keywordflow">for</span> (lof_table_t::const_iterator it = mixed_diff.begin();</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;       it != mixed_diff.end(); ++it) {</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a66e8ad44a1ddf60bf88a01dc18d49f81">is_removed</a>(it-&gt;second)) {</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;      <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#ab77eb1c8aff0b6e11369113df0bf8270">lof_table_</a>.erase(it-&gt;first);</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;      <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#ab77eb1c8aff0b6e11369113df0bf8270">lof_table_</a>[it-&gt;first] = it-&gt;second;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    }</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  }</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">lof_table_diff_</a>.clear();</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a66e8ad44a1ddf60bf88a01dc18d49f81"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a66e8ad44a1ddf60bf88a01dc18d49f81">jubatus::core::anomaly::lof_storage::is_removed</a></div><div class="ttdeci">static bool is_removed(const lof_entry &amp;entry)</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00243">lof_storage.cpp:243</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a4b2bf4b9acbdc1ae03e07185bc2796c5"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">jubatus::core::anomaly::lof_storage::lof_table_diff_</a></div><div class="ttdeci">lof_table_t lof_table_diff_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00158">lof_storage.hpp:158</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_ab77eb1c8aff0b6e11369113df0bf8270"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#ab77eb1c8aff0b6e11369113df0bf8270">jubatus::core::anomaly::lof_storage::lof_table_</a></div><div class="ttdeci">lof_table_t lof_table_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00157">lof_storage.hpp:157</a></div></div>
+<p>References <a class="el" href="lof__storage_8cpp_source.html#l00250">is_removed()</a>, <a class="el" href="lof__storage_8hpp_source.html#l00158">lof_table_</a>, and <a class="el" href="lof__storage_8hpp_source.html#l00159">lof_table_diff_</a>.</p>
+<div class="fragment"><div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                                                        {</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  <span class="keywordflow">for</span> (lof_table_t::const_iterator it = mixed_diff.begin();</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;       it != mixed_diff.end(); ++it) {</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a66e8ad44a1ddf60bf88a01dc18d49f81">is_removed</a>(it-&gt;second)) {</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;      <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#ab77eb1c8aff0b6e11369113df0bf8270">lof_table_</a>.erase(it-&gt;first);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;      <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#ab77eb1c8aff0b6e11369113df0bf8270">lof_table_</a>[it-&gt;first] = it-&gt;second;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    }</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  }</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">lof_table_diff_</a>.clear();</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a66e8ad44a1ddf60bf88a01dc18d49f81"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a66e8ad44a1ddf60bf88a01dc18d49f81">jubatus::core::anomaly::lof_storage::is_removed</a></div><div class="ttdeci">static bool is_removed(const lof_entry &amp;entry)</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00250">lof_storage.cpp:250</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a4b2bf4b9acbdc1ae03e07185bc2796c5"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">jubatus::core::anomaly::lof_storage::lof_table_diff_</a></div><div class="ttdeci">lof_table_t lof_table_diff_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00159">lof_storage.hpp:159</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_ab77eb1c8aff0b6e11369113df0bf8270"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#ab77eb1c8aff0b6e11369113df0bf8270">jubatus::core::anomaly::lof_storage::lof_table_</a></div><div class="ttdeci">lof_table_t lof_table_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00158">lof_storage.hpp:158</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1054,16 +1057,16 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00113">113</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00120">120</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
 
-<p>References <a class="el" href="lof__storage_8hpp_source.html#l00158">lof_table_diff_</a>, <a class="el" href="lof__storage_8cpp_source.html#l00238">mark_removed()</a>, and <a class="el" href="lof__storage_8hpp_source.html#l00164">nn_engine_</a>.</p>
-<div class="fragment"><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                                              {</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a45a7819ada8f9d6e233f7102cc7629b0">mark_removed</a>(<a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">lof_table_diff_</a>[row]);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">nn_engine_</a>-&gt;clear_row(row);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a9cae728978ffb8293c2d11aec0db0bea"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">jubatus::core::anomaly::lof_storage::nn_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; core::recommender::recommender_base &gt; nn_engine_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00164">lof_storage.hpp:164</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a4b2bf4b9acbdc1ae03e07185bc2796c5"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">jubatus::core::anomaly::lof_storage::lof_table_diff_</a></div><div class="ttdeci">lof_table_t lof_table_diff_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00158">lof_storage.hpp:158</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a45a7819ada8f9d6e233f7102cc7629b0"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a45a7819ada8f9d6e233f7102cc7629b0">jubatus::core::anomaly::lof_storage::mark_removed</a></div><div class="ttdeci">static void mark_removed(lof_entry &amp;entry)</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00238">lof_storage.cpp:238</a></div></div>
+<p>References <a class="el" href="lof__storage_8hpp_source.html#l00159">lof_table_diff_</a>, <a class="el" href="lof__storage_8cpp_source.html#l00245">mark_removed()</a>, and <a class="el" href="lof__storage_8hpp_source.html#l00165">nn_engine_</a>.</p>
+<div class="fragment"><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                                              {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a45a7819ada8f9d6e233f7102cc7629b0">mark_removed</a>(<a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">lof_table_diff_</a>[row]);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">nn_engine_</a>-&gt;clear_row(row);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a9cae728978ffb8293c2d11aec0db0bea"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">jubatus::core::anomaly::lof_storage::nn_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; core::recommender::recommender_base &gt; nn_engine_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00165">lof_storage.hpp:165</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a4b2bf4b9acbdc1ae03e07185bc2796c5"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">jubatus::core::anomaly::lof_storage::lof_table_diff_</a></div><div class="ttdeci">lof_table_t lof_table_diff_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00159">lof_storage.hpp:159</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a45a7819ada8f9d6e233f7102cc7629b0"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a45a7819ada8f9d6e233f7102cc7629b0">jubatus::core::anomaly::lof_storage::mark_removed</a></div><div class="ttdeci">static void mark_removed(lof_entry &amp;entry)</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00245">lof_storage.cpp:245</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1090,13 +1093,13 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00203">203</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00210">210</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
 
-<p>References <a class="el" href="lof__storage_8hpp_source.html#l00164">nn_engine_</a>.</p>
-<div class="fragment"><div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                                                       {</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">nn_engine_</a> = nn_engine;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a9cae728978ffb8293c2d11aec0db0bea"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">jubatus::core::anomaly::lof_storage::nn_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; core::recommender::recommender_base &gt; nn_engine_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00164">lof_storage.hpp:164</a></div></div>
+<p>References <a class="el" href="lof__storage_8hpp_source.html#l00165">nn_engine_</a>.</p>
+<div class="fragment"><div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                                                       {</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">nn_engine_</a> = nn_engine;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a9cae728978ffb8293c2d11aec0db0bea"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">jubatus::core::anomaly::lof_storage::nn_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; core::recommender::recommender_base &gt; nn_engine_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00165">lof_storage.hpp:165</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1122,10 +1125,10 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="lof__storage_8hpp_source.html#l00126">126</a> of file <a class="el" href="lof__storage_8hpp_source.html">lof_storage.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                               {</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    o.convert(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  }</div>
+<p>Definition at line <a class="el" href="lof__storage_8hpp_source.html#l00127">127</a> of file <a class="el" href="lof__storage_8hpp_source.html">lof_storage.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                               {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    o.convert(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1142,25 +1145,25 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00189">189</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00196">196</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
 
-<p>References <a class="el" href="lof__storage_8cpp_source.html#l00124">get_all_row_ids()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00306">update_kdist()</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00320">update_lrd()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                             {</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  vector&lt;string&gt; ids;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a1bbcba361139bc57fe158942df1cda22">get_all_row_ids</a>(ids);</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  <span class="comment">// NOTE: These two loops are separated, since update_lrd requires new kdist</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <span class="comment">// values of k-NN.</span></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; ids.size(); ++i) {</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#aefbe4c936679fcc4fd0bed12646625c7">update_kdist</a>(ids[i]);</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  }</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; ids.size(); ++i) {</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5e85edac95a7da19e47b33b608e3849c">update_lrd</a>(ids[i]);</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  }</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_aefbe4c936679fcc4fd0bed12646625c7"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#aefbe4c936679fcc4fd0bed12646625c7">jubatus::core::anomaly::lof_storage::update_kdist</a></div><div class="ttdeci">void update_kdist(const std::string &amp;row)</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00306">lof_storage.cpp:306</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a1bbcba361139bc57fe158942df1cda22"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a1bbcba361139bc57fe158942df1cda22">jubatus::core::anomaly::lof_storage::get_all_row_ids</a></div><div class="ttdeci">void get_all_row_ids(std::vector&lt; std::string &gt; &amp;ids) const </div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00124">lof_storage.cpp:124</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a5e85edac95a7da19e47b33b608e3849c"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5e85edac95a7da19e47b33b608e3849c">jubatus::core::anomaly::lof_storage::update_lrd</a></div><div class="ttdeci">void update_lrd(const std::string &amp;row)</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00320">lof_storage.cpp:320</a></div></div>
+<p>References <a class="el" href="lof__storage_8cpp_source.html#l00131">get_all_row_ids()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00329">update_kdist()</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00350">update_lrd()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                             {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  vector&lt;string&gt; ids;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a1bbcba361139bc57fe158942df1cda22">get_all_row_ids</a>(ids);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  <span class="comment">// NOTE: These two loops are separated, since update_lrd requires new kdist</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  <span class="comment">// values of k-NN.</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; ids.size(); ++i) {</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#aefbe4c936679fcc4fd0bed12646625c7">update_kdist</a>(ids[i]);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  }</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; ids.size(); ++i) {</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5e85edac95a7da19e47b33b608e3849c">update_lrd</a>(ids[i]);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  }</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_aefbe4c936679fcc4fd0bed12646625c7"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#aefbe4c936679fcc4fd0bed12646625c7">jubatus::core::anomaly::lof_storage::update_kdist</a></div><div class="ttdeci">void update_kdist(const std::string &amp;row)</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00329">lof_storage.cpp:329</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a1bbcba361139bc57fe158942df1cda22"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a1bbcba361139bc57fe158942df1cda22">jubatus::core::anomaly::lof_storage::get_all_row_ids</a></div><div class="ttdeci">void get_all_row_ids(std::vector&lt; std::string &gt; &amp;ids) const </div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00131">lof_storage.cpp:131</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a5e85edac95a7da19e47b33b608e3849c"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5e85edac95a7da19e47b33b608e3849c">jubatus::core::anomaly::lof_storage::update_lrd</a></div><div class="ttdeci">void update_lrd(const std::string &amp;row)</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00350">lof_storage.cpp:350</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1194,37 +1197,38 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Update kdist and LRD for given points and its neighbors. </p>
 
-<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00284">284</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00304">304</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
 
-<p>References <a class="el" href="lof__storage_8hpp_source.html#l00160">neighbor_num_</a>, <a class="el" href="lof__storage_8hpp_source.html#l00164">nn_engine_</a>, <a class="el" href="lof__storage_8cpp_source.html#l00312">update_kdist_with_neighbors()</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00326">update_lrd_with_neighbors()</a>.</p>
+<p>References <a class="el" href="lof__storage_8hpp_source.html#l00161">neighbor_num_</a>, <a class="el" href="lof__storage_8hpp_source.html#l00165">nn_engine_</a>, <a class="el" href="lof__storage_8cpp_source.html#l00339">update_kdist_with_neighbors()</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00359">update_lrd_with_neighbors()</a>.</p>
 
-<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00128">update_row()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                                                                  {</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;  <span class="comment">// NOTE: These two loops are separated, since update_lrd requires new kdist</span></div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  <span class="comment">// values of k-NN.</span></div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  <span class="keyword">typedef</span> unordered_map&lt;string, vector&lt;pair&lt;string, float&gt; &gt; &gt;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    rows_to_neighbors_type;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  rows_to_neighbors_type rows_to_neighbors;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  <span class="keywordflow">for</span> (unordered_set&lt;string&gt;::const_iterator it = rows.begin();</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;       it != rows.end(); ++it) {</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">nn_engine_</a>-&gt;neighbor_row(*it, rows_to_neighbors[*it], <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5f3882d5b445c5fb33fe78a401ecd95e">neighbor_num_</a>);</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  }</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  <span class="keywordflow">for</span> (rows_to_neighbors_type::const_iterator it = rows_to_neighbors.begin();</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;       it != rows_to_neighbors.end(); ++it) {</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5e3d505330d00339ab509d8a0d80b189">update_kdist_with_neighbors</a>(it-&gt;first, it-&gt;second);</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  }</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  <span class="keywordflow">for</span> (rows_to_neighbors_type::const_iterator it = rows_to_neighbors.begin();</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;       it != rows_to_neighbors.end(); ++it) {</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a7efca56d472ad38b9cd3b6ea69443425">update_lrd_with_neighbors</a>(it-&gt;first, it-&gt;second);</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  }</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a9cae728978ffb8293c2d11aec0db0bea"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">jubatus::core::anomaly::lof_storage::nn_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; core::recommender::recommender_base &gt; nn_engine_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00164">lof_storage.hpp:164</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a7efca56d472ad38b9cd3b6ea69443425"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a7efca56d472ad38b9cd3b6ea69443425">jubatus::core::anomaly::lof_storage::update_lrd_with_neighbors</a></div><div class="ttdeci">void update_lrd_with_neighbors(const std::string &amp;row, const std::vector&lt; std::pair&lt; std::string, float &gt; &gt; &amp;neighbors)</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00326">lof_storage.cpp:326</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a5f3882d5b445c5fb33fe78a401ecd95e"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5f3882d5b445c5fb33fe78a401ecd95e">jubatus::core::anomaly::lof_storage::neighbor_num_</a></div><div class="ttdeci">uint32_t neighbor_num_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00160">lof_storage.hpp:160</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a5e3d505330d00339ab509d8a0d80b189"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5e3d505330d00339ab509d8a0d80b189">jubatus::core::anomaly::lof_storage::update_kdist_with_neighbors</a></div><div class="ttdeci">void update_kdist_with_neighbors(const std::string &amp;row, const std::vector&lt; std::pair&lt; std::string, float &gt; &gt; &amp;neighbors)</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00312">lof_storage.cpp:312</a></div></div>
+<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00135">update_row()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                                                                  {</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  <span class="comment">// NOTE: These two loops are separated, since update_lrd requires new kdist</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  <span class="comment">// values of k-NN.</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  <span class="keyword">typedef</span> unordered_map&lt;string, vector&lt;pair&lt;string, float&gt; &gt; &gt;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    rows_to_neighbors_type;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;  rows_to_neighbors_type rows_to_neighbors;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  <span class="keywordflow">for</span> (unordered_set&lt;string&gt;::const_iterator it = rows.begin();</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;       it != rows.end(); ++it) {</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">nn_engine_</a>-&gt;neighbor_row(*it, rows_to_neighbors[*it], <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5f3882d5b445c5fb33fe78a401ecd95e">neighbor_num_</a>);</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  }</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  <span class="keywordflow">for</span> (rows_to_neighbors_type::const_iterator it = rows_to_neighbors.begin();</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;       it != rows_to_neighbors.end(); ++it) {</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5e3d505330d00339ab509d8a0d80b189">update_kdist_with_neighbors</a>(it-&gt;first, it-&gt;second);</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;  }</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  <span class="keywordflow">for</span> (rows_to_neighbors_type::const_iterator it = rows_to_neighbors.begin();</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;       it != rows_to_neighbors.end(); ++it) {</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a7efca56d472ad38b9cd3b6ea69443425">update_lrd_with_neighbors</a>(it-&gt;first, it-&gt;second);</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;  }</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a9cae728978ffb8293c2d11aec0db0bea"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">jubatus::core::anomaly::lof_storage::nn_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; core::recommender::recommender_base &gt; nn_engine_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00165">lof_storage.hpp:165</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a7efca56d472ad38b9cd3b6ea69443425"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a7efca56d472ad38b9cd3b6ea69443425">jubatus::core::anomaly::lof_storage::update_lrd_with_neighbors</a></div><div class="ttdeci">void update_lrd_with_neighbors(const std::string &amp;row, const std::vector&lt; std::pair&lt; std::string, float &gt; &gt; &amp;neighbors)</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00359">lof_storage.cpp:359</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a5f3882d5b445c5fb33fe78a401ecd95e"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5f3882d5b445c5fb33fe78a401ecd95e">jubatus::core::anomaly::lof_storage::neighbor_num_</a></div><div class="ttdeci">uint32_t neighbor_num_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00161">lof_storage.hpp:161</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a5e3d505330d00339ab509d8a0d80b189"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5e3d505330d00339ab509d8a0d80b189">jubatus::core::anomaly::lof_storage::update_kdist_with_neighbors</a></div><div class="ttdeci">void update_kdist_with_neighbors(const std::string &amp;row, const std::vector&lt; std::pair&lt; std::string, float &gt; &gt; &amp;neighbors)</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00339">lof_storage.cpp:339</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1267,20 +1271,21 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Update kdist for the row. </p>
 
-<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00306">306</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00329">329</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
 
-<p>References <a class="el" href="lof__storage_8hpp_source.html#l00160">neighbor_num_</a>, <a class="el" href="lof__storage_8hpp_source.html#l00164">nn_engine_</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00312">update_kdist_with_neighbors()</a>.</p>
+<p>References <a class="el" href="lof__storage_8hpp_source.html#l00161">neighbor_num_</a>, <a class="el" href="lof__storage_8hpp_source.html#l00165">nn_engine_</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00339">update_kdist_with_neighbors()</a>.</p>
 
-<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00189">update_all()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                                                {</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  vector&lt;pair&lt;string, float&gt; &gt; neighbors;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">nn_engine_</a>-&gt;neighbor_row(row, neighbors, <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5f3882d5b445c5fb33fe78a401ecd95e">neighbor_num_</a>);</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5e3d505330d00339ab509d8a0d80b189">update_kdist_with_neighbors</a>(row, neighbors);</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a9cae728978ffb8293c2d11aec0db0bea"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">jubatus::core::anomaly::lof_storage::nn_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; core::recommender::recommender_base &gt; nn_engine_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00164">lof_storage.hpp:164</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a5f3882d5b445c5fb33fe78a401ecd95e"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5f3882d5b445c5fb33fe78a401ecd95e">jubatus::core::anomaly::lof_storage::neighbor_num_</a></div><div class="ttdeci">uint32_t neighbor_num_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00160">lof_storage.hpp:160</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a5e3d505330d00339ab509d8a0d80b189"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5e3d505330d00339ab509d8a0d80b189">jubatus::core::anomaly::lof_storage::update_kdist_with_neighbors</a></div><div class="ttdeci">void update_kdist_with_neighbors(const std::string &amp;row, const std::vector&lt; std::pair&lt; std::string, float &gt; &gt; &amp;neighbors)</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00312">lof_storage.cpp:312</a></div></div>
+<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00196">update_all()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                                                {</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;  vector&lt;pair&lt;string, float&gt; &gt; neighbors;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">nn_engine_</a>-&gt;neighbor_row(row, neighbors, <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5f3882d5b445c5fb33fe78a401ecd95e">neighbor_num_</a>);</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5e3d505330d00339ab509d8a0d80b189">update_kdist_with_neighbors</a>(row, neighbors);</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a9cae728978ffb8293c2d11aec0db0bea"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">jubatus::core::anomaly::lof_storage::nn_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; core::recommender::recommender_base &gt; nn_engine_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00165">lof_storage.hpp:165</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a5f3882d5b445c5fb33fe78a401ecd95e"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5f3882d5b445c5fb33fe78a401ecd95e">jubatus::core::anomaly::lof_storage::neighbor_num_</a></div><div class="ttdeci">uint32_t neighbor_num_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00161">lof_storage.hpp:161</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a5e3d505330d00339ab509d8a0d80b189"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5e3d505330d00339ab509d8a0d80b189">jubatus::core::anomaly::lof_storage::update_kdist_with_neighbors</a></div><div class="ttdeci">void update_kdist_with_neighbors(const std::string &amp;row, const std::vector&lt; std::pair&lt; std::string, float &gt; &gt; &amp;neighbors)</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00339">lof_storage.cpp:339</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1333,18 +1338,19 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Update kdist for the row using given NN search result (<code>neighbors</code>). Note that this method expects <code>neighbors</code> to be sorted by score. </p>
 
-<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00312">312</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00339">339</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
 
-<p>References <a class="el" href="lof__storage_8hpp_source.html#l00158">lof_table_diff_</a>.</p>
+<p>References <a class="el" href="lof__storage_8hpp_source.html#l00159">lof_table_diff_</a>.</p>
 
-<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00284">update_entries()</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00306">update_kdist()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                                                   {</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  <span class="keywordflow">if</span> (!neighbors.empty()) {</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">lof_table_diff_</a>[row].kdist = neighbors.back().second;</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  }</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a4b2bf4b9acbdc1ae03e07185bc2796c5"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">jubatus::core::anomaly::lof_storage::lof_table_diff_</a></div><div class="ttdeci">lof_table_t lof_table_diff_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00158">lof_storage.hpp:158</a></div></div>
+<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00304">update_entries()</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00329">update_kdist()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                                                   {</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;  <span class="keywordflow">if</span> (!neighbors.empty()) {</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">lof_table_diff_</a>[row].kdist = neighbors.back().second;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;  }</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a4b2bf4b9acbdc1ae03e07185bc2796c5"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">jubatus::core::anomaly::lof_storage::lof_table_diff_</a></div><div class="ttdeci">lof_table_t lof_table_diff_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00159">lof_storage.hpp:159</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -1378,20 +1384,21 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Update LRD for the row. </p>
 
-<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00320">320</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00350">350</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
 
-<p>References <a class="el" href="lof__storage_8hpp_source.html#l00160">neighbor_num_</a>, <a class="el" href="lof__storage_8hpp_source.html#l00164">nn_engine_</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00326">update_lrd_with_neighbors()</a>.</p>
+<p>References <a class="el" href="lof__storage_8hpp_source.html#l00161">neighbor_num_</a>, <a class="el" href="lof__storage_8hpp_source.html#l00165">nn_engine_</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00359">update_lrd_with_neighbors()</a>.</p>
 
-<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00189">update_all()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                                              {</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  vector&lt;pair&lt;string, float&gt; &gt; neighbors;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">nn_engine_</a>-&gt;neighbor_row(row, neighbors, <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5f3882d5b445c5fb33fe78a401ecd95e">neighbor_num_</a>);</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a7efca56d472ad38b9cd3b6ea69443425">update_lrd_with_neighbors</a>(row, neighbors);</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a9cae728978ffb8293c2d11aec0db0bea"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">jubatus::core::anomaly::lof_storage::nn_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; core::recommender::recommender_base &gt; nn_engine_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00164">lof_storage.hpp:164</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a7efca56d472ad38b9cd3b6ea69443425"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a7efca56d472ad38b9cd3b6ea69443425">jubatus::core::anomaly::lof_storage::update_lrd_with_neighbors</a></div><div class="ttdeci">void update_lrd_with_neighbors(const std::string &amp;row, const std::vector&lt; std::pair&lt; std::string, float &gt; &gt; &amp;neighbors)</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00326">lof_storage.cpp:326</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a5f3882d5b445c5fb33fe78a401ecd95e"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5f3882d5b445c5fb33fe78a401ecd95e">jubatus::core::anomaly::lof_storage::neighbor_num_</a></div><div class="ttdeci">uint32_t neighbor_num_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00160">lof_storage.hpp:160</a></div></div>
+<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00196">update_all()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                                              {</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;  vector&lt;pair&lt;string, float&gt; &gt; neighbors;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">nn_engine_</a>-&gt;neighbor_row(row, neighbors, <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5f3882d5b445c5fb33fe78a401ecd95e">neighbor_num_</a>);</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a7efca56d472ad38b9cd3b6ea69443425">update_lrd_with_neighbors</a>(row, neighbors);</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a9cae728978ffb8293c2d11aec0db0bea"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">jubatus::core::anomaly::lof_storage::nn_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; core::recommender::recommender_base &gt; nn_engine_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00165">lof_storage.hpp:165</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a7efca56d472ad38b9cd3b6ea69443425"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a7efca56d472ad38b9cd3b6ea69443425">jubatus::core::anomaly::lof_storage::update_lrd_with_neighbors</a></div><div class="ttdeci">void update_lrd_with_neighbors(const std::string &amp;row, const std::vector&lt; std::pair&lt; std::string, float &gt; &gt; &amp;neighbors)</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00359">lof_storage.cpp:359</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a5f3882d5b445c5fb33fe78a401ecd95e"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5f3882d5b445c5fb33fe78a401ecd95e">jubatus::core::anomaly::lof_storage::neighbor_num_</a></div><div class="ttdeci">uint32_t neighbor_num_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00161">lof_storage.hpp:161</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1444,34 +1451,35 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Update LRD for the row using given NN search result (<code>neighbors</code>). </p>
 
-<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00326">326</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00359">359</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
 
-<p>References <a class="el" href="lof__storage_8cpp_source.html#l00151">get_kdist()</a>, <a class="el" href="lof__storage_8hpp_source.html#l00158">lof_table_diff_</a>, and <a class="el" href="lof__storage_8hpp_source.html#l00160">neighbor_num_</a>.</p>
+<p>References <a class="el" href="lof__storage_8cpp_source.html#l00158">get_kdist()</a>, <a class="el" href="lof__storage_8hpp_source.html#l00159">lof_table_diff_</a>, and <a class="el" href="lof__storage_8hpp_source.html#l00161">neighbor_num_</a>.</p>
 
-<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00284">update_entries()</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00320">update_lrd()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                                                                      {</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;  <span class="keywordflow">if</span> (neighbors.empty()) {</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">lof_table_diff_</a>[row].lrd = 1;</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;  }</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">size_t</span> length = min(neighbors.size(), size_t(<a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5f3882d5b445c5fb33fe78a401ecd95e">neighbor_num_</a>));</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;  <span class="keywordtype">float</span> sum_reachability = 0;</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; length; ++i) {</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    sum_reachability += max(neighbors[i].second, <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a171632f47b346d2edcf0e071a6a6511c">get_kdist</a>(neighbors[i].first));</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;  }</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;  <span class="keywordflow">if</span> (sum_reachability == 0) {</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">lof_table_diff_</a>[row].lrd = numeric_limits&lt;float&gt;::infinity();</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;  }</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">lof_table_diff_</a>[row].lrd = length / sum_reachability;</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a171632f47b346d2edcf0e071a6a6511c"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a171632f47b346d2edcf0e071a6a6511c">jubatus::core::anomaly::lof_storage::get_kdist</a></div><div class="ttdeci">float get_kdist(const std::string &amp;row) const </div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00151">lof_storage.cpp:151</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a4b2bf4b9acbdc1ae03e07185bc2796c5"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">jubatus::core::anomaly::lof_storage::lof_table_diff_</a></div><div class="ttdeci">lof_table_t lof_table_diff_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00158">lof_storage.hpp:158</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a5f3882d5b445c5fb33fe78a401ecd95e"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5f3882d5b445c5fb33fe78a401ecd95e">jubatus::core::anomaly::lof_storage::neighbor_num_</a></div><div class="ttdeci">uint32_t neighbor_num_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00160">lof_storage.hpp:160</a></div></div>
+<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00304">update_entries()</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00350">update_lrd()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                                                                      {</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;  <span class="keywordflow">if</span> (neighbors.empty()) {</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">lof_table_diff_</a>[row].lrd = 1;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;  }</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">size_t</span> length = min(neighbors.size(), size_t(<a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5f3882d5b445c5fb33fe78a401ecd95e">neighbor_num_</a>));</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;  <span class="keywordtype">float</span> sum_reachability = 0;</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; length; ++i) {</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    sum_reachability += max(neighbors[i].second, <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a171632f47b346d2edcf0e071a6a6511c">get_kdist</a>(neighbors[i].first));</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;  }</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;  <span class="keywordflow">if</span> (sum_reachability == 0) {</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">lof_table_diff_</a>[row].lrd = numeric_limits&lt;float&gt;::infinity();</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;  }</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">lof_table_diff_</a>[row].lrd = length / sum_reachability;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a171632f47b346d2edcf0e071a6a6511c"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a171632f47b346d2edcf0e071a6a6511c">jubatus::core::anomaly::lof_storage::get_kdist</a></div><div class="ttdeci">float get_kdist(const std::string &amp;row) const </div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00158">lof_storage.cpp:158</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a4b2bf4b9acbdc1ae03e07185bc2796c5"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4b2bf4b9acbdc1ae03e07185bc2796c5">jubatus::core::anomaly::lof_storage::lof_table_diff_</a></div><div class="ttdeci">lof_table_t lof_table_diff_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00159">lof_storage.hpp:159</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a5f3882d5b445c5fb33fe78a401ecd95e"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a5f3882d5b445c5fb33fe78a401ecd95e">jubatus::core::anomaly::lof_storage::neighbor_num_</a></div><div class="ttdeci">uint32_t neighbor_num_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00161">lof_storage.hpp:161</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1517,30 +1525,30 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00128">128</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
+<p>Definition at line <a class="el" href="lof__storage_8cpp_source.html#l00135">135</a> of file <a class="el" href="lof__storage_8cpp_source.html">lof_storage.cpp</a>.</p>
 
-<p>References <a class="el" href="lof__storage_8cpp_source.html#l00273">collect_neighbors()</a>, <a class="el" href="lof__storage_8hpp_source.html#l00164">nn_engine_</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00284">update_entries()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                                                                       {</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  unordered_set&lt;string&gt; update_set;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  {</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1common.html#a8834396b360f728705429b812ec15690">common::sfv_t</a> query;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">nn_engine_</a>-&gt;decode_row(row, query);</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">if</span> (!query.empty()) {</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;      <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4747e33d7f119fa5ee404c0665860106">collect_neighbors</a>(row, update_set);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    }</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  }</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">nn_engine_</a>-&gt;update_row(row, diff);</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4747e33d7f119fa5ee404c0665860106">collect_neighbors</a>(row, update_set);</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  update_set.insert(row);</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#aa797e76f797bd6eb848a98d790229172">update_entries</a>(update_set);</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;}</div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a9cae728978ffb8293c2d11aec0db0bea"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">jubatus::core::anomaly::lof_storage::nn_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; core::recommender::recommender_base &gt; nn_engine_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00164">lof_storage.hpp:164</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_aa797e76f797bd6eb848a98d790229172"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#aa797e76f797bd6eb848a98d790229172">jubatus::core::anomaly::lof_storage::update_entries</a></div><div class="ttdeci">void update_entries(const jubatus::util::data::unordered_set&lt; std::string &gt; &amp;rows)</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00284">lof_storage.cpp:284</a></div></div>
-<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a4747e33d7f119fa5ee404c0665860106"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4747e33d7f119fa5ee404c0665860106">jubatus::core::anomaly::lof_storage::collect_neighbors</a></div><div class="ttdeci">void collect_neighbors(const std::string &amp;row, jubatus::util::data::unordered_set&lt; std::string &gt; &amp;nn) const </div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00273">lof_storage.cpp:273</a></div></div>
+<p>References <a class="el" href="lof__storage_8cpp_source.html#l00290">collect_neighbors()</a>, <a class="el" href="lof__storage_8hpp_source.html#l00165">nn_engine_</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00304">update_entries()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                                                                       {</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  unordered_set&lt;string&gt; update_set;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <a class="code" href="namespacejubatus_1_1core_1_1common.html#a8834396b360f728705429b812ec15690">common::sfv_t</a> query;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">nn_engine_</a>-&gt;decode_row(row, query);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordflow">if</span> (!query.empty()) {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;      <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4747e33d7f119fa5ee404c0665860106">collect_neighbors</a>(row, update_set);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    }</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  }</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">nn_engine_</a>-&gt;update_row(row, diff);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4747e33d7f119fa5ee404c0665860106">collect_neighbors</a>(row, update_set);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  update_set.insert(row);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <a class="code" href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#aa797e76f797bd6eb848a98d790229172">update_entries</a>(update_set);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;}</div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a9cae728978ffb8293c2d11aec0db0bea"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a9cae728978ffb8293c2d11aec0db0bea">jubatus::core::anomaly::lof_storage::nn_engine_</a></div><div class="ttdeci">jubatus::util::lang::shared_ptr&lt; core::recommender::recommender_base &gt; nn_engine_</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8hpp_source.html#l00165">lof_storage.hpp:165</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_aa797e76f797bd6eb848a98d790229172"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#aa797e76f797bd6eb848a98d790229172">jubatus::core::anomaly::lof_storage::update_entries</a></div><div class="ttdeci">void update_entries(const jubatus::util::data::unordered_set&lt; std::string &gt; &amp;rows)</div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00304">lof_storage.cpp:304</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1anomaly_1_1lof__storage_html_a4747e33d7f119fa5ee404c0665860106"><div class="ttname"><a href="classjubatus_1_1core_1_1anomaly_1_1lof__storage.html#a4747e33d7f119fa5ee404c0665860106">jubatus::core::anomaly::lof_storage::collect_neighbors</a></div><div class="ttdeci">void collect_neighbors(const std::string &amp;row, jubatus::util::data::unordered_set&lt; std::string &gt; &amp;nn) const </div><div class="ttdef"><b>Definition:</b> <a href="lof__storage_8cpp_source.html#l00290">lof_storage.cpp:290</a></div></div>
 <div class="ttc" id="namespacejubatus_1_1core_1_1common_html_a8834396b360f728705429b812ec15690"><div class="ttname"><a href="namespacejubatus_1_1core_1_1common.html#a8834396b360f728705429b812ec15690">jubatus::core::common::sfv_t</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; std::string, float &gt; &gt; sfv_t</div><div class="ttdef"><b>Definition:</b> <a href="common_2type_8hpp_source.html#l00029">type.hpp:29</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
@@ -1573,7 +1581,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="lof__storage_8hpp_source.html#l00053">53</a> of file <a class="el" href="lof__storage_8hpp_source.html">lof_storage.hpp</a>.</p>
+<p>Definition at line <a class="el" href="lof__storage_8hpp_source.html#l00054">54</a> of file <a class="el" href="lof__storage_8hpp_source.html">lof_storage.hpp</a>.</p>
 
 </div>
 </div>
@@ -1595,7 +1603,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="lof__storage_8hpp_source.html#l00054">54</a> of file <a class="el" href="lof__storage_8hpp_source.html">lof_storage.hpp</a>.</p>
+<p>Definition at line <a class="el" href="lof__storage_8hpp_source.html#l00055">55</a> of file <a class="el" href="lof__storage_8hpp_source.html">lof_storage.hpp</a>.</p>
 
 </div>
 </div>
@@ -1617,9 +1625,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="lof__storage_8hpp_source.html#l00157">157</a> of file <a class="el" href="lof__storage_8hpp_source.html">lof_storage.hpp</a>.</p>
+<p>Definition at line <a class="el" href="lof__storage_8hpp_source.html#l00158">158</a> of file <a class="el" href="lof__storage_8hpp_source.html">lof_storage.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00118">clear()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00151">get_kdist()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00168">get_lrd()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00185">has_row()</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00212">put_diff()</a>.</p>
+<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00125">clear()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00158">get_kdist()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00175">get_lrd()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00192">has_row()</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00219">put_diff()</a>.</p>
 
 </div>
 </div>
@@ -1641,9 +1649,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="lof__storage_8hpp_source.html#l00158">158</a> of file <a class="el" href="lof__storage_8hpp_source.html">lof_storage.hpp</a>.</p>
+<p>Definition at line <a class="el" href="lof__storage_8hpp_source.html#l00159">159</a> of file <a class="el" href="lof__storage_8hpp_source.html">lof_storage.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00118">clear()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00208">get_diff()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00151">get_kdist()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00168">get_lrd()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00185">has_row()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00212">put_diff()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00113">remove_row()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00312">update_kdist_with_neighbors()</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00326">update_lrd_with_neighbors()</a>.</p>
+<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00125">clear()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00215">get_diff()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00158">get_kdist()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00175">get_lrd()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00192">has_row()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00219">put_diff()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00120">remove_row()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00339">update_kdist_with_neighbors()</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00359">update_lrd_with_neighbors()</a>.</p>
 
 </div>
 </div>
@@ -1665,9 +1673,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="lof__storage_8hpp_source.html#l00160">160</a> of file <a class="el" href="lof__storage_8hpp_source.html">lof_storage.hpp</a>.</p>
+<p>Definition at line <a class="el" href="lof__storage_8hpp_source.html#l00161">161</a> of file <a class="el" href="lof__storage_8hpp_source.html">lof_storage.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00284">update_entries()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00306">update_kdist()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00320">update_lrd()</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00326">update_lrd_with_neighbors()</a>.</p>
+<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00304">update_entries()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00329">update_kdist()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00350">update_lrd()</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00359">update_lrd_with_neighbors()</a>.</p>
 
 </div>
 </div>
@@ -1689,9 +1697,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="lof__storage_8hpp_source.html#l00164">164</a> of file <a class="el" href="lof__storage_8hpp_source.html">lof_storage.hpp</a>.</p>
+<p>Definition at line <a class="el" href="lof__storage_8hpp_source.html#l00165">165</a> of file <a class="el" href="lof__storage_8hpp_source.html">lof_storage.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00118">clear()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00273">collect_neighbors()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00124">get_all_row_ids()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00113">remove_row()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00203">set_nn_engine()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00284">update_entries()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00306">update_kdist()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00320">update_lrd()</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00128">update_row()</a>.</p>
+<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00125">clear()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00290">collect_neighbors()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00131">get_all_row_ids()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00120">remove_row()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00210">set_nn_engine()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00304">update_entries()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00329">update_kdist()</a>, <a class="el" href="lof__storage_8cpp_source.html#l00350">update_lrd()</a>, and <a class="el" href="lof__storage_8cpp_source.html#l00135">update_row()</a>.</p>
 
 </div>
 </div>
@@ -1713,9 +1721,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="lof__storage_8hpp_source.html#l00161">161</a> of file <a class="el" href="lof__storage_8hpp_source.html">lof_storage.hpp</a>.</p>
+<p>Definition at line <a class="el" href="lof__storage_8hpp_source.html#l00162">162</a> of file <a class="el" href="lof__storage_8hpp_source.html">lof_storage.hpp</a>.</p>
 
-<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00273">collect_neighbors()</a>.</p>
+<p>Referenced by <a class="el" href="lof__storage_8cpp_source.html#l00290">collect_neighbors()</a>.</p>
 
 </div>
 </div>
@@ -1726,7 +1734,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:37 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:05 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

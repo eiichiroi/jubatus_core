@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -101,10 +101,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <tr class="even"><td class="entry"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1epsilon__greedy.html#a7cc698618327914045936db23b23c48c">delete_arm</a>(const std::string &amp;arm_id)</td><td class="entry"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1epsilon__greedy.html">jubatus::core::bandit::epsilon_greedy</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1bandit__base.html#a546b72d61e3e6eff57210ffd9f1ec13e">diff_t</a> typedef</td><td class="entry"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1bandit__base.html">jubatus::core::bandit::bandit_base</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1epsilon__greedy.html#a26883c9c2f50bebe122657a125d109cd">eps_</a></td><td class="entry"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1epsilon__greedy.html">jubatus::core::bandit::epsilon_greedy</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1epsilon__greedy.html#a63d9a0acc1389a2decdc73d16413fa83">epsilon_greedy</a>(double eps)</td><td class="entry"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1epsilon__greedy.html">jubatus::core::bandit::epsilon_greedy</a></td><td class="entry"><span class="mlabel">explicit</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1epsilon__greedy.html#a8b1279eef45c86fd5a9e5846410fac25">epsilon_greedy</a>(bool assume_unrewarded, double eps)</td><td class="entry"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1epsilon__greedy.html">jubatus::core::bandit::epsilon_greedy</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1epsilon__greedy.html#aaa4ba60cd2635f15a37579f2472dca80">get_arm_info</a>(const std::string &amp;player_id) const </td><td class="entry"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1epsilon__greedy.html">jubatus::core::bandit::epsilon_greedy</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1epsilon__greedy.html#a23844a87d1bac128209f17e2e608e8e8">get_diff</a>(diff_t &amp;diff) const </td><td class="entry"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1epsilon__greedy.html">jubatus::core::bandit::epsilon_greedy</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1bandit__base.html#a97b3e3929aecb6dfcaabbdc5f5f7053f">get_version</a>() const </td><td class="entry"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1bandit__base.html">jubatus::core::bandit::bandit_base</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1epsilon__greedy.html#ab20d8106437275ae2b76ac8cb83de21b">get_version</a>() const </td><td class="entry"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1epsilon__greedy.html">jubatus::core::bandit::epsilon_greedy</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1epsilon__greedy.html#a1faec846908e952b8eb9ac886b69411c">mix</a>(const diff_t &amp;lhs, diff_t &amp;rhs) const </td><td class="entry"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1epsilon__greedy.html">jubatus::core::bandit::epsilon_greedy</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1epsilon__greedy.html#a481040ba84beaf9688e67b9a51874524">name</a>() const </td><td class="entry"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1epsilon__greedy.html">jubatus::core::bandit::epsilon_greedy</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1epsilon__greedy.html#a97a5e8c1cd99ed7e1138a07c665f41cf">pack</a>(framework::packer &amp;pk) const </td><td class="entry"><a class="el" href="classjubatus_1_1core_1_1bandit_1_1epsilon__greedy.html">jubatus::core::bandit::epsilon_greedy</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
@@ -120,7 +120,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:37 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:05 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

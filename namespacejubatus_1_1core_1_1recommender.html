@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -147,7 +147,9 @@ Functions</h2></td></tr>
 <tr class="separator:afeb67b31a65f79cbb5db2c85facb5068"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3a18d8b515bf868294c8f47c3f5566b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1recommender.html#aa3a18d8b515bf868294c8f47c3f5566b">prod_invert_and_vector</a> (const unordered_map&lt; string, vector&lt; float &gt; &gt; &amp;matrix, const <a class="el" href="namespacejubatus_1_1core_1_1common.html#a8834396b360f728705429b812ec15690">common::sfv_t</a> &amp;vec, size_t dim, vector&lt; float &gt; &amp;ret)</td></tr>
 <tr class="separator:aa3a18d8b515bf868294c8f47c3f5566b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78a268e878946313bd5fb2f75f07f875"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1recommender.html#a78a268e878946313bd5fb2f75f07f875">set_bit_vector</a> (const std::vector&lt; float &gt; &amp;vec, <a class="el" href="classjubatus_1_1core_1_1storage_1_1bit__vector.html">bit_vector</a> &amp;bit_vec)</td></tr>
+<tr class="memitem:a2ee4bede052cdcbcfa52313277f0c48f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1recommender.html#a2ee4bede052cdcbcfa52313277f0c48f">set_bit_vector</a> (const std::vector&lt; float &gt; &amp;vec, <a class="el" href="namespacejubatus_1_1core_1_1storage.html#a3cf0187e222972df167b5f987cbc3b4e">jubatus::core::storage::bit_vector</a> &amp;bit_vec)</td></tr>
+<tr class="separator:a2ee4bede052cdcbcfa52313277f0c48f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78a268e878946313bd5fb2f75f07f875"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1recommender.html#a78a268e878946313bd5fb2f75f07f875">set_bit_vector</a> (const std::vector&lt; float &gt; &amp;vec, bit_vector &amp;bit_vec)</td></tr>
 <tr class="separator:a78a268e878946313bd5fb2f75f07f875"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
@@ -166,7 +168,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="recommender_2euclid__lsh_8cpp_source.html#l00097">97</a> of file <a class="el" href="recommender_2euclid__lsh_8cpp_source.html">euclid_lsh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="recommender_2euclid__lsh_8cpp_source.html#l00091">91</a> of file <a class="el" href="recommender_2euclid__lsh_8cpp_source.html">euclid_lsh.cpp</a>.</p>
 
 </div>
 </div>
@@ -194,7 +196,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="recommender_2euclid__lsh_8cpp_source.html#l00096">96</a> of file <a class="el" href="recommender_2euclid__lsh_8cpp_source.html">euclid_lsh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="recommender_2euclid__lsh_8cpp_source.html#l00090">90</a> of file <a class="el" href="recommender_2euclid__lsh_8cpp_source.html">euclid_lsh.cpp</a>.</p>
 
 </div>
 </div>
@@ -279,7 +281,7 @@ Variables</h2></td></tr>
 
 <p>References <a class="el" href="namespacejubatus_1_1core_1_1common_1_1jsonconfig.html#a04e9956193c1365cc36e32875c892543">jubatus::core::common::jsonconfig::v()</a>.</p>
 
-<p>Referenced by <a class="el" href="recommender_2lsh_8cpp_source.html#l00121">jubatus::core::recommender::lsh::generate_column_base()</a>.</p>
+<p>Referenced by <a class="el" href="recommender_2lsh_8cpp_source.html#l00122">jubatus::core::recommender::lsh::generate_column_base()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                                                                           {</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  jubatus::util::math::random::mtrand rnd(seed);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  vector&lt;float&gt; <a class="code" href="namespacejubatus_1_1core_1_1common_1_1jsonconfig.html#a04e9956193c1365cc36e32875c892543">v</a>(dim);</div>
@@ -494,7 +496,7 @@ Here is the caller graph for this function:</div>
 
 <p>References <a class="el" href="assert_8hpp_source.html#l00063">JUBATUS_ASSERT_EQ</a>, and <a class="el" href="namespacejubatus_1_1core_1_1common_1_1jsonconfig.html#a04e9956193c1365cc36e32875c892543">jubatus::core::common::jsonconfig::v()</a>.</p>
 
-<p>Referenced by <a class="el" href="recommender_2lsh_8cpp_source.html#l00107">jubatus::core::recommender::lsh::calc_lsh_values()</a>.</p>
+<p>Referenced by <a class="el" href="recommender_2lsh_8cpp_source.html#l00108">jubatus::core::recommender::lsh::calc_lsh_values()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                        {</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  vector&lt;float&gt; r(dim);</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec.size(); ++i) {</div>
@@ -538,6 +540,32 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="a2ee4bede052cdcbcfa52313277f0c48f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void jubatus::core::recommender::set_bit_vector </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; float &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacejubatus_1_1core_1_1storage.html#a3cf0187e222972df167b5f987cbc3b4e">jubatus::core::storage::bit_vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>bit_vec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a78a268e878946313bd5fb2f75f07f875"></a>
 <div class="memitem">
 <div class="memproto">
@@ -551,7 +579,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classjubatus_1_1core_1_1storage_1_1bit__vector.html">bit_vector</a> &amp;&#160;</td>
+          <td class="paramtype">bit_vector &amp;&#160;</td>
           <td class="paramname"><em>bit_vec</em>&#160;</td>
         </tr>
         <tr>
@@ -564,12 +592,12 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="recommender_2lsh__util_8cpp_source.html#l00044">44</a> of file <a class="el" href="recommender_2lsh__util_8cpp_source.html">lsh_util.cpp</a>.</p>
 
-<p>References <a class="el" href="bit__vector_8cpp_source.html#l00041">jubatus::core::storage::bit_vector::resize_and_clear()</a>, <a class="el" href="bit__vector_8cpp_source.html#l00046">jubatus::core::storage::bit_vector::set_bit()</a>, and <a class="el" href="storage_2bit__vector_8hpp_source.html#l00065">jubatus::core::storage::bit_vector::swap()</a>.</p>
+<p>References <a class="el" href="bit__vector_8hpp_source.html#l00174">jubatus::core::storage::bit_vector_base&lt; bit_base &gt;::resize_and_clear()</a>.</p>
 
-<p>Referenced by <a class="el" href="recommender_2lsh_8cpp_source.html#l00107">jubatus::core::recommender::lsh::calc_lsh_values()</a>.</p>
+<p>Referenced by <a class="el" href="recommender_2lsh_8cpp_source.html#l00108">jubatus::core::recommender::lsh::calc_lsh_values()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                                                                      {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <a class="code" href="namespacejubatus_1_1core_1_1table.html#a597ad028f4c4f02f9ec3aab000a02f9f">bit_vector</a> bv;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  bv.resize_and_clear(vec.size());</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <a class="code" href="namespacejubatus_1_1core_1_1storage.html#a3cf0187e222972df167b5f987cbc3b4e">bit_vector</a> bv;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  bv.<a class="code" href="classjubatus_1_1core_1_1storage_1_1bit__vector__base.html#a34c766fa7d2544340f3c67dea7621040">resize_and_clear</a>(vec.size());</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec.size(); ++i) {</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">if</span> (vec[i] &gt;= 0.f) {</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      bv.set_bit(i);</div>
@@ -577,14 +605,15 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  }</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  bit_vec.swap(bv);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
-<div class="ttc" id="namespacejubatus_1_1core_1_1table_html_a597ad028f4c4f02f9ec3aab000a02f9f"><div class="ttname"><a href="namespacejubatus_1_1core_1_1table.html#a597ad028f4c4f02f9ec3aab000a02f9f">jubatus::core::table::bit_vector</a></div><div class="ttdeci">bit_vector_base&lt; uint64_t &gt; bit_vector</div><div class="ttdef"><b>Definition:</b> <a href="table_2column_2bit__vector_8hpp_source.html#l00417">bit_vector.hpp:417</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1storage_1_1bit__vector__base_html_a34c766fa7d2544340f3c67dea7621040"><div class="ttname"><a href="classjubatus_1_1core_1_1storage_1_1bit__vector__base.html#a34c766fa7d2544340f3c67dea7621040">jubatus::core::storage::bit_vector_base::resize_and_clear</a></div><div class="ttdeci">void resize_and_clear(uint64_t bit_num)</div><div class="ttdef"><b>Definition:</b> <a href="bit__vector_8hpp_source.html#l00174">bit_vector.hpp:174</a></div></div>
+<div class="ttc" id="namespacejubatus_1_1core_1_1storage_html_a3cf0187e222972df167b5f987cbc3b4e"><div class="ttname"><a href="namespacejubatus_1_1core_1_1storage.html#a3cf0187e222972df167b5f987cbc3b4e">jubatus::core::storage::bit_vector</a></div><div class="ttdeci">bit_vector_base&lt; uint64_t &gt; bit_vector</div><div class="ttdef"><b>Definition:</b> <a href="bit__vector__ranking_8hpp_source.html#l00027">bit_vector_ranking.hpp:27</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacejubatus_1_1core_1_1recommender_a78a268e878946313bd5fb2f75f07f875_cgraph.png" border="0" usemap="#namespacejubatus_1_1core_1_1recommender_a78a268e878946313bd5fb2f75f07f875_cgraph" alt=""/></div>
 <map name="namespacejubatus_1_1core_1_1recommender_a78a268e878946313bd5fb2f75f07f875_cgraph" id="namespacejubatus_1_1core_1_1recommender_a78a268e878946313bd5fb2f75f07f875_cgraph">
-<area shape="rect" id="node2" href="classjubatus_1_1core_1_1storage_1_1bit__vector.html#a1d7fa2926d0a4c99865bf2b7b7a9872e" title="jubatus::core::storage\l::bit_vector::resize_and_clear" alt="" coords="241,5,436,44"/><area shape="rect" id="node4" href="classjubatus_1_1core_1_1storage_1_1bit__vector.html#a56372262b1292c8c89385ec9ec430e66" title="jubatus::core::storage\l::bit_vector::set_bit" alt="" coords="264,68,413,107"/><area shape="rect" id="node5" href="classjubatus_1_1core_1_1storage_1_1bit__vector.html#aef8fc784d89ed7ba5444ea95dc04a696" title="jubatus::core::storage\l::bit_vector::swap" alt="" coords="264,131,413,169"/><area shape="rect" id="node3" href="classjubatus_1_1core_1_1storage_1_1bit__vector.html#a54dc5626bf18f51d51570416a327b97a" title="jubatus::core::storage\l::bit_vector::bit_num" alt="" coords="490,5,640,44"/><area shape="rect" id="node6" href="namespacejubatus_1_1core_1_1clustering.html#a82a8f4749e600affc8b16bf983de3b99" title="jubatus::core::clustering\l::swap" alt="" coords="484,131,646,169"/></map>
+<area shape="rect" id="node2" href="classjubatus_1_1core_1_1storage_1_1bit__vector__base.html#a34c766fa7d2544340f3c67dea7621040" title="jubatus::core::storage\l::bit_vector_base::resize\l_and_clear" alt="" coords="241,5,407,57"/></map>
 </div>
 </p>
 
@@ -618,14 +647,14 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="recommender_2lsh_8cpp_source.html#l00037">37</a> of file <a class="el" href="recommender_2lsh_8cpp_source.html">lsh.cpp</a>.</p>
+<p>Definition at line <a class="el" href="recommender_2lsh_8cpp_source.html#l00038">38</a> of file <a class="el" href="recommender_2lsh_8cpp_source.html">lsh.cpp</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:39 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:09 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

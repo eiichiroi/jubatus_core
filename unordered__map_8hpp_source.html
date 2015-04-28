@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -139,8 +139,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;         <span class="keyword">typename</span> H,</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;         <span class="keyword">typename</span> E,</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;         <span class="keyword">typename</span> A&gt;</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="namespacemsgpack.html#a5efc9258f6eb0862d15a1d306620d677">   49</a></span>&#160;<span class="keyword">inline</span> packer&lt;Stream&gt;&amp; <a class="code" href="namespacemsgpack.html#abe1c47c8b7c197fcba8ddd121973d203">operator&lt;&lt;</a>(</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    packer&lt;Stream&gt;&amp; o,</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="namespacemsgpack.html#a5efc9258f6eb0862d15a1d306620d677">   49</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="classmsgpack_1_1packer.html">packer&lt;Stream&gt;</a>&amp; <a class="code" href="namespacemsgpack.html#abe1c47c8b7c197fcba8ddd121973d203">operator&lt;&lt;</a>(</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="classmsgpack_1_1packer.html">packer&lt;Stream&gt;</a>&amp; o,</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">const</span> jubatus::util::data::unordered_map&lt;K, V, H, E, A&gt;&amp; <a class="code" href="namespacejubatus_1_1core_1_1common_1_1jsonconfig.html#a04e9956193c1365cc36e32875c892543">v</a>) {</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  o.pack_map(v.size());</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keyword">typedef</span> <span class="keyword">typename</span></div>
@@ -157,13 +157,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif  // JUBATUS_CORE_COMMON_UNORDERED_MAP_HPP_</span></div>
 <div class="ttc" id="namespacemsgpack_html_abe1c47c8b7c197fcba8ddd121973d203"><div class="ttname"><a href="namespacemsgpack.html#abe1c47c8b7c197fcba8ddd121973d203">msgpack::operator&lt;&lt;</a></div><div class="ttdeci">packer&lt; Stream &gt; &amp; operator&lt;&lt;(packer&lt; Stream &gt; &amp;o, const jubatus::core::common::byte_buffer &amp;b)</div><div class="ttdef"><b>Definition:</b> <a href="byte__buffer_8hpp_source.html#l00117">byte_buffer.hpp:117</a></div></div>
-<div class="ttc" id="namespacemsgpack_html"><div class="ttname"><a href="namespacemsgpack.html">msgpack</a></div><div class="ttdef"><b>Definition:</b> <a href="byte__buffer_8hpp_source.html#l00103">byte_buffer.hpp:103</a></div></div>
+<div class="ttc" id="namespacemsgpack_html"><div class="ttname"><a href="namespacemsgpack.html">msgpack</a></div><div class="ttdef"><b>Definition:</b> <a href="bandit__base_8hpp_source.html#l00024">bandit_base.hpp:24</a></div></div>
 <div class="ttc" id="namespacejubatus_1_1core_1_1common_1_1jsonconfig_html_a04e9956193c1365cc36e32875c892543"><div class="ttname"><a href="namespacejubatus_1_1core_1_1common_1_1jsonconfig.html#a04e9956193c1365cc36e32875c892543">jubatus::core::common::jsonconfig::v</a></div><div class="ttdeci">std::vector&lt; T &gt; v(size)</div></div>
 <div class="ttc" id="namespacemsgpack_html_a87a51bc053548023921f86b80db885da"><div class="ttname"><a href="namespacemsgpack.html#a87a51bc053548023921f86b80db885da">msgpack::operator&gt;&gt;</a></div><div class="ttdeci">jubatus::core::common::byte_buffer &amp; operator&gt;&gt;(object o, jubatus::core::common::byte_buffer &amp;b)</div><div class="ttdef"><b>Definition:</b> <a href="byte__buffer_8hpp_source.html#l00105">byte_buffer.hpp:105</a></div></div>
+<div class="ttc" id="classmsgpack_1_1packer_html"><div class="ttname"><a href="classmsgpack_1_1packer.html">msgpack::packer</a></div><div class="ttdef"><b>Definition:</b> <a href="bandit__base_8hpp_source.html#l00026">bandit_base.hpp:26</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:35 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:02 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

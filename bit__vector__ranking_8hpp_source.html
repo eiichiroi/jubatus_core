@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -110,34 +110,46 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#ifndef JUBATUS_CORE_NEAREST_NEIGHBOR_BIT_VECTOR_RANKING_HPP_</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#define JUBATUS_CORE_NEAREST_NEIGHBOR_BIT_VECTOR_RANKING_HPP_</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;../table/column/bit_vector.hpp&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;../table/column/abstract_column.hpp&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacejubatus.html">jubatus</a> {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>core {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>nearest_neighbor {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacejubatus_1_1core_1_1nearest__neighbor.html#aa2bdda0857c1d11f5a86e8b7d023ade9">ranking_hamming_bit_vectors</a>(</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacejubatus_1_1core_1_1table.html#a597ad028f4c4f02f9ec3aab000a02f9f">table::bit_vector</a>&amp; query,</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespacejubatus_1_1core_1_1table.html#ac5074e1e00bd8f05cc49ae3f5aa210d3">table::const_bit_vector_column</a>&amp; bvs,</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    std::vector&lt;std::pair&lt;uint64_t, float&gt; &gt;&amp; ret,</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    uint64_t ret_num);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}  <span class="comment">// namespace nearest_neighbor</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}  <span class="comment">// namespace core</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}  <span class="comment">// namespace jubatus</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif  // JUBATUS_CORE_NEAREST_NEIGHBOR_BIT_VECTOR_RANKING_HPP_</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacejubatus.html">jubatus</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>core {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>storage {</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="namespacejubatus_1_1core_1_1storage.html#a3cf0187e222972df167b5f987cbc3b4e">   27</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> bit_base&gt; <span class="keyword">class </span><a class="code" href="classjubatus_1_1core_1_1storage_1_1bit__vector__base.html">bit_vector_base</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">typedef</span> <a class="code" href="classjubatus_1_1core_1_1storage_1_1bit__vector__base.html">bit_vector_base&lt;uint64_t&gt;</a> <a class="code" href="namespacejubatus_1_1core_1_1storage.html#a3cf0187e222972df167b5f987cbc3b4e">bit_vector</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="namespacejubatus_1_1core_1_1storage.html#ac68495e0ae772ff1c0d73eef252f2891">   31</a></span>&#160;<span class="keyword">class </span><a class="code" href="classjubatus_1_1core_1_1storage_1_1typed__column.html">typed_column</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">typedef</span> <a class="code" href="classjubatus_1_1core_1_1storage_1_1typed__column_3_01bit__vector_01_4.html">typed_column&lt;bit_vector&gt;</a> <a class="code" href="namespacejubatus_1_1core_1_1storage.html#ac68495e0ae772ff1c0d73eef252f2891">bit_vector_column</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="namespacejubatus_1_1core_1_1storage.html#a63667ab3881bcaac68e5c148d4bc05ff">   33</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">const</span> bit_vector_column <a class="code" href="namespacejubatus_1_1core_1_1storage.html#a63667ab3881bcaac68e5c148d4bc05ff">const_bit_vector_column</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">namespace </span>nearest_neighbor {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacejubatus_1_1core_1_1nearest__neighbor.html#aa2bdda0857c1d11f5a86e8b7d023ade9">ranking_hamming_bit_vectors</a>(</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">const</span> <a class="code" href="classjubatus_1_1core_1_1storage_1_1bit__vector__base.html">storage::bit_vector</a>&amp; query,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">const</span> <a class="code" href="classjubatus_1_1core_1_1storage_1_1typed__column_3_01bit__vector_01_4.html">storage::const_bit_vector_column</a>&amp; bvs,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    std::vector&lt;std::pair&lt;uint64_t, float&gt; &gt;&amp; ret,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    uint64_t ret_num);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}  <span class="comment">// namespace nearest_neighbor</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}  <span class="comment">// namespace core</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}  <span class="comment">// namespace jubatus</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif  // JUBATUS_CORE_NEAREST_NEIGHBOR_BIT_VECTOR_RANKING_HPP_</span></div>
 <div class="ttc" id="namespacejubatus_html"><div class="ttname"><a href="namespacejubatus.html">jubatus</a></div><div class="ttdef"><b>Definition:</b> <a href="anomaly__base_8cpp_source.html#l00029">anomaly_base.cpp:29</a></div></div>
-<div class="ttc" id="namespacejubatus_1_1core_1_1table_html_ac5074e1e00bd8f05cc49ae3f5aa210d3"><div class="ttname"><a href="namespacejubatus_1_1core_1_1table.html#ac5074e1e00bd8f05cc49ae3f5aa210d3">jubatus::core::table::const_bit_vector_column</a></div><div class="ttdeci">const bit_vector_column const_bit_vector_column</div><div class="ttdef"><b>Definition:</b> <a href="abstract__column_8hpp_source.html#l00377">abstract_column.hpp:377</a></div></div>
 <div class="ttc" id="namespacejubatus_1_1core_1_1nearest__neighbor_html_aa2bdda0857c1d11f5a86e8b7d023ade9"><div class="ttname"><a href="namespacejubatus_1_1core_1_1nearest__neighbor.html#aa2bdda0857c1d11f5a86e8b7d023ade9">jubatus::core::nearest_neighbor::ranking_hamming_bit_vectors</a></div><div class="ttdeci">void ranking_hamming_bit_vectors(const bit_vector &amp;query, const const_bit_vector_column &amp;bvs, vector&lt; pair&lt; uint64_t, float &gt; &gt; &amp;ret, uint64_t ret_num)</div><div class="ttdef"><b>Definition:</b> <a href="bit__vector__ranking_8cpp_source.html#l00034">bit_vector_ranking.cpp:34</a></div></div>
-<div class="ttc" id="namespacejubatus_1_1core_1_1table_html_a597ad028f4c4f02f9ec3aab000a02f9f"><div class="ttname"><a href="namespacejubatus_1_1core_1_1table.html#a597ad028f4c4f02f9ec3aab000a02f9f">jubatus::core::table::bit_vector</a></div><div class="ttdeci">bit_vector_base&lt; uint64_t &gt; bit_vector</div><div class="ttdef"><b>Definition:</b> <a href="table_2column_2bit__vector_8hpp_source.html#l00417">bit_vector.hpp:417</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1storage_1_1typed__column_3_01bit__vector_01_4_html"><div class="ttname"><a href="classjubatus_1_1core_1_1storage_1_1typed__column_3_01bit__vector_01_4.html">jubatus::core::storage::typed_column&lt; bit_vector &gt;</a></div><div class="ttdef"><b>Definition:</b> <a href="abstract__column_8hpp_source.html#l00214">abstract_column.hpp:214</a></div></div>
+<div class="ttc" id="namespacejubatus_1_1core_1_1storage_html_a63667ab3881bcaac68e5c148d4bc05ff"><div class="ttname"><a href="namespacejubatus_1_1core_1_1storage.html#a63667ab3881bcaac68e5c148d4bc05ff">jubatus::core::storage::const_bit_vector_column</a></div><div class="ttdeci">const bit_vector_column const_bit_vector_column</div><div class="ttdef"><b>Definition:</b> <a href="bit__vector__ranking_8hpp_source.html#l00033">bit_vector_ranking.hpp:33</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1storage_1_1bit__vector__base_html"><div class="ttname"><a href="classjubatus_1_1core_1_1storage_1_1bit__vector__base.html">jubatus::core::storage::bit_vector_base</a></div><div class="ttdef"><b>Definition:</b> <a href="bit__vector__ranking_8hpp_source.html#l00027">bit_vector_ranking.hpp:27</a></div></div>
+<div class="ttc" id="namespacejubatus_1_1core_1_1storage_html_a3cf0187e222972df167b5f987cbc3b4e"><div class="ttname"><a href="namespacejubatus_1_1core_1_1storage.html#a3cf0187e222972df167b5f987cbc3b4e">jubatus::core::storage::bit_vector</a></div><div class="ttdeci">bit_vector_base&lt; uint64_t &gt; bit_vector</div><div class="ttdef"><b>Definition:</b> <a href="bit__vector__ranking_8hpp_source.html#l00027">bit_vector_ranking.hpp:27</a></div></div>
+<div class="ttc" id="namespacejubatus_1_1core_1_1storage_html_ac68495e0ae772ff1c0d73eef252f2891"><div class="ttname"><a href="namespacejubatus_1_1core_1_1storage.html#ac68495e0ae772ff1c0d73eef252f2891">jubatus::core::storage::bit_vector_column</a></div><div class="ttdeci">typed_column&lt; bit_vector &gt; bit_vector_column</div><div class="ttdef"><b>Definition:</b> <a href="bit__vector__ranking_8hpp_source.html#l00031">bit_vector_ranking.hpp:31</a></div></div>
+<div class="ttc" id="classjubatus_1_1core_1_1storage_1_1typed__column_html"><div class="ttname"><a href="classjubatus_1_1core_1_1storage_1_1typed__column.html">jubatus::core::storage::typed_column</a></div><div class="ttdef"><b>Definition:</b> <a href="bit__vector__ranking_8hpp_source.html#l00031">bit_vector_ranking.hpp:31</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:35 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:03 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

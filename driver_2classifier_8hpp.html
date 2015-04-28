@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">jubatus_core
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.1.2</span>
    </div>
    <div id="projectbrief">Jubatus: Online machine learning framework for distributed environment</div>
   </td>
@@ -99,9 +99,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;jubatus/util/lang/shared_ptr.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="classifier__type_8hpp_source.html">../classifier/classifier_type.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="classifier__base_8hpp_source.html">../classifier/classifier_base.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="mixable_8hpp_source.html">../framework/mixable.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="datum__to__fv__converter_8hpp_source.html">../fv_converter/datum_to_fv_converter.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="mixable__weight__manager_8hpp_source.html">../fv_converter/mixable_weight_manager.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="driver_8hpp_source.html">driver.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -109,7 +107,7 @@ Include dependency graph for classifier.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="driver_2classifier_8hpp__incl.png" border="0" usemap="#jubatus_2core_2driver_2classifier_8hpp" alt=""/></div>
 <map name="jubatus_2core_2driver_2classifier_8hpp" id="jubatus_2core_2driver_2classifier_8hpp">
-<area shape="rect" id="node6" href="classifier__type_8hpp.html" title="../classifier/classifier\l_type.hpp" alt="" coords="110,352,250,391"/><area shape="rect" id="node10" href="classifier__base_8hpp.html" title="../classifier/classifier\l_base.hpp" alt="" coords="466,265,606,304"/><area shape="rect" id="node15" href="mixable_8hpp.html" title="../framework/mixable.hpp" alt="" coords="2011,359,2181,384"/><area shape="rect" id="node21" href="datum__to__fv__converter_8hpp.html" title="../fv_converter/datum\l_to_fv_converter.hpp" alt="" coords="1008,265,1155,304"/><area shape="rect" id="node24" href="mixable__weight__manager_8hpp.html" title="../fv_converter/mixable\l_weight_manager.hpp" alt="" coords="1777,92,1932,131"/><area shape="rect" id="node47" href="driver_8hpp.html" title="driver.hpp" alt="" coords="2205,185,2285,211"/><area shape="rect" id="node8" href="classifier__config_8hpp.html" title="classifier_config.hpp" alt="" coords="93,445,235,471"/><area shape="rect" id="node11" href="common_2type_8hpp.html" title="../common/type.hpp" alt="" coords="680,359,819,384"/><area shape="rect" id="node13" href="packer_8hpp.html" title="../framework/packer.hpp" alt="" coords="2458,359,2622,384"/><area shape="rect" id="node19" href="unlearner__base_8hpp.html" title="../unlearner/unlearner\l_base.hpp" alt="" coords="355,352,504,391"/><area shape="rect" id="node17" href="version_8hpp.html" title="../common/version.hpp" alt="" coords="2177,445,2333,471"/><area shape="rect" id="node25" href="mixable__helper_8hpp.html" title="../framework/mixable\l_helper.hpp" alt="" coords="2445,179,2589,217"/><area shape="rect" id="node41" href="weight__manager_8hpp.html" title="weight_manager.hpp" alt="" coords="1583,185,1729,211"/><area shape="rect" id="node27" href="common_2exception_8hpp.html" title="../common/exception.hpp" alt="" coords="2747,359,2917,384"/><area shape="rect" id="node38" href="model_8hpp.html" title="model.hpp" alt="" coords="2410,272,2494,297"/><area shape="rect" id="node39" href="linear__mixable_8hpp.html" title="linear_mixable.hpp" alt="" coords="2517,272,2651,297"/><area shape="rect" id="node40" href="push__mixable_8hpp.html" title="push_mixable.hpp" alt="" coords="2257,272,2386,297"/><area shape="rect" id="node34" href="exception__info_8hpp.html" title="exception_info.hpp" alt="" coords="3247,445,3380,471"/><area shape="rect" id="node43" href="counter_8hpp.html" title="counter.hpp" alt="" coords="1642,359,1734,384"/><area shape="rect" id="node45" href="datum_8hpp.html" title="datum.hpp" alt="" coords="1230,359,1314,384"/><area shape="rect" id="node46" href="keyword__weights_8hpp.html" title="keyword_weights.hpp" alt="" coords="1331,272,1480,297"/><area shape="rect" id="node44" href="unordered__map_8hpp.html" title="../common/unordered\l_map.hpp" alt="" coords="1493,439,1641,477"/></map>
+<area shape="rect" id="node6" href="classifier__type_8hpp.html" title="../classifier/classifier\l_type.hpp" alt="" coords="433,352,573,391"/><area shape="rect" id="node10" href="mixable_8hpp.html" title="../framework/mixable.hpp" alt="" coords="1491,359,1661,384"/><area shape="rect" id="node15" href="mixable__weight__manager_8hpp.html" title="../fv_converter/mixable\l_weight_manager.hpp" alt="" coords="1561,92,1717,131"/><area shape="rect" id="node42" href="driver_8hpp.html" title="driver.hpp" alt="" coords="1444,185,1524,211"/><area shape="rect" id="node8" href="classifier__config_8hpp.html" title="classifier_config.hpp" alt="" coords="432,445,574,471"/><area shape="rect" id="node12" href="version_8hpp.html" title="../common/version.hpp" alt="" coords="1254,445,1410,471"/><area shape="rect" id="node16" href="mixable__helper_8hpp.html" title="../framework/mixable\l_helper.hpp" alt="" coords="1797,179,1942,217"/><area shape="rect" id="node32" href="weight__manager_8hpp.html" title="weight_manager.hpp" alt="" coords="640,185,785,211"/><area shape="rect" id="node17" href="common_2exception_8hpp.html" title="../common/exception.hpp" alt="" coords="1736,359,1907,384"/><area shape="rect" id="node28" href="model_8hpp.html" title="model.hpp" alt="" coords="1442,272,1526,297"/><area shape="rect" id="node30" href="linear__mixable_8hpp.html" title="linear_mixable.hpp" alt="" coords="1958,272,2091,297"/><area shape="rect" id="node31" href="push__mixable_8hpp.html" title="push_mixable.hpp" alt="" coords="1550,272,1680,297"/><area shape="rect" id="node24" href="exception__info_8hpp.html" title="exception_info.hpp" alt="" coords="2311,445,2444,471"/><area shape="rect" id="node29" href="packer_8hpp.html" title="packer.hpp" alt="" coords="1981,359,2068,384"/><area shape="rect" id="node37" href="common_2type_8hpp.html" title="../common/type.hpp" alt="" coords="907,359,1045,384"/><area shape="rect" id="node39" href="keyword__weights_8hpp.html" title="keyword_weights.hpp" alt="" coords="424,272,574,297"/><area shape="rect" id="node40" href="counter_8hpp.html" title="counter.hpp" alt="" coords="317,359,408,384"/><area shape="rect" id="node41" href="unordered__map_8hpp.html" title="../common/unordered\l_map.hpp" alt="" coords="209,439,357,477"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
@@ -132,13 +130,17 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacejubatus_1_1core"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core.html">jubatus::core</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacejubatus_1_1core_1_1classifier"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1classifier.html">jubatus::core::classifier</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacejubatus_1_1core_1_1driver"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1driver.html">jubatus::core::driver</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacejubatus_1_1core_1_1fv__converter"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejubatus_1_1core_1_1fv__converter.html">jubatus::core::fv_converter</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 23 2015 22:18:36 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 28 2015 13:23:04 for jubatus_core by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

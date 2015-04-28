@@ -1,6 +1,7 @@
 var searchData=
 [
   ['ucb1',['ucb1',['../classjubatus_1_1core_1_1bandit_1_1ucb1.html',1,'jubatus::core::bandit']]],
+  ['ucb1_5fconfig',['ucb1_config',['../structjubatus_1_1core_1_1bandit_1_1ucb1__config.html',1,'jubatus::core::bandit']]],
   ['unimplemented_5fexception',['unimplemented_exception',['../classjubatus_1_1core_1_1nearest__neighbor_1_1unimplemented__exception.html',1,'jubatus::core::nearest_neighbor']]],
   ['unknown_5fcentrality_5ftype',['unknown_centrality_type',['../classjubatus_1_1core_1_1graph_1_1unknown__centrality__type.html',1,'jubatus::core::graph']]],
   ['unknown_5fexception',['unknown_exception',['../classjubatus_1_1core_1_1common_1_1exception_1_1unknown__exception.html',1,'jubatus::core::common::exception']]],
