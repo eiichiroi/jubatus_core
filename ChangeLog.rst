@@ -1,3 +1,32 @@
+Release 0.1.2 - 2015/04/27
+--------------------------
+
+* Improvements
+   * bandit: add assume_unrewarded option (#125, #133)
+   * Improved performance of bit_vector calculations (#137)
+   * Codes cleanup (#132, #141, #143)
+
+* Bug fixes
+    * bandit: reject specifying unknown arm ID in register_reward API (#138, #148)
+    * bandit: fix clear API to reset arm IDs (#142, #149)
+    * recommender: fix retain_projection option not working in euclid_lsh (#98, #116)
+    * Fix fv_converter become unresponsive when empty datum is given (#146, #147)
+    * plugin.hpp is missing from installation (#139, #145)
+
+Release 0.1.1 - 2015/03/30
+--------------------------
+
+* Improvements
+    * Move column storage directory (#118, #123)
+    * classifier: install algorithm headers (#117)
+    * fv_converter reports error precisely (#119)
+    * Codes / comments cleanup (#96, #97, #107, #109, #114, #115, #122, #135, #136)
+    * Add language declarations to wscript (#108)
+    * Update to the latest waf-unittest (#128)
+
+* Bug fixes
+    * clustering: avoid clusteirng score to become NaN (#78)
+
 Release 0.1.0 - 2015/02/23
 --------------------------
 
